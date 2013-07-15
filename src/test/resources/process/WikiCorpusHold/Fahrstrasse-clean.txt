@@ -1,0 +1,68 @@
+Als Fahrstraße bezeichnet man im Eisenbahnwesen die Verknüpfung von Fahrstraßenelementen zu einem technisch gesicherten Fahrweg für Fahrten durch einen Bahnhof oder über die freie Strecke. 
+Dabei besteht Signalabhängigkeit für die Streckeneinrichtungen: Das Signal, das die Fahrt über die Fahrstraße zulässt, kann nur dann in eine Fahrtstellung gebracht werden, wenn alle beteiligten Elemente korrekt gestellt und überwacht sind, zum Beispiel Weichen sich in der korrekten Endlage befinden. 
+Während des Bestehens der Fahrstraße sind sie verschlossen, das heißt Umstellvorgänge sind technisch ausgeschlossen bis die Fahrstraße aufgelöst wird. 
+Weiterhin sind Durchrutschweg und Flankenschutz mit in die Fahrstraße einbezogen. 
+Die Signalhaltstellung und Fahrstraßenauflösung werden je nach Stellwerkstechnik manuell oder selbsttätig durch Zugeinwirkung ausgelöst. 
+Kommt es bei elektrischen Stellwerken und vorhandener selbsttätiger Gleisfreimeldeanlage zu einer fehlerhaften Belegung eines Teils der Fahrstraße oder wird eine im Fahrweg liegende oder flankenschutzbietende Weiche aufgefahren, fällt das deckende Hauptsignal in die Haltlage. 
+Bei mechanischen Stellwerken ist das systembedingt nicht möglich, die richtige Lage der Fahrwegelemente wird hier nur bei der Fahrstraßeneinstellung geprüft.
+Die Signalabhängigkeit wird im Stellwerk vor jeder Zugfahrt durch das Zusammenwirken mechanischer, elektrischer oder elektronischer Verschlusseinrichtungen hergestellt. 
+Sie bildet einen wesentlichen Teil der Sicherheit des Bahnbetriebes und ist seit 1905 vom Gesetzgeber in der Eisenbahn-Bau- und Betriebsordnung für alle regelspurigen Eisenbahnen des öffentlichen Verkehrs in Deutschland verbindlich festgelegt.
+Nach der EBO müssen Weichen, die von Zügen gegen die Spitze befahren werden, von den für die Zugfahrt gültigen Signalen derart abhängig sein, dass die Signale nur dann in Fahrtstellung gebracht werden können, wenn die Weiche für den Fahrweg richtig liegt und verschlossen ist. 
+Das gilt nicht auf Nebenbahnen, wenn die Geschwindigkeit dort 50 km/h nicht übersteigt. 
+Ferngestellte Weichen, die von Reisezügen gegen die Spitze befahren werden, müssen zusätzlich gegen Umstellen unter dem Zug festgelegt oder einzeln gesichert werden. 
+Diese Aufgabe übernimmt die Fahrstraßenfestlegung, die in Gleisbildstellwerken nahezu immer sowie in mechanischen und elektromechanischen Stellwerken bei durch den Wärter nicht einsehbaren Weichen durch eine Gleisfreimeldeanlage ergänzt wird, die bei besetzten Weichen ein Umstellen verhindert. 
+Außerdem verlangt die EBO für Reisezüge Flankenschutzvorkehrungen; auf Nebenbahnen jedoch nur, wenn dort mit mehr als 50 km/h gefahren wird.
+Auf Schnellfahrstrecken sind für Fahrstraßen in Hauptgleisen Flankenschutzverschlüsse in allen Nebengleisen und zusätzlich vorzusehende Deckungssignale einzurichten.
+Diese Forderungen der EBO werden von den Eisenbahnunternehmen im Regelfall weit übertroffen. 
+Normalerweise sind alle Weichen, nicht nur die gegen die Spitze befahrenen, und weitere Einrichtungen in die Signalabhängigkeit einbezogen. 
+In Gleisbildstellwerken sind in der Regel auch Sicherungseinrichtungen an Bahnübergängen wie Schranken, Blinklicht- oder Lichtzeichenanlagen in die Signalabhängigkeit einbezogen. 
+Das Signal, das die Fahrt zulässt, kann in diesem Fall erst in eine Fahrtstellung gebracht werden, wenn der Bahnübergang gesichert ist.
+Der Flankenschutz wird in den Nachbargleisen, die direkt oder über eine Weichenverbindung in die Fahrstraße einmünden, durch Flankenschutzelemente realisiert.
+Schutzweichen sind abweisend gestellte Weichen, die gefährdende Fahrten ablenken. 
+Gleissperren dienen dem Schutz aus einmündenden Gleisen. 
+Sie müssen aufliegen und bringen Fahrzeuge, die sich in gefährdender Weise nähern, zur Entgleisung. 
+Signale aus einmündenden Nachbargleisen, die eine Flankenfahrt zulassen könnten, werden in der Haltstellung festgelegt. 
+Zwischen Fahrwegweichen und ihren Flankenschutzelementen liegende Gleisabschnitte bilden den Flankenschutzraum. 
+Meldet eine Gleisfreimeldeanlage im Flankenschutzraum eine Belegung oder Störung, fällt das deckende Hauptsignal in die Haltlage.
+Gleissperren und Schutzweichen bieten zwingenden Flankenschutz, Signale bieten nicht zwingenden Flankenschutz . 
+Rangierfahrten auf Gleisen mit Gefälle von mehr als 4 Promille und nicht zwingendem Flankenschutz gelten als gefährdende Rangierbewegungen und sind während der Zugfahrt verboten. 
+In elektronischen Stellwerken kann eine Rangierzielsperre programmiert werden, so dass Rangierfahrten auf als Rangierziel gesperrte Signale nicht gestellt werden können.
+Ist einfacher Lichtschutz nach Flankenschutzberechnung nicht ausreichend, ist doppelter Lichtschutz vorzusehen.
+Fahrstraßen, die in eine bestehende Fahrstraße einmünden oder sie kreuzen, unterliegen einem Fahrstraßenausschluss und können daher nicht eingestellt werden. 
+Ist dieser Fahrstraßenausschluss nicht bereits durch unterschiedliche Weichenlagen gegeben, so muss er gesondert vorgesehen werden . 
+Ein typischer Fall dafür ist die Fahrt in der Gegenrichtung. 
+Flankenschutzbietende freistellbare Rangiersignale werden ebenfalls in Haltlage verschlossen. 
+Dieser Verschluss wird von der Fahrstraßenschaltung mit überwacht. 
+Fahrstraßen sind signaltechnisch gesicherte Fahrwege.
+Während in Stellwerken mit alter Technik in der Regel nur Fahrstraßen für Zugfahrten eingerichtet sind, lassen sich in moderneren Gleisbildstellwerken für das Rangieren gesicherte Fahrwege als Rangierstraßen einstellen. 
+Gleisbildstellwerke bieten darüber hinaus eine Reihe unterschiedlicher Niveaus zum Einstellen und Sichern von Fahrstraßen. 
+Hier unterscheidet man zwischen Zug- und Hilfsfahrstraßen.
+Zugstraßen müssen höheren Sicherheitskriterien genügen, so verzichtet man in der Regel in Rangierstraßen auf den Flankenschutz. 
+Zug- und Rangierstraßen, die auf direktem Weg zu ihrem Ziel führen, werden als Regelzugstraßen oder Regelrangierstraßen bezeichnet. 
+Gibt es zwischen Start und Ziel mehrere Fahrwege, lassen sich in modernen Gleisbildstellwerken alternativ auch Fahrstraßen über Umwege bilden, sogenannte Umfahrzugstraßen oder Umfahrrangierstraßen.
+Eine Zugstraße für einen in den Bahnhof einfahrenden Zug wird Einfahrzugstraße, für einen ausfahrenden Zug Ausfahrzugstraße genannt. 
+Solche Zugfahrstraßen beginnen an Hauptsignalen. 
+An mehrgleisigen Eisenbahnstrecken lässt sich außerdem für die Einfahrt eines Zuges aus Streckengleisen ohne Einfahrsignal, das heißt beim Abweichen vom Rechtsfahrbetrieb, eine Einfahr-Zughilfsstraße, für die Ausfahrt aus dem Bahnhof ins linksseitige Streckengleis eine Ausfahr-Zughilfsstraße einstellen. 
+In einer Zughilfsstraße bleibt das am Anfang stehende Hauptsignal jedoch stets in der Haltstellung. 
+In diesem Fall gibt der Fahrdienstleiter seine Zustimmung zur Zugfahrt mit einem Zusatzsignal oder mit schriftlichem Befehl. 
+An mehrgleisigen Eisenbahnstrecken mit Gleiswechselbetrieb wird für die Ein- oder Ausfahrt des Gegengleises eine herkömmliche Fahrstraße mit passender Signalisierung eingestellt.
+Eine Fahrstraße beginnt normalerweise an dem Signal, das die Fahrt zulässt , und endet bei der Einfahrt in einen Bahnhof am Ende des Durchrutschwegs des Zielsignals. 
+Dies ist bei Einfahrt in ein Durchgangsgleis ein Ausfahr- oder Zwischen-, bei Einfahrt in eine Gleisgruppe auch ein Sperrsignal, bei Einfahrt in ein Einfahrstumpfgleis am Prellbock. 
+Zielsignal ist in diesem Fall für Zugfahrten das Signal Sh 2 beziehungsweise für Rangierfahrten das Signal Sh 0. 
+Diese Signale sind auf dem jeweiligen Prellbock feststehend montiert. 
+Die letzte Variante gibt es vor allem in Kopfbahnhöfen.
+Zur Einfahrzugstraße gehört der Durchrutschweg. 
+Er ist in die signaltechnische Sicherung der Fahrstraße mit einbezogen und dient als Reserve für den Fall, dass ein Zug ausnahmsweise nicht vor dem Halt zeigenden Zielsignal zum Halten kommen sollte. 
+Die Länge des Durchrutschweges berechnet sich nach der zulässigen Einfahrgeschwindigkeit und der Neigung des Gleises. 
+In Deutschland dürfen sich, anders als in manchen anderen Ländern, die Durchrutschwege gleichzeitig gestellter Fahrstraßen überlappen, da das ‹berfahren haltzeigender Signale systembedingt selten vorkommt und das gleichzeitige Durchrutschen von zwei Zügen als unwahrscheinlich und vernachlässigbar gilt. 
+In Ländern mit anderer Sicherheitsphilosophie können überlappende Durchrutschwege strikt ausgeschlossen sein.
+Die Fahrstraße für einen aus dem Bahnhof ausfahrenden Zug beginnt am Ausfahrsignal , und endet auf Höhe des Einfahrsignals der Gegenrichtung beim ‹bergang auf die freie Strecke.
+Einfahrsignale stehen jeweils im definierten Abstand vom ersten Gefahrpunkt. 
+In der Regel ist das die Rangieren#Sonstige Signale für den Rangierhalttafel, wenn im betreffenden Bahnhof mit Rangierfahrten nicht gerechnet werden muss, die erste Weiche. 
+Die Größe des Abstands ist wie beim Durchrutschweg abhängig von der Streckengeschwindigkeit und der Neigung des Streckengleises. 
+Dieser Bereich gehört aber zu keiner Fahrstraße - er wird grundsätzlich freigehalten.
+Bevor ein Hauptsignal für einen Zug auf Fahrt gestellt wird, muss der Signalbediener die Fahrwegprüfung durchführen. 
+Dazu muss er feststellen, ob der gesamte Fahrweg mit dem Durchrutschweg frei ist und alle zur Fahrstraße gehörenden Einrichtungen richtig gestellt sind. 
+Das Freisein muss der Signalbediener in Stellwerken ohne Gleisfreimeldeanlagen durch Hinsehen feststellen. 
+In Gleisbildstellwerken übernimmt im Regelfall die selbsttätige Gleisfreimeldeanlage diese Aufgabe, indem sie in die Signalabhängigkeit eingebunden ist, d.h. dass eine Fahrtstellung eines Hauptsignals in einen besetzten Bahnhofsabschnitt verhindert wird. 
+Das Prüfen der richtigen Stellung aller Einrichtungen ist im Regelfall durch die Abhängigkeiten und Verschlusseinrichtungen innerhalb der Stellwerksanlage gewährleistet und somit nicht erforderlich.

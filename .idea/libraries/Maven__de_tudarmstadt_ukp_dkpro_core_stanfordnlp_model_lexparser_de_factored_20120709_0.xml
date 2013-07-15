@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Maven: de.tudarmstadt.ukp.dkpro.core:stanfordnlp-model-lexparser-de-factored:20120709.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/models/de.tudarmstadt.ukp.dkpro.core.stanfordnlp-model-parser-de-factored-20120709.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
