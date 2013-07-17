@@ -1,0 +1,16 @@
+### README ###
+ --- TU DARMSTADT TOPIC - COMMENT DISCOURSE STRUCTURE ANNOTATOR FOR GERMAN
+
+
+This project represents the intent to deploy discourse structure annotations and interpretations to the German language.
+The project entails both the empirical study representation in form of xml rule files, as developed in (cf. reference to masters), 
+as well as the structural markup annotators, based on the Stanford Parser (cf. stanford parser).
+The main interpretation coding of this project is based on the works of R. Eckard de Castelho (with denominal and structural adaptations and bug fixes)
+
+
+
+-- Compiling and Building -- 
+There are ant scripts provided to build and compile the code and the jar file to use
+Just run "ant compile" and if succeded without errors "ant jar" to  build the jar file
+
+
