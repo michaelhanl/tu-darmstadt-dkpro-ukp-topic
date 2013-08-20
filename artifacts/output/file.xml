@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<ROOT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/Volumes/MacUser/Users/hanl/IdeaProjects/dkpro.ukp.topic.structure/artifacts/config/schema.xsd" DocName="file">
+	<Constituent ID="001" cat="S">
+		<Constituent cat="NP">
+			<Constituent cat="NNP" Lemma="Maria">Maria</Constituent>
+		</Constituent>
+		<Constituent cat="VP">
+			<Constituent cat="VBD" Lemma="be">was</Constituent>
+			<Constituent cat="VP">
+				<Constituent cat="VBG" Lemma="go">going</Constituent>
+				<Constituent cat="NP">
+					<Constituent cat="NN" Lemma="home">home</Constituent>
+				</Constituent>
+			</Constituent>
+		</Constituent>
+		<Constituent cat="." Lemma="!">!</Constituent>
+	</Constituent>
+	<Constituent ID="002" cat="S">
+		<Constituent cat="NP">
+			<Constituent cat="PRP" Lemma="she">She</Constituent>
+		</Constituent>
+		<Constituent cat="VP">
+			<Constituent cat="VP">
+				<Constituent cat="VBD" Lemma="talk">talked</Constituent>
+				<Constituent cat="PP">
+					<Constituent cat="TO" Lemma="to">to</Constituent>
+					<Constituent cat="NP">
+						<Constituent cat="NNP" Lemma="Martin">Martin</Constituent>
+					</Constituent>
+				</Constituent>
+				<Constituent cat="PP">
+					<Constituent cat="IN" Lemma="on">on</Constituent>
+					<Constituent cat="NP">
+						<Constituent cat="PRP$" Lemma="she">her</Constituent>
+						<Constituent cat="NN" Lemma="way">way</Constituent>
+						<Constituent cat="NN" Lemma="home">home</Constituent>
+					</Constituent>
+				</Constituent>
+			</Constituent>
+			<Constituent cat="CC" Lemma="and">and</Constituent>
+			<Constituent cat="VP">
+				<Constituent cat="VBD" Lemma="be">was</Constituent>
+				<Constituent cat="ADJP">
+					<Constituent cat="JJ" Lemma="surprised">surprised</Constituent>
+					<Constituent cat="S">
+						<Constituent cat="VP">
+							<Constituent cat="TO" Lemma="to">to</Constituent>
+							<Constituent cat="VP">
+								<Constituent cat="VB" Lemma="hear">hear</Constituent>
+								<Constituent cat="SBAR">
+									<Constituent cat="IN" Lemma="that">that</Constituent>
+									<Constituent cat="S">
+										<Constituent cat="NP">
+											<Constituent cat="PRP" Lemma="he">he</Constituent>
+										</Constituent>
+										<Constituent cat="VP">
+											<Constituent cat="VBD" Lemma="be">was</Constituent>
+											<Constituent cat="VP">
+												<Constituent cat="VBG" Lemma="get">getting</Constituent>
+												<Constituent cat="ADJP">
+													<Constituent cat="JJ" Lemma="married">married</Constituent>
+												</Constituent>
+											</Constituent>
+										</Constituent>
+									</Constituent>
+								</Constituent>
+							</Constituent>
+						</Constituent>
+					</Constituent>
+				</Constituent>
+			</Constituent>
+		</Constituent>
+		<Constituent cat="." Lemma=".">.</Constituent>
+	</Constituent></ROOT>

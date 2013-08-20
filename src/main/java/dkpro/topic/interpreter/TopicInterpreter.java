@@ -14,7 +14,7 @@ import java.util.*;
 
 
 /**
- * wrapper around theme interpreter class in the annolab project, written by R.
+ * wrapper around topic interpreter class in the annolab project, written by R.
  * Eckart de Castilho
  * I dont get the sentence StringBuilder object, because it is used within the original theme interpreter class only
  *
@@ -34,6 +34,7 @@ public class TopicInterpreter {
     private List<Result> _results;
     private List<RuleInstance> _allRulesMatched = new ArrayList<>();
     private List<RuleInstance> _rulesMatched = null;
+    @Deprecated
     private ArrayList<Topic> sentenceResult = new ArrayList<>();
     private boolean _filterGeneralRules = true;
     private Map<MatchListener, Object> _matchListeners = new WeakHashMap<>();
@@ -228,6 +229,7 @@ public class TopicInterpreter {
     private RuleDefinition getExpected(Constituent constituent) {
         return this._ruleBook.getDefinitionByName(constituent.getExpected());
     }
+
 
     public List<Topic> getSentenceTopics() {
         return sentenceResult;

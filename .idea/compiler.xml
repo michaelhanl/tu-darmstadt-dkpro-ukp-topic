@@ -25,6 +25,9 @@
         <module name="dkpro.ukp.topic.structure" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dkpro.ukp.topic.structure" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
 
