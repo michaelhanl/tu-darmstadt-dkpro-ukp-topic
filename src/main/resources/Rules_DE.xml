@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules>
+    <!-- problematic, since sentence element is supposed to match inner sentences as well?! 
+        If I choose to leave a sentence element, than i would have to explicitly display every rule-->
+    <rule id="Regel 1" label="unmarkiertes, eingliedriges Subjekt" type="nominales Subjekt-Topik">
+        <!-- Beispiel: Maria ist nach Hause gefahren. -->
+        <Constituent type="S">
+            <Constituent type="(NP-SB|NP|NN|NN-SB)" isTheme="true">
+                <relax/>
+            </Constituent>
+            <relax/>
+            <Constituent type="(VVFIN|VAFIN|VMFIN)">
+                <relax/>
+            </Constituent>
+            <relax/>
+        </Constituent>
+    </rule>
+</rules>

@@ -23,6 +23,7 @@ public class SAXParser extends SAXFilter {
     private final TopicInterpreter _interpreter;
     private String docName;
     private String sentenceID;
+    @Deprecated
     private DocResultsHolder results;
 
 

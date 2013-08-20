@@ -9,8 +9,8 @@ The main interpretation coding of this project is based on the works of R. Eckar
 
 
 
--- Compiling and Building -- 
+-- Compiling and Building Source Code-- 
 There are ant scripts provided to build and compile the code and the jar file to use
-Just run "ant compile" and if succeded without errors "ant jar" to  build the jar file
+Just run "ant compile" and if succeeded without errors "ant jar" to  build the jar file
 
 
