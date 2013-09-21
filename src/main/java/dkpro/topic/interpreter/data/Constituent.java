@@ -1,4 +1,4 @@
-package dkpro.topic.interpreter;
+package dkpro.topic.interpreter.data;
 
 import org.dom4j.Element;
 

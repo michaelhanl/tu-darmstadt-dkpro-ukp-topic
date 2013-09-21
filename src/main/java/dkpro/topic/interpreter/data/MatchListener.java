@@ -1,4 +1,4 @@
-package dkpro.topic.interpreter;
+package dkpro.topic.interpreter.data;
 
 import dkpro.topic.interpreter.rules.RuleInstance;
 
