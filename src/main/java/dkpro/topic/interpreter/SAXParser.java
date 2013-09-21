@@ -38,8 +38,7 @@ public class SAXParser extends SAXFilter {
     @Override
     public void startElement(String uri, String localName, String name,
                              Attributes attributes) throws SAXException {
-
-        // FIXME: docname probably not needed!
+//        FIXME: docname probably not needed!
         if (localName.equals(Configuration.getDocRoot())) {
             docName = attributes.getValue(Configuration.getAttrDocName());
         }

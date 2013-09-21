@@ -51,7 +51,7 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
         DocumentMetaData meta = DocumentMetaData.get(aJCas);
         String title = ConfigUtils.getTitle(meta.getDocumentTitle());
         File file = new File(outputPath, title + ".xml");
-        if (!Configuration.isAutoOverrideEnabled() && file.exists()) {
+        if (!Configuration.isAutoOverEn() && file.exists()) {
             System.out.println("");
             System.out
                     .println("WARNING: target file to write XML parse tree to already exists!");

@@ -129,7 +129,7 @@ public class Configuration extends Properties {
         return Configuration.getParameter("generic.topicrule");
     }
 
-    public static boolean isAutoOverrideEnabled() {
+    public static boolean isAutoOverEn() {
         return enabledOverride;
     }
 

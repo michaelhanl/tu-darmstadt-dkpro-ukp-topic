@@ -22,7 +22,7 @@ public class Main {
     private static Logger _log = LoggerFactory.getLogger(Main.class);
     private static boolean topicAnnotator = false;
 
-    public static boolean isTopicAnnotatorEnabled() {
+    public static boolean isAEn() {
         return topicAnnotator;
     }
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
-<ROOT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/Volumes/MacUser/Users/hanl/IdeaProjects/dkpro.ukp.topic.structure/artifacts/config/schema.xsd" DocName="file">
-	<Constituent ID="001" cat="S">
+<ROOT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!-- the entire sentence need to have the expect attribute to let the interpreter recognize it -->
+	<Constituent ID="001" cat="S" expect="[rule 1]">
 		<Constituent cat="NP">
 			<Constituent cat="NNP" Lemma="Maria">Maria</Constituent>
 		</Constituent>

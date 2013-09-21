@@ -1,6 +1,6 @@
 package dkpro.topic.interpreter.rules;
 
-import dkpro.topic.interpreter.Constituent;
+import dkpro.topic.interpreter.data.Constituent;
 import dkpro.topic.utils.XMLUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

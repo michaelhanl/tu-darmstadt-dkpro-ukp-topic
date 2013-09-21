@@ -1,6 +1,8 @@
 package dkpro.topic.interpreter;
 
 import dkpro.topic.annotator.DocResultsHolder.Topic;
+import dkpro.topic.interpreter.data.Constituent;
+import dkpro.topic.interpreter.data.MatchListener;
 import dkpro.topic.utils.Statistics;
 import dkpro.topic.interpreter.rules.Result;
 import dkpro.topic.interpreter.rules.RuleBook;
@@ -37,7 +39,8 @@ public class TopicInterpreter {
     @Deprecated
     private ArrayList<Topic> sentenceResult = new ArrayList<>();
     private boolean _filterGeneralRules = true;
-    private Map<MatchListener, Object> _matchListeners = new WeakHashMap<>();
+    private List<MatchListener> _matchListeners = new ArrayList<>();
+    //private Map<MatchListener, Object> _matchListeners = new WeakHashMap<>();
 
 
     public TopicInterpreter(RuleBook rules) {
@@ -49,15 +52,19 @@ public class TopicInterpreter {
 
     public static Result.Expectation getExpectation(Constituent constituent,
                                                     RuleInstance rule) {
-        if (constituent.getExpected() == null) {
+
+        if (constituent.getExpected() == null)
             return Result.Expectation.UNEXPECTED;
-        }
-        return ((constituent.getExpected().equals(rule.getDefinition())) ? Result.Expectation.MET
+
+        /**
+         * fixed a bug, where the String getExpected was compared with the getDefinition object (RuleDefinition)
+         */
+        return ((constituent.getExpected().equals(rule.getDefinition().toString())) ? Result.Expectation.MET
                 : Result.Expectation.MISMATCH);
     }
 
     public void addMatchListener(MatchListener l) {
-        this._matchListeners.put(l, null);
+        this._matchListeners.add(l);
     }
 
     public void removeMatchListener(MatchListener l) {
@@ -65,7 +72,7 @@ public class TopicInterpreter {
     }
 
     protected void fireMatch(RuleInstance r, Constituent c) {
-        for (MatchListener l : this._matchListeners.keySet())
+        for (MatchListener l : this._matchListeners)
             l.match(r, c);
     }
 
@@ -85,9 +92,10 @@ public class TopicInterpreter {
         this._ruleBook.getRules(this._depth, this._activeRules, node);
         _log.debug("Active rules: " + this._activeRules.size());
 
+        this._results = new ArrayList<>();
         if (this._depth == 2) {
-            this._sentence.setLength(0);
-            this._results = new ArrayList<>();
+            //this._sentence.setLength(0);
+            //this._results = new ArrayList<>();
         }
 
         Iterator i = this._activeRules.iterator();
@@ -143,24 +151,28 @@ public class TopicInterpreter {
             } else if (r.getCreationDepth() > this._depth) {
                 i.remove();
 
-                if (!(r.expectsMore())) {
+                if (!r.expectsMore()) {
+                    String s = "RuleInstance matches: " + r + " -> " +
+                            r.getDefinition().getTopicType();
+
+
                     _log.debug("RuleInstance matches: " + r + " -> " +
                             r.getDefinition().getTopicType());
-
                     Result.Expectation e = getExpectation(node, r);
+
                     if (e == Result.Expectation.MET) {
                         expectationMet = true;
                     }
 
                     boolean removed = toRemove.contains(r);
-                    if (!(removed)) {
+                    if (!removed) {
                         fireMatch(r, node);
                         this._rulesMatched.add(r);
                         this._allRulesMatched.add(r);
                         this._stats.tallyMatch(r, e);
                     }
 
-                    this._results.add(new Result(r, e, getExpected(node),
+                    this._results.add(new Result(r, e, getExpectedRule(node),
                             removed));
 
                     // my own implementation to extract topic label and rule
@@ -177,11 +189,11 @@ public class TopicInterpreter {
 
         }
 
-        RuleDefinition expected = getExpected(node);
+        RuleDefinition expected = getExpectedRule(node);
         if (expected != null) {
             this._stats.tallyExpectation(expected);
             if (!(expectationMet)) {
-                this._stats.tallyUnfulfilledExpectation(getExpected(node));
+                this._stats.tallyUnfulfilledExpectation(getExpectedRule(node));
             }
 
         }
@@ -226,7 +238,7 @@ public class TopicInterpreter {
         return this._allRulesMatched;
     }
 
-    private RuleDefinition getExpected(Constituent constituent) {
+    private RuleDefinition getExpectedRule(Constituent constituent) {
         return this._ruleBook.getDefinitionByName(constituent.getExpected());
     }
 

@@ -1,6 +1,6 @@
 package dkpro.topic.interpreter.rules;
 
-import dkpro.topic.interpreter.Constituent;
+import dkpro.topic.interpreter.data.Constituent;
 import dkpro.topic.utils.Configuration;
 import org.dom4j.Element;
 import org.slf4j.Logger;
@@ -97,6 +97,7 @@ public class RuleInstance {
     public boolean startElement(int depth, Constituent node) {
         if (isRelaxing()) {
             Element expectedElement = peekAhead();
+
 
             boolean matchesThis = (node.match(getCursor())) && (depth == getCurrentDepth());
 
@@ -221,6 +222,7 @@ public class RuleInstance {
         sb.append(" -> ");
         sb.append(ahead);
         sb.append("]");
+        sb.append(" text " + getMatchText());
 
         return sb.toString();
     }

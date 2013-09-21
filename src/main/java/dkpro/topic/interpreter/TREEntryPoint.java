@@ -40,7 +40,7 @@ public class TREEntryPoint extends JCasConsumer_ImplBase {
         File annotated = new File(TRAnnotator.outDirFinal + "/"
                 + targetFile.getName());
 
-        if (!Configuration.isAutoOverrideEnabled() && Main.isTopicAnnotatorEnabled()
+        if (!Configuration.isAutoOverEn() && Main.isAEn()
                 && annotated.exists()) {
             System.out.println("");
             System.out
@@ -53,7 +53,7 @@ public class TREEntryPoint extends JCasConsumer_ImplBase {
             TRParser walker = TRParser.runner(
                     ConfigUtils.getRuleFile(), targetFile);
 
-            if (Main.isTopicAnnotatorEnabled())
+            if (Main.isAEn())
                 TRAnnotator.annotate(targetFile, walker.getDocResults());
         } catch (Exception e) {
             _log.error("TreeRuleEngine exit with error!", e);

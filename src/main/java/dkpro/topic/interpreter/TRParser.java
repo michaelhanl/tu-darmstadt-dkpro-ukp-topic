@@ -59,9 +59,11 @@ public class TRParser {
         SAXParser parseXML = new SAXParser(interpreter, results);
         XMLUtils.parse(xmlFile, parseXML);
         System.out.println("sentence results " + interpreter.getSentenceResults());
+        System.out.println("all rules matched "+ interpreter.getAllRulesMatched());
         this.writeOutResults(interpreter.getSentenceResults());
         interpreter.getStats().dumpStats(System.out);
 
+        /**
         stats.info("\n--- Rule and rules superseding them");
         for (RuleDefinition r1 : ruleMap.keySet()) {
 
@@ -72,6 +74,7 @@ public class TRParser {
             }
             stats.info("]");
         }
+         */
 //		 Statistics.dumpResultsToConsole(results);
 
     }

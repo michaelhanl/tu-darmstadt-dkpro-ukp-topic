@@ -1,10 +1,10 @@
 #!/bin/bash
 
-cd ..
+#cd ..
 
 v1="dkproTopic.jar"
 v2="themeOffice.jar"
-v3="all_intellij.jar"
+v3="dkpro.ukp.topic.structure.jar"
 input="output"
 output="$input/topics"
 rule="config/Rules_EN.xml"

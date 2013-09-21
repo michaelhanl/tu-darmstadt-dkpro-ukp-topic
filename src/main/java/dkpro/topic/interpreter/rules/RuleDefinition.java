@@ -2,7 +2,7 @@ package dkpro.topic.interpreter.rules;
 
 
 import dkpro.topic.annotator.DocResultsHolder;
-import dkpro.topic.interpreter.Constituent;
+import dkpro.topic.interpreter.data.Constituent;
 import dkpro.topic.interpreter.SAXParser;
 import dkpro.topic.utils.*;
 import dkpro.topic.utils.XMLUtils;
@@ -17,11 +17,11 @@ import org.xml.sax.SAXException;
 import java.util.*;
 
 public class RuleDefinition {
-    static Log _log = LogFactory.getLog(RuleDefinition.class);
-    static int _next_instance_id;
-    final String _name;
+    public static Log _log = LogFactory.getLog(RuleDefinition.class);
+    public static int _next_instance_id;
+    public final String _name;
     private final String _topicType;
-    final Document _structure;
+    public final Document _structure;
     private final Map<RuleDefinition, Boolean> _matchesDefinition = new WeakHashMap();
 
     public RuleDefinition(String name, String topicType, Document structure) {

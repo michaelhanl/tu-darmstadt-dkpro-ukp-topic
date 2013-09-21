@@ -1,5 +1,6 @@
 package dkpro.topic.interpreter;
 
+import dkpro.topic.interpreter.data.Constituent;
 import org.dom4j.Attribute;
 import org.dom4j.Element;
 
@@ -14,6 +15,7 @@ public class XMLConstituent
     public XMLConstituent(Constituent parent, Element element) {
         this._parent = parent;
         this._element = element;
+
     }
 
     public Constituent getParent() {
