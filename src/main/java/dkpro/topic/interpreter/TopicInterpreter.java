@@ -36,6 +36,7 @@ public class TopicInterpreter {
     private List<Result> _results;
     private List<RuleInstance> _allRulesMatched = new ArrayList<>();
     private List<RuleInstance> _rulesMatched = null;
+    //FIXME: find a better way of dealing with this
     @Deprecated
     private ArrayList<Topic> sentenceResult = new ArrayList<>();
     private boolean _filterGeneralRules = true;

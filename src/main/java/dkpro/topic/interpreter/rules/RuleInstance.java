@@ -8,12 +8,14 @@ import org.slf4j.LoggerFactory;
 
 public class RuleInstance {
     private final RuleDefinition _ruleDefinition;
+    //FIXME: variable is never filled with text
     private final StringBuilder _matchText;
     private final RuleDefinition.RelaxStack _relaxStack;
     private final int _instance_id;
     Logger jlog = LoggerFactory.getLogger(RuleInstance.class);
     private Element _cursor;
     private int _createdAtDepth;
+    //FIXME: add sentence result to this container and return list as replacement for DocHolderContainer
 
     public RuleInstance(RuleDefinition ruleDefinition, int createdAtDepth) {
         this._ruleDefinition = ruleDefinition;
