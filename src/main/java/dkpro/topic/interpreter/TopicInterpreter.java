@@ -176,6 +176,9 @@ public class TopicInterpreter {
 
         }
 
+        /**
+         * TODO: returns null, why?!
+         */
         RuleDefinition expected = getExpectedRule(node);
         if (expected != null) {
             System.out.println("expectation is not null");
@@ -228,7 +231,6 @@ public class TopicInterpreter {
     }
 
     private RuleDefinition getExpectedRule(Constituent constituent) {
-
         return this._ruleBook.getDefinitionByName(constituent.getExpected());
     }
 

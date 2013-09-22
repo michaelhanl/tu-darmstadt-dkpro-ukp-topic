@@ -7,13 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d23da889-40de-41d3-8170-1eef29c4fdb4" name="Default" comment="new review">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/data/Constituent.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/data/Constituent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/Result.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/Result.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleBook.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleBook.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleDefinition.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleDefinition.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleInstance.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleInstance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Statistics.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Statistics.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TRParser.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TRParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicInterpreter.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicInterpreter.java" />
     </list>
     <ignored path="dkpro.ukp.topic.structure.iws" />
@@ -48,7 +41,7 @@
     <file path="/RuleInstance.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379789702651" ignored="false" />
     <file path="/RuleDefinition.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379846915640" ignored="false" />
     <file path="/Configuration.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1373654735870" ignored="false" />
-    <file path="/TopicInterpreter.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379846809553" ignored="false" />
+    <file path="/TopicInterpreter.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379847251105" ignored="false" />
     <file path="/SAXParser.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379770456768" ignored="false" />
     <file path="/Constituent.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379846612911" ignored="false" />
     <file path="/XMLConstituent.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379771754250" ignored="false" />
@@ -128,10 +121,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TopicInterpreter.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TopicInterpreter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicInterpreter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="231" column="39" selection-start="7777" selection-end="7777" vertical-scroll-proportion="0.0">
+            <state line="179" column="36" selection-start="6311" selection-end="6311" vertical-scroll-proportion="0.3181818">
               <folding />
             </state>
           </provider>
@@ -185,10 +178,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TRParser.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TRParser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TRParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="34" selection-start="2151" selection-end="2151" vertical-scroll-proportion="0.60152286">
+            <state line="61" column="34" selection-start="2151" selection-end="2151" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -240,10 +233,10 @@
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/Result.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleInstance.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/data/Constituent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicInterpreter.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleDefinition.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleBook.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TRParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicInterpreter.java" />
       </list>
     </option>
   </component>
@@ -898,7 +891,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258786" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3237082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3237082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960506" sideWeight="0.6741214" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15327258" sideWeight="0.6746269" order="3" side_tool="false" content_ui="tabs" />
@@ -1068,13 +1061,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicInterpreter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="231" column="39" selection-start="7777" selection-end="7777" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleDefinition.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="97" column="22" selection-start="2931" selection-end="2931" vertical-scroll-proportion="0.48105437">
@@ -1091,7 +1077,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TRParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="34" selection-start="2151" selection-end="2151" vertical-scroll-proportion="0.60152286">
+        <state line="61" column="34" selection-start="2151" selection-end="2151" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicInterpreter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="179" column="36" selection-start="6311" selection-end="6311" vertical-scroll-proportion="0.3181818">
           <folding />
         </state>
       </provider>
