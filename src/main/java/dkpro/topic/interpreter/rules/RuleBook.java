@@ -25,7 +25,7 @@ public class RuleBook
     private static final String TAG_RULE = "rule";
     private static final String ATTR_RULE_IDENTIFIER = "id";
     private static final String ATTR_TOPIC_TYPE = "label";
-    List<RuleDefinition> _ruleDefinitions;
+    private List<RuleDefinition> _ruleDefinitions;
 
     public RuleBook() {
         this._ruleDefinitions = new ArrayList();
@@ -54,6 +54,7 @@ public class RuleBook
         return null;
     }
 
+
     public void read(File file)
             throws ParserConfigurationException, SAXException, IOException {
         XMLUtils.parse(file, new RuleHandler());
@@ -68,7 +69,11 @@ public class RuleBook
         return this._ruleDefinitions.size();
     }
 
-    class RuleHandler extends DefaultHandler {
+    public String toString() {
+        return _ruleDefinitions.toString();
+    }
+
+    private class RuleHandler extends DefaultHandler {
         private String _currentName = null;
         private String _currentType = null;
         private SAXContentHandler _currentRuleStructure = null;

@@ -7,5 +7,6 @@ public abstract interface Constituent {
 
     public abstract Constituent getParent();
 
+    // String identifier for rule, as given in the gold standard data set
     public abstract String getExpected();
 }

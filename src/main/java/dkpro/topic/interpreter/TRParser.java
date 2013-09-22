@@ -46,20 +46,21 @@ public class TRParser {
         jlog.info("interpreting file {}", xmlFile);
         this.interpreter = new TopicInterpreter(rules);
         this.results = DocResultsHolder.createResultMap();
-        this.apply(xmlFile);
+        this.apply(xmlFile, rules);
     }
 
-    private void apply(File xmlFile) throws ParserConfigurationException,
+    private void apply(File xmlFile, RuleBook rules) throws ParserConfigurationException,
             SAXException, IOException {
 
         Map<RuleDefinition, Collection<RuleDefinition>> ruleMap = this
-                .generateRules(interpreter.getRuleBook());
+                .generateRules(rules);
 
         jlog.debug("--- Now we will try to match the rules");
         SAXParser parseXML = new SAXParser(interpreter, results);
         XMLUtils.parse(xmlFile, parseXML);
         System.out.println("sentence results " + interpreter.getSentenceResults());
         System.out.println("all rules matched "+ interpreter.getAllRulesMatched());
+        System.out.println("ruleDef " + rules.toString());
         this.writeOutResults(interpreter.getSentenceResults());
         interpreter.getStats().dumpStats(System.out);
 

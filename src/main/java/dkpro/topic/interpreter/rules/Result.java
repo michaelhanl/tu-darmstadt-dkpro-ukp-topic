@@ -1,5 +1,6 @@
 package dkpro.topic.interpreter.rules;
 
+import dkpro.topic.interpreter.data.Constituent;
 import dkpro.topic.utils.XMLUtils;
 
 public class Result {

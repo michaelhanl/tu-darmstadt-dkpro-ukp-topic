@@ -7,7 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d23da889-40de-41d3-8170-1eef29c4fdb4" name="Default" comment="new review">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/data/Constituent.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/data/Constituent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/Result.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/Result.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleBook.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleBook.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleDefinition.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleDefinition.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleInstance.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleInstance.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Statistics.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Statistics.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TRParser.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TRParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicInterpreter.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicInterpreter.java" />
     </list>
     <ignored path="dkpro.ukp.topic.structure.iws" />
@@ -34,17 +40,17 @@
     <file path="$PROJECT_DIR$/../korAP-project/.idea/compiler.xml" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1373632908192" ignored="false" />
     <file path="$PROJECT_DIR$/../korAP-project/.idea/modules.xml" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1373632908192" ignored="false" />
     <file path="$PROJECT_DIR$/../korAP-project/.idea/encodings.xml" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1373632908192" ignored="false" />
-    <file path="/TRParser.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379755486972" ignored="false" />
-    <file path="/a.dummy" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379772869894" ignored="false" />
+    <file path="/TRParser.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379846994151" ignored="false" />
+    <file path="/a.dummy" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379846559388" ignored="false" />
     <file path="/TRAnnotator.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1373648223839" ignored="false" />
-    <file path="/Statistics.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1373647814963" ignored="false" />
+    <file path="/Statistics.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379845680438" ignored="false" />
     <file path="/ConfigUtils.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1373646853869" ignored="false" />
     <file path="/RuleInstance.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379789702651" ignored="false" />
-    <file path="/RuleDefinition.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379770775327" ignored="false" />
+    <file path="/RuleDefinition.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379846915640" ignored="false" />
     <file path="/Configuration.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1373654735870" ignored="false" />
-    <file path="/TopicInterpreter.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379789645419" ignored="false" />
+    <file path="/TopicInterpreter.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379846809553" ignored="false" />
     <file path="/SAXParser.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379770456768" ignored="false" />
-    <file path="/Constituent.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1373650732446" ignored="false" />
+    <file path="/Constituent.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379846612911" ignored="false" />
     <file path="/XMLConstituent.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379771754250" ignored="false" />
     <file path="/ConstituentWriter.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1373654740573" ignored="false" />
     <file path="/Dummy.txt" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379754937633" ignored="false" />
@@ -60,7 +66,8 @@
     <file path="/AuthorityHandler.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1378821324182" ignored="false" />
     <file path="/TREEntryPoint.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379755581913" ignored="false" />
     <file path="/config.properties" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379771812743" ignored="false" />
-    <file path="/Result.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379772414838" ignored="false" />
+    <file path="/Result.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379846095661" ignored="false" />
+    <file path="/RuleBook.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379846945418" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,26 +131,38 @@
       <file leaf-file-name="TopicInterpreter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicInterpreter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="51" selection-start="1485" selection-end="1485" vertical-scroll-proportion="0.0">
+            <state line="231" column="39" selection-start="7777" selection-end="7777" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Result.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/Result.java">
+      <file leaf-file-name="RuleBook.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleBook.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="26" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0">
+            <state line="72" column="43" selection-start="2252" selection-end="2252" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RuleInstance.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RuleInstance.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleInstance.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="104" selection-start="705" selection-end="705" vertical-scroll-proportion="0.32828283">
+            <state line="142" column="6" selection-start="4935" selection-end="4935" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Statistics.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Statistics.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="10" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#4568#4758#0" expanded="true" />
+                <element signature="e#4747#4748#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -166,19 +185,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TRParser.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TRParser.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TRParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="34" selection-start="2328" selection-end="2328" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ParsingPipeline.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="10" selection-start="2283" selection-end="2283" vertical-scroll-proportion="0.0">
+            <state line="61" column="34" selection-start="2151" selection-end="2151" vertical-scroll-proportion="0.60152286">
               <folding />
             </state>
           </provider>
@@ -218,22 +228,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/constituents/ConstituentWriter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Statistics.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/XMLUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/main/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/main/Learner.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/data/Constituent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TRParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TREEntryPoint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleDefinition.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXParser.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/XMLConstituent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Statistics.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/Result.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicInterpreter.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleInstance.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/data/Constituent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicInterpreter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleDefinition.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleBook.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TRParser.java" />
       </list>
     </option>
   </component>
@@ -352,6 +362,60 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dom4j" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dkpro.ukp.topic.structure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.7 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dkpro.ukp.topic.structure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.7 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rt.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dkpro.ukp.topic.structure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.7 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rt.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -834,12 +898,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258786" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3237082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3237082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960506" sideWeight="0.6741214" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15327258" sideWeight="0.6746269" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2533784" sideWeight="0.6793313" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2533784" sideWeight="0.67629176" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="148" y="122" width="1112" height="546" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -915,48 +979,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="21" selection-start="656" selection-end="656" vertical-scroll-proportion="0.29654035">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar!/org/dom4j/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="17" selection-start="797" selection-end="797" vertical-scroll-proportion="0.6672158">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TRParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="34" selection-start="2328" selection-end="2328" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar!/org/dom4j/Element.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="564" column="21" selection-start="17611" selection-end="17621" vertical-scroll-proportion="0.3321859">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/annotator/Statistics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="32" selection-start="566" selection-end="566" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="37" selection-start="558" selection-end="558" vertical-scroll-proportion="0.60913706">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="116" column="24" selection-start="4298" selection-end="4298" vertical-scroll-proportion="0.0">
@@ -964,23 +986,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/data/Constituent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="27" selection-start="237" selection-end="237" vertical-scroll-proportion="0.22240527">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TREEntryPoint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="28" selection-start="1654" selection-end="1654" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="29" selection-start="2969" selection-end="2969" vertical-scroll-proportion="0.40691927">
           <folding />
         </state>
       </provider>
@@ -1006,23 +1014,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicInterpreter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="51" selection-start="1485" selection-end="1485" vertical-scroll-proportion="0.0">
+        <state line="56" column="10" selection-start="2283" selection-end="2283" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_07.jdk/Contents/Home/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="199" column="6" selection-start="9031" selection-end="9031" vertical-scroll-proportion="0.33278418">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/annotator/Statistics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="32" selection-start="566" selection-end="566" vertical-scroll-proportion="0.37067544">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/Result.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="26" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="20" column="5" selection-start="696" selection-end="696" vertical-scroll-proportion="0.49423394">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Statistics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="10" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#4568#4758#0" expanded="true" />
+            <element signature="e#4747#4748#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleInstance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="104" selection-start="705" selection-end="705" vertical-scroll-proportion="0.32828283">
+        <state line="142" column="6" selection-start="4935" selection-end="4935" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/data/Constituent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="73" selection-start="283" selection-end="283" vertical-scroll-proportion="0.3409091">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicInterpreter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="231" column="39" selection-start="7777" selection-end="7777" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleDefinition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="22" selection-start="2931" selection-end="2931" vertical-scroll-proportion="0.48105437">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleBook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="43" selection-start="2252" selection-end="2252" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TRParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="34" selection-start="2151" selection-end="2151" vertical-scroll-proportion="0.60152286">
           <folding />
         </state>
       </provider>

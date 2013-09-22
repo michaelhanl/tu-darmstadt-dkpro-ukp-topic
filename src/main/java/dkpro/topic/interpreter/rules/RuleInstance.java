@@ -30,6 +30,18 @@ public class RuleInstance {
         advanceCursor();
     }
 
+
+    public Result.Expectation getExpectation(Constituent constituent) {
+        if (constituent.getExpected() == null)
+            return Result.Expectation.UNEXPECTED;
+
+        /**
+         * fixed a bug, where the String getExpected was compared with the getDefinition object (RuleDefinition)
+         */
+        return ((constituent.getExpected().equals(getDefinition().toString())) ? Result.Expectation.MET
+                : Result.Expectation.MISMATCH);
+    }
+
     public String getName() {
         return this._ruleDefinition._name;
     }

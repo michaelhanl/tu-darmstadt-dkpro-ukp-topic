@@ -36,7 +36,8 @@ public class Statistics {
     }
 
     public void tallyExpectation(RuleDefinition expected) {
-        getStats(expected).expected();
+       int i= getStats(expected).expected();
+        System.out.println("total ex " + i);
     }
 
     public void tallyMatch(RuleInstance rule, Result.Expectation expectation) {
@@ -54,7 +55,7 @@ public class Statistics {
             throw new IllegalArgumentException("Argument [definition] can not be null");
         }
 
-        Stats s = (Stats) this._stats.get(definition);
+        Stats s = this._stats.get(definition);
         if (s == null) {
             s = new Stats(definition);
             this._stats.put(definition, s);
@@ -63,13 +64,14 @@ public class Statistics {
     }
 
     public double getPrecision(boolean includeUnexpected) {
-        if (includeUnexpected) {
+        if (includeUnexpected)
             return this._totalMet / (this._totalMet + this._totalMismatches + this._totalUnexpectedMatches);
-        }
         return this._totalMet / (this._totalMet + this._totalMismatches);
     }
 
     public double getRecall() {
+        System.out.println("met " + _totalMet);
+        System.out.println("expected "+ _totalExpected);
         return this._totalMet / this._totalExpected;
     }
 
@@ -99,6 +101,7 @@ public class Statistics {
         os.format(" %-8s %-30s %-4s %-4s %-4s %-4s %-4s %-7s %-7s %-7s %-7s %-7s%n", new Object[]{"RuleInstance", "Label", "Exp", "Met", "UMet", "MisM", "UExp", "Rec", "Prec+", "Prec-", "FSco+", "FSco-"});
 
         List<RuleDefinition> rdefs = new ArrayList(this._stats.keySet());
+
         Collections.sort(rdefs, new Comparator<RuleDefinition>() {
             public int compare(RuleDefinition o1, RuleDefinition o2) {
                 return o1.getName().compareTo(o2.getName());
@@ -136,12 +139,14 @@ public class Statistics {
             }
         }
 
-        void expected() {
+        private int expected() {
+
             Statistics.this._totalExpected += 1;
             this._expected += 1;
+            return Statistics.this._totalExpected;
         }
 
-        void unmet() {
+        private void unmet() {
             this._unmet += 1;
         }
 

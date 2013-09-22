@@ -51,19 +51,6 @@ public class TopicInterpreter {
         this._sentence = new StringBuilder();
     }
 
-    public static Result.Expectation getExpectation(Constituent constituent,
-                                                    RuleInstance rule) {
-
-        if (constituent.getExpected() == null)
-            return Result.Expectation.UNEXPECTED;
-
-        /**
-         * fixed a bug, where the String getExpected was compared with the getDefinition object (RuleDefinition)
-         */
-        return ((constituent.getExpected().equals(rule.getDefinition().toString())) ? Result.Expectation.MET
-                : Result.Expectation.MISMATCH);
-    }
-
     public void addMatchListener(MatchListener l) {
         this._matchListeners.add(l);
     }
@@ -75,10 +62,6 @@ public class TopicInterpreter {
     protected void fireMatch(RuleInstance r, Constituent c) {
         for (MatchListener l : this._matchListeners)
             l.match(r, c);
-    }
-
-    public RuleBook getRuleBook() {
-        return this._ruleBook;
     }
 
     public void setFilterGeneralRules(boolean b) {
@@ -93,10 +76,13 @@ public class TopicInterpreter {
         this._ruleBook.getRules(this._depth, this._activeRules, node);
         _log.debug("Active rules: " + this._activeRules.size());
 
-        this._results = new ArrayList<>();
+
+        /**
+         * required to seperate sentence within the results
+         */
         if (this._depth == 2) {
-            //this._sentence.setLength(0);
-            //this._results = new ArrayList<>();
+            this._sentence.setLength(0);
+            this._results = new ArrayList<>();
         }
 
         Iterator i = this._activeRules.iterator();
@@ -159,7 +145,7 @@ public class TopicInterpreter {
 
                     _log.debug("RuleInstance matches: " + r + " -> " +
                             r.getDefinition().getTopicType());
-                    Result.Expectation e = getExpectation(node, r);
+                    Result.Expectation e = r.getExpectation(node);
 
                     if (e == Result.Expectation.MET) {
                         expectationMet = true;
@@ -192,12 +178,13 @@ public class TopicInterpreter {
 
         RuleDefinition expected = getExpectedRule(node);
         if (expected != null) {
+            System.out.println("expectation is not null");
             this._stats.tallyExpectation(expected);
-            if (!(expectationMet)) {
+            if (!(expectationMet))
                 this._stats.tallyUnfulfilledExpectation(getExpectedRule(node));
-            }
+        } else
+            System.out.println("expectation is null!");
 
-        }
 
         if (this._depth == 1) {
             this._sentenceResults.put(XMLUtils.collapseWhitespace(this._sentence)
@@ -232,6 +219,7 @@ public class TopicInterpreter {
     }
 
     public Map<String, List<Result>> getSentenceResults() {
+        System.out.println("sentence results: " + _sentenceResults);
         return this._sentenceResults;
     }
 
@@ -240,6 +228,7 @@ public class TopicInterpreter {
     }
 
     private RuleDefinition getExpectedRule(Constituent constituent) {
+
         return this._ruleBook.getDefinitionByName(constituent.getExpected());
     }
 
