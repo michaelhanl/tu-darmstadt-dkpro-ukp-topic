@@ -199,6 +199,9 @@ public class RuleDefinition {
             return this._stack.isEmpty();
         }
 
+        /*
+         * returns the index position of the current Node
+         */
         public int getHeadDepth() {
             return this.rootDepth + this._stack.size() - 1;
         }

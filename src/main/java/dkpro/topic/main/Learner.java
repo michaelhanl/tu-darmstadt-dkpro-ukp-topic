@@ -22,8 +22,9 @@ import java.util.List;
 /**
  * this class was targeted as a wrapper class for the original learner class. I couldn't get it to work though
  *
+ * FIXME: buggy for multiple sentences in one document.
+ * Plus only recognizes the first sentence, but only at ROOT end Node
  */
-@Deprecated
 public class Learner implements Runnable, ElementHandler {
     private static final Log _log = LogFactory.getLog(Learner.class);
     private static final int CHOICE_NONE = -1;
@@ -44,6 +45,11 @@ public class Learner implements Runnable, ElementHandler {
 
     @Override
     public void onStart(ElementPath elementPath) {
+        System.out.println("element. " + elementPath.getPath());
+        if (elementPath.getCurrent().getParent() != null)   {
+           // System.out.println(elementPath.getCurrent().getParent().getName());
+        }
+
     }
 
     private static void renderXML(Node node) {
@@ -64,7 +70,7 @@ public class Learner implements Runnable, ElementHandler {
         System.out.format("Choose which rule is the right one:%n",
                 new Object[0]);
         for (int i = 0; i < rulesMatched.size(); ++i) {
-            RuleInstance r = (RuleInstance) rulesMatched.get(i);
+            RuleInstance r = rulesMatched.get(i);
             System.out.format(
                     "[%d] - %s [%s]%n",
                     new Object[]{Integer.valueOf(i),
@@ -118,30 +124,32 @@ public class Learner implements Runnable, ElementHandler {
         return choice;
     }
 
+    /**
+     * TODO: bug: the rule only matches at the last element (ROOT),
+     * but this is wrong since there can be more than one sentence in a document
+     * @param elementPath
+     */
     @Override
     public void onEnd(ElementPath elementPath) {
-        System.out.println("elementpath " + elementPath.getPath());
         Element current = elementPath.getCurrent();
-        List<RuleInstance> rulesMatched = this._tri.getRulesMatched();
-        System.out.println("current node " + this._sw.getCurrent());
-        System.out.println("current node expectation "
-                + this._sw.getCurrent().getNodeExpectation());
 
-        if (this._sw.getCurrent().getNodeExpectation() == null)
-            System.out.println("null value encountered");
+        if (elementPath.getCurrent().getParent() != null)
+            System.out.println(elementPath.getCurrent().getParent().attributeValue("cat"));
+        else
+            System.out.println("null!!");
+        /*
+         * There was a bug where the object rulesMatched was returned. At this call however this object
+         * is always null and thus causes the programme to crash
+         */
+        List<RuleInstance> rulesMatched = this._tri.getAllRulesMatched();
 
-        if ((this._skipAll) || (this._sw.getCurrent().getNodeExpectation() != null)
-                || rulesMatched.size() == 0) {
+        if (this._skipAll || this._sw.getCurrent().getNodeExpectation() != null
+                || rulesMatched.size() == 0)
             return;
-        }
-
-        renderXML(current);
 
         System.out.format("Sentence read so far: [%s]%n",
                 new Object[]{this._tri.getSentence()});
-
         renderChoices(rulesMatched);
-
         int choice = getChoice(rulesMatched.size());
 
         switch (choice) {
@@ -155,8 +163,9 @@ public class Learner implements Runnable, ElementHandler {
                 break;
             default:
                 current.addAttribute("expect",
-                        ((RuleInstance) rulesMatched.get(choice)).getName());
+                        rulesMatched.get(choice).getName());
         }
+        renderXML(current);
     }
 
     public void run() {
@@ -181,6 +190,8 @@ public class Learner implements Runnable, ElementHandler {
             RuleBook rules = new RuleBook();
             rules.read(new File(ruleFile));
 
+
+
             this._sink = new SAXContentHandler(DocumentFactory.getInstance(),
                     this);
 
@@ -192,7 +203,7 @@ public class Learner implements Runnable, ElementHandler {
             XMLUtils.parse(new File(parseFile), this._sw);
 
             System.out.println("--- Writing output file: " + outFile);
-            XMLUtils.dumpDocumentToFile(fOutFile.getName(), fOutFile.getAbsolutePath(), this._sink.getDocument());
+            XMLUtils.dumpDocumentToFile(fOutFile, this._sink.getDocument());
         } catch (Throwable e) {
             _log.fatal("Fatal error", e);
         }

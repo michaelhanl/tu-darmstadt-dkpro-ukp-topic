@@ -1,6 +1,5 @@
 package dkpro.topic.interpreter;
 
-import dkpro.topic.annotator.DocResultsHolder;
 import dkpro.topic.interpreter.data.XMLConstituent;
 import dkpro.topic.utils.Configuration;
 import org.dom4j.DocumentHelper;

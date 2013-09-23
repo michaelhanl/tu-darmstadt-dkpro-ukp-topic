@@ -1,10 +1,7 @@
 package dkpro.topic.interpreter;
 
-import dkpro.topic.annotator.DocResultsHolder;
-import dkpro.topic.annotator.Statistics;
 import dkpro.topic.interpreter.rules.Result;
 import dkpro.topic.interpreter.rules.RuleBook;
-import dkpro.topic.interpreter.rules.RuleDefinition;
 import dkpro.topic.utils.OutputWriter;
 import dkpro.topic.utils.XMLUtils;
 import org.slf4j.Logger;

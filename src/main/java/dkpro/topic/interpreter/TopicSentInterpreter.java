@@ -167,6 +167,7 @@ public class TopicSentInterpreter {
                     this._results);
             this._stats.tallySentence();
         }
+
         this._rulesMatched = null;
     }
 

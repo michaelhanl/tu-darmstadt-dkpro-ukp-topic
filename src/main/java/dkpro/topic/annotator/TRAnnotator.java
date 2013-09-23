@@ -69,7 +69,7 @@ public class TRAnnotator {
             } else {
                 sentence.addAttribute(Configuration.getAttrTopicLabel(), ruleLabels);
                 try {
-                    XMLUtils.dumpDocumentToFile(this.file.getName(), outDirFinal, document);
+                    XMLUtils.dumpDocumentToFile(new File(outDirFinal, this.file.getName()), document);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

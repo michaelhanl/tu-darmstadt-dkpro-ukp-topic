@@ -16,7 +16,6 @@ public class StatisticsContainer {
     protected int _totalMismatches;
     protected int _totalUnexpectedMatches;
 
-
     public StatisticsContainer() {
         this._sentences = 0;
         this._totalExpected = 0;
@@ -24,7 +23,6 @@ public class StatisticsContainer {
         this._totalMet = 0;
         this._totalMismatches = 0;
         this._totalUnexpectedMatches = 0;
-
         this._stats = new HashMap();
     }
 
@@ -59,19 +57,12 @@ public class StatisticsContainer {
     }
 
     public double getPrecision(boolean includeUnexpected) {
-//        int v = this._totalMet + this._totalMismatches;
-//        if ((v + this._totalUnexpectedMatches) == 0)
-//            return 0;
         if (includeUnexpected)
             return this._totalMet / (this._totalMet + this._totalMismatches + this._totalUnexpectedMatches);
-//        if (v == 0)
-//            return 0;
         return this._totalMet / Float.valueOf(this._totalMet + this._totalMismatches);
     }
 
     public double getRecall() {
-//        if (this._totalExpected == 0)
-//            return 0;
         return this._totalMet / Float.valueOf(this._totalExpected);
     }
 

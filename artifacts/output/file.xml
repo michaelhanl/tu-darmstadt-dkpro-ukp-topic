@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<ROOT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ROOT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/hanl/Projects/tu-darmstadt-dkpro-ukp-topic/artifacts/config/schema.xsd" docName="file">
 	<constituent id="001" cat="S">
 		<constituent cat="NP">
 			<constituent cat="NNP" lemma="Maria">Maria</constituent>
@@ -16,63 +16,21 @@
 		<constituent cat="." lemma="!">!</constituent>
 	</constituent>
 	<constituent id="002" cat="S">
-		<constituent cat="S">
-			<constituent cat="NP">
-				<constituent cat="PRP" lemma="she">She</constituent>
-			</constituent>
-			<constituent cat="VP">
-				<constituent cat="VBD" lemma="talk">talked</constituent>
-				<constituent cat="PP">
-					<constituent cat="TO" lemma="to">to</constituent>
-					<constituent cat="NP">
-						<constituent cat="NNP" lemma="Martin">Martin</constituent>
-					</constituent>
-				</constituent>
-				<constituent cat="PP">
-					<constituent cat="IN" lemma="on">on</constituent>
-					<constituent cat="NP">
-						<constituent cat="PRP$" lemma="she">her</constituent>
-						<constituent cat="NN" lemma="way">way</constituent>
-						<constituent cat="NN" lemma="home">home</constituent>
-					</constituent>
-				</constituent>
-			</constituent>
+		<constituent cat="NP">
+			<constituent cat="PRP" lemma="I">I</constituent>
 		</constituent>
-		<constituent cat="CC" lemma="and">and</constituent>
-		<constituent cat="S">
-			<constituent cat="NP">
-				<constituent cat="PRP" lemma="she">she</constituent>
-			</constituent>
-			<constituent cat="VP">
-				<constituent cat="VBD" lemma="be">was</constituent>
-				<constituent cat="ADJP">
-					<constituent cat="JJ" lemma="surprised">surprised</constituent>
-					<constituent cat="S">
-						<constituent cat="VP">
-							<constituent cat="TO" lemma="to">to</constituent>
-							<constituent cat="VP">
-								<constituent cat="VB" lemma="hear">hear</constituent>
-								<constituent cat="SBAR">
-									<constituent cat="IN" lemma="that">that</constituent>
-									<constituent cat="S">
-										<constituent cat="NP">
-											<constituent cat="PRP" lemma="he">he</constituent>
-										</constituent>
-										<constituent cat="VP">
-											<constituent cat="VBD" lemma="be">was</constituent>
-											<constituent cat="VP">
-												<constituent cat="VBG" lemma="get">getting</constituent>
-												<constituent cat="ADJP">
-													<constituent cat="JJ" lemma="married">married</constituent>
-												</constituent>
-											</constituent>
-										</constituent>
-									</constituent>
-								</constituent>
-							</constituent>
-						</constituent>
-					</constituent>
+		<constituent cat="VP">
+			<constituent cat="VBD" lemma="be">was</constituent>
+			<constituent cat="PP">
+				<constituent cat="IN" lemma="with">with</constituent>
+				<constituent cat="NP">
+					<constituent cat="PRP" lemma="she">her</constituent>
 				</constituent>
+			</constituent>
+			<constituent cat="NP">
+				<constituent cat="DT" lemma="the">the</constituent>
+				<constituent cat="JJ" lemma="entire">entire</constituent>
+				<constituent cat="NN" lemma="time">time</constituent>
 			</constituent>
 		</constituent>
 		<constituent cat="." lemma=".">.</constituent>

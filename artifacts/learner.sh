@@ -5,9 +5,9 @@ v2="themeOffice.jar"
 v3="dkpro.ukp.topic.structure.jar"
 input="output/file.xml"
 output="output/file2.xml"
-language="german"
+language="english"
 modal="factored"
-rule="config/Rules_DE.xml"
+rule="config/Rules_EN.xml"
 
 parameters="-learn $rule $input $output"
 

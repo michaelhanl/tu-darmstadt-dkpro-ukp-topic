@@ -45,9 +45,9 @@ public final class XMLUtils {
         p.parse(is, h);
     }
 
-    public static void dumpDocumentToFile(String fileName, String altPath, Document doc) throws IOException {
-        jlog.info("writing XML file {} with annotation to directory {}",
-                fileName, altPath);
+    public static void dumpDocumentToFile(File file, Document doc) throws IOException {
+        jlog.info("writing XML file {} with annotation to directory",
+                file.getAbsolutePath());
         String encode;
         OutputFormat outformat = OutputFormat.createPrettyPrint();
 
@@ -57,9 +57,7 @@ public final class XMLUtils {
             encode = doc.getXMLEncoding();
 
         outformat.setEncoding(encode);
-        File out = new File(altPath, fileName);
-
-        FileOutputStream ous = new FileOutputStream(out);
+        FileOutputStream ous = new FileOutputStream(file);
         Writer osw = new BufferedWriter(new OutputStreamWriter(ous, encode));
 
         XMLWriter writer = new XMLWriter(osw,

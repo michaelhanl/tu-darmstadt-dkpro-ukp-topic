@@ -1,6 +1,5 @@
 package dkpro.topic.utils;
 
-import dkpro.topic.annotator.Statistics;
 import dkpro.topic.interpreter.rules.Result;
 import dkpro.topic.interpreter.rules.RuleBook;
 import dkpro.topic.interpreter.rules.RuleDefinition;
@@ -17,13 +16,12 @@ import java.util.*;
  */
 public class OutputWriter {
 
-    private Logger stats = LoggerFactory.getLogger(Statistics.statLogger);
+    private Logger stats = LoggerFactory.getLogger("statLogger");
     private PrintStream out;
 
     public OutputWriter(PrintStream out) {
         this.out = out;
     }
-
 
     public void writeOutResults(Map<String, List<Result>> sentenceResults) {
         int numberOfSentences = 0;
