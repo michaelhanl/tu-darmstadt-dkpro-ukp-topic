@@ -1,10 +1,13 @@
 package dkpro.topic.utils;
 
+import dkpro.topic.interpreter.rules.Result;
 import org.dom4j.Document;
 import org.dom4j.Node;
 import org.dom4j.io.OutputFormat;
 import org.dom4j.io.SAXWriter;
 import org.dom4j.io.XMLWriter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
@@ -12,8 +15,13 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.*;
+import java.util.List;
 
 public final class XMLUtils {
+
+    private static Logger jlog = LoggerFactory.getLogger(XMLUtils.class);
+    private static final String default_encoding = "UTF-8";
+
     public static void parse(File f, DefaultHandler h)
             throws ParserConfigurationException, SAXException, IOException {
         SAXParserFactory sp = SAXParserFactory.newInstance();
@@ -37,35 +45,33 @@ public final class XMLUtils {
         p.parse(is, h);
     }
 
-    public static void dumpToFile(File f, Document doc)
-            throws IOException {
-        OutputStream os = null;
-        try {
-            os = new FileOutputStream(f);
-            String encoding = doc.getXMLEncoding();
+    public static void dumpDocumentToFile(String fileName, String altPath, Document doc) throws IOException {
+        jlog.info("writing XML file {} with annotation to directory {}",
+                fileName, altPath);
+        String encode;
+        OutputFormat outformat = OutputFormat.createPrettyPrint();
 
-            if (encoding == null) {
-                encoding = "UTF-8";
-            }
+        if (doc.getXMLEncoding() == null)
+            encode = default_encoding;
+        else
+            encode = doc.getXMLEncoding();
 
-            XMLWriter writer = null;
-            Writer osw = new BufferedWriter(new OutputStreamWriter(os, encoding));
+        outformat.setEncoding(encode);
+        File out = new File(altPath, fileName);
 
-            writer = new XMLWriter(osw, new OutputFormat("  ", false, encoding));
+        FileOutputStream ous = new FileOutputStream(out);
+        Writer osw = new BufferedWriter(new OutputStreamWriter(ous, encode));
 
-            writer.write(doc);
-            writer.flush();
-        } finally {
-            if (os != null)
-                try {
-                    os.close();
-                } catch (IOException e) {
-                }
-        }
+        XMLWriter writer = new XMLWriter(osw,
+                outformat);
+        writer.write(doc);
+        writer.flush();
+        writer.close();
     }
 
     public static StringBuilder collapseWhitespace(StringBuilder sb) {
         boolean drop = true;
+
         int length = sb.length();
         int ipos = 0;
         for (int i = 0; i < length; i++) {
@@ -87,6 +93,25 @@ public final class XMLUtils {
         return sb;
     }
 
+    public static String ruleEnumeration(List<Result> results) {
+        StringBuilder b = new StringBuilder();
+        if (results == null || results.size() == 0)
+            return null;
+        for (Result r: results)
+            b.append(r.getRule().getDefinition().getTopicType()+ ";");
+        b.deleteCharAt(b.length()-1);
+        return b.toString();
+    }
+
+    public static String splitSentenceIdentifier(String s) {
+        return s.split(":")[0];
+    }
+
+    public static String splitSentence(String s) {
+        return s.split(":")[1];
+    }
+
+
     public static void close(Closeable o) {
         if (o == null) return;
         try {
@@ -94,4 +119,5 @@ public final class XMLUtils {
         } catch (IOException e) {
         }
     }
+
 }

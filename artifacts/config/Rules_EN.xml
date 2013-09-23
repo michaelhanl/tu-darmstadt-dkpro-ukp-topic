@@ -2,167 +2,167 @@
 <rules>
     <rule id="rule 1" label="Unmarked Subject" level="9">
         <!-- Example: The duke has given my aunt that teapot. -->
-        <Constituent cat="S">
-            <Constituent cat="NP" isTheme="true">
+        <constituent cat="S">
+            <constituent cat="NP" isTheme="true">
                 <relax/>
-            </Constituent>
+            </constituent>
             <relax/>
-            <Constituent cat="VP">
+            <constituent cat="VP">
                 <relax/>
-            </Constituent>
+            </constituent>
             <relax/>
-        </Constituent>
+        </constituent>
     </rule>
     <rule id="rule 2" label="Existential There" level="8">
         <!-- Example: There were three jovial Welshmen. -->
-        <Constituent cat="S">
-            <Constituent cat="NP">
-                <Constituent cat="EX" isTheme="true">
+        <constituent cat="S">
+            <constituent cat="NP">
+                <constituent cat="EX" isTheme="true">
                     <relax/>
-                </Constituent>
-            </Constituent>
-            <Constituent cat="VP">
+                </constituent>
+            </constituent>
+            <constituent cat="VP">
                 <relax/>
-            </Constituent>
+            </constituent>
             <relax/>
-        </Constituent>
+        </constituent>
     </rule>
     <rule id="rule 3" label="Unmarked Nominalization" level="4">
         <!-- Example: What the duke gave to my aunt was that teapot. -->
-        <Constituent cat="S">
-            <Constituent cat="SBAR" isTheme="true">
+        <constituent cat="S">
+            <constituent cat="SBAR" isTheme="true">
                 <relax/>
-            </Constituent>
+            </constituent>
             <relax/>
-            <Constituent cat="VP">
+            <constituent cat="VP">
                 <relax/>
-            </Constituent>
-            <Constituent hw="." cat="." tag="." ht=".">
+            </constituent>
+            <constituent hw="." cat="." tag="." ht=".">
                 <relax/>
-            </Constituent>
-        </Constituent>
+            </constituent>
+        </constituent>
     </rule>
     <rule id="rule 4" label="Marked Adjunct: Adverbial Phrase" level="2">
         <!-- Example: Merrily we roll along. -->
-        <Constituent cat="S">
-            <Constituent cat="ADVP" isTheme="true">
+        <constituent cat="S">
+            <constituent cat="ADVP" isTheme="true">
                 <relax/>
-            </Constituent>
-            <Constituent cat="NP">
+            </constituent>
+            <constituent cat="NP">
                 <relax/>
-            </Constituent>
-            <Constituent cat="VP">
+            </constituent>
+            <constituent cat="VP">
                 <relax/>
-            </Constituent>
+            </constituent>
             <relax/>
-        </Constituent>
+        </constituent>
     </rule>
     <rule id="rule 5" label="Marked Adjunct: PP" level="2">
         <!-- Example: From house to house I went my way. -->
-        <Constituent cat="S">
-            <Constituent cat="PP" isTheme="true">
+        <constituent cat="S">
+            <constituent cat="PP" isTheme="true">
                 <relax/>
-            </Constituent>
+            </constituent>
             <relax/>
-            <Constituent cat="VP">
+            <constituent cat="VP">
                 <relax/>
-            </Constituent>
+            </constituent>
             <relax/>
-        </Constituent>
+        </constituent>
     </rule>
     <rule id="rule 6" label="Marked: Object as Theme" level="6">
         <!-- Example: The teapot the duke has given my aunt. -->
-        <Constituent cat="S">
-            <Constituent cat="NP" isTheme="true">
+        <constituent cat="S">
+            <constituent cat="NP" isTheme="true">
                 <relax/>
-            </Constituent>
-            <Constituent cat="NP">
+            </constituent>
+            <constituent cat="NP">
                 <relax/>
-            </Constituent>
-            <Constituent cat="VP">
+            </constituent>
+            <constituent cat="VP">
                 <relax/>
-            </Constituent>
+            </constituent>
             <relax/>
-        </Constituent>
+        </constituent>
     </rule>
     <rule id="rule 7" label="Exclamative" level="2">
         <!-- Example: How dreadful she sounds. -->
-        <Constituent cat="S">
-            <Constituent cat="ADJP" isTheme="true">
+        <constituent cat="S">
+            <constituent cat="ADJP" isTheme="true">
                 <relax/>
-            </Constituent>
-            <Constituent cat="NP">
+            </constituent>
+            <constituent cat="NP">
                 <relax/>
-            </Constituent>
-            <Constituent cat="VP">
+            </constituent>
+            <constituent cat="VP">
                 <relax/>
-            </Constituent>
+            </constituent>
             <relax/>
-        </Constituent>
+        </constituent>
     </rule>
     <rule id="rule 9" label="Unmarked: WH-Question" level="1">
         <!-- Example: Who wants a glass of wine? -->
-        <Constituent cat="SBARQ">
-            <Constituent cat="(WHNP|WHADVP)" isTheme="true">
+        <constituent cat="SBARQ">
+            <constituent cat="(WHNP|WHADVP)" isTheme="true">
                 <relax/>
-            </Constituent>
+            </constituent>
             <relax/>
-            </Constituent>
+            </constituent>
     </rule>
     <rule id="rule 10" label="Unmarked: Yes/No Interrogative" level="1">
         <!-- Example: Did you sleep okay? -->
-        <Constituent cat="SQ">
-            <Constituent cat="(.*)" isTheme="true">
+        <constituent cat="SQ">
+            <constituent cat="(.*)" isTheme="true">
                 <relax/>
-            </Constituent>
+            </constituent>
             <relax/>
-            </Constituent>
+            </constituent>
     </rule>
     <rule id="rule 11" label="Unmarked Imperative" level="2">
         <!-- Example: Turn it down. -->
-        <Constituent cat="S">
-            <Constituent cat="VP">
-                <Constituent cat="VB" isTheme="true">
+        <constituent cat="S">
+            <constituent cat="VP">
+                <constituent cat="VB" isTheme="true">
                     <relax/>
-                </Constituent>
+                </constituent>
                 <relax/>
-            </Constituent>
+            </constituent>
             <relax/>
-        </Constituent>
+        </constituent>
     </rule>
     <rule id="rule 12" label="Unmarked Thematic Equative" level="4">
         <!-- Example: The one who gave my aunt that teapot was the duke. -->
-        <Constituent cat="S">
-            <Constituent cat="NP" isTheme="true">
-                <Constituent cat="NP">
+        <constituent cat="S">
+            <constituent cat="NP" isTheme="true">
+                <constituent cat="NP">
                     <relax/>
-                </Constituent>
-                <Constituent cat="SBAR">
+                </constituent>
+                <constituent cat="SBAR">
                     <relax/>
-                </Constituent>
-            </Constituent>
-            <Constituent cat="VP">
+                </constituent>
+            </constituent>
+            <constituent cat="VP">
                 <relax/>
-            </Constituent>
+            </constituent>
             <relax/>
-        </Constituent>
+        </constituent>
     </rule>
     <rule id="rule 13" label="Marked Thematic Equative" level="5">
         <!-- Example: That is the one I like. -->
-        <Constituent cat="S">
-            <Constituent cat="NP">
-                <Constituent cat="DT" isTheme="true">
+        <constituent cat="S">
+            <constituent cat="NP">
+                <constituent cat="DT" isTheme="true">
                     <relax/>
-                </Constituent>
-            </Constituent>
-            <Constituent cat="VP">
+                </constituent>
+            </constituent>
+            <constituent cat="VP">
                 <relax/>
-                <Constituent cat="SBAR">
+                <constituent cat="SBAR">
                     <relax/>
-                </Constituent>
+                </constituent>
                 <relax/>
-            </Constituent>
+            </constituent>
             <relax/>
-            </Constituent>
+            </constituent>
     </rule>
 </rules>

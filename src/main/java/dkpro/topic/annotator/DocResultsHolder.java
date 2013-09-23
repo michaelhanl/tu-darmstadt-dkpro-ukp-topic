@@ -11,6 +11,7 @@ import java.util.List;
 /**
  * @author hanl@ids-mannheim.de
  */
+@Deprecated
 public class DocResultsHolder {
     private Logger jlog = LoggerFactory.getLogger(DocResultsHolder.class);
     // allows multiple instances of the same rule type to be stored for every

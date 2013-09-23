@@ -1,12 +1,11 @@
 package dkpro.topic.interpreter.rules;
 
 
-import dkpro.topic.annotator.DocResultsHolder;
-import dkpro.topic.interpreter.data.Constituent;
 import dkpro.topic.interpreter.SAXParser;
-import dkpro.topic.utils.*;
+import dkpro.topic.interpreter.TopicSentInterpreter;
+import dkpro.topic.interpreter.data.Constituent;
+import dkpro.topic.utils.Configuration;
 import dkpro.topic.utils.XMLUtils;
-import dkpro.topic.interpreter.TopicInterpreter;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.dom4j.Document;
@@ -105,18 +104,18 @@ public class RuleDefinition {
         return r;
     }
 
+    /*
+     * see if rd contains elements that are part of this rule, thus, this rule is superseeded
+     */
     public boolean matches(RuleDefinition rd) {
-        Boolean match = (Boolean) this._matchesDefinition.get(rd);
+        Boolean match = this._matchesDefinition.get(rd);
         if (match != null)
-            return match.booleanValue();
+            return match;
 
         Element firstRuleElement = (Element) rd.getStructure().selectSingleNode("/ROOT/*");
-
-        match = Boolean.valueOf(matches(firstRuleElement));
-
+        match = matches(firstRuleElement);
         this._matchesDefinition.put(rd, match);
-
-        return match.booleanValue();
+        return match;
     }
 
     public boolean matches(Element element) {
@@ -124,10 +123,9 @@ public class RuleDefinition {
         try {
             RuleBook testBook = new RuleBook();
             testBook.addRule(this);
-            DocResultsHolder topicResults = DocResultsHolder.createResultMap();
-            TopicInterpreter tri = new TopicInterpreter(testBook);
+            TopicSentInterpreter tri = new TopicSentInterpreter(testBook);
 
-            SAXParser sw = new SAXParser(tri, topicResults);
+            SAXParser sw = new SAXParser(tri);
 
             XMLUtils.parse(element, sw);
 

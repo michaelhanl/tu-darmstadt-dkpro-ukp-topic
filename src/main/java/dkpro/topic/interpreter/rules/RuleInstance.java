@@ -8,13 +8,13 @@ import org.slf4j.LoggerFactory;
 
 public class RuleInstance {
     private final RuleDefinition _ruleDefinition;
-    //FIXME: variable is never filled with text
-    private final StringBuilder _matchText;
     private final RuleDefinition.RelaxStack _relaxStack;
     private final int _instance_id;
     Logger jlog = LoggerFactory.getLogger(RuleInstance.class);
     private Element _cursor;
     private int _createdAtDepth;
+    private StringBuilder textMatch;
+
     //FIXME: add sentence result to this container and return list as replacement for DocHolderContainer
 
     public RuleInstance(RuleDefinition ruleDefinition, int createdAtDepth) {
@@ -25,20 +25,20 @@ public class RuleInstance {
         this._relaxStack = new RuleDefinition.RelaxStack();
         this._cursor = this._ruleDefinition._structure.getRootElement();
         jlog.info("root element {}", this._cursor);
-        this._matchText = new StringBuilder();
+        textMatch = new StringBuilder();
 
         advanceCursor();
     }
 
 
     public Result.Expectation getExpectation(Constituent constituent) {
-        if (constituent.getExpected() == null)
+        if (constituent.getNodeExpectation() == null)
             return Result.Expectation.UNEXPECTED;
 
         /**
-         * fixed a bug, where the String getExpected was compared with the getDefinition object (RuleDefinition)
+         * fixed a bug, where the String getNodeExpectation was compared with the getDefinition object (RuleDefinition)
          */
-        return ((constituent.getExpected().equals(getDefinition().toString())) ? Result.Expectation.MET
+        return ((constituent.getNodeExpectation().equals(getDefinition().getName())) ? Result.Expectation.MET
                 : Result.Expectation.MISMATCH);
     }
 
@@ -55,9 +55,8 @@ public class RuleInstance {
     }
 
     private int getElementDepth(Element element) {
-        if (element == null) {
+        if (element == null)
             return -1;
-        }
 
         int depth = -1;
 
@@ -168,7 +167,6 @@ public class RuleInstance {
 
         return remove;
     }
-
     public Element peekAhead() {
         Element oldCursor = this._cursor;
         advanceCursor();
@@ -197,8 +195,12 @@ public class RuleInstance {
         return this._createdAtDepth;
     }
 
-    public StringBuilder getMatchText() {
-        return this._matchText;
+    public void addTextMatch(String s) {
+        this.textMatch.append(s);
+    }
+
+    public StringBuilder getTextMatch() {
+        return this.textMatch;
     }
 
     public boolean expectsMore() {
@@ -236,7 +238,6 @@ public class RuleInstance {
         sb.append(" -> ");
         sb.append(ahead);
         sb.append("]");
-        sb.append(" text " + getMatchText());
 
         return sb.toString();
     }

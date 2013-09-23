@@ -1,10 +1,10 @@
 package dkpro.topic.main;
 
 import dkpro.topic.interpreter.SAXParser;
+import dkpro.topic.interpreter.TopicSentInterpreter;
 import dkpro.topic.interpreter.rules.RuleBook;
 import dkpro.topic.interpreter.rules.RuleInstance;
 import dkpro.topic.utils.XMLUtils;
-import dkpro.topic.interpreter.TopicInterpreter;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.log4j.BasicConfigurator;
@@ -34,7 +34,7 @@ public class Learner implements Runnable, ElementHandler {
     private static final String CHOICE_SKIP_KEY = "s";
     private final String[] _args;
     private SAXContentHandler _sink;
-    private TopicInterpreter _tri;
+    private TopicSentInterpreter _tri;
     private SAXParser _sw;
     private boolean _skipAll = false;
 
@@ -69,7 +69,7 @@ public class Learner implements Runnable, ElementHandler {
                     "[%d] - %s [%s]%n",
                     new Object[]{Integer.valueOf(i),
                             r.getDefinition().getTopicType(),
-                            XMLUtils.collapseWhitespace(r.getMatchText())});
+                            XMLUtils.collapseWhitespace(r.getTextMatch())});
         }
 
         System.out.format("[%s] - %s%n", new Object[]{"n",
@@ -125,12 +125,12 @@ public class Learner implements Runnable, ElementHandler {
         List<RuleInstance> rulesMatched = this._tri.getRulesMatched();
         System.out.println("current node " + this._sw.getCurrent());
         System.out.println("current node expectation "
-                + this._sw.getCurrent().getExpected());
+                + this._sw.getCurrent().getNodeExpectation());
 
-        if (this._sw.getCurrent().getExpected() == null)
+        if (this._sw.getCurrent().getNodeExpectation() == null)
             System.out.println("null value encountered");
 
-        if ((this._skipAll) || (this._sw.getCurrent().getExpected() != null)
+        if ((this._skipAll) || (this._sw.getCurrent().getNodeExpectation() != null)
                 || rulesMatched.size() == 0) {
             return;
         }
@@ -184,15 +184,15 @@ public class Learner implements Runnable, ElementHandler {
             this._sink = new SAXContentHandler(DocumentFactory.getInstance(),
                     this);
 
-            this._tri = new TopicInterpreter(rules);
+            this._tri = new TopicSentInterpreter(rules);
             this._tri.setFilterGeneralRules(false);
 
-            this._sw = new SAXParser(this._tri, null);
+            this._sw = new SAXParser(this._tri);
             this._sw.filter(this._sink);
             XMLUtils.parse(new File(parseFile), this._sw);
 
             System.out.println("--- Writing output file: " + outFile);
-            XMLUtils.dumpToFile(fOutFile, this._sink.getDocument());
+            XMLUtils.dumpDocumentToFile(fOutFile.getName(), fOutFile.getAbsolutePath(), this._sink.getDocument());
         } catch (Throwable e) {
             _log.fatal("Fatal error", e);
         }

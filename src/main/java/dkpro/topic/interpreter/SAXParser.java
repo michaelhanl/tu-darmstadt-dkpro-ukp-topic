@@ -1,6 +1,7 @@
 package dkpro.topic.interpreter;
 
 import dkpro.topic.annotator.DocResultsHolder;
+import dkpro.topic.interpreter.data.XMLConstituent;
 import dkpro.topic.utils.Configuration;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
@@ -18,34 +19,25 @@ import java.util.Stack;
  */
 public class SAXParser extends SAXFilter {
     private final Stack<XMLConstituent> _stack = new Stack();
-    // FIXME: internally (RuleInstance) there is also another instance of
-    // themeruleinterpreter used. how to overcome this?
-    private final TopicInterpreter _interpreter;
+    private final TopicSentInterpreter _interpreter;
     private String docName;
     private String sentenceID;
-    @Deprecated
-    private DocResultsHolder results;
 
-
-    public SAXParser(TopicInterpreter i, DocResultsHolder results) {
+    public SAXParser(TopicSentInterpreter i) {
         this._interpreter = i;
         this.docName = new String();
         this.sentenceID = new String();
-        this.results = results;
     }
-
 
     @Override
     public void startElement(String uri, String localName, String name,
                              Attributes attributes) throws SAXException {
 //        FIXME: docname probably not needed!
-        if (localName.equals(Configuration.getDocRoot())) {
+        if (localName.equals(Configuration.getDocRoot()))
             docName = attributes.getValue(Configuration.getAttrDocName());
-        }
 
-        if (localName.equals(Configuration.getElementSentence())) {
+        if (localName.equals(Configuration.getElementSentence()))
             sentenceID = attributes.getValue(Configuration.getAttrSentenceID());
-        }
 
         Element e = DocumentHelper.createElement(QName
                 .get(localName, uri, name));
@@ -59,9 +51,9 @@ public class SAXParser extends SAXFilter {
 
         XMLConstituent parent = null;
         if (!(this._stack.isEmpty())) {
-            parent = (XMLConstituent) this._stack.peek();
+            parent = this._stack.peek();
         }
-        XMLConstituent constituent = new XMLConstituent(parent, e);
+        XMLConstituent constituent = new XMLConstituent(parent, e, sentenceID);
 
         this._stack.push(constituent);
         this._interpreter.startElement(constituent);
@@ -77,25 +69,20 @@ public class SAXParser extends SAXFilter {
 
         super.endElement(uri, localName, name);
 
-        XMLConstituent constituent = (XMLConstituent) this._stack.peek();
+        XMLConstituent constituent = this._stack.peek();
         this._interpreter.endElement(constituent);
         this._stack.pop();
-
-        if (localName.equals(Configuration.getElementSentence())) {
-            results.addAll(sentenceID, _interpreter.getSentenceTopics());
-        }
 
     }
 
     @Override
-    public void characters(char[] ch, int start, int length) throws SAXException
-    {
+    public void characters(char[] ch, int start, int length) throws SAXException {
         this._interpreter.chars(getCurrent(), new String(ch, start, length));
     }
 
 
     public XMLConstituent getCurrent() {
-        return ((XMLConstituent) this._stack.peek());
+        return this._stack.peek();
     }
 
 }

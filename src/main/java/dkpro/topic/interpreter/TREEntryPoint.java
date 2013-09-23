@@ -50,11 +50,11 @@ public class TREEntryPoint extends JCasConsumer_ImplBase {
 
         try {
             _log.info("Running TreeRuleEngine!");
-            TRParser walker = TRParser.runner(
+            TopicXMLParserHandler walker = TopicXMLParserHandler.runner(
                     ConfigUtils.getRuleFile(), targetFile);
 
             if (Main.isAEn())
-                TRAnnotator.annotate(targetFile, walker.getDocResults());
+                TRAnnotator.annotate(targetFile, walker.getSentenceResults());
         } catch (Exception e) {
             _log.error("TreeRuleEngine exit with error!", e);
         }

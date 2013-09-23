@@ -1,6 +1,5 @@
 package dkpro.topic.interpreter.rules;
 
-import dkpro.topic.interpreter.data.Constituent;
 import dkpro.topic.utils.XMLUtils;
 
 public class Result {
@@ -9,7 +8,7 @@ public class Result {
     private final RuleDefinition _expectedRule;
     private final boolean _removed;
 
-    public Result(RuleInstance rule, Expectation expectation, RuleDefinition expectedRule, boolean removed) {
+    public Result(RuleInstance rule, Expectation expectation, RuleDefinition expectedRule, String sentID, boolean removed) {
         this._rule = rule;
         this._expectation = expectation;
         this._expectedRule = expectedRule;
@@ -17,7 +16,11 @@ public class Result {
     }
 
     public String getSentence() {
-        return XMLUtils.collapseWhitespace(this._rule.getMatchText()).toString();
+        return XMLUtils.collapseWhitespace(this._rule.getTextMatch()).toString();
+    }
+
+    public RuleInstance getRule() {
+        return _rule;
     }
 
     public Expectation getExpectation() {

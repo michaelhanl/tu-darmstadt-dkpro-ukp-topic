@@ -14,10 +14,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class RuleBook
         implements Iterable<RuleDefinition> {
@@ -47,12 +44,27 @@ public class RuleBook
 
     public RuleDefinition getDefinitionByName(String name) {
         for (RuleDefinition def : this._ruleDefinitions) {
-            if (def.getName().equals(name)) {
+            if (def.getName().equals(name))
                 return def;
-            }
         }
         return null;
     }
+
+    public Map<RuleDefinition, Collection<RuleDefinition>> generateRules() {
+        _log.debug("--- We are going through the rules determining how they relate");
+        Map<RuleDefinition, Collection<RuleDefinition>> ruleGen = new LinkedHashMap<>();
+
+        for (RuleDefinition r1 : this) {
+            Collection<RuleDefinition> supersededBy = new ArrayList<>();
+            for (RuleDefinition r2 : this) {
+                if ((r1 != r2) && (r1.matches(r2)))
+                    supersededBy.add(r2);
+            }
+            ruleGen.put(r1, supersededBy);
+        }
+        return ruleGen;
+    }
+
 
 
     public void read(File file)
@@ -84,8 +96,8 @@ public class RuleBook
         public void startElement(String uri, String localName, String name, Attributes attributes)
                 throws SAXException {
             if (TAG_RULE.equals(name)) {
-                this._currentName = attributes.getValue(ATTR_RULE_IDENTIFIER);
-                this._currentType = attributes.getValue(ATTR_TOPIC_TYPE);
+                this._currentName = attributes.getValue(ATTR_RULE_IDENTIFIER).trim();
+                this._currentType = attributes.getValue(ATTR_TOPIC_TYPE).trim();
 
                 //the saxhandler introduces start and end ROOT tags, so each rule can be parsed seperately!!
                 this._currentRuleStructure = new SAXContentHandler();
