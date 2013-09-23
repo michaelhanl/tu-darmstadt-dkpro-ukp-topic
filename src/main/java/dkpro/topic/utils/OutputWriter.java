@@ -63,16 +63,17 @@ public class OutputWriter {
         out.format("====== STATISTICS ======%n", new Object[0]);
         out.format("%n===== Overall statistics =====%n", new Object[0]);
         out.format("| Sentences found                        | %7d |%n", new Object[]{Integer.valueOf(stats._sentences)});
-        out.format("| Avg matches per sentence               | %7.2f |%n", new Object[]{Double.valueOf(stats._totalMatches / stats._sentences)});
-        out.format("| Total matches                          | %7d |%n", new Object[]{Integer.valueOf(stats._totalMatches)});
-        out.format("| Total matches MET             (true +) | %7d |%n", new Object[]{Integer.valueOf(stats._totalMet)});
-        out.format("| Total matches UNEXPECTED     (false +) | %7d |%n", new Object[]{Integer.valueOf(stats._totalUnexpectedMatches)});
-        out.format("| Total matches MISMATCHed     (false +) | %7d |%n", new Object[]{Integer.valueOf(stats._totalMismatches)});
+        out.format("| Avg matches per sentence               | %7.2f |%n", new Object[]{Float.valueOf(stats._totalMatches /
+                stats._sentences)});
+        out.format("| Total matches                          | %7d |%n", new Object[]{stats._totalMatches});
+        out.format("| Total matches MET             (true +) | %7d |%n", new Object[]{stats._totalMet});
+        out.format("| Total matches UNEXPECTED     (false +) | %7d |%n", new Object[]{stats._totalUnexpectedMatches});
+        out.format("| Total matches MISMATCHed     (false +) | %7d |%n", new Object[]{stats._totalMismatches});
         out.format("| Overall recall                         | %6.2f%% |%n", new Object[]{Double.valueOf(stats.getRecall() * 100.0D)});
         out.format("| Overall precision    (with unexpected) | %6.2f%% |%n", new Object[]{Double.valueOf(stats.getPrecision(true) * 100.0D)});
         out.format("| Overall precision (without unexpected) | %6.2f%% |%n", new Object[]{Double.valueOf(stats.getPrecision(false) * 100.0D)});
-        out.format("| Overall f-score      (with unexpected) | %7.4f |%n", new Object[]{Double.valueOf(stats.getFScore(true, 1.0D))});
-        out.format("| Overall f-score   (without unexpected) | %7.4f |%n", new Object[]{Double.valueOf(stats.getFScore(false, 1.0D))});
+        out.format("| Overall f-score      (with unexpected) | %7.4f |%n", new Object[]{Double.valueOf(stats.getFScore(true, 1.0F))});
+        out.format("| Overall f-score   (without unexpected) | %7.4f |%n", new Object[]{Double.valueOf(stats.getFScore(false, 1.0F))});
 
         out.format("%n===== Detail statistics =====%n", new Object[]{Integer.valueOf(stats._sentences)});
         out.format("%-8s%-30s%-4s%-4s%-4s%-4s %-4s %-7s %-7s %-7s %-7s %-7s%n", new Object[]{"RuleInstance", "Label", "Exp", "Met", "UMet", "MisM", "UExp", "Rec", "Prec+", "Prec-", "FSco+", "FSco-"});

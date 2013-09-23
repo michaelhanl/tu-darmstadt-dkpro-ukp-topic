@@ -59,25 +59,25 @@ public class StatisticsContainer {
     }
 
     public double getPrecision(boolean includeUnexpected) {
-        int v = this._totalMet + this._totalMismatches;
-        if ((v + this._totalUnexpectedMatches) == 0)
-            return 0;
+//        int v = this._totalMet + this._totalMismatches;
+//        if ((v + this._totalUnexpectedMatches) == 0)
+//            return 0;
         if (includeUnexpected)
             return this._totalMet / (this._totalMet + this._totalMismatches + this._totalUnexpectedMatches);
-        if (v == 0)
-            return 0;
-        return this._totalMet / (this._totalMet + this._totalMismatches);
+//        if (v == 0)
+//            return 0;
+        return this._totalMet / Float.valueOf(this._totalMet + this._totalMismatches);
     }
 
     public double getRecall() {
-        if (this._totalExpected == 0)
-            return 0;
-        return this._totalMet / this._totalExpected;
+//        if (this._totalExpected == 0)
+//            return 0;
+        return this._totalMet / Float.valueOf(this._totalExpected);
     }
 
-    public double getFScore(boolean includeUnexpected, double alpha) {
-        double precision = getPrecision(includeUnexpected);
-        double recall = getRecall();
+    public double getFScore(boolean includeUnexpected, float alpha) {
+        float precision = new Float(getPrecision(includeUnexpected));
+        float recall = new Float(getRecall());
 
         return (1.0D + alpha) * (precision * recall) / (alpha * precision + recall);
     }
@@ -121,29 +121,28 @@ public class StatisticsContainer {
         }
 
         private double getPrecision(boolean includeUnexpected) {
-            if ((this._met + this._mismatch + this._unexpectedMatch) == 0)
-                return 0;
             if (includeUnexpected)
-                return this._met / (this._met + this._mismatch + this._unexpectedMatch);
-            if ((this._met + this._mismatch) == 0)
-                return 0;
-            return this._met / (this._met + this._mismatch);
+                return this._met / Float.valueOf(this._met + this._mismatch + this._unexpectedMatch);
+            return this._met / Float.valueOf(this._met + this._mismatch);
         }
 
         private double getRecall() {
-            if (this._expected == 0)
-                return 0;
-            return this._met / this._expected;
+            return this._met / Float.valueOf(this._expected);
         }
 
-        private double getFScore(boolean includeUnexpected, double alpha) {
-            double precision = getPrecision(includeUnexpected);
-            double recall = getRecall();
-            return (1.0D + alpha) * (precision * recall) / (alpha * precision + recall);
+        private double getFScore(boolean includeUnexpected, float alpha) {
+            float precision = new Float(getPrecision(includeUnexpected));
+            float recall = new Float(getRecall());
+            return (1.0D + alpha) * (precision * recall) / Float.valueOf(alpha * precision + recall);
         }
 
         public String toString() {
-            return String.format("[%-8s|%-30s|%4d|%4d|%4d|%4d|%4d|%6.2f%%|%6.2f%%|%6.2f%%|%7.4f|%7.4f]", new Object[]{this._definition.getName(), this._definition.getTopicType(), Integer.valueOf(this._expected), Integer.valueOf(this._met), Integer.valueOf(this._unmet), Integer.valueOf(this._mismatch), Integer.valueOf(this._unexpectedMatch), Double.valueOf(getRecall() * 100.0D), Double.valueOf(getPrecision(true) * 100.0D), Double.valueOf(getPrecision(false) * 100.0D), Double.valueOf(getFScore(true, 1.0D)), Double.valueOf(getFScore(false, 1.0D))});
+            return String.format("[%-8s|%-30s|%4d|%4d|%4d|%4d|%4d|%6.2f%%|%6.2f%%|%6.2f%%|%7.4f|%7.4f]",
+                    new Object[]{this._definition.getName(), this._definition.getTopicType(), Integer.valueOf(this._expected),
+                            Integer.valueOf(this._met), Integer.valueOf(this._unmet), Integer.valueOf(this._mismatch),
+                            Integer.valueOf(this._unexpectedMatch), Double.valueOf(getRecall() * 100.0D),
+                            Double.valueOf(getPrecision(true) * 100.0D), Double.valueOf(getPrecision(false) * 100.0D),
+                            Double.valueOf(getFScore(true, 1.0F)), Double.valueOf(getFScore(false, 1.0F))});
         }
     }
 }

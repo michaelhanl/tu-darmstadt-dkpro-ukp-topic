@@ -146,7 +146,7 @@ public class RuleDefinition {
         return e != null ? e.getName() + "/" + e.attributeValue(Configuration.getAttrConstType()) : null;
     }
 
-    protected static class RelaxStack {
+    public static class RelaxStack {
         private final Stack<Constituent> _stack = new Stack();
         private int rootDepth;
 
