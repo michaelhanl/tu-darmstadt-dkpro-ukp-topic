@@ -8,7 +8,8 @@ public class Result {
     private final RuleDefinition _expectedRule;
     private final boolean _removed;
 
-    public Result(RuleInstance rule, Expectation expectation, RuleDefinition expectedRule, String sentID, boolean removed) {
+    public Result(RuleInstance rule, Expectation expectation, RuleDefinition expectedRule,
+                  boolean removed) {
         this._rule = rule;
         this._expectation = expectation;
         this._expectedRule = expectedRule;

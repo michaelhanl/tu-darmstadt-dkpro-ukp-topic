@@ -136,7 +136,7 @@ public class TopicSentInterpreter {
                         this._stats.tallyMatch(r, e);
 
                     }
-                    this._results.add(new Result(r, e, getExpectedRule(node), c.getSentenceID(),
+                    this._results.add(new Result(r, e, getExpectedRule(node),
                             removed));
                 } else {
                     _log.debug("RuleInstance left scope (" +
