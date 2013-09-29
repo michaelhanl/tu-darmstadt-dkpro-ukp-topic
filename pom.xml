@@ -19,7 +19,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>2.2.1</version>
+                <version>2.4</version>
                 <executions>
                     <execution>
                         <id>package-jar-with-dependencies</id>
@@ -37,6 +37,7 @@
                                     <mainClass>dkpro.topic.main.Main</mainClass>
                                 </manifest>
                             </archive>
+
                         </configuration>
                     </execution>
                 </executions>

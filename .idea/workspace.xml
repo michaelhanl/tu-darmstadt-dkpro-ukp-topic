@@ -16,7 +16,7 @@
     <ignored path=".idea/workspace.xml" />
     <ignored path="target/" />
     <file path="/Utils.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1373625651720" ignored="false" />
-    <file path="/pom.xml" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1374129517214" ignored="false" />
+    <file path="/pom.xml" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380460521915" ignored="false" />
     <file path="/fragment.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379893507893" ignored="false" />
     <file path="$PROJECT_DIR$/../korAP-project/pom.xml" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1373632633523" ignored="false" />
     <file path="$PROJECT_DIR$/../korAP-project/KorA-indexer/pom.xml" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1373631090723" ignored="false" />
@@ -145,7 +145,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="51" selection-start="1269" selection-end="1269" vertical-scroll-proportion="0.42767295">
+            <state line="14" column="50" selection-start="664" selection-end="664" vertical-scroll-proportion="0.35220125">
               <folding />
             </state>
           </provider>
@@ -1165,7 +1165,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="51" selection-start="1269" selection-end="1269" vertical-scroll-proportion="0.42767295">
+        <state line="14" column="50" selection-start="664" selection-end="664" vertical-scroll-proportion="0.35220125">
           <folding />
         </state>
       </provider>
