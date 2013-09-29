@@ -37,7 +37,6 @@
                                     <mainClass>dkpro.topic.main.Main</mainClass>
                                 </manifest>
                             </archive>
-
                         </configuration>
                     </execution>
                 </executions>

@@ -73,6 +73,7 @@
     <file path="/Interprefer.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380446938987" ignored="false" />
     <file path="/UIMAComponents.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380446618024" ignored="false" />
     <file path="/ParsingPipeline.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380448336667" ignored="false" />
+    <file path="/maven-build.xml" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380462209444" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +137,16 @@
       <file leaf-file-name="ConstituentWriter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/writers/ConstituentWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="35" selection-start="1392" selection-end="1392" vertical-scroll-proportion="0.0">
+            <state line="32" column="20" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="maven-build.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/maven-build.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="343" column="53" selection-start="26936" selection-end="26936" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -145,7 +155,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="50" selection-start="664" selection-end="664" vertical-scroll-proportion="0.35220125">
+            <state line="31" column="35" selection-start="1374" selection-end="1374" vertical-scroll-proportion="0.342246">
               <folding />
             </state>
           </provider>
@@ -194,7 +204,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/XMLUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/annotator/TRAnnotator.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleDefinition.java" />
@@ -209,6 +218,7 @@
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/writers/ConstituentWriter.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topics/components/UIMAComponents.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java" />
+        <option value="$PROJECT_DIR$/maven-build.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
@@ -256,9 +266,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="53" />
-    <option name="width" value="1314" />
-    <option name="height" value="769" />
+    <option name="x" value="410" />
+    <option name="y" value="74" />
+    <option name="width" value="1099" />
+    <option name="height" value="507" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -493,7 +504,7 @@
       <showLibraryContents />
       <hideEmptyPackages />
       <abbreviatePackageNames />
-      <autoscrollToSource Scope="true" ProjectPane="false" />
+      <autoscrollToSource Scope="false" ProjectPane="false" />
       <autoscrollFromSource Scope="true" ProjectPane="true" />
       <sortByType Scope="false" />
     </navigator>
@@ -722,6 +733,42 @@
         <subPane subId="All">
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src/main/java">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src/main/java">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="dkpro/topic/writers">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -974,7 +1021,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="53" y="0" width="1314" height="769" extended-state="6" />
+    <frame x="410" y="74" width="1099" height="507" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.55686855" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -989,9 +1036,9 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3214815" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32791728" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2527646" sideWeight="0.67851853" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15323855" sideWeight="0.6711111" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19600381" sideWeight="0.6711111" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21879937" sideWeight="0.6711111" order="0" side_tool="false" content_ui="combo" x="555" y="47" width="312" height="677" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36304063" sideWeight="0.6711111" order="0" side_tool="false" content_ui="combo" x="555" y="47" width="312" height="677" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="148" y="122" width="1112" height="546" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1142,13 +1189,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/writers/ConstituentWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="35" selection-start="1392" selection-end="1392" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="46" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.0">
@@ -1163,9 +1203,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/writers/ConstituentWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="20" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maven-build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="343" column="53" selection-start="26936" selection-end="26936" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="50" selection-start="664" selection-end="664" vertical-scroll-proportion="0.35220125">
+        <state line="31" column="35" selection-start="1374" selection-end="1374" vertical-scroll-proportion="0.342246">
           <folding />
         </state>
       </provider>
