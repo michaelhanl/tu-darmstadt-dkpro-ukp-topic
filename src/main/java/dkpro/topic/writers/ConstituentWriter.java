@@ -1,4 +1,4 @@
-package dkpro.topic.constituents;
+package dkpro.topic.writers;
 
 import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
@@ -125,7 +125,7 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
 
 
     /**
-     * process phrase constituents and phrase types
+     * process phrase writers and phrase types
      *
      * @param xmlstream Outputstream
      * @param c         Constituent to process

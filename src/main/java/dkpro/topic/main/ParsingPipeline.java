@@ -4,9 +4,10 @@ import de.tudarmstadt.ukp.dkpro.core.io.text.TextReader;
 import de.tudarmstadt.ukp.dkpro.core.io.xmi.XmiWriter;
 import de.tudarmstadt.ukp.dkpro.core.stanfordnlp.StanfordParser;
 import de.tudarmstadt.ukp.dkpro.core.stanfordnlp.StanfordSegmenter;
-import dkpro.topic.constituents.ConstituentWriter;
+import dkpro.topic.writers.ConstituentWriter;
 import dkpro.topic.interpreter.TREEntryPoint;
 import dkpro.topic.utils.ConfigUtils;
+import dkpro.topics.components.UIMAComponents;
 import org.apache.uima.UIMAException;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.analysis_engine.annotator.AnnotatorConfigurationException;
@@ -39,25 +40,24 @@ public class ParsingPipeline {
     private AnalysisEngineDescription constituentXML;
     private AnalysisEngineDescription treeRuleEngine;
 
+
+    public void setup() throws ResourceInitializationException {
+        collReader = UIMAComponents.setupReader();
+        segmenter = UIMAComponents.setupSegmenter();
+        parser = UIMAComponents.setupParser();
+        cxmi = UIMAComponents.setupXMIWriter();
+        constituentXML = UIMAComponents.setupConstituentWriter();
+        treeRuleEngine = UIMAComponents.setupTreeRuleEngine();
+    }
+
     public void runTopicEngineOnly() throws AnnotatorConfigurationException,
             ResourceInitializationException {
-        /*
-         * reads input files from Param_Path default: "src/test/resources"
-		 */
-        _log.debug("initize FileReader");
-        collReader = createCollectionReader(TextReader.class,
-                TextReader.PARAM_PATH, ConfigUtils.getFilesDir(),
-                TextReader.PARAM_LANGUAGE, ConfigUtils.getLang(),
-                TextReader.PARAM_PATTERNS, new String[]{"[+]*.xml"});
-
-        _log.debug("initialize Tree-Rule-Engine");
-        treeRuleEngine = createPrimitiveDescription(TREEntryPoint.class,
-                TREEntryPoint.PARAM_PATH, ConfigUtils.getFilesDir());
+        collReader = UIMAComponents.setupReader();
+        treeRuleEngine = UIMAComponents.setupTreeRuleEngine();
 
         try {
             _log.debug("run Analysis Pipeline");
             SimplePipeline.runPipeline(collReader, treeRuleEngine);
-
         } catch (UIMAException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -67,41 +67,10 @@ public class ParsingPipeline {
 
     public void runStanfordParser() throws AnnotatorConfigurationException,
             ResourceInitializationException {
-        collReader = createCollectionReader(TextReader.class,
-                TextReader.PARAM_PATH, ConfigUtils.getFilesDir(),
-                TextReader.PARAM_LANGUAGE, ConfigUtils.getLang(),
-                TextReader.PARAM_PATTERNS, new String[]{"[+]*.txt"});
-		/*
-		 * loads segmentation annotator for the Stanford Tools
-		 */
-        segmenter = createPrimitiveDescription(StanfordSegmenter.class);
-
-		/*
-		 * laods the Stanford Parser and implements parsing parameters and
-		 * parsing tree parameters
-		 */
-
-        _log.debug("initialize Parser");
-        // StanfordParser.PARAM_MAX_ITEMS, 5000000
-        parser = createPrimitiveDescription(StanfordParser.class,
-                StanfordParser.PARAM_LANGUAGE, ConfigUtils.getLang(),
-                StanfordParser.PARAM_VARIANT, ConfigUtils.getModal(),
-                StanfordParser.PARAM_CREATE_CONSTITUENT_TAGS, true,
-                StanfordParser.PARAM_CREATE_DEPENDENCY_TAGS, false);
-
-        _log.debug("initialize XMI Writer");
-        cxmi = createPrimitiveDescription(XmiWriter.class,
-                XmiWriter.PARAM_PATH, "target/xmi",
-                XmiWriter.PARAM_TYPE_SYSTEM_FILE, "TypeSystem.xml");
-
-		/*
-		 * loads constituent writer to transform JCas object to XML format,
-		 * readable by the TRE
-		 */
-        System.out.println("ouput dir: " + ConfigUtils.getOutputDir());
-        _log.debug("initialize Constituent Writer");
-        constituentXML = createPrimitiveDescription(ConstituentWriter.class,
-                ConstituentWriter.PARAM_PATH, ConfigUtils.getOutputDir());
+        collReader = UIMAComponents.setupReader();
+        segmenter = UIMAComponents.setupSegmenter();
+        parser = UIMAComponents.setupParser();
+        constituentXML = UIMAComponents.setupConstituentWriter();
 
         /**
          * run pipeline with instantiated AnalysisEngines
@@ -120,48 +89,7 @@ public class ParsingPipeline {
 
     public void runAll() throws AnnotatorConfigurationException,
             ResourceInitializationException {
-        collReader = createCollectionReader(TextReader.class,
-                TextReader.PARAM_PATH, ConfigUtils.getFilesDir(),
-                TextReader.PARAM_LANGUAGE, ConfigUtils.getLang(),
-                TextReader.PARAM_PATTERNS, new String[]{"[+]*.txt"});
-		/*
-		 * loads segmentation annotator for the Stanford Tools
-		 */
-        segmenter = createPrimitiveDescription(StanfordSegmenter.class);
-
-		/*
-		 * laods the Stanford Parser and implements parsing parameters and
-		 * parsing tree parameters
-		 */
-
-        _log.debug("initialize Parser");
-        // StanfordParser.PARAM_MAX_ITEMS, 5000000
-        parser = createPrimitiveDescription(StanfordParser.class,
-                StanfordParser.PARAM_LANGUAGE, ConfigUtils.getLang(),
-                StanfordParser.PARAM_VARIANT, ConfigUtils.getModal(),
-                StanfordParser.PARAM_CREATE_CONSTITUENT_TAGS, true,
-                StanfordParser.PARAM_CREATE_DEPENDENCY_TAGS, false);
-
-        _log.debug("initialize XMI Writer");
-        cxmi = createPrimitiveDescription(XmiWriter.class,
-                XmiWriter.PARAM_PATH, "target/xmi",
-                XmiWriter.PARAM_TYPE_SYSTEM_FILE, "TypeSystem.xml");
-
-		/*
-		 * loads constituent writer to transform JCas object to XML format,
-		 * readable by the TRE
-		 */
-        _log.debug("initialize Constituent Writer");
-        constituentXML = createPrimitiveDescription(ConstituentWriter.class,
-                ConstituentWriter.PARAM_PATH, ConfigUtils.getOutputDir());
-
-		/*
-		 * takes XML files as input and produces statistics output in console
-		 * for topic identification
-		 */
-        _log.debug("initialize Tree-Rule-Engine");
-        treeRuleEngine = createPrimitiveDescription(TREEntryPoint.class,
-                TREEntryPoint.PARAM_PATH, ConfigUtils.getOutputDir());
+        setup();
         /**
          * run pipeline with instantiated AnalysisEngines
          */
