@@ -10,14 +10,12 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.util.Arrays;
 
+/**
+ * @author hanl
+ *
+ * main class to run the application with the respective parameters
+ */
 public class Main {
-
-    /**
-     * @author hanl TODO: due to the system scoped maven dependencies, it is not
-     * possible to successfully get this to work as a jar file.
-     * @param args
-     * command line arguments
-     */
 
     private static Logger _log = LoggerFactory.getLogger(Main.class);
     private static boolean topicAnnotator = false;
