@@ -192,7 +192,7 @@ public class Main {
             }
         }
 
-        ConfigUtils.retrieveRuleFiles(path + Configuration.CONFIGDIR);
+        ConfigUtils.retrieveRuleFiles(path +"/"+ Configuration.CONFIGDIR);
         try {
             new ParsingPipeline().runAll();
             _log.debug("Exit Pipeline");

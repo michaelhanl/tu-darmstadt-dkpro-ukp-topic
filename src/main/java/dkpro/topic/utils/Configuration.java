@@ -4,6 +4,7 @@ import org.apache.log4j.PropertyConfigurator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -30,20 +31,24 @@ public class Configuration extends Properties {
     public static String bootstrapConfiguration() {
         _log.trace("loading properties");
         Configuration.setEnableOverride(true);
-        String local = Configuration.class.getProtectionDomain()
-                .getCodeSource().getLocation().getPath();
-        String trimPath = local.substring(0, local.lastIndexOf("/") + 1);
+        File f = new File(System.getProperty("java.class.path"));
+        String path = f.getAbsoluteFile().getParentFile().getAbsolutePath();
+        System.out.println("file path " + path);
+//        String local = Configuration.class.getProtectionDomain()
+//                .getCodeSource().getLocation().getPath();
+//        String trimPath = local.substring(0, local.lastIndexOf("/") + 1);
         Properties props = new Properties();
+//        System.out.println("trim path " + local);
         try {
-            props.load(new FileInputStream(trimPath + Configuration.CONFIGDIR
+            props.load(new FileInputStream(path +"/"+ Configuration.CONFIGDIR
                     + "/" + Configuration.LOG4J));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        schema = trimPath + CONFIGDIR + "/"+ "schema.xsd";
+        schema = path +"/"+ CONFIGDIR + "/"+ "schema.xsd";
         PropertyConfigurator.configure(props);
-        Configuration.loadConfigurationProperties(trimPath);
-        return trimPath;
+        Configuration.loadConfigurationProperties(path);
+        return path;
     }
 
     private static void setConfigurationProperties(
@@ -78,7 +83,7 @@ public class Configuration extends Properties {
         }
 
         try {
-            properties.load(new FileInputStream(path + CONFIGDIR + "/"
+            properties.load(new FileInputStream(path +"/"+ CONFIGDIR + "/"
                     + CONFIGURATION));
             setConfigurationProperties(properties);
 
