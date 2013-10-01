@@ -18,7 +18,7 @@ The script places the runnable jar in the artifact directory.
 
 
 -- Prerequisities --
-To run smoothly the application assumes the presence of the following files and directory structure accordingly:
+The application assumes the presence of the following files and directory structure respective to the executable jar file:
 	- config/log4j.properties
 	- config/config.properties
 	- config/Rules_[Language-Code].xml
