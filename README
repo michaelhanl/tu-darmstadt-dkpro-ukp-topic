@@ -10,7 +10,32 @@ The main interpretation coding of this project is based on the works of R. Eckar
 
 
 -- Compiling and Building Source Code-- 
-There are ant scripts provided to build and compile the code and the jar file to use
-Just run "ant compile" and if succeeded without errors "ant jar" to  build the jar file
+The source code provides compile and package scripts to facilitate the useage of the application.
+In order to create a runnable jar with the application, check that maven and ant are installed on your local system and that internet access is available, in case maven dependencies need resolving. 
+During first compilation it is advised to set "maven.settings.offline" in the build properties to false to allow maven dependency resolution. 
+To compile the code run "ant" or "ant build.modules" in the main directory. To create a runnable jar run "ant build:artifact". 
+The script places the runnable jar in the artifact directory. 
+
+
+-- Prerequisities --
+To run smoothly the application assumes the presence of the following files and directory structure accordingly:
+	- config/log4j.properties
+	- config/config.properties
+	- config/Rules_[Language-Code].xml
+	- config/schema.xsd
+
+Input and Output files can be provided as command line paramters.
+
+-- Application Arguments --
+The Advanced TreeruleEngine takes one of the following specifiers as first argument, according the requirements of the user:
+	- all
+	- parser
+	- topic
+	- learn
+"all" parses the input document and returns a XML document as output with the respective matched rule instances as @rule attribute.
+
+
+
+-- Application parameters and script files --
 
 

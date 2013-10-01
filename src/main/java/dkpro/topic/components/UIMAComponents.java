@@ -1,4 +1,4 @@
-package dkpro.topics.components;
+package dkpro.topic.components;
 
 import de.tudarmstadt.ukp.dkpro.core.io.text.TextReader;
 import de.tudarmstadt.ukp.dkpro.core.io.xmi.XmiWriter;

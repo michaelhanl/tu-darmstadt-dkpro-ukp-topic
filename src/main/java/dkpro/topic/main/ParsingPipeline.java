@@ -1,13 +1,7 @@
 package dkpro.topic.main;
 
-import de.tudarmstadt.ukp.dkpro.core.io.text.TextReader;
-import de.tudarmstadt.ukp.dkpro.core.io.xmi.XmiWriter;
-import de.tudarmstadt.ukp.dkpro.core.stanfordnlp.StanfordParser;
-import de.tudarmstadt.ukp.dkpro.core.stanfordnlp.StanfordSegmenter;
-import dkpro.topic.writers.ConstituentWriter;
-import dkpro.topic.interpreter.TREEntryPoint;
 import dkpro.topic.utils.ConfigUtils;
-import dkpro.topics.components.UIMAComponents;
+import dkpro.topic.components.UIMAComponents;
 import org.apache.uima.UIMAException;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.analysis_engine.annotator.AnnotatorConfigurationException;

@@ -60,14 +60,16 @@ public class TRAnnotator {
 
             Attribute sentID = sentence.attribute(Configuration.getAttrSentenceID());
             System.out.println("sentence id " + sentID.getValue());
-
-            String ruleLabels = XMLUtils.ruleEnumeration(getResults(sentID.getValue()));
+            List<String> f = XMLUtils.ruleEnumeration(getResults(sentID.getValue()));
+            String ruleLabels = f.get(1);
+            String ruleIds = f.get(0);
             System.out.println("rule enum " + ruleLabels);
             if (results.get(sentID.getValue()) == null) {
                 jlog.info("no topics available for sentence with ID {}!", sentID.getValue());
                 continue;
             } else {
-                sentence.addAttribute(Configuration.getAttrTopicLabel(), ruleLabels);
+                sentence.addAttribute(Configuration.getAttrTopicRule(), ruleIds);
+                //sentence.addAttribute(Configuration.getAttrTopicLabel(), ruleLabels);
                 try {
                     XMLUtils.dumpDocumentToFile(new File(outDirFinal, this.file.getName()), document);
                 } catch (IOException e) {

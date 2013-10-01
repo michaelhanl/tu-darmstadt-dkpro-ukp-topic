@@ -15,6 +15,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public final class XMLUtils {
@@ -91,14 +92,21 @@ public final class XMLUtils {
         return sb;
     }
 
-    public static String ruleEnumeration(List<Result> results) {
+    public static List<String> ruleEnumeration(List<Result> results) {
         StringBuilder b = new StringBuilder();
+        StringBuilder id = new StringBuilder();
         if (results == null || results.size() == 0)
             return null;
-        for (Result r: results)
-            b.append(r.getRule().getDefinition().getTopicType()+ ";");
-        b.deleteCharAt(b.length()-1);
-        return b.toString();
+        for (Result r : results) {
+            b.append(r.getRule().getDefinition().getTopicType() + ";");
+            id.append(r.getRule().getName() + ";");
+        }
+        b.deleteCharAt(b.length() - 1);
+        id.deleteCharAt(id.length() - 1);
+        List<String> l = new ArrayList<>();
+        l.add(id.toString());
+        l.add(b.toString());
+        return l;
     }
 
     public static String splitSentenceIdentifier(String s) {
