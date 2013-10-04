@@ -35,19 +35,19 @@ public class ParsingPipeline {
     private AnalysisEngineDescription treeRuleEngine;
 
 
-    public void setup() throws ResourceInitializationException {
-        collReader = UIMAComponents.setupReader();
+    private void defaultSetup() throws ResourceInitializationException {
+        collReader = UIMAComponents.setupReader(UIMAComponents.TEXT);
         segmenter = UIMAComponents.setupSegmenter();
         parser = UIMAComponents.setupParser();
         cxmi = UIMAComponents.setupXMIWriter();
         constituentXML = UIMAComponents.setupConstituentWriter();
-        treeRuleEngine = UIMAComponents.setupTreeRuleEngine();
+        treeRuleEngine = UIMAComponents.setupTreeRuleEngine(ConfigUtils.getOutputDir());
     }
 
     public void runTopicEngineOnly() throws AnnotatorConfigurationException,
             ResourceInitializationException {
-        collReader = UIMAComponents.setupReader();
-        treeRuleEngine = UIMAComponents.setupTreeRuleEngine();
+        collReader = UIMAComponents.setupReader(UIMAComponents.XML);
+        treeRuleEngine = UIMAComponents.setupTreeRuleEngine(ConfigUtils.getInputDir());
 
         try {
             _log.debug("run Analysis Pipeline");
@@ -61,7 +61,7 @@ public class ParsingPipeline {
 
     public void runStanfordParser() throws AnnotatorConfigurationException,
             ResourceInitializationException {
-        collReader = UIMAComponents.setupReader();
+        collReader = UIMAComponents.setupReader(UIMAComponents.TEXT);
         segmenter = UIMAComponents.setupSegmenter();
         parser = UIMAComponents.setupParser();
         constituentXML = UIMAComponents.setupConstituentWriter();
@@ -83,7 +83,7 @@ public class ParsingPipeline {
 
     public void runAll() throws AnnotatorConfigurationException,
             ResourceInitializationException {
-        setup();
+        defaultSetup();
         /**
          * run pipeline with instantiated AnalysisEngines
          */

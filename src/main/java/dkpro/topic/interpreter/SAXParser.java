@@ -2,6 +2,7 @@ package dkpro.topic.interpreter;
 
 import dkpro.topic.interpreter.data.XMLConstituent;
 import dkpro.topic.utils.Configuration;
+import dkpro.topic.utils.OutputWriter;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 import org.dom4j.QName;
@@ -21,11 +22,17 @@ public class SAXParser extends SAXFilter {
     private final TopicSentInterpreter _interpreter;
     private String docName;
     private String sentenceID;
+    private final boolean render;
 
-    public SAXParser(TopicSentInterpreter i) {
+    public SAXParser(TopicSentInterpreter i, boolean render) {
         this._interpreter = i;
         this.docName = new String();
         this.sentenceID = new String();
+        this.render = render;
+    }
+
+    public SAXParser(TopicSentInterpreter i) {
+        this(i, false);
     }
 
     @Override
@@ -71,7 +78,8 @@ public class SAXParser extends SAXFilter {
         XMLConstituent constituent = this._stack.peek();
         this._interpreter.endElement(constituent);
         this._stack.pop();
-
+        if (render)
+            OutputWriter.renderXML(constituent.getNode());
     }
 
     @Override

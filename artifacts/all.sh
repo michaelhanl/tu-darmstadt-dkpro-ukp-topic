@@ -11,7 +11,7 @@ output="output"
 modal="pcfg"
 rule="config/Rules_EN.xml"
 
-parameters="-all english -modal $modal -inDir $input -outDir $output"
+parameters="-all $1 -modal $modal -inDir $input -outDir $output"
 
 java -jar $v3 $parameters
 

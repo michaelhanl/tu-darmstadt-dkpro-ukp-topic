@@ -9,7 +9,7 @@ input="output"
 output="$input/topics"
 rule="config/Rules_EN.xml"
 
-parameters="-topic -rules $rule -inDir $input -outDir $output -toFile"
+parameters="-topic $1 -inDir $input -outDir $output -toFile"
 
 #java -jar themeOffice.jar $parameters
 

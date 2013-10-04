@@ -1,11 +1,16 @@
 package dkpro.topic.utils;
 
+import dkpro.topic.interpreter.data.Constituent;
 import dkpro.topic.interpreter.rules.Result;
 import dkpro.topic.interpreter.rules.RuleBook;
 import dkpro.topic.interpreter.rules.RuleDefinition;
+import org.dom4j.Node;
+import org.dom4j.io.OutputFormat;
+import org.dom4j.io.XMLWriter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.IOException;
 import java.io.PrintStream;
 import java.util.*;
 
@@ -16,7 +21,7 @@ import java.util.*;
  */
 public class OutputWriter {
 
-    private Logger stats = LoggerFactory.getLogger("statLogger");
+    private static Logger stats = LoggerFactory.getLogger("statLogger");
     private PrintStream out;
 
     public OutputWriter(PrintStream out) {
@@ -100,6 +105,34 @@ public class OutputWriter {
             out.println("]");
         }
 
+    }
+
+    public static void renderXML(Node node) {
+        try {
+            OutputFormat outformat = OutputFormat.createPrettyPrint();
+            outformat.setEncoding("UTF-8");
+            XMLWriter writer = new XMLWriter(System.out, outformat);
+            writer.write(node);
+            writer.flush();
+        } catch (IOException e) {
+            stats.error("Unable to render XML tree", e);
+        }
+        System.out.println();
+        System.out.println();
+    }
+
+    public static void renderXML(Constituent constituent) {
+        try {
+            OutputFormat outformat = OutputFormat.createPrettyPrint();
+            outformat.setEncoding("UTF-8");
+            XMLWriter writer = new XMLWriter(System.out, outformat);
+            writer.write(constituent);
+            writer.flush();
+        } catch (IOException e) {
+            stats.error("Unable to render XML tree", e);
+        }
+        System.out.println();
+        System.out.println();
     }
 
 }

@@ -3,6 +3,7 @@ package dkpro.topic.interpreter.data;
 import dkpro.topic.interpreter.data.Constituent;
 import org.dom4j.Attribute;
 import org.dom4j.Element;
+import org.dom4j.Node;
 
 import java.util.List;
 import java.util.regex.Pattern;
@@ -52,5 +53,10 @@ public class XMLConstituent
 
     public String getNodeExpectation() {
         return this._element.attributeValue("expect");
+    }
+
+
+    public Node getNode() {
+        return _element;
     }
 }

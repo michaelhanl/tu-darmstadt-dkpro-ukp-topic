@@ -59,10 +59,9 @@ public class TRAnnotator {
             Element sentence = i.next();
 
             Attribute sentID = sentence.attribute(Configuration.getAttrSentenceID());
-            System.out.println("sentence id " + sentID.getValue());
             List<String> f = XMLUtils.ruleEnumeration(getResults(sentID.getValue()));
-            String ruleLabels = f.get(1);
             String ruleIds = f.get(0);
+            String ruleLabels = f.get(1);
             System.out.println("rule enum " + ruleLabels);
             if (results.get(sentID.getValue()) == null) {
                 jlog.info("no topics available for sentence with ID {}!", sentID.getValue());

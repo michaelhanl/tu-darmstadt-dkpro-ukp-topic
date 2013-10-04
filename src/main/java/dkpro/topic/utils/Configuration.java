@@ -29,16 +29,11 @@ public class Configuration extends Properties {
     private static Logger _log = LoggerFactory.getLogger(Configuration.class);
 
     public static String bootstrapConfiguration() {
-        _log.trace("loading properties");
+        _log.info("loading properties");
         Configuration.setEnableOverride(true);
         File f = new File(System.getProperty("java.class.path"));
         String path = f.getAbsoluteFile().getParentFile().getAbsolutePath();
-        System.out.println("file path " + path);
-//        String local = Configuration.class.getProtectionDomain()
-//                .getCodeSource().getLocation().getPath();
-//        String trimPath = local.substring(0, local.lastIndexOf("/") + 1);
         Properties props = new Properties();
-//        System.out.println("trim path " + local);
         try {
             props.load(new FileInputStream(path +"/"+ Configuration.CONFIGDIR
                     + "/" + Configuration.LOG4J));

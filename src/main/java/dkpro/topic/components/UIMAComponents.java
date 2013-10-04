@@ -23,17 +23,30 @@ import static org.uimafit.factory.CollectionReaderFactory.createCollectionReader
  */
 public class UIMAComponents {
 
-    static Logger _log = LoggerFactory.getLogger(UIMAComponents.class);
+    private static Logger _log = LoggerFactory.getLogger(UIMAComponents.class);
+    public static final int XML = 1;
+    public static final int TEXT = 2;
 
-    public static CollectionReader setupReader() throws ResourceInitializationException {
+    public static CollectionReader setupReader(int fileType) throws ResourceInitializationException {
+        String[] files = new String[1];
+        switch(fileType) {
+            case XML:
+                files[0] = "[+]*.xml";
+                break;
+            case TEXT:
+                files[0] = "[+]*.txt";
+                break;
+        }
+
         /*
          * reads input files from Param_Path default: "src/test/resources"
+         * new String[]{"[+]*.txt"}
 		 */
-        _log.debug("initize FileReader");
+        _log.debug("initialize FileReader");
         CollectionReader collReader = createCollectionReader(TextReader.class,
-                TextReader.PARAM_PATH, ConfigUtils.getFilesDir(),
+                TextReader.PARAM_PATH, ConfigUtils.getInputDir(),
                 TextReader.PARAM_LANGUAGE, ConfigUtils.getLang(),
-                TextReader.PARAM_PATTERNS, new String[]{"[+]*.txt"});
+                TextReader.PARAM_PATTERNS, files);
         return collReader;
     }
 
@@ -82,14 +95,14 @@ public class UIMAComponents {
     }
 
 
-    public static AnalysisEngineDescription setupTreeRuleEngine() throws ResourceInitializationException {
+    public static AnalysisEngineDescription setupTreeRuleEngine(String fileDir) throws ResourceInitializationException {
         	/*
 		 * takes XML files as input and produces statistics output in console
 		 * for topic identification
 		 */
         _log.debug("initialize Tree-Rule-Engine");
         AnalysisEngineDescription treeRuleEngine = createPrimitiveDescription(TREEntryPoint.class,
-                TREEntryPoint.PARAM_PATH, ConfigUtils.getOutputDir());
+                TREEntryPoint.PARAM_PATH, fileDir);
         return treeRuleEngine;
     }
 }

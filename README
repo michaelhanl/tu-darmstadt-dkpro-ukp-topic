@@ -18,15 +18,17 @@ The script places the runnable jar in the artifact directory.
 
 
 -- Prerequisities --
-The application assumes the presence of the following files and directory structure respective to the executable jar file:
+The application assumes the presence of the following files and directory structure respective to the executable jar file. These parameters are not configurable, but are provided with the application source code under Apache Open Source Licence.
 	- config/log4j.properties
 	- config/config.properties
-	- config/Rules_[Language-Code].xml
 	- config/schema.xsd
+
+
+* Only if "rule" parameter is ommited in the running command, the applications looks for the rule file in the mentioned format in the configuration directory.
 
 Input and Output files can be provided as command line paramters.
 
--- Application Arguments --
+-- Application Parameters --
 The Advanced TreeruleEngine takes one of the following specifiers as first argument, according the requirements of the user:
 	- all
 	- parser
@@ -34,8 +36,20 @@ The Advanced TreeruleEngine takes one of the following specifiers as first argum
 	- learn
 "all" parses the input document and returns a XML document as output with the respective matched rule instances as @rule attribute.
 
+The following parameters are partially optional and support default value settings. These parameters and default values are:
+-outDir : output
+-inDir  : input
+-rule   : config/Rules_[Language-Code].xml
 
 
 -- Application parameters and script files --
+Stanford Parser:
 
+[JARBUNDLE] german/english  -inDir [input file directory] -outDir [ouput file directory] -rule [ruleFile] -modal [modal file] 
 
+All:
+[JARBUNDLE] german/english  -inDir [input file directory] -outDir [ouput file directory] -rule [ruleFile] -modal [modal file] 
+
+TopicEngine:
+The TreeRuleEngine expects the input files to in a compatible XML format as produced by the parser. 
+[JARBUNDLE] german/english  -inDir [input file directory] -outDir [ouput file directory] -rule [ruleFile] -modal [modal file] 

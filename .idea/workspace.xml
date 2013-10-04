@@ -7,13 +7,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d23da889-40de-41d3-8170-1eef29c4fdb4" name="Default" comment="new review">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topics/components/UIMAComponents.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/components/UIMAComponents.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/Apache_Commons.xml" afterPath="$PROJECT_DIR$/.idea/copyright/Apache_Commons.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/ConfigUtils.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/ConfigUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Configuration.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Configuration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/main/Learner.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/main/Learner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/main/Main.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/main/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/OutputWriter.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/OutputWriter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXParser.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/annotator/TRAnnotator.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/annotator/TRAnnotator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/XMLUtils.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/XMLUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ant.xml" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TREEntryPoint.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TREEntryPoint.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicXMLParserHandler.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicXMLParserHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/components/UIMAComponents.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/components/UIMAComponents.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/data/XMLConstituent.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/data/XMLConstituent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dkpro.ukp.topic.structure.iws" />
@@ -41,22 +49,22 @@
     <file path="$USER_HOME$/korAP-project/.idea/modules.xml" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1373632908192" ignored="false" />
     <file path="$USER_HOME$/korAP-project/.idea/encodings.xml" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1373632908192" ignored="false" />
     <file path="/TRParser.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379871040873" ignored="false" />
-    <file path="/a.dummy" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380582938260" ignored="false" />
+    <file path="/a.dummy" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380886888570" ignored="false" />
     <file path="/TRAnnotator.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380585745595" ignored="false" />
     <file path="/Statistics.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379867025893" ignored="false" />
-    <file path="/ConfigUtils.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1373646853869" ignored="false" />
+    <file path="/ConfigUtils.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380889954590" ignored="false" />
     <file path="/RuleInstance.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379888438929" ignored="false" />
     <file path="/RuleDefinition.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379977699918" ignored="false" />
-    <file path="/Configuration.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380579992498" ignored="false" />
+    <file path="/Configuration.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380806055543" ignored="false" />
     <file path="/TopicInterpreter.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379871665102" ignored="false" />
-    <file path="/SAXParser.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379891537877" ignored="false" />
+    <file path="/SAXParser.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380890519672" ignored="false" />
     <file path="/Constituent.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379846612911" ignored="false" />
-    <file path="/XMLConstituent.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379891696201" ignored="false" />
+    <file path="/XMLConstituent.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380890365355" ignored="false" />
     <file path="/ConstituentWriter.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1373654740573" ignored="false" />
-    <file path="/Dummy.txt" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380580998622" ignored="false" />
+    <file path="/Dummy.txt" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380886151174" ignored="false" />
     <file path="/XMLUtils.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380585649283" ignored="false" />
-    <file path="/Learner.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379978480076" ignored="false" />
-    <file path="/Main.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380556844243" ignored="false" />
+    <file path="/Learner.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380892119842" ignored="false" />
+    <file path="/Main.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380887303856" ignored="false" />
     <file path="$USER_HOME$/korAP-project/KorAP-core/src/main/java/de/ids_mannheim/korap/server/ServerHandler.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1375387047276" ignored="false" />
     <file path="$USER_HOME$/korAP-project/MATE/src/de/mannheim/ids/korap/mate/MatePipeline.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1375425108328" ignored="false" />
     <file path="$USER_HOME$/korap-maven/KorAP-database/src/main/java/de/ids_mannheim/korap/sql/resources/RoleSettingsHandler.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1378821376508" ignored="false" />
@@ -64,19 +72,19 @@
     <file path="/RoleSettingsHandler.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1378821285630" ignored="false" />
     <file path="$USER_HOME$/korap-maven/KorAP-database/src/main/java/de/ids_mannheim/korap/sql/resources/AuthorityHandler.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1378821325912" ignored="false" />
     <file path="/AuthorityHandler.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1378821324182" ignored="false" />
-    <file path="/TREEntryPoint.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379889878524" ignored="false" />
+    <file path="/TREEntryPoint.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380889742652" ignored="false" />
     <file path="/config.properties" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379898483016" ignored="false" />
     <file path="/Result.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379890650860" ignored="false" />
     <file path="/RuleBook.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379900162846" ignored="false" />
     <file path="/DocResultsHolder.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379871600274" ignored="false" />
     <file path="/TopicSentInterpreter.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379973191335" ignored="false" />
-    <file path="/OutputWriter.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379977947575" ignored="false" />
-    <file path="/TopicXMLParserHandler.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379900325301" ignored="false" />
+    <file path="/OutputWriter.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380888969326" ignored="false" />
+    <file path="/TopicXMLParserHandler.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380890537623" ignored="false" />
     <file path="/StatisticsContainer.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379920273403" ignored="false" />
     <file path="/SAXFilter.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379975155050" ignored="false" />
     <file path="/Interprefer.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380446938987" ignored="false" />
-    <file path="/UIMAComponents.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380446618024" ignored="false" />
-    <file path="/ParsingPipeline.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380448336667" ignored="false" />
+    <file path="/UIMAComponents.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380889833754" ignored="false" />
+    <file path="/ParsingPipeline.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380889871600" ignored="false" />
     <file path="/maven-build.xml" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380462209444" ignored="false" />
     <file path="$USER_HOME$/KorAP/KorAP-core/pom.xml" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380567300659" ignored="false" />
     <file path="$USER_HOME$/KorAP/KorAP-indexer/src/resources/test/00001/xip/morpho.xml" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380567552571" ignored="false" />
@@ -116,6 +124,7 @@
     <file path="$USER_HOME$/KorAP/QuerySerialization/pom.xml" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380568554831" ignored="false" />
     <file path="/build.xml" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380582848099" ignored="false" />
     <file path="$PROJECT_DIR$/META-INF/MANIFEST.MF" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380582955772" ignored="false" />
+    <file path="/Apache_Commons.xml" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380885837487" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,28 +185,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ConstituentWriter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/writers/ConstituentWriter.java">
+      <file leaf-file-name="TREEntryPoint.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TREEntryPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="20" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.0">
+            <state line="38" column="46" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="TopicXMLParserHandler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicXMLParserHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="44" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0">
+            <state line="49" column="60" selection-start="1721" selection-end="1721" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.xml">
+      <file leaf-file-name="Learner.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/Learner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="441" column="60" selection-start="23078" selection-end="23078" vertical-scroll-proportion="0.0">
+            <state line="131" column="16" selection-start="4822" selection-end="4822" vertical-scroll-proportion="0.56962025">
               <folding />
             </state>
           </provider>
@@ -206,25 +215,43 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="8" selection-start="8" selection-end="24" vertical-scroll-proportion="0.0">
+            <state line="236" column="22" selection-start="9070" selection-end="9070" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TRAnnotator.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/annotator/TRAnnotator.java">
+      <file leaf-file-name="Configuration.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Configuration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="18" selection-start="2506" selection-end="2506" vertical-scroll-proportion="0.6860643">
+            <state line="69" column="36" selection-start="2387" selection-end="2387" vertical-scroll-proportion="-29.344828">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConfigUtils.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/utils/ConfigUtils.java">
+      <file leaf-file-name="ParsingPipeline.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="174" column="58" selection-start="4952" selection-end="4952" vertical-scroll-proportion="0.0">
+            <state line="81" column="48" selection-start="3042" selection-end="3042" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SAXParser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="17" selection-start="926" selection-end="926" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XMLConstituent.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/data/XMLConstituent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="58" column="14" selection-start="1509" selection-end="1509" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -255,22 +282,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicSentInterpreter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dkpro/components/Interprefer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dkpro/components/Interpreter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dkpro/components/Parser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dkpro/topics/components/Interpreter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/writers/ConstituentWriter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dkpro/topics/components/UIMAComponents.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java" />
-        <option value="$PROJECT_DIR$/maven-build.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Configuration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/main/Main.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/XMLUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/annotator/TRAnnotator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Configuration.java" />
+        <option value="$PROJECT_DIR$/.idea/copyright/Apache_Commons.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/OutputWriter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TREEntryPoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/components/UIMAComponents.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/ConfigUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/data/XMLConstituent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicXMLParserHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/main/Learner.java" />
       </list>
     </option>
   </component>
@@ -317,7 +344,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1419" />
+    <option name="x" value="53" />
     <option name="y" value="3" />
     <option name="width" value="1314" />
     <option name="height" value="766" />
@@ -548,7 +575,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="Scope" currentSubView="All" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages Scope="true" ProjectPane="true" />
       <showMembers Scope="false" />
       <showModules Scope="true" />
@@ -714,6 +741,10 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="dkpro/topic/writers">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Root">
@@ -729,6 +760,20 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="dkpro/topic/utils">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src/main/java">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -764,25 +809,7 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="dkpro/topic/interpreter/rules">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src/main/java">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="dkpro/topic/annotator">
+            <PATH_ELEMENT USER_OBJECT="dkpro/topic/interpreter">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -791,24 +818,6 @@
         <subPane subId="All">
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src/main/java">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -840,7 +849,7 @@
     <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="options.lastSelected" value="fileTemplates" />
+    <property name="options.lastSelected" value="copyright.profiles" />
     <property name="project.structure.side.proportion" value="0.1622248" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -1061,31 +1070,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1419" y="3" width="1314" height="766" extended-state="6" />
+    <frame x="53" y="3" width="1314" height="766" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.55686855" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31811488" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24091627" sideWeight="0.67893964" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3233979" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24861442" sideWeight="0.4002954" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3210604" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32791728" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2527646" sideWeight="0.67851853" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25194132" sideWeight="0.67851853" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12401264" sideWeight="0.6780627" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20063192" sideWeight="0.67893964" order="0" side_tool="false" content_ui="combo" x="555" y="47" width="312" height="677" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32842416" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2085308" sideWeight="0.6818851" order="0" side_tool="false" content_ui="combo" x="555" y="47" width="312" height="677" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32842416" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="148" y="122" width="1112" height="546" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39968154" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39968154" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -1170,106 +1179,114 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/data/XMLConstituent.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/Element.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="12" selection-start="614" selection-end="614" vertical-scroll-proportion="0.024653314" />
+        <state line="6" column="17" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/uimafit/uimafit/1.4.0/uimafit-1.4.0.jar!/org/uimafit/factory/CollectionReaderFactory.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar!/org/dom4j/Element.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="62" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0" />
+        <state line="94" column="39" selection-start="2831" selection-end="2833" vertical-scroll-proportion="0.73134327">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/uimafit/uimafit/1.4.0/uimafit-1.4.0-sources.jar!/org/uimafit/factory/CollectionReaderFactory.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar!/org/dom4j/ElementPath.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="35" selection-start="5185" selection-end="5185" vertical-scroll-proportion="0.33281973" />
+        <state line="47" column="12" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.3322785">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/components/UIMAComponents.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/utils/OutputWriter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="34" selection-start="648" selection-end="648" vertical-scroll-proportion="0.32049307" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="40" selection-start="1011" selection-end="1011" vertical-scroll-proportion="0.0">
+        <state line="113" column="45" selection-start="4984" selection-end="4994" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/writers/ConstituentWriter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="20" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="33" selection-start="55" selection-end="55" vertical-scroll-proportion="0.025316456">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="44" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="441" column="60" selection-start="23078" selection-end="23078" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/utils/ConfigUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="174" column="58" selection-start="4952" selection-end="4952" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="8" selection-start="8" selection-end="24" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleInstance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="226" selection-end="226" vertical-scroll-proportion="-0.20678514">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="34" selection-start="132" selection-end="132" vertical-scroll-proportion="0.12658228">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/utils/XMLUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="28" selection-start="3576" selection-end="3576" vertical-scroll-proportion="0.68670887">
+        <state line="35" column="71" selection-start="1296" selection-end="1296" vertical-scroll-proportion="0.32911393">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Configuration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="47" selection-start="2982" selection-end="2982" vertical-scroll-proportion="0.48101267">
+        <state line="69" column="36" selection-start="2387" selection-end="2387" vertical-scroll-proportion="-29.344828">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/annotator/TRAnnotator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/components/UIMAComponents.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="18" selection-start="2506" selection-end="2506" vertical-scroll-proportion="0.6860643">
+        <state line="104" column="46" selection-start="4252" selection-end="4252" vertical-scroll-proportion="0.8085758">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/utils/ConfigUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="17" selection-start="1215" selection-end="1215" vertical-scroll-proportion="0.63705975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TREEntryPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="46" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/data/XMLConstituent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="14" selection-start="1509" selection-end="1509" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="17" selection-start="926" selection-end="926" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicXMLParserHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="60" selection-start="1721" selection-end="1721" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="48" selection-start="3042" selection-end="3042" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="236" column="22" selection-start="9070" selection-end="9070" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar!/org/dom4j/io/SAXContentHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="142" column="11" selection-start="4290" selection-end="4290" vertical-scroll-proportion="2.7088609">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/Learner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="131" column="16" selection-start="4822" selection-end="4822" vertical-scroll-proportion="0.56962025">
           <folding />
         </state>
       </provider>
@@ -1285,7 +1302,19 @@
             <option name="proportions">
               <list>
                 <option value="0.1622248" />
-                <option value="0.5919118" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="Copyright.UI">
+        <settings>
+          <last-edited>Apache Commons</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -1366,6 +1395,7 @@
       </state>
       <state key="ScopeChooserConfigurable.UI">
         <settings>
+          <last-edited>Apache-Commons</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

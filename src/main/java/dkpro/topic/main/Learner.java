@@ -4,6 +4,7 @@ import dkpro.topic.interpreter.SAXParser;
 import dkpro.topic.interpreter.TopicSentInterpreter;
 import dkpro.topic.interpreter.rules.RuleBook;
 import dkpro.topic.interpreter.rules.RuleInstance;
+import dkpro.topic.utils.OutputWriter;
 import dkpro.topic.utils.XMLUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -20,7 +21,7 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 /**
- * this class was targeted as a wrapper class for the original learner class. I couldn't get it to work though
+ * this class was targeted as a wrapper class for the original learner class.
  *
  * FIXME: buggy for multiple sentences in one document.
  * Plus only recognizes the first sentence, but only at ROOT end Node
@@ -45,25 +46,6 @@ public class Learner implements Runnable, ElementHandler {
 
     @Override
     public void onStart(ElementPath elementPath) {
-        System.out.println("element. " + elementPath.getPath());
-        if (elementPath.getCurrent().getParent() != null)   {
-           // System.out.println(elementPath.getCurrent().getParent().getName());
-        }
-
-    }
-
-    private static void renderXML(Node node) {
-        try {
-            OutputFormat outformat = OutputFormat.createPrettyPrint();
-            outformat.setEncoding("UTF-8");
-            XMLWriter writer = new XMLWriter(System.out, outformat);
-            writer.write(node);
-            writer.flush();
-        } catch (IOException e) {
-            _log.error("Unable to render XML tree", e);
-        }
-        System.out.println();
-        System.out.println();
     }
 
     private static void renderChoices(List<RuleInstance> rulesMatched) {
@@ -126,17 +108,20 @@ public class Learner implements Runnable, ElementHandler {
 
     /**
      * TODO: bug: the rule only matches at the last element (ROOT),
-     * but this is wrong since there can be more than one sentence in a document
+     * but this is wrong since there can be more than one sentence in a document (with root)
      * @param elementPath
      */
     @Override
     public void onEnd(ElementPath elementPath) {
         Element current = elementPath.getCurrent();
+        String parent = "null";
+
 
         if (elementPath.getCurrent().getParent() != null)
-            System.out.println(elementPath.getCurrent().getParent().attributeValue("cat"));
-        else
-            System.out.println("null!!");
+            parent = elementPath.getCurrent().getParent().getQName().getName();
+         //   System.out.println(elementPath.getCurrent().getParent().attributeValue("cat"));
+        //else
+         //   System.out.println("null!!");
         /*
          * There was a bug where the object rulesMatched was returned. At this call however this object
          * is always null and thus causes the programme to crash
@@ -165,25 +150,25 @@ public class Learner implements Runnable, ElementHandler {
                 current.addAttribute("expect",
                         rulesMatched.get(choice).getName());
         }
-        renderXML(current);
+        OutputWriter.renderXML(current);
     }
 
     public void run() {
         try {
-            String ruleFile = this._args[1];
-            String parseFile = this._args[2];
-            String outFile = this._args[3];
+            String ruleFile = this._args[0];
+            String parseFile = this._args[1];
+            String outFile = this._args[2];
 
             File fOutFile = new File(outFile);
             if (!(fOutFile.createNewFile())) {
                 System.out.println("Target file [" + fOutFile
                         + "] already exists!");
-                return;
+                System.exit(-1);
             }
             if (!(fOutFile.canWrite())) {
                 System.out.println("Target file [" + fOutFile
                         + "] is read-only!");
-                return;
+                System.exit(-1);
             }
 
             _log.debug("--- Reading in the rules");
@@ -211,7 +196,6 @@ public class Learner implements Runnable, ElementHandler {
 
     public static void main(String[] args) throws Exception {
         BasicConfigurator.configure();
-
         new Learner(args).run();
     }
 

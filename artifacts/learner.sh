@@ -9,8 +9,5 @@ language="english"
 modal="factored"
 rule="config/Rules_EN.xml"
 
-parameters="-learn $rule $input $output"
-
-#java -jar themeOffice.jar $parameters
-
+parameters="-learn -rule $rule -in $input -out $output"
 java -jar $v3 $parameters

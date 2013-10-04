@@ -47,7 +47,7 @@ public class TopicXMLParserHandler {
     private void apply(File xmlFile, RuleBook rules) throws ParserConfigurationException,
             SAXException, IOException {
         jlog.debug("--- Now we will try to match the rules");
-        SAXParser parseXML = new SAXParser(interpreter);
+        SAXParser parseXML = new SAXParser(interpreter, true);
         XMLUtils.parse(xmlFile, parseXML);
         System.out.println("sentence results " + interpreter.getSentenceResults());
 

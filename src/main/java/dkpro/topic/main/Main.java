@@ -1,3 +1,11 @@
+/*
+ * Copyright (c) 2013. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ * Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
+ * Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
+ * Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
+ * Vestibulum commodo. Ut rhoncus gravida arcu.
+ */
+
 package dkpro.topic.main;
 
 import dkpro.topic.utils.ConfigUtils;
@@ -12,8 +20,8 @@ import java.util.Arrays;
 
 /**
  * @author hanl
- *
- * main class to run the application with the respective parameters
+ *         <p/>
+ *         main class to run the application with the respective parameters
  */
 public class Main {
 
@@ -31,34 +39,27 @@ public class Main {
                     .println("help: 'java -jar <jarFile> -parser | -topic | -all ... [-toFile]'");
             System.exit(-1);
         }
-        String trimPath = Configuration.bootstrapConfiguration();
+        String path = Configuration.bootstrapConfiguration();
 
         for (int i = 0; i < args.length; i++) {
             switch (args[i]) {
                 case "-all":
                     _log.info("running entire annotation engine");
-                    runAll(args, trimPath);
+                    runAll(args, path);
                     break;
                 case "-parser":
                     _log.info("running stanford parser engine");
-                    runStanfordParser(args, trimPath);
-                    break;
-                // case "-learn":
-                // // TODO: doesn't work. compilation/rule failure in source code
-                // // of main project
-                // _log.info("running annotator learning engine");
-                // runAnnoLabLearner(args);
-                // break;
-                case "-topic":
-                    _log.info("running topic engine only");
-                    runTopicEngine(args, trimPath);
+                    runStanfordParser(args, path);
                     break;
                 case "-learn":
-                    try {
-                        Learner.main(args);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
+                    // TODO: doesn't work. compilation/rule failure in source code
+                    _log.info("running annotator learning engine");
+                    runAnnoLabLearner(args);
+                    break;
+                case "-topic":
+                    _log.info("running topic engine only");
+                    runTopicEngine(args, path);
+                    break;
             }
         }
     }
@@ -89,40 +90,43 @@ public class Main {
                         System.exit(-1);
                         return;
                     }
-                case "-rules":
-                    ConfigUtils.setRuleFile(new File(args[i + 1]));
                 case "-help":
                     System.out
                             .println("Help: java -jar Annotator.jar -parser <Language> -rules <RuleFile> -in <InputDir> -out <OutputDir> -m <Modal> [-toFile]");
                     System.exit(-1);
                     return;
-
             }
         }
-
-        ConfigUtils.retrieveRuleFiles(path + Configuration.CONFIGDIR);
+        ConfigUtils.retrieveRuleFiles(path + "/" + Configuration.CONFIGDIR);
         try {
             new ParsingPipeline().runStanfordParser();
-            _log.debug("Exit Pipeline");
-
         } catch (AnnotatorConfigurationException
                 | ResourceInitializationException e) {
             _log.error("Parsing could not be completed, due to internal error",
                     e.getMessage(), e);
         }
+        _log.info("Successfully run pipeline");
     }
 
     private static void runTopicEngine(String[] args, String path) {
+        boolean getRules = true;
         for (int i = 0; i < args.length; i++) {
             switch (args[i]) {
+                case "german":
+                    ConfigUtils.setLang(ConfigUtils.GERMAN);
+                    break;
+                case "english":
+                    ConfigUtils.setLang(ConfigUtils.ENGLISH);
+                    break;
                 case "-inDir":
                     ConfigUtils.setFilesDir(args[i + 1]);
                     break;
                 case "-outDir":
                     ConfigUtils.setOutputDir(args[i + 1]);
                     break;
-                case "-rules":
+                case "-rule":
                     ConfigUtils.setRuleFile(new File(args[i + 1]));
+                    getRules = false;
                     break;
                 case "-toFile":
                     topicAnnotator = true;
@@ -138,21 +142,22 @@ public class Main {
             }
         }
 
-        ConfigUtils.retrieveRuleFiles(path + Configuration.CONFIGDIR);
+        if(getRules)
+            ConfigUtils.retrieveRuleFiles(path + "/" + Configuration.CONFIGDIR);
         try {
             new ParsingPipeline().runTopicEngineOnly();
-            _log.debug("Exit Pipeline");
-
         } catch (AnnotatorConfigurationException
                 | ResourceInitializationException e) {
             _log.error("Parsing could not be completed, due to internal error",
                     e.getMessage(), e);
         }
+        _log.info("Successfully run pipeline");
 
     }
 
     private static void runAll(String[] args, String path) {
         topicAnnotator = true;
+        boolean getRules = true;
         for (int i = 0; i < args.length; i++) {
             switch (args[i]) {
                 case "german":
@@ -178,12 +183,13 @@ public class Main {
                         return;
                     }
                     break;
-                case "-rules":
+                case "-rule":
                     ConfigUtils.setRuleFile(new File(args[i + 1]));
+                    getRules = false;
                     break;
                 //case "-toFile":
-                  //  topicAnnotator = true;
-                   // break;
+                //  topicAnnotator = true;
+                // break;
                 case "-help":
                     System.out
                             .println("Help: java -jar Annotator.jar -all <Language> -rules <RuleFile> -in <InputDir> -out <OutputDir> -m <Modal> [-toFile]");
@@ -192,16 +198,17 @@ public class Main {
             }
         }
 
-        ConfigUtils.retrieveRuleFiles(path +"/"+ Configuration.CONFIGDIR);
+        if (getRules)
+            ConfigUtils.retrieveRuleFiles(path + "/" + Configuration.CONFIGDIR);
+
         try {
             new ParsingPipeline().runAll();
-            _log.debug("Exit Pipeline");
-
         } catch (AnnotatorConfigurationException
                 | ResourceInitializationException e) {
             _log.error("Parsing could not be completed, due to internal error",
                     e.getMessage(), e);
         }
+        _log.info("Successfully run pipeline");
 
     }
 
@@ -232,6 +239,7 @@ public class Main {
             e.printStackTrace();
             System.exit(-1);
         }
+        _log.info("Successfully run pipeline");
     }
 
 }

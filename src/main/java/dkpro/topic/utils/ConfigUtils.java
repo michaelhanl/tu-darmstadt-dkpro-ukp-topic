@@ -31,11 +31,6 @@ public class ConfigUtils extends Constants {
     private static DecimalFormat df1 = new DecimalFormat("000");
     private static DecimalFormat df2 = new DecimalFormat("00");
     private static File ruleFile = null;
-    private static boolean rulesSet = false;
-
-    public static boolean isRuleSet() {
-        return rulesSet;
-    }
 
     public static File getRuleFile() {
         return ruleFile;
@@ -79,13 +74,13 @@ public class ConfigUtils extends Constants {
         if (modal == null) {
             modal = PCFG;
         }
-        _log.debug("ModMessage: Using modal: " + modal);
+        _log.trace("ModMessage: Using modal: " + modal);
         return modal;
 
     }
 
     public static void setModal(final String modal) {
-        _log.info("Setting modal: {}", modal);
+        _log.debug("Setting modal: {}", modal);
         ConfigUtils.modal = modal;
     }
 
@@ -93,16 +88,16 @@ public class ConfigUtils extends Constants {
         if (lang == null) {
             lang = ENGLISH;
         }
-        _log.debug("LangMessage: Using language: " + lang);
+        _log.trace("LangMessage: Using language: " + lang);
         return lang;
     }
 
     public static void setLang(final String lang) {
-        _log.info("Setting language: {}", lang);
+        _log.debug("Setting language: {}", lang);
         ConfigUtils.lang = lang;
     }
 
-    public static String getFilesDir() {
+    public static String getInputDir() {
         if (input == null) {
             try {
                 input = new File(".").getCanonicalPath() + "/" + "input";
@@ -112,12 +107,12 @@ public class ConfigUtils extends Constants {
                 e.printStackTrace();
             }
         }
-        _log.debug("InputMessage: Using input dir: {}", input);
+        _log.trace("InputMessage: Using input dir: {}", input);
         return input;
     }
 
     public static void setFilesDir(final String input) {
-        _log.info("Setting Files directory: {}", input);
+        _log.debug("Setting Files directory: {}", input);
         ConfigUtils.input = input;
     }
 
@@ -132,7 +127,7 @@ public class ConfigUtils extends Constants {
                 e.printStackTrace();
             }
         }
-        _log.debug("OutputMessage: Using output dir: " + output);
+        _log.trace("OutputMessage: Using output dir: " + output);
         return output;
     }
 
@@ -143,7 +138,7 @@ public class ConfigUtils extends Constants {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        _log.info("Setting OutputDir: " + out);
+        _log.debug("Setting OutputDir: " + out);
         ConfigUtils.output = output;
     }
 
@@ -167,12 +162,12 @@ public class ConfigUtils extends Constants {
      * @param fileDir
      * @return
      */
-    public static void retrieveRuleFiles(String fileDir) {
+    public static void retrieveRuleFiles(String fileDir) throws IllegalArgumentException{
         File dir = new File(fileDir);
 
         FileFilter ruleFilter = new WildcardFileFilter("Rules_*.xml");
         File[] files = dir.listFiles(ruleFilter);
-        _log.info("found rule files: " + Arrays.asList(files));
+        _log.debug("found rule files: " + Arrays.asList(files));
 
         for (File in : files) {
             String trimName = getTitle(in.getName());
@@ -197,7 +192,6 @@ public class ConfigUtils extends Constants {
         }
 
         if (getRuleFile() == null)
-            rulesSet = false;
-        rulesSet = true;
+            throw new IllegalArgumentException("No rule file found");
     }
 }

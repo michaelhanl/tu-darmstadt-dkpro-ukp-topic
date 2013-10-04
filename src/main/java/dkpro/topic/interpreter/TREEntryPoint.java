@@ -26,16 +26,16 @@ public class TREEntryPoint extends JCasConsumer_ImplBase {
 
     Logger _log = LoggerFactory.getLogger(TREEntryPoint.class);
 
-    public final static String PARAM_PATH = "Input_Path";
+    public final static String PARAM_PATH = "input";
     @ConfigurationParameter(name = PARAM_PATH, mandatory = true)
-    private String Input_Path;
+    private String input;
 
     @Override
     public void process(JCas aJCas) throws AnalysisEngineProcessException {
         _log.debug("Adding parameters to class");
 
         DocumentMetaData meta = DocumentMetaData.get(aJCas);
-        File targetFile = new File(ConfigUtils.buildTargetDocPath(Input_Path,
+        File targetFile = new File(ConfigUtils.buildTargetDocPath(input,
                 meta.getDocumentTitle()));
         File annotated = new File(TRAnnotator.outDirFinal + "/"
                 + targetFile.getName());
@@ -49,6 +49,7 @@ public class TREEntryPoint extends JCasConsumer_ImplBase {
         }
 
         try {
+            System.out.println("file to interpret " + targetFile);
             _log.info("Running TreeRuleEngine!");
             TopicXMLParserHandler walker = TopicXMLParserHandler.runner(
                     ConfigUtils.getRuleFile(), targetFile);
