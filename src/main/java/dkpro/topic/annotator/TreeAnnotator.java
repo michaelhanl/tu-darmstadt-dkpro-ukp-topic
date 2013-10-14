@@ -14,28 +14,25 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 
-public class TRAnnotator {
+public class TreeAnnotator {
     public static final String outDirEx = "topics";
-    private static Logger jlog = LoggerFactory.getLogger(TRAnnotator.class);
+    private static Logger jlog = LoggerFactory.getLogger(TreeAnnotator.class);
     private Map<String, List<Result>> results;
     private File file;
 
-    public static void annotate(File parse, Map<String, List<Result>> results) {
-        TRAnnotator annotator = new TRAnnotator(parse, results);
-        annotator.process();
+    public static TreeAnnotator instantiate(File parse, Map<String, List<Result>> results) {
+        return new TreeAnnotator(parse, results);
     }
 
-    private TRAnnotator(File parse, Map<String, List<Result>> results) {
+    private TreeAnnotator(File parse, Map<String, List<Result>> results) {
         this.results = results;
         this.file = parse;
     }
-
 
     public void process() {
         jlog.info("running XML annotator");

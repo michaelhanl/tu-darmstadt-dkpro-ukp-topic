@@ -1,7 +1,7 @@
 package dkpro.topic.interpreter;
 
 import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
-import dkpro.topic.annotator.TRAnnotator;
+import dkpro.topic.annotator.TreeAnnotator;
 import dkpro.topic.main.Main;
 import dkpro.topic.utils.ConfigUtils;
 import dkpro.topic.utils.Configuration;
@@ -11,8 +11,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.uimafit.component.JCasConsumer_ImplBase;
 import org.uimafit.descriptor.ConfigurationParameter;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
+import java.io.IOException;
 
 public class TREEntryPoint extends JCasConsumer_ImplBase {
 
@@ -29,6 +32,20 @@ public class TREEntryPoint extends JCasConsumer_ImplBase {
     public final static String PARAM_PATH = "input";
     @ConfigurationParameter(name = PARAM_PATH, mandatory = true)
     private String input;
+    TopicXMLParserHandler parser;
+    TreeAnnotator annotator;
+
+    public TREEntryPoint() {
+        try {
+            parser = TopicXMLParserHandler.instantiate();
+        } catch (ParserConfigurationException e) {
+            _log.error("Parsing Configuration Error", e);
+        } catch (SAXException e) {
+            _log.error("SAX Parser Error", e);
+        } catch (IOException e) {
+            _log.error("Input/Output Error", e);
+        }
+    }
 
     @Override
     public void process(JCas aJCas) throws AnalysisEngineProcessException {
@@ -37,7 +54,7 @@ public class TREEntryPoint extends JCasConsumer_ImplBase {
         DocumentMetaData meta = DocumentMetaData.get(aJCas);
         File targetFile = new File(ConfigUtils.buildTargetDocPath(input,
                 meta.getDocumentTitle()));
-        File annotated = new File(ConfigUtils.getOutputDir() + "/" + TRAnnotator.outDirEx + "/"
+        File annotated = new File(ConfigUtils.getOutputDir() + "/" + TreeAnnotator.outDirEx + "/"
                 + targetFile.getName());
 
         if (!Configuration.isAutoOverEn() && Main.isAEn()
@@ -47,18 +64,17 @@ public class TREEntryPoint extends JCasConsumer_ImplBase {
                     .println("WARNING: topic annotation target File already exists!");
             System.exit(0);
         }
-
         try {
-            System.out.println("file to interpret " + targetFile);
-            _log.info("Running TreeRuleEngine!");
-            TopicXMLParserHandler walker = TopicXMLParserHandler.runner(
-                    ConfigUtils.getRuleFile(), targetFile);
-
-            if (Main.isAEn())
-                TRAnnotator.annotate(targetFile, walker.getSentenceResults());
+            _log.info("Running TreeRuleParser on {}!", targetFile);
+            parser.process(ConfigUtils.getRuleFile(), targetFile);
         } catch (Exception e) {
-            _log.error("TreeRuleEngine exit with error!", e);
+            _log.error("TreeRuleParser exits with error!", e);
         }
+        annotator = TreeAnnotator.instantiate
+                (targetFile, parser.getSentenceResults());
+
+        if (Main.isAEn())
+            annotator.process();
 
     }
 }

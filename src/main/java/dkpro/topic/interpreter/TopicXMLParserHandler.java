@@ -28,14 +28,13 @@ public class TopicXMLParserHandler {
         out = new OutputWriter(System.out);
     }
 
-    public static TopicXMLParserHandler runner(File ruleFile, File xmlFile)
+    public static TopicXMLParserHandler instantiate()
             throws ParserConfigurationException, SAXException, IOException {
         TopicXMLParserHandler wrapper = new TopicXMLParserHandler();
-        wrapper.run(ruleFile, xmlFile);
         return wrapper;
     }
 
-    private void run(File ruleFile, File xmlFile)
+    public void process(File ruleFile, File xmlFile)
             throws ParserConfigurationException, SAXException, IOException {
         RuleBook rules = new RuleBook();
         rules.read(ruleFile);

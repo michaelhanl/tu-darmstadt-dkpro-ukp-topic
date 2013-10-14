@@ -54,7 +54,7 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
         if (!Configuration.isAutoOverEn() && file.exists()) {
             System.out.println("");
             System.out
-                    .println("WARNING: target file to write XML parse tree to already exists!");
+                    .println("WARNING: target file to write XML tree to already exists!");
             System.exit(0);
         }
 
