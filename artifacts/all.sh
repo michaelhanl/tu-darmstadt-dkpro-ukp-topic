@@ -9,7 +9,6 @@ v3="dkpro.ukp.topic.structure.jar"
 input="input"
 output="output"
 modal="pcfg"
-rule="config/Rules_EN.xml"
 
 parameters="-all $1 -modal $modal -inDir $input -outDir $output"
 

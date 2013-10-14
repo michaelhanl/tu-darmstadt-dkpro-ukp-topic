@@ -14,15 +14,14 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 
 public class TRAnnotator {
-    private static final String outDirEx = "topics";
-    public static final String outDirFinal = ConfigUtils.getOutputDir() + "/" +
-            outDirEx;
+    public static final String outDirEx = "topics";
     private static Logger jlog = LoggerFactory.getLogger(TRAnnotator.class);
     private Map<String, List<Result>> results;
     private File file;
@@ -59,29 +58,30 @@ public class TRAnnotator {
             Element sentence = i.next();
 
             Attribute sentID = sentence.attribute(Configuration.getAttrSentenceID());
-            List<String> f = XMLUtils.ruleEnumeration(getResults(sentID.getValue()));
-            String ruleIds = f.get(0);
-            String ruleLabels = f.get(1);
-            System.out.println("rule enum " + ruleLabels);
-            if (results.get(sentID.getValue()) == null) {
+            String[] f = XMLUtils.ruleEnumeration(getResults(sentID.getValue()));
+            String ruleIds = f[0];
+            String ruleLabels = f[1];
+
+            if (getResults(sentID.getValue()) == null) {
                 jlog.info("no topics available for sentence with ID {}!", sentID.getValue());
                 continue;
             } else {
                 sentence.addAttribute(Configuration.getAttrTopicRule(), ruleIds);
                 //sentence.addAttribute(Configuration.getAttrTopicLabel(), ruleLabels);
                 try {
-                    XMLUtils.dumpDocumentToFile(new File(outDirFinal, this.file.getName()), document);
+                    File dir = new File(ConfigUtils.getOutputDir(), outDirEx);
+                    dir.mkdir();
+                    XMLUtils.dumpDocumentToFile(new File(dir, this.file.getName()), document);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
         }
-
     }
 
     private List<Result> getResults(String id) {
         for (String key : results.keySet()) {
-            if (key.contains(id))
+            if (key.startsWith(id))
                 return results.get(key);
         }
         return null;

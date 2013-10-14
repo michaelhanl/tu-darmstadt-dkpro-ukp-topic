@@ -92,7 +92,7 @@ public final class XMLUtils {
         return sb;
     }
 
-    public static List<String> ruleEnumeration(List<Result> results) {
+    public static String[] ruleEnumeration(List<Result> results) {
         StringBuilder b = new StringBuilder();
         StringBuilder id = new StringBuilder();
         if (results == null || results.size() == 0)
@@ -103,10 +103,10 @@ public final class XMLUtils {
         }
         b.deleteCharAt(b.length() - 1);
         id.deleteCharAt(id.length() - 1);
-        List<String> l = new ArrayList<>();
-        l.add(id.toString());
-        l.add(b.toString());
-        return l;
+        String[] list = new String[2];
+        list[0] = id.toString();
+        list[1] = b.toString();
+        return list;
     }
 
     public static String splitSentenceIdentifier(String s) {

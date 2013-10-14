@@ -37,7 +37,7 @@ public class TREEntryPoint extends JCasConsumer_ImplBase {
         DocumentMetaData meta = DocumentMetaData.get(aJCas);
         File targetFile = new File(ConfigUtils.buildTargetDocPath(input,
                 meta.getDocumentTitle()));
-        File annotated = new File(TRAnnotator.outDirFinal + "/"
+        File annotated = new File(ConfigUtils.getOutputDir() + "/" + TRAnnotator.outDirEx + "/"
                 + targetFile.getName());
 
         if (!Configuration.isAutoOverEn() && Main.isAEn()

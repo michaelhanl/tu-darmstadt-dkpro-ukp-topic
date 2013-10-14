@@ -169,6 +169,7 @@ public class ConfigUtils extends Constants {
         File[] files = dir.listFiles(ruleFilter);
         _log.debug("found rule files: " + Arrays.asList(files));
 
+        System.out.println();
         for (File in : files) {
             String trimName = getTitle(in.getName());
             String languageExtension = trimName
@@ -192,6 +193,6 @@ public class ConfigUtils extends Constants {
         }
 
         if (getRuleFile() == null)
-            throw new IllegalArgumentException("No rule file found");
+           throw new IllegalArgumentException("No rule file set! Please check you have set the correct directory or language");
     }
 }
