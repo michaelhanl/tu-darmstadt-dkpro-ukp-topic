@@ -31,7 +31,7 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
      * @author hanl
      */
 
-    Logger _log = LoggerFactory.getLogger(ConstituentWriter.class);
+    private Logger _log = LoggerFactory.getLogger(ConstituentWriter.class);
     public final static String PARAM_PATH = "outputPath";
 
     @ConfigurationParameter(name = PARAM_PATH, mandatory = true)
@@ -73,9 +73,8 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
             /*
              * process segments of sentence
              */
-            for (ROOT r : JCasUtil.select(aJCas, ROOT.class)) {
+            for (ROOT r : JCasUtil.select(aJCas, ROOT.class))
                 processSegments(writer, r);
-            }
 
             writer.writeEndDocument();
             writer.flush();
@@ -102,9 +101,8 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
     private void processSegments(XMLStreamWriter xmlstream, Annotation ann)
             throws AnalysisEngineProcessException {
         try {
-            if (ann instanceof Token) {
+            if (ann instanceof Token)
                 processPOS(xmlstream, (Token) ann);
-            }
 
             if (ann instanceof Constituent) {
                 Constituent c = (Constituent) ann;
@@ -135,7 +133,7 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
      */
     private void processConstituents(XMLStreamWriter xmlstream, Constituent c)
             throws AnalysisEngineProcessException {
-        _log.debug("Processing constituent: " + c.getCoveredText());
+        _log.debug("Processing constituent: '{}'", c.getCoveredText());
         if (!c.getConstituentType().equals("ROOT")) {
             /*
              * sentence parameter receives sentence id
@@ -178,7 +176,7 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
      */
     private void processPOS(XMLStreamWriter xmlstream, Token t)
             throws AnalysisEngineProcessException {
-        _log.debug("Processing token: " + t.getCoveredText());
+        _log.debug("Processing token: '{}'", t.getCoveredText());
 
         String pos = null;
         String lemma = null; // lemmas are only available for English!
@@ -201,7 +199,7 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
              */
             if (pos.equals("$*LRB*") &&
                     t.getCoveredText().trim().charAt(0) == '"') {
-                _log.debug("Writing ID for citation: " + ConfigUtils.getCiteID());
+                _log.debug("Writing ID for citation: '{}'", ConfigUtils.getCiteID());
                 xmlstream.writeAttribute(Configuration.getAttrCitationID(),
                         ConfigUtils.getCiteID());
                 ConfigUtils.incrementCiteID();
