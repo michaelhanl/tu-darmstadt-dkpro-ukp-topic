@@ -25,7 +25,7 @@ public class ParsingPipeline {
      * @author hanl
      */
 
-    static Logger _log = LoggerFactory.getLogger(ParsingPipeline.class);
+    private static Logger _log = LoggerFactory.getLogger(ParsingPipeline.class);
 
     private CollectionReader collReader;
     private AnalysisEngineDescription segmenter;
@@ -53,9 +53,9 @@ public class ParsingPipeline {
             _log.debug("run Analysis Pipeline");
             SimplePipeline.runPipeline(collReader, treeRuleEngine);
         } catch (UIMAException e) {
-            _log.error("UIMA Exception",e.getMessage());
+            _log.error("UIMA Exception", e.getMessage());
         } catch (IOException e) {
-            _log.error("IO Exception",e.getMessage());
+            _log.error("IO Exception", e.getMessage());
         }
     }
 
@@ -75,9 +75,9 @@ public class ParsingPipeline {
             SimplePipeline.runPipeline(collReader, segmenter, parser,
                     constituentXML);
         } catch (UIMAException e) {
-            _log.error("UIMA Exception",e.getMessage());
+            _log.error("UIMA Exception", e.getMessage());
         } catch (IOException e) {
-            _log.error("IO Exception",e.getMessage());
+            _log.error("IO Exception", e.getMessage());
         }
     }
 
@@ -93,9 +93,9 @@ public class ParsingPipeline {
             SimplePipeline.runPipeline(collReader, segmenter, parser,
                     constituentXML, treeRuleEngine);
         } catch (UIMAException e) {
-            _log.error("UIMA Exception",e.getMessage());
+            _log.error("UIMA Exception", e.getMessage());
         } catch (IOException e) {
-            _log.error("IO Exception",e.getMessage());
+            _log.error("IO Exception", e.getMessage());
         }
 
     }
