@@ -1,37 +1,31 @@
 <?xml version="1.0" ?>
 <ROOT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/hanl/Projects/tu-darmstadt-dkpro-ukp-topic/artifacts/config/schema.xsd" docName="file">
 	<constituent id="001" cat="S">
-		<constituent cat="NP">
-			<constituent cat="NNP" lemma="Maria">Maria</constituent>
-		</constituent>
-		<constituent cat="VP">
-			<constituent cat="VBD" lemma="be">was</constituent>
-			<constituent cat="VP">
-				<constituent cat="VBG" lemma="go">going</constituent>
-				<constituent cat="NP">
-					<constituent cat="NN" lemma="home">home</constituent>
+		<constituent cat="NP-SB">
+			<constituent cat="NE">Maria</constituent>
+			<constituent cat="AP">
+				<constituent cat="NP-OA">
+					<constituent cat="PWS">was</constituent>
 				</constituent>
+				<constituent cat="ADJA">going</constituent>
 			</constituent>
 		</constituent>
-		<constituent cat="." lemma="!">!</constituent>
+		<constituent cat="VVFIN">home</constituent>
+		<constituent cat="$.">!</constituent>
 	</constituent>
-	<constituent id="002" cat="S">
-		<constituent cat="NP">
-			<constituent cat="PRP" lemma="I">I</constituent>
-		</constituent>
-		<constituent cat="VP">
-			<constituent cat="VBD" lemma="be">was</constituent>
-			<constituent cat="PP">
-				<constituent cat="IN" lemma="with">with</constituent>
-				<constituent cat="NP">
-					<constituent cat="PRP" lemma="she">her</constituent>
+	<constituent id="002" cat="NUR">
+		<constituent cat="CARD">I</constituent>
+		<constituent cat="S">
+			<constituent cat="PWS-OA">was</constituent>
+			<constituent cat="NP-SB">
+				<constituent cat="MPN">
+					<constituent cat="FM">with</constituent>
+					<constituent cat="FM">her</constituent>
+					<constituent cat="FM">the</constituent>
+					<constituent cat="FM">entire</constituent>
 				</constituent>
 			</constituent>
-			<constituent cat="NP">
-				<constituent cat="DT" lemma="the">the</constituent>
-				<constituent cat="JJ" lemma="entire">entire</constituent>
-				<constituent cat="NN" lemma="time">time</constituent>
-			</constituent>
+			<constituent cat="VVFIN">time</constituent>
 		</constituent>
-		<constituent cat="." lemma=".">.</constituent>
+		<constituent cat="$.">.</constituent>
 	</constituent></ROOT>

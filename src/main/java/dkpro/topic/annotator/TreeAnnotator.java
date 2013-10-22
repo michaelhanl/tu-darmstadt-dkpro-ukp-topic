@@ -21,7 +21,7 @@ import java.util.Map;
 
 public class TreeAnnotator {
     public static final String outDirEx = "topics";
-    private static Logger jlog = LoggerFactory.getLogger(TreeAnnotator.class);
+    private Logger jlog = LoggerFactory.getLogger(TreeAnnotator.class);
     private Map<String, List<Result>> results;
     private File file;
 
