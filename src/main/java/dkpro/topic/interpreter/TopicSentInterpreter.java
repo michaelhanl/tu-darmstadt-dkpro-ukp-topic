@@ -17,7 +17,6 @@ import java.util.*;
 /**
  * wrapper around topic interpreter class in the annolab project, written by R.
  * Eckart de Castilho
- * I dont get the sentence StringBuilder object, because it is used within the original theme interpreter class only
  *
  * @author hanl@ids-mannheim.de
  */
@@ -29,7 +28,7 @@ public class TopicSentInterpreter {
     private final RuleBook _ruleBook;
     private final List<RuleInstance> _activeRules;
     private final Map<String, List<Result>> _sentenceResults;
-    private final StringBuilder _sentence;
+    private final StringBuffer _sentence;
     private final StatisticsContainer _stats = new StatisticsContainer();
     private int _depth = 0;
     private List<Result> _results;
@@ -42,7 +41,7 @@ public class TopicSentInterpreter {
         this._ruleBook = rules;
         this._activeRules = new ArrayList<>();
         this._sentenceResults = new LinkedHashMap<>();
-        this._sentence = new StringBuilder();
+        this._sentence = new StringBuffer();
     }
 
     public void setFilterGeneralRules(boolean b) {

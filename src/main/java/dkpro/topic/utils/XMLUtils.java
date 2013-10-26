@@ -47,7 +47,7 @@ public final class XMLUtils {
     }
 
     public static void dumpDocumentToFile(File file, Document doc) throws IOException {
-        jlog.info("writing XML file {} with annotation to directory",
+        jlog.info("writing XML file {} with discourse information to directory",
                 file.getAbsolutePath());
         String encode;
         OutputFormat outformat = OutputFormat.createPrettyPrint();
@@ -68,7 +68,8 @@ public final class XMLUtils {
         writer.close();
     }
 
-    public static StringBuilder collapseWhitespace(StringBuilder sb) {
+    // fix: StringBuffer is much faster, though not synchronized
+    public static StringBuffer collapseWhitespace(StringBuffer sb) {
         boolean drop = true;
 
         int length = sb.length();
@@ -93,8 +94,8 @@ public final class XMLUtils {
     }
 
     public static String[] ruleEnumeration(List<Result> results) {
-        StringBuilder b = new StringBuilder();
-        StringBuilder id = new StringBuilder();
+        StringBuffer b = new StringBuffer();
+        StringBuffer id = new StringBuffer();
         if (results == null || results.size() == 0)
             return null;
         for (Result r : results) {

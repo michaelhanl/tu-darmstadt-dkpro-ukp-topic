@@ -33,7 +33,7 @@ public class Result {
     }
 
     public String toString() {
-        StringBuilder sb = new StringBuilder();
+        StringBuffer sb = new StringBuffer();
         if (this._removed)
             sb.append("[Ghost ");
         else {

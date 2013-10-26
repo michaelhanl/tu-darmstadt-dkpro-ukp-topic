@@ -149,7 +149,7 @@ public class ConfigUtils extends Constants {
 
     public static String buildTargetDocPath(String path, String inputTitle) {
         String title = getTitle(inputTitle);
-        StringBuilder documentPath = new StringBuilder();
+        StringBuffer documentPath = new StringBuffer();
         documentPath.append(path + "/");
         documentPath.append(title + ".xml");
         return documentPath.toString();

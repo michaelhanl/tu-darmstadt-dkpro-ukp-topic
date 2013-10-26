@@ -13,7 +13,7 @@ public class RuleInstance {
     Logger jlog = LoggerFactory.getLogger(RuleInstance.class);
     private Element _cursor;
     private int _createdAtDepth;
-    private StringBuilder textMatch;
+    private StringBuffer textMatch;
 
     //FIXME: add sentence result to this container and return list as replacement for DocHolderContainer
 
@@ -25,7 +25,7 @@ public class RuleInstance {
         this._relaxStack = new RuleDefinition.RelaxStack();
         this._cursor = this._ruleDefinition._structure.getRootElement();
         jlog.info("root element {}", this._cursor);
-        textMatch = new StringBuilder();
+        textMatch = new StringBuffer();
 
         advanceCursor();
     }
@@ -199,7 +199,7 @@ public class RuleInstance {
         this.textMatch.append(s);
     }
 
-    public StringBuilder getTextMatch() {
+    public StringBuffer getTextMatch() {
         return this.textMatch;
     }
 
@@ -222,7 +222,7 @@ public class RuleInstance {
         Element next = peekAhead();
         String ahead = RuleDefinition.elementToString(next);
         String current = RuleDefinition.elementToString(this._cursor);
-        StringBuilder sb = new StringBuilder();
+        StringBuffer sb = new StringBuffer();
         sb.append("[");
         sb.append(this._instance_id);
         sb.append("|");

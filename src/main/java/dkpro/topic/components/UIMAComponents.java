@@ -27,9 +27,13 @@ public class UIMAComponents {
     public static final int XML = 1;
     public static final int TEXT = 2;
 
+        /*
+         * reads input files from the configured input path!
+         * new String[]{"[+]*.txt"}
+		 */
     public static CollectionReader setupReader(int fileType) throws ResourceInitializationException {
         String[] files = new String[1];
-        switch(fileType) {
+        switch (fileType) {
             case XML:
                 files[0] = "[+]*.xml";
                 break;
@@ -37,11 +41,6 @@ public class UIMAComponents {
                 files[0] = "[+]*.txt";
                 break;
         }
-
-        /*
-         * reads input files from Param_Path default: "src/test/resources"
-         * new String[]{"[+]*.txt"}
-		 */
         _log.debug("initialize FileReader");
         CollectionReader collReader = createCollectionReader(TextReader.class,
                 TextReader.PARAM_PATH, ConfigUtils.getInputDir(),
@@ -55,12 +54,12 @@ public class UIMAComponents {
          * loads segmentation annotator for the Stanford Tools
 		 */
         AnalysisEngineDescription segmenter = createPrimitiveDescription(StanfordSegmenter.class);
-                         return segmenter;
+        return segmenter;
     }
 
     public static AnalysisEngineDescription setupParser() throws ResourceInitializationException {
         /*
-		 * loads the Stanford Parser and implements parsing parameters and
+         * loads the Stanford Parser and implements parsing parameters and
 		 * parsing tree parameters
 		 */
         _log.debug("initialize Parser");
@@ -70,7 +69,7 @@ public class UIMAComponents {
                 StanfordParser.PARAM_VARIANT, ConfigUtils.getModal(),
                 StanfordParser.PARAM_CREATE_CONSTITUENT_TAGS, true,
                 StanfordParser.PARAM_CREATE_DEPENDENCY_TAGS, false);
-                                  return parser;
+        return parser;
     }
 
 
@@ -85,7 +84,7 @@ public class UIMAComponents {
 
     public static AnalysisEngineDescription setupConstituentWriter() throws ResourceInitializationException {
         /*
-		 * loads constituent writer to transform JCas object to XML format,
+         * loads constituent writer to transform JCas object to XML format,
 		 * readable by the TRE
 		 */
         _log.debug("initialize Constituent Writer");
@@ -96,7 +95,7 @@ public class UIMAComponents {
 
 
     public static AnalysisEngineDescription setupTreeRuleEngine(String fileDir) throws ResourceInitializationException {
-        	/*
+        /*
 		 * takes XML files as input and produces statistics output in console
 		 * for topic identification
 		 */
