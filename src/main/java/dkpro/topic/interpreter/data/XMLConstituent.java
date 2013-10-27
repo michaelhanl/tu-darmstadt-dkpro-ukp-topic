@@ -31,14 +31,13 @@ public class XMLConstituent
         return sentenceID;
     }
 
+    @Override
     public boolean match(Element ruleElement) {
         if (ruleElement == null)
             return false;
 
-
         if (!this._element.getName().equals(ruleElement.getName()))
             return false;
-
 
         for (Attribute attr : (List<Attribute>) this._element.attributes()) {
             String name = attr.getName();
@@ -51,12 +50,16 @@ public class XMLConstituent
         return true;
     }
 
+    @Override
     public String getNodeExpectation() {
         return this._element.attributeValue("expect");
     }
 
-
+    @Override
     public Node getNode() {
         return _element;
     }
+
+
+
 }

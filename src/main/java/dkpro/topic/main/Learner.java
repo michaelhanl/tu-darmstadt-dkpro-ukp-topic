@@ -118,13 +118,14 @@ public class Learner implements ElementHandler {
         String parent = "none";
 
 
+
         if (elementPath.getCurrent().getParent() != null)
             parent = elementPath.getCurrent().getParent().getQName().getName();
         /*
          * There was a bug where the object rulesMatched was returned. At this call however this object
          * is always null and thus causes the programme to crash
          */
-        List<RuleInstance> rulesMatched = this._tri.getAllRulesMatched();
+        List<RuleInstance> rulesMatched = this._tri.getRulesMatched();
 
         if (this._skipAll || this._sw.getCurrent().getNodeExpectation() != null
                 || rulesMatched.size() == 0)
@@ -181,6 +182,7 @@ public class Learner implements ElementHandler {
             this._tri.setFilterGeneralRules(false);
 
             this._sw = new SAXParser(this._tri);
+
             this._sw.filter(this._sink);
             XMLUtils.parse(new File(parseFile), this._sw);
 

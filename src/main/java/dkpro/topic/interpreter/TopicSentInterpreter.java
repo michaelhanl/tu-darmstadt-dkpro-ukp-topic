@@ -35,6 +35,7 @@ public class TopicSentInterpreter {
     private List<RuleInstance> _allRulesMatched = new ArrayList<>();
     private List<RuleInstance> _rulesMatched = new ArrayList<>();
     private boolean _filterGeneralRules = true;
+    private StringBuffer _prevSentence;
 
 
     public TopicSentInterpreter(RuleBook rules) {
@@ -42,6 +43,7 @@ public class TopicSentInterpreter {
         this._activeRules = new ArrayList<>();
         this._sentenceResults = new LinkedHashMap<>();
         this._sentence = new StringBuffer();
+        this._prevSentence = new StringBuffer();
     }
 
     public void setFilterGeneralRules(boolean b) {
@@ -49,11 +51,8 @@ public class TopicSentInterpreter {
     }
 
     public void startElement(Constituent node) {
-        _log.debug("--------- INTERPRETER @START ------------");
+        _log.debug("--- " + this._depth + " START " + node + " ---");
         this._depth += 1;
-
-        _log.debug("--- " + this._depth + " START " + node);
-
         this._ruleBook.getRules(this._depth, this._activeRules, node);
         _log.debug("Active rules: " + this._activeRules.size());
 
@@ -147,8 +146,7 @@ public class TopicSentInterpreter {
         }
 
         /**
-         * TODO: returns null, why?!
-         * Due to an error in the matching of the rule Identifier (getNodeExpectation expected format [rule 1]
+         * Due to an error/bug in the matching of the rule Identifier (getNodeExpectation expected format [rule 1]
          * as the value for the "expect" attribute, whereas getExpectedRule expected the name to be without brackets,
          * e.g. "rule 1"
          * if expected == null, no expect attribute in XML found
@@ -166,14 +164,14 @@ public class TopicSentInterpreter {
                     this._results);
             this._stats.tallySentence();
         }
-//        this._rulesMatched = null;
+        //this._rulesMatched = null;
+
     }
 
 
     public void chars(Constituent node, String value) {
-        if (node.getParent() != null && node.getParent().equals("ROOT"))
-            _sentence.setLength(0);
         _sentence.append(value);
+        System.out.println("------ " + XMLUtils.collapseWhitespace(_sentence).toString());
     }
 
 
@@ -183,6 +181,10 @@ public class TopicSentInterpreter {
 
     public String getSentence() {
         return XMLUtils.collapseWhitespace(this._sentence).toString();
+    }
+
+    public String getPrevSentence() {
+        return XMLUtils.collapseWhitespace(this._prevSentence).toString();
     }
 
     public StatisticsContainer getStats() {

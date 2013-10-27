@@ -1,7 +1,6 @@
 package dkpro.topic.writers;
 
 import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
-import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent;
 import de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.ROOT;
@@ -78,10 +77,8 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
             /*
              * process segments of sentence
              */
-            for (Sentence sent : JCasUtil.select(aJCas, Sentence.class)) {
-                _log.debug("- PROCESSING SENTENCE " + sent.getType() + "-->" + sent.getBegin() + ":" + sent.getEnd() + " -");
-                processSentence(writer, sent, aJCas);
-            }
+            for (ROOT r : JCasUtil.select(aJCas, ROOT.class))
+                processSegments(writer, r);
 
             writer.writeEndDocument();
             writer.flush();
@@ -105,13 +102,9 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
      * @throws javax.xml.stream.XMLStreamException
      *
      */
-    private void processSegments(XMLStreamWriter xmlstream, Annotation ann, Sentence sent)
+    private void processSegments(XMLStreamWriter xmlstream, Annotation ann)
             throws AnalysisEngineProcessException {
-        boolean range = ann.getBegin() >= sent.getBegin() && ann.getEnd() <= sent.getEnd() ? true : false;
-        if (!range)
-            return;
-        else
-            _log.debug("- CONST WITHIN RANGE: " + ann.getType() + "@" + ann.getCoveredText() + "-->" + ann.getBegin() + ":" + ann.getEnd() + " -");
+        _log.debug("--- CONST WITHIN RANGE: " + ann.getType() + "@" + ann.getCoveredText() + "-->" + ann.getBegin() + ":" + ann.getEnd() + " ---");
         try {
             if (ann instanceof Token)
                 processPOS(xmlstream, (Token) ann);
@@ -121,7 +114,7 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
                 processConstituents(xmlstream, c);
 
                 for (FeatureStructure child : c.getChildren().toArray())
-                    processSegments(xmlstream, (Annotation) child, sent);
+                    processSegments(xmlstream, (Annotation) child);
 
                 if (!c.getConstituentType().equals("ROOT"))
                     xmlstream.writeEndElement();
@@ -131,12 +124,6 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
 
         }
 
-    }
-
-    private void processSentence(XMLStreamWriter xmlStreamWriter, Sentence sent, JCas aJcas)
-            throws AnalysisEngineProcessException {
-        for (ROOT r : JCasUtil.select(aJcas, ROOT.class))
-            processSegments(xmlStreamWriter, r, sent);
     }
 
 
@@ -151,8 +138,6 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
      */
     private void processConstituents(XMLStreamWriter xmlstream, Constituent c)
             throws AnalysisEngineProcessException {
-        _log.debug("Processing constituent: '{}'", c.getCoveredText());
-
         if (!c.getConstituentType().equals("ROOT")) {
             /*
              * sentence parameter receives sentence id
