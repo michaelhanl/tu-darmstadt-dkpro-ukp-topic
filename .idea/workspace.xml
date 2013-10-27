@@ -7,12 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d23da889-40de-41d3-8170-1eef29c4fdb4" name="Default" comment="new review">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/data/Constituent.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/data/Constituent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/writers/ConstituentWriter.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/writers/ConstituentWriter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/main/Learner.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/main/Learner.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicSentInterpreter.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicSentInterpreter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/data/XMLConstituent.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/data/XMLConstituent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dkpro.ukp.topic.structure.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,7 +62,7 @@
     <file path="/Result.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1382782019590" ignored="false" />
     <file path="/RuleBook.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379900162846" ignored="false" />
     <file path="/DocResultsHolder.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379871600274" ignored="false" />
-    <file path="/TopicSentInterpreter.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1382902183172" ignored="false" />
+    <file path="/TopicSentInterpreter.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1382902530419" ignored="false" />
     <file path="/OutputWriter.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1382385364072" ignored="false" />
     <file path="/TopicXMLParserHandler.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1382894031772" ignored="false" />
     <file path="/StatisticsContainer.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379920273403" ignored="false" />
@@ -176,10 +171,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ConstituentWriter.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ConstituentWriter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/writers/ConstituentWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="51" selection-start="3867" selection-end="3867" vertical-scroll-proportion="1.010101">
+            <state line="79" column="37" selection-start="3084" selection-end="3084" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -188,7 +183,7 @@
       <file leaf-file-name="Learner.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/Learner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="186" column="25" selection-start="6595" selection-end="6595" vertical-scroll-proportion="0.0">
+            <state line="127" column="58" selection-start="4678" selection-end="4678" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -203,10 +198,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TopicSentInterpreter.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TopicSentInterpreter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicSentInterpreter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="148" column="30" selection-start="5359" selection-end="5359" vertical-scroll-proportion="0.0">
+            <state line="129" column="36" selection-start="4741" selection-end="4741" vertical-scroll-proportion="0.29654035">
               <folding />
             </state>
           </provider>
@@ -269,8 +264,8 @@
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/main/Learner.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/XMLUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicSentInterpreter.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/writers/ConstituentWriter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicSentInterpreter.java" />
       </list>
     </option>
   </component>
@@ -1642,13 +1637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicXMLParserHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="29" selection-start="1732" selection-end="1732" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="33" selection-start="587" selection-end="587" vertical-scroll-proportion="0.0">
@@ -1656,23 +1644,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicSentInterpreter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/writers/ConstituentWriter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="30" selection-start="5359" selection-end="5359" vertical-scroll-proportion="0.0">
+        <state line="79" column="37" selection-start="3084" selection-end="3084" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicXMLParserHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="29" selection-start="1732" selection-end="1732" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/Learner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="186" column="25" selection-start="6595" selection-end="6595" vertical-scroll-proportion="0.0">
+        <state line="127" column="58" selection-start="4678" selection-end="4678" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/writers/ConstituentWriter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicSentInterpreter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="51" selection-start="3867" selection-end="3867" vertical-scroll-proportion="1.010101">
+        <state line="129" column="36" selection-start="4741" selection-end="4741" vertical-scroll-proportion="0.29654035">
           <folding />
         </state>
       </provider>

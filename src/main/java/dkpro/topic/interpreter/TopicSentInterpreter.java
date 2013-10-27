@@ -24,7 +24,7 @@ public class TopicSentInterpreter {
 
     private static final Log _log = LogFactory
             .getLog(TopicSentInterpreter.class);
-    private static final int SENTENCE_DEPTH = 1;
+    private static final int SENTENCE_DEPTH = 2;
     private final RuleBook _ruleBook;
     private final List<RuleInstance> _activeRules;
     private final Map<String, List<Result>> _sentenceResults;
@@ -60,7 +60,7 @@ public class TopicSentInterpreter {
         /**
          * required to seperate sentence within the results
          */
-        if (this._depth == 2) {
+        if (this._depth == SENTENCE_DEPTH) {
             this._sentence.setLength(0);
             this._results = new ArrayList<>();
         }
