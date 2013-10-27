@@ -26,7 +26,7 @@ import java.util.List;
  * FIXME: buggy for multiple sentences in one document.
  * Plus only recognizes the first sentence, but only at ROOT end Node
  */
-public class Learner implements Runnable, ElementHandler {
+public class Learner implements ElementHandler {
     private static final Log _log = LogFactory.getLog(Learner.class);
     private static final int CHOICE_NONE = -1;
     private static final String CHOICE_NONE_KEY = "n";
@@ -84,16 +84,16 @@ public class Learner implements Runnable, ElementHandler {
                         break;
                     }
                 } catch (NumberFormatException e) {
-                    if (raw.equals("n")) {
-                        choice = -1;
+                    if (raw.equals(CHOICE_NONE_KEY)) {
+                        choice = CHOICE_NONE;
                         break;
                     }
-                    if (raw.equals("w")) {
-                        choice = -2;
+                    if (raw.equals(CHOICE_SKIP_ALL_KEY)) {
+                        choice = CHOICE_SKIP_ALL;
                         break;
                     }
-                    if (raw.equals("s")) {
-                        choice = -3;
+                    if (raw.equals(CHOICE_SKIP_KEY)) {
+                        choice = CHOICE_SKIP;
                         break;
                     }
                 }
@@ -113,15 +113,13 @@ public class Learner implements Runnable, ElementHandler {
      */
     @Override
     public void onEnd(ElementPath elementPath) {
+        _log.debug("--------- LEARNING @END ------------");
         Element current = elementPath.getCurrent();
-        String parent = "null";
+        String parent = "none";
 
 
         if (elementPath.getCurrent().getParent() != null)
             parent = elementPath.getCurrent().getParent().getQName().getName();
-         //   System.out.println(elementPath.getCurrent().getParent().attributeValue("cat"));
-        //else
-         //   System.out.println("null!!");
         /*
          * There was a bug where the object rulesMatched was returned. At this call however this object
          * is always null and thus causes the programme to crash
@@ -153,6 +151,7 @@ public class Learner implements Runnable, ElementHandler {
         OutputWriter.renderXML(current);
     }
 
+    //@Override
     public void run() {
         try {
             String ruleFile = this._args[0];
@@ -175,8 +174,6 @@ public class Learner implements Runnable, ElementHandler {
             RuleBook rules = new RuleBook();
             rules.read(new File(ruleFile));
 
-
-
             this._sink = new SAXContentHandler(DocumentFactory.getInstance(),
                     this);
 
@@ -187,7 +184,7 @@ public class Learner implements Runnable, ElementHandler {
             this._sw.filter(this._sink);
             XMLUtils.parse(new File(parseFile), this._sw);
 
-            System.out.println("--- Writing output file: " + outFile);
+//            System.out.println("--- Writing output file: " + outFile);
             XMLUtils.dumpDocumentToFile(fOutFile, this._sink.getDocument());
         } catch (Throwable e) {
             _log.fatal("Fatal error", e);

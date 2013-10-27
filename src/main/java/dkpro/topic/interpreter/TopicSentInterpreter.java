@@ -33,7 +33,7 @@ public class TopicSentInterpreter {
     private int _depth = 0;
     private List<Result> _results;
     private List<RuleInstance> _allRulesMatched = new ArrayList<>();
-    private List<RuleInstance> _rulesMatched = null;
+    private List<RuleInstance> _rulesMatched = new ArrayList<>();
     private boolean _filterGeneralRules = true;
 
 
@@ -49,6 +49,7 @@ public class TopicSentInterpreter {
     }
 
     public void startElement(Constituent node) {
+        _log.debug("--------- INTERPRETER @START ------------");
         this._depth += 1;
 
         _log.debug("--- " + this._depth + " START " + node);
@@ -80,13 +81,12 @@ public class TopicSentInterpreter {
 
     public void endElement(Constituent node) {
         _log.debug("--- " + this._depth + " END   " + node);
+        _log.debug("--------- INTERPRETER @END ------------");
         XMLConstituent c = (XMLConstituent) node;
-        //sentenceResult = new ArrayList<>();
-
         this._depth -= 1;
 
         boolean expectationMet = false;
-        this._rulesMatched = new ArrayList<>();
+        this._rulesMatched.clear();
 
         Set<RuleInstance> toRemove = new HashSet<>();
         Iterator i1;
@@ -166,7 +166,7 @@ public class TopicSentInterpreter {
                     this._results);
             this._stats.tallySentence();
         }
-        this._rulesMatched = null;
+//        this._rulesMatched = null;
     }
 
 

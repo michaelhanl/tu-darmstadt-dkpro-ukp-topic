@@ -1,6 +1,7 @@
 package dkpro.topic.writers;
 
 import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
+import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent;
 import de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.ROOT;
@@ -23,6 +24,8 @@ import javax.xml.stream.XMLStreamWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class ConstituentWriter extends JCasConsumer_ImplBase {
@@ -36,6 +39,7 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
 
     @ConfigurationParameter(name = PARAM_PATH, mandatory = true)
     private String outputPath;
+    Map<Integer, Integer> sentennces = new HashMap<>();
 
     /**
      * process document as uima analysis engine and write stand-off-annotation XML file, based on relax NG XML schema.
@@ -51,8 +55,9 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
         DocumentMetaData meta = DocumentMetaData.get(aJCas);
         String title = ConfigUtils.getTitle(meta.getDocumentTitle());
         File file = new File(outputPath, title + ".xml");
+
         if (!Configuration.isAutoOverEn() && file.exists()) {
-            System.out.println("");
+            System.out.println();
             System.out
                     .println("WARNING: target file to write XML tree to already exists!");
             System.exit(0);
@@ -73,8 +78,10 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
             /*
              * process segments of sentence
              */
-            for (ROOT r : JCasUtil.select(aJCas, ROOT.class))
-                processSegments(writer, r);
+            for (Sentence sent : JCasUtil.select(aJCas, Sentence.class)) {
+                _log.debug("- PROCESSING SENTENCE " + sent.getType() + "-->" + sent.getBegin() + ":" + sent.getEnd() + " -");
+                processSentence(writer, sent, aJCas);
+            }
 
             writer.writeEndDocument();
             writer.flush();
@@ -98,8 +105,13 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
      * @throws javax.xml.stream.XMLStreamException
      *
      */
-    private void processSegments(XMLStreamWriter xmlstream, Annotation ann)
+    private void processSegments(XMLStreamWriter xmlstream, Annotation ann, Sentence sent)
             throws AnalysisEngineProcessException {
+        boolean range = ann.getBegin() >= sent.getBegin() && ann.getEnd() <= sent.getEnd() ? true : false;
+        if (!range)
+            return;
+        else
+            _log.debug("- CONST WITHIN RANGE: " + ann.getType() + "@" + ann.getCoveredText() + "-->" + ann.getBegin() + ":" + ann.getEnd() + " -");
         try {
             if (ann instanceof Token)
                 processPOS(xmlstream, (Token) ann);
@@ -109,7 +121,7 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
                 processConstituents(xmlstream, c);
 
                 for (FeatureStructure child : c.getChildren().toArray())
-                    processSegments(xmlstream, (Annotation) child);
+                    processSegments(xmlstream, (Annotation) child, sent);
 
                 if (!c.getConstituentType().equals("ROOT"))
                     xmlstream.writeEndElement();
@@ -119,6 +131,12 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
 
         }
 
+    }
+
+    private void processSentence(XMLStreamWriter xmlStreamWriter, Sentence sent, JCas aJcas)
+            throws AnalysisEngineProcessException {
+        for (ROOT r : JCasUtil.select(aJcas, ROOT.class))
+            processSegments(xmlStreamWriter, r, sent);
     }
 
 
@@ -134,6 +152,7 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
     private void processConstituents(XMLStreamWriter xmlstream, Constituent c)
             throws AnalysisEngineProcessException {
         _log.debug("Processing constituent: '{}'", c.getCoveredText());
+
         if (!c.getConstituentType().equals("ROOT")) {
             /*
              * sentence parameter receives sentence id

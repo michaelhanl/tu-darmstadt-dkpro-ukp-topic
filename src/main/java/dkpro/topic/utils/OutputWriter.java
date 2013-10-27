@@ -32,13 +32,13 @@ public class OutputWriter {
         int numberOfSentences = 0;
         int sentencesWithoutResults = 0;
 
-        out.println("--- Results");
+        out.println("--- Results ---");
         for (Map.Entry<String, List<Result>> e : sentenceResults.entrySet()) {
             numberOfSentences++;
 
             boolean fullSentenceFound = false;
             String sent = XMLUtils.splitSentence(e.getKey());
-            String id = XMLUtils.splitSentenceIdentifier(e.getKey());
+//            String id = XMLUtils.splitSentenceIdentifier(e.getKey());
 
             out.println("Sentence: [" + e.getKey() + "]");
             for (Result r : e.getValue()) {
@@ -94,7 +94,7 @@ public class OutputWriter {
 
     public void writeRuleBuild(RuleBook rules) {
         Map<RuleDefinition, Collection<RuleDefinition>> ruleMap = rules.generateRules();
-        out.println("\n--- Rule and rules superseding them");
+        out.println("\n--- Rule and rules superseding them ---");
         for (RuleDefinition r1 : ruleMap.keySet()) {
 
             //TODO: do better formatting!

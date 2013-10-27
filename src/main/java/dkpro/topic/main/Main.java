@@ -146,12 +146,13 @@ public class Main {
             ConfigUtils.retrieveRuleFiles(path + "/" + Configuration.CONFIGDIR);
         try {
             new ParsingPipeline().runTopicEngineOnly();
+            _log.info("Successfully run pipeline");
         } catch (AnnotatorConfigurationException
                 | ResourceInitializationException e) {
             _log.error("Parsing could not be completed, due to internal error",
                     e.getMessage(), e);
         }
-        _log.info("Successfully run pipeline");
+
 
     }
 
@@ -203,12 +204,13 @@ public class Main {
 
         try {
             new ParsingPipeline().runAll();
+            _log.info("Successfully run pipeline");
         } catch (AnnotatorConfigurationException
                 | ResourceInitializationException e) {
             _log.error("Parsing could not be completed, due to internal error",
                     e.getMessage(), e);
         }
-        _log.info("Successfully run pipeline");
+
 
     }
 
@@ -232,14 +234,15 @@ public class Main {
             }
         }
 
-        System.out.println("arguments: " + Arrays.asList(sortedArgs));
         try {
             Learner.main(sortedArgs);
+            _log.info("Successfully run pipeline");
         } catch (Exception e) {
-            e.printStackTrace();
+            _log.error("Parsing could not be completed, due to internal error",
+                    e.getMessage(), e);
             System.exit(-1);
         }
-        _log.info("Successfully run pipeline");
+
     }
 
 }

@@ -59,7 +59,7 @@ public class TREEntryPoint extends JCasConsumer_ImplBase {
 
         if (!Configuration.isAutoOverEn() && Main.isAEn()
                 && annotated.exists()) {
-            System.out.println("");
+            System.out.println();
             System.out
                     .println("WARNING: topic annotation target File already exists!");
             System.exit(0);
@@ -70,11 +70,11 @@ public class TREEntryPoint extends JCasConsumer_ImplBase {
         } catch (Exception e) {
             _log.error("TreeRuleParser exits with error!", e);
         }
-        annotator = TreeAnnotator.instantiate
-                (targetFile, parser.getSentenceResults());
 
-        if (Main.isAEn())
+        if (Main.isAEn()) {
+            annotator = TreeAnnotator.instantiate
+                    (targetFile, parser.getSentenceResults());
             annotator.process();
-
+        }
     }
 }

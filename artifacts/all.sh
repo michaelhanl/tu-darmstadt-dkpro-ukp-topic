@@ -1,7 +1,5 @@
 #!/bin/bash
 
-## set working dir to main (pwd)?!
-
 ## set runtime parameters 
 ## in "all" mode the rule file is automatically detected, if there are rule files in the "config"
 ## directory with the respective language extension ("EN" or "DE").
