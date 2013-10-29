@@ -78,6 +78,7 @@ public class SAXParser extends SAXFilter {
         XMLConstituent constituent = this._stack.peek();
         this._interpreter.endElement(constituent);
         this._stack.pop();
+
         if (render)
             OutputWriter.renderXML(constituent.getNode());
     }

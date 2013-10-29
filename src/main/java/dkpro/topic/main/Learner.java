@@ -117,8 +117,6 @@ public class Learner implements ElementHandler {
         Element current = elementPath.getCurrent();
         String parent = "none";
 
-
-
         if (elementPath.getCurrent().getParent() != null)
             parent = elementPath.getCurrent().getParent().getQName().getName();
         /*
@@ -152,7 +150,6 @@ public class Learner implements ElementHandler {
         OutputWriter.renderXML(current);
     }
 
-    //@Override
     public void run() {
         try {
             String ruleFile = this._args[0];
@@ -186,7 +183,6 @@ public class Learner implements ElementHandler {
             this._sw.filter(this._sink);
             XMLUtils.parse(new File(parseFile), this._sw);
 
-//            System.out.println("--- Writing output file: " + outFile);
             XMLUtils.dumpDocumentToFile(fOutFile, this._sink.getDocument());
         } catch (Throwable e) {
             _log.fatal("Fatal error", e);

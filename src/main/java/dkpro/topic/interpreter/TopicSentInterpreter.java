@@ -165,15 +165,11 @@ public class TopicSentInterpreter {
             this._stats.tallySentence();
         }
         //this._rulesMatched = null;
-
     }
-
 
     public void chars(Constituent node, String value) {
         _sentence.append(value);
-        System.out.println("------ " + XMLUtils.collapseWhitespace(_sentence).toString());
     }
-
 
     public List<RuleInstance> getRulesMatched() {
         return this._rulesMatched;
@@ -181,10 +177,6 @@ public class TopicSentInterpreter {
 
     public String getSentence() {
         return XMLUtils.collapseWhitespace(this._sentence).toString();
-    }
-
-    public String getPrevSentence() {
-        return XMLUtils.collapseWhitespace(this._prevSentence).toString();
     }
 
     public StatisticsContainer getStats() {
