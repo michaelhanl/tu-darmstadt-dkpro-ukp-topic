@@ -129,7 +129,7 @@ public class Learner implements ElementHandler {
                 || rulesMatched.size() == 0)
             return;
 
-        System.out.format("Sentence read so far: [%s]%n",
+        System.out.format("Sentence read so far: '%s'%n",
                 new Object[]{this._tri.getSentence()});
         renderChoices(rulesMatched);
         int choice = getChoice(rulesMatched.size());

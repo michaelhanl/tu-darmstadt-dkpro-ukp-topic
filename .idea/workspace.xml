@@ -8,9 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d23da889-40de-41d3-8170-1eef29c4fdb4" name="Default" comment="new review">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/main/Learner.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/main/Learner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXParser.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicSentInterpreter.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicSentInterpreter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dkpro.ukp.topic.structure.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,7 +63,7 @@
     <file path="/Result.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1382782019590" ignored="false" />
     <file path="/RuleBook.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379900162846" ignored="false" />
     <file path="/DocResultsHolder.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379871600274" ignored="false" />
-    <file path="/TopicSentInterpreter.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1382902530419" ignored="false" />
+    <file path="/TopicSentInterpreter.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383037862902" ignored="false" />
     <file path="/OutputWriter.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1382385364072" ignored="false" />
     <file path="/TopicXMLParserHandler.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1382894031772" ignored="false" />
     <file path="/StatisticsContainer.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379920273403" ignored="false" />
@@ -186,7 +184,7 @@
       <file leaf-file-name="Learner.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/Learner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="132" column="45" selection-start="4939" selection-end="4939" vertical-scroll-proportion="0.5376106">
+            <state line="132" column="50" selection-start="4944" selection-end="4944" vertical-scroll-proportion="0.5054096">
               <folding />
             </state>
           </provider>
@@ -195,8 +193,10 @@
       <file leaf-file-name="TopicSentInterpreter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicSentInterpreter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="182" column="34" selection-start="6609" selection-end="6609" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="141" column="54" selection-start="5257" selection-end="5257" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -258,8 +258,8 @@
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/XMLUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/writers/ConstituentWriter.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/main/Learner.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicSentInterpreter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/main/Learner.java" />
       </list>
     </option>
   </component>
@@ -618,6 +618,24 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="dkpro/topic/main">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src/main/java">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="dkpro/topic/interpreter">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -1515,12 +1533,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3206687" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24861442" sideWeight="0.4002954" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29098967" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29098967" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32791728" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25194132" sideWeight="0.67851853" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12401264" sideWeight="0.6780627" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21625888" sideWeight="0.70901036" order="0" side_tool="false" content_ui="combo" x="555" y="47" width="312" height="677" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21625888" sideWeight="0.7081481" order="0" side_tool="false" content_ui="combo" x="555" y="47" width="312" height="677" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32842416" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="148" y="122" width="1112" height="546" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1701,20 +1719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicSentInterpreter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="34" selection-start="6609" selection-end="6609" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="33" selection-start="2830" selection-end="2830" vertical-scroll-proportion="1.4114021">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar!/org/dom4j/io/SAXContentHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="142" column="11" selection-start="4290" selection-end="4290" vertical-scroll-proportion="0.33226836">
@@ -1722,9 +1726,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicSentInterpreter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="141" column="54" selection-start="5257" selection-end="5257" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="13" selection-start="462" selection-end="462" vertical-scroll-proportion="-0.86217946">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/Learner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="45" selection-start="4939" selection-end="4939" vertical-scroll-proportion="0.5376106">
+        <state line="132" column="50" selection-start="4944" selection-end="4944" vertical-scroll-proportion="0.5054096">
           <folding />
         </state>
       </provider>

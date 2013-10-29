@@ -8,8 +8,9 @@ import dkpro.topic.interpreter.rules.RuleDefinition;
 import dkpro.topic.interpreter.rules.RuleInstance;
 import dkpro.topic.utils.StatisticsContainer;
 import dkpro.topic.utils.XMLUtils;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
+
 
 import java.util.*;
 
@@ -22,8 +23,8 @@ import java.util.*;
  */
 public class TopicSentInterpreter {
 
-    private static final Log _log = LogFactory
-            .getLog(TopicSentInterpreter.class);
+    private static final Logger _log = LoggerFactory
+            .getLogger(TopicSentInterpreter.class);
     private static final int SENTENCE_DEPTH = 2;
     private final RuleBook _ruleBook;
     private final List<RuleInstance> _activeRules;
@@ -54,7 +55,7 @@ public class TopicSentInterpreter {
         _log.debug("--- " + this._depth + " START " + node + " ---");
         this._depth += 1;
         this._ruleBook.getRules(this._depth, this._activeRules, node);
-        _log.debug("Active rules: " + this._activeRules.size());
+        _log.debug("Active rules: {}", this._activeRules.size());
 
 
         /**
@@ -72,14 +73,14 @@ public class TopicSentInterpreter {
             boolean remove = r.startElement(this._depth, node);
             if (remove) {
                 i.remove();
-                _log.debug("RuleInstance is no longer a candidate: rule did not get what it expected (" +
-                        this._activeRules.size() + "): " + r);
+                _log.debug("RuleInstance is no longer a candidate: rule did not get what it expected ({}): {}",
+                        this._activeRules.size(), r);
             }
         }
     }
 
     public void endElement(Constituent node) {
-        _log.debug("--- " + this._depth + " END   " + node);
+        _log.debug("--- {} END  {}",this._depth, node);
         _log.debug("--------- INTERPRETER @END ------------");
         XMLConstituent c = (XMLConstituent) node;
         this._depth -= 1;
@@ -112,13 +113,13 @@ public class TopicSentInterpreter {
             boolean remove = r.endElement(this._depth + 1, node);
             if (remove) {
                 i.remove();
-                _log.debug("RuleInstance is no longer a candidate [2] (" +
-                        this._activeRules.size() + "): " + r);
+                _log.debug("RuleInstance is no longer a candidate [2] ({}): {}",
+                        this._activeRules.size(), r);
             } else if (r.getCreationDepth() > this._depth) {
                 i.remove();
 
                 if (!r.expectsMore()) {
-                    _log.debug("RuleInstance matches: " + r + " -> " +
+                    _log.debug("RuleInstance matches: {} -> {}",r.toString(),
                             r.getDefinition().getTopicType());
                     Result.Expectation e = r.getExpectation(node);
 
@@ -137,8 +138,8 @@ public class TopicSentInterpreter {
                     this._results.add(new Result(r, e, getExpectedRule(node),
                             removed));
                 } else {
-                    _log.debug("RuleInstance left scope (" +
-                            this._activeRules.size() + "): " + r);
+                    _log.debug("RuleInstance left scope ({}): {}",
+                            this._activeRules.size(), r);
                 }
 
             }
