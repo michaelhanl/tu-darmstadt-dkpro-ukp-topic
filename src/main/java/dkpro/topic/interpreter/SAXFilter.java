@@ -44,7 +44,6 @@ public class SAXFilter extends DefaultHandler
 
     public void endElement(String uri, String localName, String qName)
             throws SAXException {
-        System.out.println("---- SAX FILTER ELEMENT END");
         if (this.debug) {
             _log.debug("endElement");
         }

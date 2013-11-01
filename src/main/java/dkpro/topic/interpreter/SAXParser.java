@@ -90,7 +90,10 @@ public class SAXParser extends SAXFilter {
 
 
     public XMLConstituent getCurrent() {
-        return this._stack.peek();
+        if (!this._stack.isEmpty())
+            return this._stack.peek();
+        else
+            return null;
     }
 
 }

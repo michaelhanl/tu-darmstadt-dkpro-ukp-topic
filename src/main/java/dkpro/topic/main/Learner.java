@@ -2,6 +2,7 @@ package dkpro.topic.main;
 
 import dkpro.topic.interpreter.SAXParser;
 import dkpro.topic.interpreter.TopicSentInterpreter;
+import dkpro.topic.interpreter.data.XMLConstituent;
 import dkpro.topic.interpreter.rules.RuleBook;
 import dkpro.topic.interpreter.rules.RuleInstance;
 import dkpro.topic.utils.OutputWriter;
@@ -125,8 +126,9 @@ public class Learner extends DefaultHandler implements ElementHandler {
          * is always null and thus causes the programme to crash
          */
         List<RuleInstance> rulesMatched = this._tri.getRulesMatched();
+        XMLConstituent con = this._sw.getCurrent();
 
-        if (this._skipAll || this._sw.getCurrent().getNodeExpectation() != null
+        if (this._skipAll || (con != null && con.getNodeExpectation() != null)
                 || rulesMatched.size() == 0)
             return;
 
@@ -148,7 +150,7 @@ public class Learner extends DefaultHandler implements ElementHandler {
                 current.addAttribute("expect",
                         rulesMatched.get(choice).getName());
         }
-        OutputWriter.renderXML(current);
+        //OutputWriter.renderXML(current);
     }
 
     public void run() {

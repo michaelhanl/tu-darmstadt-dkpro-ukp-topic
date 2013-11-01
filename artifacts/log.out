@@ -45076,3 +45076,53 @@ Nov 01, 2013 18:32:54 dkpro.topic.utils.NamingParameters
  INFO : loading properties
 Nov 01, 2013 18:32:54 dkpro.topic.main.Main 
  INFO : running annotator learning engine
+Nov 01, 2013 18:37:38 dkpro.topic.utils.NamingParameters 
+ INFO : loading properties
+Nov 01, 2013 18:37:38 dkpro.topic.main.Main 
+ INFO : running annotator learning engine
+Nov 01, 2013 18:37:47 dkpro.topic.utils.NamingParameters 
+ INFO : loading properties
+Nov 01, 2013 18:37:47 dkpro.topic.main.Main 
+ INFO : running annotator learning engine
+Nov 01, 2013 18:37:57 dkpro.topic.main.Learner 
+ FATAL: Fatal error
+java.util.EmptyStackException
+	at java.util.Stack.peek(Stack.java:102)
+	at dkpro.topic.interpreter.SAXParser.getCurrent(SAXParser.java:94)
+	at dkpro.topic.main.Learner.onEnd(Learner.java:129)
+	at org.dom4j.io.SAXContentHandler.endElement(SAXContentHandler.java:268)
+	at dkpro.topic.interpreter.SAXFilter.endElement(SAXFilter.java:55)
+	at dkpro.topic.interpreter.SAXParser.endElement(SAXParser.java:84)
+	at org.apache.xerces.parsers.AbstractSAXParser.endElement(Unknown Source)
+	at org.apache.xerces.impl.XMLNSDocumentScannerImpl.scanEndElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(Unknown Source)
+	at javax.xml.parsers.SAXParser.parse(SAXParser.java:392)
+	at javax.xml.parsers.SAXParser.parse(SAXParser.java:328)
+	at dkpro.topic.utils.XMLUtils.parse(XMLUtils.java:31)
+	at dkpro.topic.main.Learner.run(Learner.java:185)
+	at dkpro.topic.main.Learner.main(Learner.java:195)
+	at dkpro.topic.main.Main.runAnnoLabLearner(Main.java:239)
+	at dkpro.topic.main.Main.main(Main.java:58)
+Nov 01, 2013 18:37:57 dkpro.topic.main.Main 
+ INFO : Successfully run pipeline
+Nov 01, 2013 18:42:17 dkpro.topic.utils.NamingParameters 
+ INFO : loading properties
+Nov 01, 2013 18:42:17 dkpro.topic.main.Main 
+ INFO : running annotator learning engine
+Nov 01, 2013 18:42:24 dkpro.topic.utils.XMLUtils 
+ INFO : writing XML file /home/hanl/Projects/tu-darmstadt-dkpro-ukp-topic/artifacts/output/file2.xml with discourse information to directory
+Nov 01, 2013 18:42:24 dkpro.topic.main.Main 
+ INFO : Successfully run pipeline
+Nov 01, 2013 18:44:48 dkpro.topic.utils.NamingParameters 
+ INFO : loading properties
+Nov 01, 2013 18:44:48 dkpro.topic.main.Main 
+ INFO : running annotator learning engine
+Nov 01, 2013 18:44:51 dkpro.topic.utils.XMLUtils 
+ INFO : writing XML file /home/hanl/Projects/tu-darmstadt-dkpro-ukp-topic/artifacts/output/file2.xml with discourse information to directory
+Nov 01, 2013 18:44:51 dkpro.topic.main.Main 
+ INFO : Successfully run pipeline
