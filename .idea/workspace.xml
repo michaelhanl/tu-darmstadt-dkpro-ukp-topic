@@ -7,9 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d23da889-40de-41d3-8170-1eef29c4fdb4" name="Default" comment="new review">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/main/Learner.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/main/Learner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXFilter.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXParser.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/XMLUtils.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/XMLUtils.java" />
     </list>
     <ignored path="dkpro.ukp.topic.structure.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -181,13 +179,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Learner.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Learner.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/Learner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="32" selection-start="4768" selection-end="4768" vertical-scroll-proportion="0.16383308">
+            <state line="136" column="24" selection-start="5143" selection-end="5143" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TreeAnnotator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/annotator/TreeAnnotator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="62" selection-start="2062" selection-end="2062" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XMLUtils.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/utils/XMLUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="68" selection-start="1539" selection-end="1539" vertical-scroll-proportion="0.42628205">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OutputWriter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/utils/OutputWriter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="13" selection-start="514" selection-end="514" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -257,7 +282,6 @@
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicXMLParserHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/data/Constituent.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/data/XMLConstituent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/XMLUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/writers/ConstituentWriter.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicSentInterpreter.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java" />
@@ -269,6 +293,7 @@
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/main/Learner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/XMLUtils.java" />
       </list>
     </option>
   </component>
@@ -1696,23 +1721,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/data/Constituent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="22" selection-start="87" selection-end="87" vertical-scroll-proportion="0.071428575" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/utils/XMLUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="40" selection-start="993" selection-end="993" vertical-scroll-proportion="0.30952382" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicXMLParserHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="20" selection-start="1679" selection-end="1679" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar!/org/dom4j/io/SAXContentHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="142" column="11" selection-start="4290" selection-end="4290" vertical-scroll-proportion="0.33226836">
@@ -1797,10 +1805,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/Learner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="32" selection-start="4768" selection-end="4768" vertical-scroll-proportion="0.16383308">
+        <state line="136" column="24" selection-start="5143" selection-end="5143" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/annotator/TreeAnnotator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="62" selection-start="2062" selection-end="2062" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/utils/OutputWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="13" selection-start="514" selection-end="514" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/utils/XMLUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="68" selection-start="1539" selection-end="1539" vertical-scroll-proportion="0.42628205">
+          <folding />
         </state>
       </provider>
     </entry>

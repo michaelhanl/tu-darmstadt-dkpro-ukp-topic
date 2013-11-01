@@ -47,7 +47,7 @@ public final class XMLUtils {
     }
 
     public static void dumpDocumentToFile(File file, Document doc) throws IOException {
-        jlog.info("writing XML file {} with discourse information to directory",
+        jlog.info("writing XML file {}",
                 file.getAbsolutePath());
         String encode;
         OutputFormat outformat = OutputFormat.createPrettyPrint();

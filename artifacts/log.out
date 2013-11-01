@@ -45126,3 +45126,11 @@ Nov 01, 2013 18:44:51 dkpro.topic.utils.XMLUtils
  INFO : writing XML file /home/hanl/Projects/tu-darmstadt-dkpro-ukp-topic/artifacts/output/file2.xml with discourse information to directory
 Nov 01, 2013 18:44:51 dkpro.topic.main.Main 
  INFO : Successfully run pipeline
+Nov 01, 2013 18:47:09 dkpro.topic.utils.NamingParameters 
+ INFO : loading properties
+Nov 01, 2013 18:47:09 dkpro.topic.main.Main 
+ INFO : running annotator learning engine
+Nov 01, 2013 18:47:12 dkpro.topic.utils.XMLUtils 
+ INFO : writing XML file /home/hanl/Projects/tu-darmstadt-dkpro-ukp-topic/artifacts/output/file2.xml with discourse information to directory
+Nov 01, 2013 18:47:12 dkpro.topic.main.Main 
+ INFO : Successfully run pipeline
