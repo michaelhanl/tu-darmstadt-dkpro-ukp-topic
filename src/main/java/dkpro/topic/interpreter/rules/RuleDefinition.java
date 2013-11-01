@@ -4,7 +4,7 @@ package dkpro.topic.interpreter.rules;
 import dkpro.topic.interpreter.SAXParser;
 import dkpro.topic.interpreter.TopicSentInterpreter;
 import dkpro.topic.interpreter.data.Constituent;
-import dkpro.topic.utils.Configuration;
+import dkpro.topic.utils.NamingParameters;
 import dkpro.topic.utils.XMLUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -143,7 +143,7 @@ public class RuleDefinition {
     }
 
     public static String elementToString(Element e) {
-        return e != null ? e.getName() + "/" + e.attributeValue(Configuration.getAttrConstType()) : null;
+        return e != null ? e.getName() + "/" + e.attributeValue(NamingParameters.getAttrConstType()) : null;
     }
 
     public static class RelaxStack {

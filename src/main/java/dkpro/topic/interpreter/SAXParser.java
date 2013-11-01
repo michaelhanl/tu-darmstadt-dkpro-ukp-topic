@@ -1,7 +1,7 @@
 package dkpro.topic.interpreter;
 
 import dkpro.topic.interpreter.data.XMLConstituent;
-import dkpro.topic.utils.Configuration;
+import dkpro.topic.utils.NamingParameters;
 import dkpro.topic.utils.OutputWriter;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
@@ -39,11 +39,11 @@ public class SAXParser extends SAXFilter {
     public void startElement(String uri, String localName, String name,
                              Attributes attributes) throws SAXException {
 //        FIXME: docname probably not needed!
-        if (localName.equals(Configuration.getDocRoot()))
-            docName = attributes.getValue(Configuration.getAttrDocName());
+        if (localName.equals(NamingParameters.getDocRoot()))
+            docName = attributes.getValue(NamingParameters.getAttrDocName());
 
-        if (localName.equals(Configuration.getElementSentence()))
-            sentenceID = attributes.getValue(Configuration.getAttrSentenceID());
+        if (localName.equals(NamingParameters.getElementSentence()))
+            sentenceID = attributes.getValue(NamingParameters.getAttrSentenceID());
 
         Element e = DocumentHelper.createElement(QName
                 .get(localName, uri, name));
@@ -72,15 +72,15 @@ public class SAXParser extends SAXFilter {
     @Override
     public void endElement(String uri, String localName, String name)
             throws SAXException {
-
-        super.endElement(uri, localName, name);
-
         XMLConstituent constituent = this._stack.peek();
         this._interpreter.endElement(constituent);
         this._stack.pop();
 
         if (render)
             OutputWriter.renderXML(constituent.getNode());
+        //filter must run after parser, since learner has to resolve the result directly after the parser
+        // found the topic type and can return the respective sentence accordingly!
+        super.endElement(uri, localName, name);
     }
 
     @Override

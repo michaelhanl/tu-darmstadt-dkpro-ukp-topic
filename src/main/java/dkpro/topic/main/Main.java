@@ -8,15 +8,14 @@
 
 package dkpro.topic.main;
 
-import dkpro.topic.utils.ConfigUtils;
 import dkpro.topic.utils.Configuration;
+import dkpro.topic.utils.NamingParameters;
 import org.apache.uima.analysis_engine.annotator.AnnotatorConfigurationException;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
-import java.util.Arrays;
 
 /**
  * @author hanl
@@ -27,25 +26,27 @@ public class Main {
 
     private static Logger _log = LoggerFactory.getLogger(Main.class);
     private static boolean topicAnnotator = false;
+    private static ParsingPipeline pipeline;
 
     public static boolean isAEn() {
         return topicAnnotator;
     }
 
     public static void main(String[] args) {
+        pipeline = new ParsingPipeline();
         if (args.length == 0) {
             System.out.println("please specify parameters!");
             System.out
                     .println("help: 'java -jar <jarFile> -parser | -topic | -all ... [-toFile]'");
             System.exit(-1);
         }
-        String path = Configuration.bootstrapConfiguration();
+        String path = NamingParameters.bootstrapConfiguration();
 
         for (int i = 0; i < args.length; i++) {
             switch (args[i]) {
                 case "-all":
                     _log.info("running entire annotation engine");
-                    runAll(args, path);
+                    runPipeline(args, path);
                     break;
                 case "-parser":
                     _log.info("running stanford parser engine");
@@ -68,21 +69,21 @@ public class Main {
         for (int i = 0; i < args.length; i++) {
             switch (args[i]) {
                 case "german":
-                    ConfigUtils.setLang(ConfigUtils.GERMAN);
+                    Configuration.setLang(Configuration.GERMAN);
                     break;
                 case "english":
-                    ConfigUtils.setLang(ConfigUtils.ENGLISH);
+                    Configuration.setLang(Configuration.ENGLISH);
                     break;
                 case "-inDir":
-                    ConfigUtils.setFilesDir(args[i + 1]);
+                    Configuration.setFilesDir(args[i + 1]);
                     break;
                 case "-outDir":
-                    ConfigUtils.setOutputDir(args[i + 1]);
+                    Configuration.setOutputDir(args[i + 1]);
                     break;
                 case "-modal":
-                    if (args[i + 1].equalsIgnoreCase(ConfigUtils.PCFG)
-                            | args[i + 1].equalsIgnoreCase(ConfigUtils.FACTORED)) {
-                        ConfigUtils.setModal(args[i + 1]);
+                    if (args[i + 1].equalsIgnoreCase(Configuration.PCFG)
+                            | args[i + 1].equalsIgnoreCase(Configuration.FACTORED)) {
+                        Configuration.setModal(args[i + 1]);
                         break;
                     } else {
                         System.out
@@ -97,9 +98,9 @@ public class Main {
                     return;
             }
         }
-        ConfigUtils.retrieveRuleFiles(path + "/" + Configuration.CONFIGDIR);
+        Configuration.retrieveRuleFiles(path + "/" + Configuration.CONFIGDIR);
         try {
-            new ParsingPipeline().runStanfordParser();
+            pipeline.runStanfordParser();
         } catch (AnnotatorConfigurationException
                 | ResourceInitializationException e) {
             _log.error("Parsing could not be completed, due to internal error",
@@ -113,19 +114,19 @@ public class Main {
         for (int i = 0; i < args.length; i++) {
             switch (args[i]) {
                 case "german":
-                    ConfigUtils.setLang(ConfigUtils.GERMAN);
+                    Configuration.setLang(Configuration.GERMAN);
                     break;
                 case "english":
-                    ConfigUtils.setLang(ConfigUtils.ENGLISH);
+                    Configuration.setLang(Configuration.ENGLISH);
                     break;
                 case "-inDir":
-                    ConfigUtils.setFilesDir(args[i + 1]);
+                    Configuration.setFilesDir(args[i + 1]);
                     break;
                 case "-outDir":
-                    ConfigUtils.setOutputDir(args[i + 1]);
+                    Configuration.setOutputDir(args[i + 1]);
                     break;
                 case "-rule":
-                    ConfigUtils.setRuleFile(new File(args[i + 1]));
+                    Configuration.setRuleFile(new File(args[i + 1]));
                     getRules = false;
                     break;
                 case "-toFile":
@@ -143,9 +144,9 @@ public class Main {
         }
 
         if(getRules)
-            ConfigUtils.retrieveRuleFiles(path + "/" + Configuration.CONFIGDIR);
+            Configuration.retrieveRuleFiles(path + "/" + Configuration.CONFIGDIR);
         try {
-            new ParsingPipeline().runTopicEngineOnly();
+           pipeline.runTopicEngineOnly();
             _log.info("Successfully run pipeline");
         } catch (AnnotatorConfigurationException
                 | ResourceInitializationException e) {
@@ -156,27 +157,27 @@ public class Main {
 
     }
 
-    private static void runAll(String[] args, String path) {
+    private static void runPipeline(String[] args, String path) {
         topicAnnotator = true;
         boolean getRules = true;
         for (int i = 0; i < args.length; i++) {
             switch (args[i]) {
                 case "german":
-                    ConfigUtils.setLang(ConfigUtils.GERMAN);
+                    Configuration.setLang(Configuration.GERMAN);
                     break;
                 case "english":
-                    ConfigUtils.setLang(ConfigUtils.ENGLISH);
+                    Configuration.setLang(Configuration.ENGLISH);
                     break;
                 case "-inDir":
-                    ConfigUtils.setFilesDir(args[i + 1]);
+                    Configuration.setFilesDir(args[i + 1]);
                     break;
                 case "-outDir":
-                    ConfigUtils.setOutputDir(args[i + 1]);
+                    Configuration.setOutputDir(args[i + 1]);
                     break;
                 case "-modal":
-                    if (args[i + 1].equalsIgnoreCase(ConfigUtils.PCFG)
-                            | args[i + 1].equalsIgnoreCase(ConfigUtils.FACTORED)) {
-                        ConfigUtils.setModal(args[i + 1]);
+                    if (args[i + 1].equalsIgnoreCase(Configuration.PCFG)
+                            | args[i + 1].equalsIgnoreCase(Configuration.FACTORED)) {
+                        Configuration.setModal(args[i + 1]);
                     } else {
                         System.out
                                 .println("Please use 'pcfg' or 'factored' as modal description");
@@ -185,7 +186,7 @@ public class Main {
                     }
                     break;
                 case "-rule":
-                    ConfigUtils.setRuleFile(new File(args[i + 1]));
+                    Configuration.setRuleFile(new File(args[i + 1]));
                     getRules = false;
                     break;
                 //case "-toFile":
@@ -200,10 +201,10 @@ public class Main {
         }
 
         if (getRules)
-            ConfigUtils.retrieveRuleFiles(path + "/" + Configuration.CONFIGDIR);
+            Configuration.retrieveRuleFiles(path + "/" + Configuration.CONFIGDIR);
 
         try {
-            new ParsingPipeline().runAll();
+            pipeline.runPipeline();
             _log.info("Successfully run pipeline");
         } catch (AnnotatorConfigurationException
                 | ResourceInitializationException e) {

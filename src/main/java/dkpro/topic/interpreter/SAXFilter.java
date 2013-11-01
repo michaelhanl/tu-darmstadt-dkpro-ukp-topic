@@ -25,9 +25,8 @@ public class SAXFilter extends DefaultHandler
 
     public void characters(char[] ch, int start, int length)
             throws SAXException {
-        if (this.debug) {
+        if (this.debug)
             _log.debug("chars");
-        }
 
         if (this._target != null)
             this._target.characters(ch, start, length);
@@ -45,6 +44,7 @@ public class SAXFilter extends DefaultHandler
 
     public void endElement(String uri, String localName, String qName)
             throws SAXException {
+        System.out.println("---- SAX FILTER ELEMENT END");
         if (this.debug) {
             _log.debug("endElement");
         }

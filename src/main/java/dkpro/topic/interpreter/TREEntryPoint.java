@@ -3,8 +3,8 @@ package dkpro.topic.interpreter;
 import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
 import dkpro.topic.annotator.TreeAnnotator;
 import dkpro.topic.main.Main;
-import dkpro.topic.utils.ConfigUtils;
 import dkpro.topic.utils.Configuration;
+import dkpro.topic.utils.NamingParameters;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.jcas.JCas;
 import org.slf4j.Logger;
@@ -39,7 +39,7 @@ public class TREEntryPoint extends JCasConsumer_ImplBase {
         try {
             parser = TopicXMLParserHandler.instantiate();
         } catch (ParserConfigurationException e) {
-            _log.error("Parsing Configuration Error", e);
+            _log.error("Parsing NamingParameters Error", e);
         } catch (SAXException e) {
             _log.error("SAX Parser Error", e);
         } catch (IOException e) {
@@ -52,12 +52,12 @@ public class TREEntryPoint extends JCasConsumer_ImplBase {
         _log.debug("Adding parameters to class");
 
         DocumentMetaData meta = DocumentMetaData.get(aJCas);
-        File targetFile = new File(ConfigUtils.buildTargetDocPath(input,
+        File targetFile = new File(Configuration.buildTargetDocPath(input,
                 meta.getDocumentTitle()));
-        File annotated = new File(ConfigUtils.getOutputDir() + "/" + TreeAnnotator.outDirEx + "/"
+        File annotated = new File(Configuration.getOutputDir() + "/" + TreeAnnotator.outDirEx + "/"
                 + targetFile.getName());
 
-        if (!Configuration.isAutoOverEn() && Main.isAEn()
+        if (!NamingParameters.isAutoOverEn() && Main.isAEn()
                 && annotated.exists()) {
             System.out.println();
             System.out
@@ -66,7 +66,7 @@ public class TREEntryPoint extends JCasConsumer_ImplBase {
         }
         try {
             _log.info("Running TreeRuleParser on {}!", targetFile);
-            parser.process(ConfigUtils.getRuleFile(), targetFile);
+            parser.process(Configuration.getRuleFile(), targetFile);
         } catch (Exception e) {
             _log.error("TreeRuleParser exits with error!", e);
         }

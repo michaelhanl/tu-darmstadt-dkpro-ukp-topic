@@ -5,7 +5,7 @@ import de.tudarmstadt.ukp.dkpro.core.io.xmi.XmiWriter;
 import de.tudarmstadt.ukp.dkpro.core.stanfordnlp.StanfordParser;
 import de.tudarmstadt.ukp.dkpro.core.stanfordnlp.StanfordSegmenter;
 import dkpro.topic.interpreter.TREEntryPoint;
-import dkpro.topic.utils.ConfigUtils;
+import dkpro.topic.utils.Configuration;
 import dkpro.topic.writers.ConstituentWriter;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.collection.CollectionReader;
@@ -43,8 +43,8 @@ public class UIMAComponents {
         }
         _log.debug("initialize FileReader");
         CollectionReader collReader = createCollectionReader(TextReader.class,
-                TextReader.PARAM_PATH, ConfigUtils.getInputDir(),
-                TextReader.PARAM_LANGUAGE, ConfigUtils.getLang(),
+                TextReader.PARAM_PATH, Configuration.getInputDir(),
+                TextReader.PARAM_LANGUAGE, Configuration.getLang(),
                 TextReader.PARAM_PATTERNS, files);
         return collReader;
     }
@@ -65,8 +65,8 @@ public class UIMAComponents {
         _log.debug("initialize Parser");
         // StanfordParser.PARAM_MAX_ITEMS, 5000000
         AnalysisEngineDescription parser = createPrimitiveDescription(StanfordParser.class,
-                StanfordParser.PARAM_LANGUAGE, ConfigUtils.getLang(),
-                StanfordParser.PARAM_VARIANT, ConfigUtils.getModal(),
+                StanfordParser.PARAM_LANGUAGE, Configuration.getLang(),
+                StanfordParser.PARAM_VARIANT, Configuration.getModal(),
                 StanfordParser.PARAM_CREATE_CONSTITUENT_TAGS, true,
                 StanfordParser.PARAM_CREATE_DEPENDENCY_TAGS, false);
         return parser;
@@ -89,7 +89,7 @@ public class UIMAComponents {
 		 */
         _log.debug("initialize Constituent Writer");
         AnalysisEngineDescription constituentXML = createPrimitiveDescription(ConstituentWriter.class,
-                ConstituentWriter.PARAM_PATH, ConfigUtils.getOutputDir());
+                ConstituentWriter.PARAM_PATH, Configuration.getOutputDir());
         return constituentXML;
     }
 

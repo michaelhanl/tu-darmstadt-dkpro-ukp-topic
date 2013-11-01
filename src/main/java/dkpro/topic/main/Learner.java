@@ -13,6 +13,7 @@ import org.dom4j.*;
 import org.dom4j.io.OutputFormat;
 import org.dom4j.io.SAXContentHandler;
 import org.dom4j.io.XMLWriter;
+import org.xml.sax.helpers.DefaultHandler;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -26,7 +27,7 @@ import java.util.List;
  * FIXME: buggy for multiple sentences in one document.
  * Plus only recognizes the first sentence, but only at ROOT end Node
  */
-public class Learner implements ElementHandler {
+public class Learner extends DefaultHandler implements ElementHandler {
     private static final Log _log = LogFactory.getLog(Learner.class);
     private static final int CHOICE_NONE = -1;
     private static final String CHOICE_NONE_KEY = "n";

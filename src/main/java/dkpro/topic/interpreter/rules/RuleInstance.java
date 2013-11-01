@@ -1,7 +1,7 @@
 package dkpro.topic.interpreter.rules;
 
 import dkpro.topic.interpreter.data.Constituent;
-import dkpro.topic.utils.Configuration;
+import dkpro.topic.utils.NamingParameters;
 import org.dom4j.Element;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,7 +10,7 @@ public class RuleInstance {
     private final RuleDefinition _ruleDefinition;
     private final RuleDefinition.RelaxStack _relaxStack;
     private final int _instance_id;
-    Logger jlog = LoggerFactory.getLogger(RuleInstance.class);
+    private Logger jlog = LoggerFactory.getLogger(RuleInstance.class);
     private Element _cursor;
     private int _createdAtDepth;
     private StringBuffer textMatch;
@@ -24,7 +24,7 @@ public class RuleInstance {
         this._createdAtDepth = createdAtDepth;
         this._relaxStack = new RuleDefinition.RelaxStack();
         this._cursor = this._ruleDefinition._structure.getRootElement();
-        jlog.info("root element {}", this._cursor);
+        jlog.debug("root element {}", this._cursor);
         textMatch = new StringBuffer();
 
         advanceCursor();
@@ -71,7 +71,7 @@ public class RuleInstance {
 
     public boolean isRelaxing() {
         if (this._cursor != null) {
-            return Configuration.getRelaxElement().equals(this._cursor.getName());
+            return NamingParameters.getRelaxElement().equals(this._cursor.getName());
         }
         return false;
     }

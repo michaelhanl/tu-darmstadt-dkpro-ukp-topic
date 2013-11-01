@@ -1,8 +1,8 @@
 package dkpro.topic.annotator;
 
 import dkpro.topic.interpreter.rules.Result;
-import dkpro.topic.utils.ConfigUtils;
 import dkpro.topic.utils.Configuration;
+import dkpro.topic.utils.NamingParameters;
 import dkpro.topic.utils.XMLUtils;
 import org.dom4j.Attribute;
 import org.dom4j.Document;
@@ -50,11 +50,11 @@ public class TreeAnnotator {
         Element root = document.getRootElement();
         jlog.info("running the annotator for file {}", file);
 
-        for (Iterator<Element> i = root.elementIterator(Configuration
+        for (Iterator<Element> i = root.elementIterator(NamingParameters
                 .getElementSentence()); i.hasNext(); ) {
             Element sentence = i.next();
 
-            Attribute sentID = sentence.attribute(Configuration.getAttrSentenceID());
+            Attribute sentID = sentence.attribute(NamingParameters.getAttrSentenceID());
             String[] f = XMLUtils.ruleEnumeration(getResults(sentID.getValue()));
             String ruleIds = f[0];
             String ruleLabels = f[1];
@@ -63,10 +63,10 @@ public class TreeAnnotator {
                 jlog.info("no topics available for sentence with ID {}!", sentID.getValue());
                 continue;
             } else {
-                sentence.addAttribute(Configuration.getAttrTopicRule(), ruleIds);
-                //sentence.addAttribute(Configuration.getAttrTopicLabel(), ruleLabels);
+                sentence.addAttribute(NamingParameters.getAttrTopicRule(), ruleIds);
+                //sentence.addAttribute(NamingParameters.getAttrTopicLabel(), ruleLabels);
                 try {
-                    File dir = new File(ConfigUtils.getOutputDir(), outDirEx);
+                    File dir = new File(Configuration.getOutputDir(), outDirEx);
                     dir.mkdir();
                     XMLUtils.dumpDocumentToFile(new File(dir, this.file.getName()), document);
                 } catch (IOException e) {

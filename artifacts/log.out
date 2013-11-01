@@ -44033,3 +44033,1046 @@ Oct 29, 2013 10:05:45 dkpro.topic.interpreter.TopicSentInterpreter
  DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (2): [19|rule 13 (2|4) @ constituent/DT -> relax/null]
 Oct 29, 2013 10:05:45 dkpro.topic.main.Learner 
  DEBUG: --------- LEARNING @END ------------
+Oct 29, 2013 10:24:21 dkpro.topic.utils.Configuration 
+ INFO : loading properties
+Oct 29, 2013 10:24:21 dkpro.topic.main.Main 
+ INFO : running annotator learning engine
+Oct 29, 2013 10:24:33 dkpro.topic.utils.Configuration 
+ INFO : loading properties
+Oct 29, 2013 10:24:33 dkpro.topic.main.Main 
+ INFO : running annotator learning engine
+Oct 29, 2013 10:24:33 dkpro.topic.main.Learner 
+ DEBUG: --- Reading in the rules
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleBook$RuleHandler 
+ DEBUG: Created rule: [rule 1]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleBook$RuleHandler 
+ DEBUG: Created rule: [rule 2]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleBook$RuleHandler 
+ DEBUG: Created rule: [rule 3]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleBook$RuleHandler 
+ DEBUG: Created rule: [rule 4]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleBook$RuleHandler 
+ DEBUG: Created rule: [rule 5]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleBook$RuleHandler 
+ DEBUG: Created rule: [rule 6]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleBook$RuleHandler 
+ DEBUG: Created rule: [rule 7]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleBook$RuleHandler 
+ DEBUG: Created rule: [rule 9]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleBook$RuleHandler 
+ DEBUG: Created rule: [rule 10]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleBook$RuleHandler 
+ DEBUG: Created rule: [rule 11]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleBook$RuleHandler 
+ DEBUG: Created rule: [rule 12]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleBook$RuleHandler 
+ DEBUG: Created rule: [rule 13]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 0 START dkpro.topic.interpreter.data.XMLConstituent@70b75bc0 ---
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 0
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 1 START dkpro.topic.interpreter.data.XMLConstituent@6738b554 ---
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@770cfd02 [Element: <ROOT attributes: []/>]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [0|rule 1 (2|2) @ constituent/S -> constituent/NP] instantiated
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@75b6cb5d [Element: <ROOT attributes: []/>]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [1|rule 2 (2|2) @ constituent/S -> constituent/NP] instantiated
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@33e1830b [Element: <ROOT attributes: []/>]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [2|rule 3 (2|2) @ constituent/S -> constituent/SBAR] instantiated
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@1a6261c9 [Element: <ROOT attributes: []/>]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [3|rule 4 (2|2) @ constituent/S -> constituent/ADVP] instantiated
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@3101e0a7 [Element: <ROOT attributes: []/>]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [4|rule 5 (2|2) @ constituent/S -> constituent/PP] instantiated
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@72440d13 [Element: <ROOT attributes: []/>]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [5|rule 6 (2|2) @ constituent/S -> constituent/NP] instantiated
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@51b69500 [Element: <ROOT attributes: []/>]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [6|rule 7 (2|2) @ constituent/S -> constituent/ADJP] instantiated
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@29f05ce9 [Element: <ROOT attributes: []/>]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [7|rule 11 (2|2) @ constituent/S -> constituent/VP] instantiated
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@6363da81 [Element: <ROOT attributes: []/>]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [8|rule 12 (2|2) @ constituent/S -> constituent/NP] instantiated
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@309e7e21 [Element: <ROOT attributes: []/>]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [9|rule 13 (2|2) @ constituent/S -> constituent/NP] instantiated
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 10
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|3) @ constituent/NP -> relax/null] matches so far - advanced to constituent/NP - 3
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [1|rule 2 (2|3) @ constituent/NP -> constituent/EX] matches so far - advanced to constituent/NP - 3
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [2|rule 3 (2|3) @ constituent/SBAR -> relax/null] matches so far - advanced to constituent/SBAR - 3
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [3|rule 4 (2|3) @ constituent/ADVP -> relax/null] matches so far - advanced to constituent/ADVP - 3
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [4|rule 5 (2|3) @ constituent/PP -> relax/null] matches so far - advanced to constituent/PP - 3
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [5|rule 6 (2|3) @ constituent/NP -> relax/null] matches so far - advanced to constituent/NP - 3
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [6|rule 7 (2|3) @ constituent/ADJP -> relax/null] matches so far - advanced to constituent/ADJP - 3
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [7|rule 11 (2|3) @ constituent/VP -> constituent/VB] matches so far - advanced to constituent/VP - 3
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [8|rule 12 (2|3) @ constituent/NP -> constituent/NP] matches so far - advanced to constituent/NP - 3
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [9|rule 13 (2|3) @ constituent/NP -> constituent/DT] matches so far - advanced to constituent/NP - 3
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 2 START dkpro.topic.interpreter.data.XMLConstituent@756ac176 ---
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 10
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] matches so far - advanced to relax/null - 4
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|3|dkpro.topic.interpreter.data.XMLConstituent@6738b554]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [1|rule 2 (2|4) @ constituent/EX -> relax/null] matches so far - advanced to constituent/EX - 4
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (9): [2|rule 3 (2|3) @ constituent/SBAR -> relax/null]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (8): [3|rule 4 (2|3) @ constituent/ADVP -> relax/null]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (7): [4|rule 5 (2|3) @ constituent/PP -> relax/null]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [5|rule 6 (2|4) @ relax/null -> constituent/NP] matches so far - advanced to relax/null - 4
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|3|dkpro.topic.interpreter.data.XMLConstituent@6738b554]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (6): [6|rule 7 (2|3) @ constituent/ADJP -> relax/null]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (5): [7|rule 11 (2|3) @ constituent/VP -> constituent/VB]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [8|rule 12 (2|4) @ constituent/NP -> relax/null] matches so far - advanced to constituent/NP - 4
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [9|rule 13 (2|4) @ constituent/DT -> relax/null] matches so far - advanced to constituent/DT - 4
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 3 START dkpro.topic.interpreter.data.XMLConstituent@33c36633 ---
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 5
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] gets an dkpro.topic.interpreter.data.XMLConstituent@33c36633 expecting relax/null
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|4|dkpro.topic.interpreter.data.XMLConstituent@6738b554, dkpro.topic.interpreter.data.XMLConstituent@33c36633]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] is relaxing
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (4): [1|rule 2 (2|4) @ constituent/EX -> relax/null]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [5|rule 6 (2|4) @ relax/null -> constituent/NP] gets an dkpro.topic.interpreter.data.XMLConstituent@33c36633 expecting constituent/NP
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|4|dkpro.topic.interpreter.data.XMLConstituent@6738b554, dkpro.topic.interpreter.data.XMLConstituent@33c36633]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [5|rule 6 (2|4) @ relax/null -> constituent/NP] is relaxing
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (3): [8|rule 12 (2|4) @ constituent/NP -> relax/null]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (2): [9|rule 13 (2|4) @ constituent/DT -> relax/null]
+Oct 29, 2013 10:24:34 dkpro.topic.main.Learner 
+ DEBUG: --------- LEARNING @END ------------
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 4 END  dkpro.topic.interpreter.data.XMLConstituent@33c36633
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --------- INTERPRETER @END ------------
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: POP   [3|3|dkpro.topic.interpreter.data.XMLConstituent@6738b554]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: POP   [3|3|dkpro.topic.interpreter.data.XMLConstituent@6738b554]
+Oct 29, 2013 10:24:34 dkpro.topic.main.Learner 
+ DEBUG: --------- LEARNING @END ------------
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 3 END  dkpro.topic.interpreter.data.XMLConstituent@756ac176
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --------- INTERPRETER @END ------------
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: POP   []
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] stops relaxing due to parent [dkpro.topic.interpreter.data.XMLConstituent@756ac176] closing
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|3) @ relax/null -> constituent/VP] advanced to relax/null
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|3) @ relax/null -> constituent/VP] pushing parent of relax following relax: [dkpro.topic.interpreter.data.XMLConstituent@6738b554]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [2|2|dkpro.topic.interpreter.data.XMLConstituent@6738b554]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: POP   []
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [5|rule 6 (2|4) @ relax/null -> constituent/NP] stops relaxing due to parent [dkpro.topic.interpreter.data.XMLConstituent@756ac176] closing
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [5|rule 6 (2|3) @ constituent/NP -> relax/null] advanced to constituent/NP
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 2 START dkpro.topic.interpreter.data.XMLConstituent@616ab8d1 ---
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 2
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|3) @ relax/null -> constituent/VP] gets an dkpro.topic.interpreter.data.XMLConstituent@616ab8d1 expecting constituent/VP
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|3) @ relax/null -> constituent/VP] stops relaxing
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|3) @ constituent/VP -> relax/null] advanced to constituent/VP - 3
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: CLEAR  []
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] advanced to relax/null - 4
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] pushing parent of relax following relax: [dkpro.topic.interpreter.data.XMLConstituent@6738b554]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|3|dkpro.topic.interpreter.data.XMLConstituent@6738b554]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (1): [5|rule 6 (2|3) @ constituent/NP -> relax/null]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 3 START dkpro.topic.interpreter.data.XMLConstituent@258bd34e ---
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 1
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] gets an dkpro.topic.interpreter.data.XMLConstituent@258bd34e expecting relax/null
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|4|dkpro.topic.interpreter.data.XMLConstituent@6738b554, dkpro.topic.interpreter.data.XMLConstituent@258bd34e]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] is relaxing
+Oct 29, 2013 10:24:34 dkpro.topic.main.Learner 
+ DEBUG: --------- LEARNING @END ------------
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 4 END  dkpro.topic.interpreter.data.XMLConstituent@258bd34e
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --------- INTERPRETER @END ------------
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: POP   [3|3|dkpro.topic.interpreter.data.XMLConstituent@6738b554]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 3 START dkpro.topic.interpreter.data.XMLConstituent@7eddb923 ---
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 1
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] gets an dkpro.topic.interpreter.data.XMLConstituent@7eddb923 expecting relax/null
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|4|dkpro.topic.interpreter.data.XMLConstituent@6738b554, dkpro.topic.interpreter.data.XMLConstituent@7eddb923]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] is relaxing
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 4 START dkpro.topic.interpreter.data.XMLConstituent@ea5e9e7 ---
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 1
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] gets an dkpro.topic.interpreter.data.XMLConstituent@ea5e9e7 expecting relax/null
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|5|dkpro.topic.interpreter.data.XMLConstituent@6738b554, dkpro.topic.interpreter.data.XMLConstituent@7eddb923, dkpro.topic.interpreter.data.XMLConstituent@ea5e9e7]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] is relaxing
+Oct 29, 2013 10:24:34 dkpro.topic.main.Learner 
+ DEBUG: --------- LEARNING @END ------------
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 5 END  dkpro.topic.interpreter.data.XMLConstituent@ea5e9e7
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --------- INTERPRETER @END ------------
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: POP   [3|4|dkpro.topic.interpreter.data.XMLConstituent@6738b554, dkpro.topic.interpreter.data.XMLConstituent@7eddb923]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 4 START dkpro.topic.interpreter.data.XMLConstituent@2e9f4434 ---
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 1
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] gets an dkpro.topic.interpreter.data.XMLConstituent@2e9f4434 expecting relax/null
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|5|dkpro.topic.interpreter.data.XMLConstituent@6738b554, dkpro.topic.interpreter.data.XMLConstituent@7eddb923, dkpro.topic.interpreter.data.XMLConstituent@2e9f4434]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] is relaxing
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 5 START dkpro.topic.interpreter.data.XMLConstituent@5a36c9d5 ---
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 1
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] gets an dkpro.topic.interpreter.data.XMLConstituent@5a36c9d5 expecting relax/null
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|6|dkpro.topic.interpreter.data.XMLConstituent@6738b554, dkpro.topic.interpreter.data.XMLConstituent@7eddb923, dkpro.topic.interpreter.data.XMLConstituent@2e9f4434, dkpro.topic.interpreter.data.XMLConstituent@5a36c9d5]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] is relaxing
+Oct 29, 2013 10:24:34 dkpro.topic.main.Learner 
+ DEBUG: --------- LEARNING @END ------------
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 6 END  dkpro.topic.interpreter.data.XMLConstituent@5a36c9d5
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --------- INTERPRETER @END ------------
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: POP   [3|5|dkpro.topic.interpreter.data.XMLConstituent@6738b554, dkpro.topic.interpreter.data.XMLConstituent@7eddb923, dkpro.topic.interpreter.data.XMLConstituent@2e9f4434]
+Oct 29, 2013 10:24:34 dkpro.topic.main.Learner 
+ DEBUG: --------- LEARNING @END ------------
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 5 END  dkpro.topic.interpreter.data.XMLConstituent@2e9f4434
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --------- INTERPRETER @END ------------
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: POP   [3|4|dkpro.topic.interpreter.data.XMLConstituent@6738b554, dkpro.topic.interpreter.data.XMLConstituent@7eddb923]
+Oct 29, 2013 10:24:34 dkpro.topic.main.Learner 
+ DEBUG: --------- LEARNING @END ------------
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 4 END  dkpro.topic.interpreter.data.XMLConstituent@7eddb923
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --------- INTERPRETER @END ------------
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: POP   [3|3|dkpro.topic.interpreter.data.XMLConstituent@6738b554]
+Oct 29, 2013 10:24:34 dkpro.topic.main.Learner 
+ DEBUG: --------- LEARNING @END ------------
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 3 END  dkpro.topic.interpreter.data.XMLConstituent@616ab8d1
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --------- INTERPRETER @END ------------
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: POP   []
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] stops relaxing due to parent [dkpro.topic.interpreter.data.XMLConstituent@616ab8d1] closing
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|3) @ relax/null -> null] advanced to relax/null
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|3) @ relax/null -> null] pushing parent of relax following relax: [dkpro.topic.interpreter.data.XMLConstituent@6738b554]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [2|2|dkpro.topic.interpreter.data.XMLConstituent@6738b554]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 2 START dkpro.topic.interpreter.data.XMLConstituent@42fced38 ---
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 1
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|3) @ relax/null -> null] gets an dkpro.topic.interpreter.data.XMLConstituent@42fced38 expecting null
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [2|3|dkpro.topic.interpreter.data.XMLConstituent@6738b554, dkpro.topic.interpreter.data.XMLConstituent@42fced38]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|3) @ relax/null -> null] is relaxing
+Oct 29, 2013 10:24:34 dkpro.topic.main.Learner 
+ DEBUG: --------- LEARNING @END ------------
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 3 END  dkpro.topic.interpreter.data.XMLConstituent@42fced38
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --------- INTERPRETER @END ------------
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: POP   [2|2|dkpro.topic.interpreter.data.XMLConstituent@6738b554]
+Oct 29, 2013 10:24:34 dkpro.topic.main.Learner 
+ DEBUG: --------- LEARNING @END ------------
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 2 END  dkpro.topic.interpreter.data.XMLConstituent@6738b554
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --------- INTERPRETER @END ------------
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: POP   []
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|3) @ relax/null -> null] stops relaxing due to parent [dkpro.topic.interpreter.data.XMLConstituent@6738b554] closing
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2) @ null -> null] advanced to null
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance matches: [0|rule 1 (2) @ null -> null] -> Unmarked Subject
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 1 START dkpro.topic.interpreter.data.XMLConstituent@6c928e0 ---
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@770cfd02 [Element: <ROOT attributes: []/>]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [10|rule 1 (2|2) @ constituent/S -> constituent/NP] instantiated
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@75b6cb5d [Element: <ROOT attributes: []/>]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [11|rule 2 (2|2) @ constituent/S -> constituent/NP] instantiated
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@33e1830b [Element: <ROOT attributes: []/>]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [12|rule 3 (2|2) @ constituent/S -> constituent/SBAR] instantiated
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@1a6261c9 [Element: <ROOT attributes: []/>]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [13|rule 4 (2|2) @ constituent/S -> constituent/ADVP] instantiated
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@3101e0a7 [Element: <ROOT attributes: []/>]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [14|rule 5 (2|2) @ constituent/S -> constituent/PP] instantiated
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@72440d13 [Element: <ROOT attributes: []/>]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [15|rule 6 (2|2) @ constituent/S -> constituent/NP] instantiated
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@51b69500 [Element: <ROOT attributes: []/>]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [16|rule 7 (2|2) @ constituent/S -> constituent/ADJP] instantiated
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@29f05ce9 [Element: <ROOT attributes: []/>]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [17|rule 11 (2|2) @ constituent/S -> constituent/VP] instantiated
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@6363da81 [Element: <ROOT attributes: []/>]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [18|rule 12 (2|2) @ constituent/S -> constituent/NP] instantiated
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@309e7e21 [Element: <ROOT attributes: []/>]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [19|rule 13 (2|2) @ constituent/S -> constituent/NP] instantiated
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 10
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [10|rule 1 (2|3) @ constituent/NP -> relax/null] matches so far - advanced to constituent/NP - 3
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [11|rule 2 (2|3) @ constituent/NP -> constituent/EX] matches so far - advanced to constituent/NP - 3
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [12|rule 3 (2|3) @ constituent/SBAR -> relax/null] matches so far - advanced to constituent/SBAR - 3
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [13|rule 4 (2|3) @ constituent/ADVP -> relax/null] matches so far - advanced to constituent/ADVP - 3
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [14|rule 5 (2|3) @ constituent/PP -> relax/null] matches so far - advanced to constituent/PP - 3
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [15|rule 6 (2|3) @ constituent/NP -> relax/null] matches so far - advanced to constituent/NP - 3
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [16|rule 7 (2|3) @ constituent/ADJP -> relax/null] matches so far - advanced to constituent/ADJP - 3
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [17|rule 11 (2|3) @ constituent/VP -> constituent/VB] matches so far - advanced to constituent/VP - 3
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [18|rule 12 (2|3) @ constituent/NP -> constituent/NP] matches so far - advanced to constituent/NP - 3
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [19|rule 13 (2|3) @ constituent/NP -> constituent/DT] matches so far - advanced to constituent/NP - 3
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 2 START dkpro.topic.interpreter.data.XMLConstituent@9a8d9b ---
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 10
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [10|rule 1 (2|4) @ relax/null -> relax/null] matches so far - advanced to relax/null - 4
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|3|dkpro.topic.interpreter.data.XMLConstituent@6c928e0]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [11|rule 2 (2|4) @ constituent/EX -> relax/null] matches so far - advanced to constituent/EX - 4
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (9): [12|rule 3 (2|3) @ constituent/SBAR -> relax/null]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (8): [13|rule 4 (2|3) @ constituent/ADVP -> relax/null]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (7): [14|rule 5 (2|3) @ constituent/PP -> relax/null]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [15|rule 6 (2|4) @ relax/null -> constituent/NP] matches so far - advanced to relax/null - 4
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|3|dkpro.topic.interpreter.data.XMLConstituent@6c928e0]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (6): [16|rule 7 (2|3) @ constituent/ADJP -> relax/null]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (5): [17|rule 11 (2|3) @ constituent/VP -> constituent/VB]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [18|rule 12 (2|4) @ constituent/NP -> relax/null] matches so far - advanced to constituent/NP - 4
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [19|rule 13 (2|4) @ constituent/DT -> relax/null] matches so far - advanced to constituent/DT - 4
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 3 START dkpro.topic.interpreter.data.XMLConstituent@22c6bb6c ---
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 5
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [10|rule 1 (2|4) @ relax/null -> relax/null] gets an dkpro.topic.interpreter.data.XMLConstituent@22c6bb6c expecting relax/null
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|4|dkpro.topic.interpreter.data.XMLConstituent@6c928e0, dkpro.topic.interpreter.data.XMLConstituent@22c6bb6c]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [10|rule 1 (2|4) @ relax/null -> relax/null] is relaxing
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (4): [11|rule 2 (2|4) @ constituent/EX -> relax/null]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [15|rule 6 (2|4) @ relax/null -> constituent/NP] gets an dkpro.topic.interpreter.data.XMLConstituent@22c6bb6c expecting constituent/NP
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|4|dkpro.topic.interpreter.data.XMLConstituent@6c928e0, dkpro.topic.interpreter.data.XMLConstituent@22c6bb6c]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [15|rule 6 (2|4) @ relax/null -> constituent/NP] is relaxing
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (3): [18|rule 12 (2|4) @ constituent/NP -> relax/null]
+Oct 29, 2013 10:24:34 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (2): [19|rule 13 (2|4) @ constituent/DT -> relax/null]
+Oct 29, 2013 10:24:34 dkpro.topic.main.Learner 
+ DEBUG: --------- LEARNING @END ------------
+Nov 01, 2013 17:52:42 dkpro.topic.utils.Configuration 
+ INFO : loading properties
+Nov 01, 2013 17:52:42 dkpro.topic.main.Main 
+ INFO : running annotator learning engine
+Nov 01, 2013 17:52:43 dkpro.topic.main.Learner 
+ DEBUG: --- Reading in the rules
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleBook$RuleHandler 
+ DEBUG: Created rule: [rule 1]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleBook$RuleHandler 
+ DEBUG: Created rule: [rule 2]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleBook$RuleHandler 
+ DEBUG: Created rule: [rule 3]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleBook$RuleHandler 
+ DEBUG: Created rule: [rule 4]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleBook$RuleHandler 
+ DEBUG: Created rule: [rule 5]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleBook$RuleHandler 
+ DEBUG: Created rule: [rule 6]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleBook$RuleHandler 
+ DEBUG: Created rule: [rule 7]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleBook$RuleHandler 
+ DEBUG: Created rule: [rule 9]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleBook$RuleHandler 
+ DEBUG: Created rule: [rule 10]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleBook$RuleHandler 
+ DEBUG: Created rule: [rule 11]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleBook$RuleHandler 
+ DEBUG: Created rule: [rule 12]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleBook$RuleHandler 
+ DEBUG: Created rule: [rule 13]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 0 START dkpro.topic.interpreter.data.XMLConstituent@46f2486b ---
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 0
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 1 START dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f ---
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@3b870cfc [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [0|rule 1 (2|2) @ constituent/S -> constituent/NP] instantiated
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@1f6592ec [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [1|rule 2 (2|2) @ constituent/S -> constituent/NP] instantiated
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@4590d40e [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [2|rule 3 (2|2) @ constituent/S -> constituent/SBAR] instantiated
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@275206d0 [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [3|rule 4 (2|2) @ constituent/S -> constituent/ADVP] instantiated
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@7a3d55da [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [4|rule 5 (2|2) @ constituent/S -> constituent/PP] instantiated
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@50cf99e8 [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [5|rule 6 (2|2) @ constituent/S -> constituent/NP] instantiated
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@6d8177ca [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [6|rule 7 (2|2) @ constituent/S -> constituent/ADJP] instantiated
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@4edfa6f0 [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [7|rule 11 (2|2) @ constituent/S -> constituent/VP] instantiated
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@3d48ff04 [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [8|rule 12 (2|2) @ constituent/S -> constituent/NP] instantiated
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@35e7f0b [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [9|rule 13 (2|2) @ constituent/S -> constituent/NP] instantiated
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 10
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|3) @ constituent/NP -> relax/null] matches so far - advanced to constituent/NP - 3
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [1|rule 2 (2|3) @ constituent/NP -> constituent/EX] matches so far - advanced to constituent/NP - 3
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [2|rule 3 (2|3) @ constituent/SBAR -> relax/null] matches so far - advanced to constituent/SBAR - 3
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [3|rule 4 (2|3) @ constituent/ADVP -> relax/null] matches so far - advanced to constituent/ADVP - 3
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [4|rule 5 (2|3) @ constituent/PP -> relax/null] matches so far - advanced to constituent/PP - 3
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [5|rule 6 (2|3) @ constituent/NP -> relax/null] matches so far - advanced to constituent/NP - 3
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [6|rule 7 (2|3) @ constituent/ADJP -> relax/null] matches so far - advanced to constituent/ADJP - 3
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [7|rule 11 (2|3) @ constituent/VP -> constituent/VB] matches so far - advanced to constituent/VP - 3
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [8|rule 12 (2|3) @ constituent/NP -> constituent/NP] matches so far - advanced to constituent/NP - 3
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [9|rule 13 (2|3) @ constituent/NP -> constituent/DT] matches so far - advanced to constituent/NP - 3
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 2 START dkpro.topic.interpreter.data.XMLConstituent@30e6ace7 ---
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 10
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] matches so far - advanced to relax/null - 4
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|3|dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [1|rule 2 (2|4) @ constituent/EX -> relax/null] matches so far - advanced to constituent/EX - 4
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (9): [2|rule 3 (2|3) @ constituent/SBAR -> relax/null]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (8): [3|rule 4 (2|3) @ constituent/ADVP -> relax/null]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (7): [4|rule 5 (2|3) @ constituent/PP -> relax/null]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [5|rule 6 (2|4) @ relax/null -> constituent/NP] matches so far - advanced to relax/null - 4
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|3|dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (6): [6|rule 7 (2|3) @ constituent/ADJP -> relax/null]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (5): [7|rule 11 (2|3) @ constituent/VP -> constituent/VB]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [8|rule 12 (2|4) @ constituent/NP -> relax/null] matches so far - advanced to constituent/NP - 4
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [9|rule 13 (2|4) @ constituent/DT -> relax/null] matches so far - advanced to constituent/DT - 4
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 3 START dkpro.topic.interpreter.data.XMLConstituent@78618ac5 ---
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 5
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] gets an dkpro.topic.interpreter.data.XMLConstituent@78618ac5 expecting relax/null
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|4|dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f, dkpro.topic.interpreter.data.XMLConstituent@78618ac5]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] is relaxing
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (4): [1|rule 2 (2|4) @ constituent/EX -> relax/null]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [5|rule 6 (2|4) @ relax/null -> constituent/NP] gets an dkpro.topic.interpreter.data.XMLConstituent@78618ac5 expecting constituent/NP
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|4|dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f, dkpro.topic.interpreter.data.XMLConstituent@78618ac5]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [5|rule 6 (2|4) @ relax/null -> constituent/NP] is relaxing
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (3): [8|rule 12 (2|4) @ constituent/NP -> relax/null]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (2): [9|rule 13 (2|4) @ constituent/DT -> relax/null]
+Nov 01, 2013 17:52:43 dkpro.topic.main.Learner 
+ DEBUG: --------- LEARNING @END ------------
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 4 END  dkpro.topic.interpreter.data.XMLConstituent@78618ac5
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --------- INTERPRETER @END ------------
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: POP   [3|3|dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: POP   [3|3|dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f]
+Nov 01, 2013 17:52:43 dkpro.topic.main.Learner 
+ DEBUG: --------- LEARNING @END ------------
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 3 END  dkpro.topic.interpreter.data.XMLConstituent@30e6ace7
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --------- INTERPRETER @END ------------
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: POP   []
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] stops relaxing due to parent [dkpro.topic.interpreter.data.XMLConstituent@30e6ace7] closing
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|3) @ relax/null -> constituent/VP] advanced to relax/null
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|3) @ relax/null -> constituent/VP] pushing parent of relax following relax: [dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [2|2|dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: POP   []
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [5|rule 6 (2|4) @ relax/null -> constituent/NP] stops relaxing due to parent [dkpro.topic.interpreter.data.XMLConstituent@30e6ace7] closing
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [5|rule 6 (2|3) @ constituent/NP -> relax/null] advanced to constituent/NP
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 2 START dkpro.topic.interpreter.data.XMLConstituent@4bddc941 ---
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 2
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|3) @ relax/null -> constituent/VP] gets an dkpro.topic.interpreter.data.XMLConstituent@4bddc941 expecting constituent/VP
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|3) @ relax/null -> constituent/VP] stops relaxing
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|3) @ constituent/VP -> relax/null] advanced to constituent/VP - 3
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: CLEAR  []
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] advanced to relax/null - 4
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] pushing parent of relax following relax: [dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|3|dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (1): [5|rule 6 (2|3) @ constituent/NP -> relax/null]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 3 START dkpro.topic.interpreter.data.XMLConstituent@4dc7f150 ---
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 1
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] gets an dkpro.topic.interpreter.data.XMLConstituent@4dc7f150 expecting relax/null
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|4|dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f, dkpro.topic.interpreter.data.XMLConstituent@4dc7f150]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] is relaxing
+Nov 01, 2013 17:52:43 dkpro.topic.main.Learner 
+ DEBUG: --------- LEARNING @END ------------
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 4 END  dkpro.topic.interpreter.data.XMLConstituent@4dc7f150
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --------- INTERPRETER @END ------------
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: POP   [3|3|dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 3 START dkpro.topic.interpreter.data.XMLConstituent@1b3e315 ---
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 1
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] gets an dkpro.topic.interpreter.data.XMLConstituent@1b3e315 expecting relax/null
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|4|dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f, dkpro.topic.interpreter.data.XMLConstituent@1b3e315]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] is relaxing
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 4 START dkpro.topic.interpreter.data.XMLConstituent@49017892 ---
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 1
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] gets an dkpro.topic.interpreter.data.XMLConstituent@49017892 expecting relax/null
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|5|dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f, dkpro.topic.interpreter.data.XMLConstituent@1b3e315, dkpro.topic.interpreter.data.XMLConstituent@49017892]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] is relaxing
+Nov 01, 2013 17:52:43 dkpro.topic.main.Learner 
+ DEBUG: --------- LEARNING @END ------------
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 5 END  dkpro.topic.interpreter.data.XMLConstituent@49017892
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --------- INTERPRETER @END ------------
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: POP   [3|4|dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f, dkpro.topic.interpreter.data.XMLConstituent@1b3e315]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 4 START dkpro.topic.interpreter.data.XMLConstituent@7f92deaf ---
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 1
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] gets an dkpro.topic.interpreter.data.XMLConstituent@7f92deaf expecting relax/null
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|5|dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f, dkpro.topic.interpreter.data.XMLConstituent@1b3e315, dkpro.topic.interpreter.data.XMLConstituent@7f92deaf]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] is relaxing
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 5 START dkpro.topic.interpreter.data.XMLConstituent@359f498 ---
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 1
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] gets an dkpro.topic.interpreter.data.XMLConstituent@359f498 expecting relax/null
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|6|dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f, dkpro.topic.interpreter.data.XMLConstituent@1b3e315, dkpro.topic.interpreter.data.XMLConstituent@7f92deaf, dkpro.topic.interpreter.data.XMLConstituent@359f498]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] is relaxing
+Nov 01, 2013 17:52:43 dkpro.topic.main.Learner 
+ DEBUG: --------- LEARNING @END ------------
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 6 END  dkpro.topic.interpreter.data.XMLConstituent@359f498
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --------- INTERPRETER @END ------------
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: POP   [3|5|dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f, dkpro.topic.interpreter.data.XMLConstituent@1b3e315, dkpro.topic.interpreter.data.XMLConstituent@7f92deaf]
+Nov 01, 2013 17:52:43 dkpro.topic.main.Learner 
+ DEBUG: --------- LEARNING @END ------------
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 5 END  dkpro.topic.interpreter.data.XMLConstituent@7f92deaf
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --------- INTERPRETER @END ------------
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: POP   [3|4|dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f, dkpro.topic.interpreter.data.XMLConstituent@1b3e315]
+Nov 01, 2013 17:52:43 dkpro.topic.main.Learner 
+ DEBUG: --------- LEARNING @END ------------
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 4 END  dkpro.topic.interpreter.data.XMLConstituent@1b3e315
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --------- INTERPRETER @END ------------
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: POP   [3|3|dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f]
+Nov 01, 2013 17:52:43 dkpro.topic.main.Learner 
+ DEBUG: --------- LEARNING @END ------------
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 3 END  dkpro.topic.interpreter.data.XMLConstituent@4bddc941
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --------- INTERPRETER @END ------------
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: POP   []
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|4) @ relax/null -> relax/null] stops relaxing due to parent [dkpro.topic.interpreter.data.XMLConstituent@4bddc941] closing
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|3) @ relax/null -> null] advanced to relax/null
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|3) @ relax/null -> null] pushing parent of relax following relax: [dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [2|2|dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 2 START dkpro.topic.interpreter.data.XMLConstituent@6c928e0 ---
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 1
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|3) @ relax/null -> null] gets an dkpro.topic.interpreter.data.XMLConstituent@6c928e0 expecting null
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [2|3|dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f, dkpro.topic.interpreter.data.XMLConstituent@6c928e0]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|3) @ relax/null -> null] is relaxing
+Nov 01, 2013 17:52:43 dkpro.topic.main.Learner 
+ DEBUG: --------- LEARNING @END ------------
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 3 END  dkpro.topic.interpreter.data.XMLConstituent@6c928e0
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --------- INTERPRETER @END ------------
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: POP   [2|2|dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f]
+Nov 01, 2013 17:52:43 dkpro.topic.main.Learner 
+ DEBUG: --------- LEARNING @END ------------
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 2 END  dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --------- INTERPRETER @END ------------
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: POP   []
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2|3) @ relax/null -> null] stops relaxing due to parent [dkpro.topic.interpreter.data.XMLConstituent@7d3eea2f] closing
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [0|rule 1 (2) @ null -> null] advanced to null
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance matches: [0|rule 1 (2) @ null -> null] -> Unmarked Subject
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 1 START dkpro.topic.interpreter.data.XMLConstituent@5fc02db5 ---
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@3b870cfc [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [10|rule 1 (2|2) @ constituent/S -> constituent/NP] instantiated
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@1f6592ec [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [11|rule 2 (2|2) @ constituent/S -> constituent/NP] instantiated
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@4590d40e [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [12|rule 3 (2|2) @ constituent/S -> constituent/SBAR] instantiated
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@275206d0 [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [13|rule 4 (2|2) @ constituent/S -> constituent/ADVP] instantiated
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@7a3d55da [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [14|rule 5 (2|2) @ constituent/S -> constituent/PP] instantiated
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@50cf99e8 [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [15|rule 6 (2|2) @ constituent/S -> constituent/NP] instantiated
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@6d8177ca [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [16|rule 7 (2|2) @ constituent/S -> constituent/ADJP] instantiated
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@4edfa6f0 [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [17|rule 11 (2|2) @ constituent/S -> constituent/VP] instantiated
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@3d48ff04 [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [18|rule 12 (2|2) @ constituent/S -> constituent/NP] instantiated
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@35e7f0b [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition 
+ DEBUG: [19|rule 13 (2|2) @ constituent/S -> constituent/NP] instantiated
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 10
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [10|rule 1 (2|3) @ constituent/NP -> relax/null] matches so far - advanced to constituent/NP - 3
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [11|rule 2 (2|3) @ constituent/NP -> constituent/EX] matches so far - advanced to constituent/NP - 3
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [12|rule 3 (2|3) @ constituent/SBAR -> relax/null] matches so far - advanced to constituent/SBAR - 3
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [13|rule 4 (2|3) @ constituent/ADVP -> relax/null] matches so far - advanced to constituent/ADVP - 3
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [14|rule 5 (2|3) @ constituent/PP -> relax/null] matches so far - advanced to constituent/PP - 3
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [15|rule 6 (2|3) @ constituent/NP -> relax/null] matches so far - advanced to constituent/NP - 3
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [16|rule 7 (2|3) @ constituent/ADJP -> relax/null] matches so far - advanced to constituent/ADJP - 3
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [17|rule 11 (2|3) @ constituent/VP -> constituent/VB] matches so far - advanced to constituent/VP - 3
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [18|rule 12 (2|3) @ constituent/NP -> constituent/NP] matches so far - advanced to constituent/NP - 3
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [19|rule 13 (2|3) @ constituent/NP -> constituent/DT] matches so far - advanced to constituent/NP - 3
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 2 START dkpro.topic.interpreter.data.XMLConstituent@41f8f72f ---
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 10
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [10|rule 1 (2|4) @ relax/null -> relax/null] matches so far - advanced to relax/null - 4
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|3|dkpro.topic.interpreter.data.XMLConstituent@5fc02db5]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [11|rule 2 (2|4) @ constituent/EX -> relax/null] matches so far - advanced to constituent/EX - 4
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (9): [12|rule 3 (2|3) @ constituent/SBAR -> relax/null]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (8): [13|rule 4 (2|3) @ constituent/ADVP -> relax/null]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (7): [14|rule 5 (2|3) @ constituent/PP -> relax/null]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [15|rule 6 (2|4) @ relax/null -> constituent/NP] matches so far - advanced to relax/null - 4
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|3|dkpro.topic.interpreter.data.XMLConstituent@5fc02db5]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (6): [16|rule 7 (2|3) @ constituent/ADJP -> relax/null]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (5): [17|rule 11 (2|3) @ constituent/VP -> constituent/VB]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [18|rule 12 (2|4) @ constituent/NP -> relax/null] matches so far - advanced to constituent/NP - 4
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [19|rule 13 (2|4) @ constituent/DT -> relax/null] matches so far - advanced to constituent/DT - 4
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: --- 3 START dkpro.topic.interpreter.data.XMLConstituent@402c507f ---
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: Active rules: 5
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [10|rule 1 (2|4) @ relax/null -> relax/null] gets an dkpro.topic.interpreter.data.XMLConstituent@402c507f expecting relax/null
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|4|dkpro.topic.interpreter.data.XMLConstituent@5fc02db5, dkpro.topic.interpreter.data.XMLConstituent@402c507f]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [10|rule 1 (2|4) @ relax/null -> relax/null] is relaxing
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (4): [11|rule 2 (2|4) @ constituent/EX -> relax/null]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [15|rule 6 (2|4) @ relax/null -> constituent/NP] gets an dkpro.topic.interpreter.data.XMLConstituent@402c507f expecting constituent/NP
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleDefinition$RelaxStack 
+ DEBUG: PUSH  [3|4|dkpro.topic.interpreter.data.XMLConstituent@5fc02db5, dkpro.topic.interpreter.data.XMLConstituent@402c507f]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.rules.RuleInstance 
+ DEBUG: [15|rule 6 (2|4) @ relax/null -> constituent/NP] is relaxing
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (3): [18|rule 12 (2|4) @ constituent/NP -> relax/null]
+Nov 01, 2013 17:52:43 dkpro.topic.interpreter.TopicSentInterpreter 
+ DEBUG: RuleInstance is no longer a candidate: rule did not get what it expected (2): [19|rule 13 (2|4) @ constituent/DT -> relax/null]
+Nov 01, 2013 17:52:43 dkpro.topic.main.Learner 
+ DEBUG: --------- LEARNING @END ------------
+Nov 01, 2013 17:55:38 dkpro.topic.utils.Configuration 
+ INFO : loading properties
+Nov 01, 2013 17:55:38 dkpro.topic.main.Main 
+ INFO : running annotator learning engine
+Nov 01, 2013 17:55:48 dkpro.topic.utils.Configuration 
+ INFO : loading properties
+Nov 01, 2013 17:55:48 dkpro.topic.main.Main 
+ INFO : running annotator learning engine
+Nov 01, 2013 17:55:48 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@7685dfcf [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:55:48 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@1d48c [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:55:48 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@78293354 [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:55:48 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@58e90d6d [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:55:48 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@2c709cb5 [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:55:48 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@154045de [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:55:48 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@2eaafcb8 [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:55:48 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@5bb5abf7 [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:55:48 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@742d142a [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:55:48 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@3b870cfc [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:55:48 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@7685dfcf [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:55:48 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@1d48c [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:55:48 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@78293354 [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:55:48 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@58e90d6d [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:55:48 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@2c709cb5 [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:55:48 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@154045de [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:55:48 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@2eaafcb8 [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:55:48 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@5bb5abf7 [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:55:48 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@742d142a [Element: <ROOT attributes: []/>]
+Nov 01, 2013 17:55:48 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@3b870cfc [Element: <ROOT attributes: []/>]
+Nov 01, 2013 18:18:37 dkpro.topic.utils.Configuration 
+ INFO : loading properties
+Nov 01, 2013 18:18:37 dkpro.topic.main.Main 
+ INFO : running annotator learning engine
+Nov 01, 2013 18:18:43 dkpro.topic.utils.Configuration 
+ INFO : loading properties
+Nov 01, 2013 18:18:43 dkpro.topic.main.Main 
+ INFO : running annotator learning engine
+Nov 01, 2013 18:18:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@29ccd0a [Element: <ROOT attributes: []/>]
+Nov 01, 2013 18:18:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@2c709cb5 [Element: <ROOT attributes: []/>]
+Nov 01, 2013 18:18:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@154045de [Element: <ROOT attributes: []/>]
+Nov 01, 2013 18:18:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@2eaafcb8 [Element: <ROOT attributes: []/>]
+Nov 01, 2013 18:18:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@5bb5abf7 [Element: <ROOT attributes: []/>]
+Nov 01, 2013 18:18:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@742d142a [Element: <ROOT attributes: []/>]
+Nov 01, 2013 18:18:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@3b870cfc [Element: <ROOT attributes: []/>]
+Nov 01, 2013 18:18:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@1f6592ec [Element: <ROOT attributes: []/>]
+Nov 01, 2013 18:18:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@4590d40e [Element: <ROOT attributes: []/>]
+Nov 01, 2013 18:18:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@275206d0 [Element: <ROOT attributes: []/>]
+Nov 01, 2013 18:18:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@29ccd0a [Element: <ROOT attributes: []/>]
+Nov 01, 2013 18:18:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@2c709cb5 [Element: <ROOT attributes: []/>]
+Nov 01, 2013 18:18:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@154045de [Element: <ROOT attributes: []/>]
+Nov 01, 2013 18:18:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@2eaafcb8 [Element: <ROOT attributes: []/>]
+Nov 01, 2013 18:18:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@5bb5abf7 [Element: <ROOT attributes: []/>]
+Nov 01, 2013 18:18:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@742d142a [Element: <ROOT attributes: []/>]
+Nov 01, 2013 18:18:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@3b870cfc [Element: <ROOT attributes: []/>]
+Nov 01, 2013 18:18:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@1f6592ec [Element: <ROOT attributes: []/>]
+Nov 01, 2013 18:18:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@4590d40e [Element: <ROOT attributes: []/>]
+Nov 01, 2013 18:18:43 dkpro.topic.interpreter.rules.RuleInstance 
+ INFO : root element org.dom4j.tree.DefaultElement@275206d0 [Element: <ROOT attributes: []/>]
+Nov 01, 2013 18:24:37 dkpro.topic.utils.NamingParameters 
+ INFO : loading properties
+Nov 01, 2013 18:24:37 dkpro.topic.utils.NamingParameters 
+ ERROR: IOException
+java.io.FileNotFoundException: /home/hanl/Projects/tu-darmstadt-dkpro-ukp-topic/artifacts/dkpro.ukp.topic.structure.jar/config/parameters.dat (Not a directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at java.io.FileInputStream.<init>(FileInputStream.java:101)
+	at dkpro.topic.utils.NamingParameters.loadConfigurationProperties(NamingParameters.java:80)
+	at dkpro.topic.utils.NamingParameters.bootstrapConfiguration(NamingParameters.java:44)
+	at dkpro.topic.main.Main.main(Main.java:43)
+Nov 01, 2013 18:25:27 dkpro.topic.utils.NamingParameters 
+ INFO : loading properties
+Nov 01, 2013 18:25:27 dkpro.topic.main.Main 
+ INFO : running annotator learning engine
+Nov 01, 2013 18:28:41 dkpro.topic.utils.NamingParameters 
+ INFO : loading properties
+Nov 01, 2013 18:28:41 dkpro.topic.main.Main 
+ INFO : running annotator learning engine
+Nov 01, 2013 18:29:37 dkpro.topic.utils.NamingParameters 
+ INFO : loading properties
+Nov 01, 2013 18:29:37 dkpro.topic.main.Main 
+ INFO : running annotator learning engine
+Nov 01, 2013 18:30:37 dkpro.topic.utils.NamingParameters 
+ INFO : loading properties
+Nov 01, 2013 18:30:37 dkpro.topic.main.Main 
+ INFO : running annotator learning engine
+Nov 01, 2013 18:31:01 dkpro.topic.utils.NamingParameters 
+ INFO : loading properties
+Nov 01, 2013 18:31:01 dkpro.topic.main.Main 
+ INFO : running annotator learning engine
+Nov 01, 2013 18:32:54 dkpro.topic.utils.NamingParameters 
+ INFO : loading properties
+Nov 01, 2013 18:32:54 dkpro.topic.main.Main 
+ INFO : running annotator learning engine

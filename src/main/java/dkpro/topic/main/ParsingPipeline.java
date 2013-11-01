@@ -1,6 +1,6 @@
 package dkpro.topic.main;
 
-import dkpro.topic.utils.ConfigUtils;
+import dkpro.topic.utils.Configuration;
 import dkpro.topic.components.UIMAComponents;
 import org.apache.uima.UIMAException;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
@@ -16,14 +16,13 @@ import java.io.IOException;
 import static org.uimafit.factory.AnalysisEngineFactory.createPrimitiveDescription;
 import static org.uimafit.factory.CollectionReaderFactory.createCollectionReader;
 
+/**
+ * Uses UIMAFit pipeline mechanism to create workflow for XML annotation and
+ * topic identification
+ *
+ * @author hanl
+ */
 public class ParsingPipeline {
-
-    /**
-     * Uses UIMAFit pipeline mechanism to create workflow for XML annotation and
-     * topic identification
-     *
-     * @author hanl
-     */
 
     private static Logger _log = LoggerFactory.getLogger(ParsingPipeline.class);
 
@@ -41,13 +40,13 @@ public class ParsingPipeline {
         parser = UIMAComponents.setupParser();
         cxmi = UIMAComponents.setupXMIWriter();
         constituentXML = UIMAComponents.setupConstituentWriter();
-        treeRuleEngine = UIMAComponents.setupTreeRuleEngine(ConfigUtils.getOutputDir());
+        treeRuleEngine = UIMAComponents.setupTreeRuleEngine(Configuration.getOutputDir());
     }
 
     public void runTopicEngineOnly() throws AnnotatorConfigurationException,
             ResourceInitializationException {
         collReader = UIMAComponents.setupReader(UIMAComponents.XML);
-        treeRuleEngine = UIMAComponents.setupTreeRuleEngine(ConfigUtils.getInputDir());
+        treeRuleEngine = UIMAComponents.setupTreeRuleEngine(Configuration.getInputDir());
 
         try {
             _log.debug("run Analysis Pipeline");
@@ -81,7 +80,7 @@ public class ParsingPipeline {
         }
     }
 
-    public void runAll() throws AnnotatorConfigurationException,
+    public void runPipeline() throws AnnotatorConfigurationException,
             ResourceInitializationException {
         defaultSetup();
         /**
@@ -102,13 +101,13 @@ public class ParsingPipeline {
 
     @Deprecated
     private void init() {
-        ConfigUtils.setFilesDir("resources/current/");
-        ConfigUtils.setModal(ConfigUtils.PCFG);
-        ConfigUtils.setOutputDir("XMLOutput/" + "current");
-        ConfigUtils.setLang(ConfigUtils.GERMAN);
-        ConfigUtils.retrieveRuleFiles("/Volumes/Mac User/Users/michael/Library/"
+        Configuration.setFilesDir("resources/current/");
+        Configuration.setModal(Configuration.PCFG);
+        Configuration.setOutputDir("XMLOutput/" + "current");
+        Configuration.setLang(Configuration.GERMAN);
+        Configuration.retrieveRuleFiles("/Volumes/Mac User/Users/michael/Library/"
                 + "Workspace/tu.darmstadt.ukp.dkpro.theme-german/src/main/resources");
-        // Configuration.loadConfigurationProperties();
+        // NamingParameters.loadConfigurationProperties();
     }
 }
 //
