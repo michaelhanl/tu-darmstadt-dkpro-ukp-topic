@@ -1,7 +1,7 @@
 package dkpro.topic.main;
 
-import dkpro.topic.utils.Configuration;
 import dkpro.topic.components.UIMAComponents;
+import dkpro.topic.utils.Configuration;
 import org.apache.uima.UIMAException;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.analysis_engine.annotator.AnnotatorConfigurationException;
@@ -13,14 +13,12 @@ import org.uimafit.pipeline.SimplePipeline;
 
 import java.io.IOException;
 
-import static org.uimafit.factory.AnalysisEngineFactory.createPrimitiveDescription;
-import static org.uimafit.factory.CollectionReaderFactory.createCollectionReader;
-
 /**
  * Uses UIMAFit pipeline mechanism to create workflow for XML annotation and
  * topic identification
  *
- * @author hanl
+ * @author hanl@ids-mannheim.de
+ * @date 11/6/13
  */
 public class ParsingPipeline {
 

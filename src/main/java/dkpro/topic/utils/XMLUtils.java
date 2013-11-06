@@ -15,9 +15,13 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.*;
-import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ * @author hanl@ids-mannheim.de
+ * @date 11/6/13
+ */
 public final class XMLUtils {
 
     private static Logger jlog = LoggerFactory.getLogger(XMLUtils.class);

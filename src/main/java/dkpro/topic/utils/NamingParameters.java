@@ -14,9 +14,9 @@ import java.util.Properties;
  * loads XML element names from property file
  *
  * @author hanl@ids-mannheim.de
+ * @date 11/6/13
  */
-
-public class NamingParameters extends Properties {
+public class NamingParameters {
     private static String path;
     private static String PARAS = "parameters.dat";
     public static boolean enabledOverride = false;

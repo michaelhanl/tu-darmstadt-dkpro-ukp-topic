@@ -17,15 +17,15 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * This class instantiates the TreeRuleEngine and processes XML-files
+ * provided by the JCas-module with the following annotation layers:
+ * Syntactic Parsing, Part-of-Speech, Tokens
+ *
+ * @author eckart@ukp.informatik.tu-darmstadt.de, hanl@ids-mannheim.de
+ * @date 11/6/13
+ */
 public class TREEntryPoint extends JCasConsumer_ImplBase {
-
-    /**
-     * This class instantiates the TreeRuleEngine and processes XML-files
-     * provided by the JCas-module with the following annotation layers:
-     * Syntactic Parsing, Part-of-Speech, Tokens
-     *
-     * @author hanl
-     */
 
     Logger _log = LoggerFactory.getLogger(TREEntryPoint.class);
 

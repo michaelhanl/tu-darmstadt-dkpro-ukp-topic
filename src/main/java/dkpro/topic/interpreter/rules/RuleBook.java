@@ -16,6 +16,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.*;
 
+/**
+ * @author eckart@ukp.informatik.tu-darmstadt.de, hanl@ids-mannheim.de
+ * @date 11/6/13
+ */
 public class RuleBook
         implements Iterable<RuleDefinition> {
     private static final Log _log = LogFactory.getLog(RuleBook.class);

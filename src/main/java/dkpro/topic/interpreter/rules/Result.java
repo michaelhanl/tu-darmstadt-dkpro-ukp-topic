@@ -2,6 +2,11 @@ package dkpro.topic.interpreter.rules;
 
 import dkpro.topic.utils.XMLUtils;
 
+/**
+ *
+ * @author eckart@ukp.informatik.tu-darmstadt.de, hanl@ids-mannheim.de
+ * @date 11/6/13
+ */
 public class Result {
     private final RuleInstance _rule;
     private final Expectation _expectation;

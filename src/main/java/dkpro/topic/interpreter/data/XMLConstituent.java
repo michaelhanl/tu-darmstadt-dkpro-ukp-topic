@@ -1,6 +1,5 @@
 package dkpro.topic.interpreter.data;
 
-import dkpro.topic.interpreter.data.Constituent;
 import org.dom4j.Attribute;
 import org.dom4j.Element;
 import org.dom4j.Node;
@@ -8,6 +7,11 @@ import org.dom4j.Node;
 import java.util.List;
 import java.util.regex.Pattern;
 
+/**
+ *
+ * @author eckart@ukp.informatik.tu-darmstadt.de, hanl@ids-mannheim.de
+ * @date 11/6/13
+ */
 public class XMLConstituent
         implements Constituent {
     private final Constituent _parent;

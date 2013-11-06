@@ -3,6 +3,11 @@ package dkpro.topic.interpreter.data;
 import org.dom4j.Element;
 import org.dom4j.Node;
 
+/**
+ *
+ * @author eckart@ukp.informatik.tu-darmstadt.de, hanl@ids-mannheim.de
+ * @date 11/6/13
+ */
 public abstract interface Constituent {
     public abstract boolean match(Element paramElement);
 

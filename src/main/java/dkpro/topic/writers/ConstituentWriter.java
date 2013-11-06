@@ -27,11 +27,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 
+/**
+ *
+ * @author eckart@ukp.informatik.tu-darmstadt.de, hanl@ids-mannheim.de
+ * @date 11/6/13
+ */
 public class ConstituentWriter extends JCasConsumer_ImplBase {
-
-    /**
-     * @author hanl
-     */
 
     private Logger _log = LoggerFactory.getLogger(ConstituentWriter.class);
     public final static String PARAM_PATH = "outputPath";

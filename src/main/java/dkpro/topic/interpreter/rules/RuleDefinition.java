@@ -15,6 +15,11 @@ import org.xml.sax.SAXException;
 
 import java.util.*;
 
+/**
+ *
+ * @author eckart@ukp.informatik.tu-darmstadt.de, hanl@ids-mannheim.de
+ * @date 11/6/13
+ */
 public class RuleDefinition {
     public static Log _log = LogFactory.getLog(RuleDefinition.class);
     public static int _next_instance_id;

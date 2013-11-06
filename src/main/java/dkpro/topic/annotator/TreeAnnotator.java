@@ -18,7 +18,12 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-
+/**
+ *
+ *
+ * @author hanl@ids-mannheim.de
+ * @date 11/6/13
+ */
 public class TreeAnnotator {
     public static final String outDirEx = "topics";
     private Logger jlog = LoggerFactory.getLogger(TreeAnnotator.class);

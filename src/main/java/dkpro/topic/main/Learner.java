@@ -5,15 +5,15 @@ import dkpro.topic.interpreter.TopicSentInterpreter;
 import dkpro.topic.interpreter.data.XMLConstituent;
 import dkpro.topic.interpreter.rules.RuleBook;
 import dkpro.topic.interpreter.rules.RuleInstance;
-import dkpro.topic.utils.OutputWriter;
 import dkpro.topic.utils.XMLUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.log4j.BasicConfigurator;
-import org.dom4j.*;
-import org.dom4j.io.OutputFormat;
+import org.dom4j.DocumentFactory;
+import org.dom4j.Element;
+import org.dom4j.ElementHandler;
+import org.dom4j.ElementPath;
 import org.dom4j.io.SAXContentHandler;
-import org.dom4j.io.XMLWriter;
 import org.xml.sax.helpers.DefaultHandler;
 
 import java.io.BufferedReader;
@@ -23,10 +23,11 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 /**
- * this class was targeted as a wrapper class for the original learner class.
+ * Learner class to annotate XML output file with topic type, in a convenient way via a command line
+ * interface
  *
- * FIXME: buggy for multiple sentences in one document.
- * Plus only recognizes the first sentence, but only at ROOT end Node
+ * @author hanl@ids-mannheim.de
+ * @date 11/6/13
  */
 public class Learner extends DefaultHandler implements ElementHandler {
     private static final Log _log = LogFactory.getLog(Learner.class);

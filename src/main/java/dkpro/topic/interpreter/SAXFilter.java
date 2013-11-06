@@ -10,6 +10,11 @@ import org.xml.sax.helpers.DefaultHandler;
 
 import java.io.IOException;
 
+/**
+ *
+ * @author eckart@ukp.informatik.tu-darmstadt.de, hanl@ids-mannheim.de
+ * @date 11/6/13
+ */
 public class SAXFilter extends DefaultHandler
         implements LexicalHandler, DeclHandler {
     private static Log _log = LogFactory.getLog(SAXFilter.class);

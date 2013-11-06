@@ -17,9 +17,9 @@ import static org.uimafit.factory.AnalysisEngineFactory.createPrimitiveDescripti
 import static org.uimafit.factory.CollectionReaderFactory.createCollectionReader;
 
 /**
- * User: hanl
- * Date: 9/29/13
- * Time: 11:06 AM
+ *
+ * @author eckart@ukp.informatik.tu-darmstadt.de, hanl@ids-mannheim.de
+ * @date 11/6/13
  */
 public class UIMAComponents {
 

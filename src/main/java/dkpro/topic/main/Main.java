@@ -18,9 +18,9 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 
 /**
- * @author hanl
- *         <p/>
- *         main class to run the application with the respective parameters
+ * Main class
+ * @author hanl@ids-mannheim.de
+ * @date 11/6/13
  */
 public class Main {
 

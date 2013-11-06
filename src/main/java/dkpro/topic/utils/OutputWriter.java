@@ -15,9 +15,10 @@ import java.io.PrintStream;
 import java.util.*;
 
 /**
- * User: hanl
- * Date: 9/22/13
- * Time: 7:42 PM
+ *
+ *
+ * @author hanl@ids-mannheim.de
+ * @date 11/6/13
  */
 public class OutputWriter {
 

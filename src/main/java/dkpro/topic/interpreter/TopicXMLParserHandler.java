@@ -17,8 +17,10 @@ import java.util.*;
  * class was copied and modified from the tree-rule-processor-engine by R.
  * Eckart de Castilho
  *
- * @author hanl
+ * @author eckart@ukp.informatik.tu-darmstadt.de, hanl@ids-mannheim.de
+ * @date 11/6/13
  */
+
 public class TopicXMLParserHandler {
     private Logger jlog = LoggerFactory.getLogger(TopicXMLParserHandler.class);
     private TopicSentInterpreter interpreter;

@@ -11,7 +11,12 @@ import java.text.DecimalFormat;
 import java.util.Arrays;
 
 /**
+ * Configuration class to load parameter from args in. Assumes a default values for log4j properties
+ * and a configuration directory (config)
+ *
  * @author hanl@ids-mannheim.de
+ * @date 11/6/13
+ *
  */
 public class Configuration {
 
@@ -196,6 +201,7 @@ public class Configuration {
         }
 
         if (getRuleFile() == null)
-           throw new IllegalArgumentException("No rule file set! Please check you have set the correct directory or language");
+           throw new IllegalArgumentException("No rule file set! Please check you have " +
+                   "set the correct directory or language");
     }
 }

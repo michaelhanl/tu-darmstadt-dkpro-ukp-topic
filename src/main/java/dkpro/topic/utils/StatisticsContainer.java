@@ -7,6 +7,11 @@ import dkpro.topic.interpreter.rules.RuleInstance;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @author hanl
+ * serves as a container for statistical empirical data, that can be printed to stdout after processing
+ * of input
+ */
 public class StatisticsContainer {
     protected final Map<RuleDefinition, Stats> _stats;
     protected int _sentences;

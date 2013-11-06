@@ -11,11 +11,10 @@ import org.xml.sax.SAXException;
 
 import java.util.Stack;
 
-
 /**
  * a wrapper class based on the SAXWalker class, provided by R. Eckart de Castilho
- *
- * @author hanl
+ * @author eckart@ukp.informatik.tu-darmstadt.de, hanl@ids-mannheim.de
+ * @date 11/6/13
  */
 public class SAXParser extends SAXFilter {
     private final Stack<XMLConstituent> _stack = new Stack();
