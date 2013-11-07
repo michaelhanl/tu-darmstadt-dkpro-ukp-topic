@@ -45,7 +45,8 @@ public class UIMAComponents {
         CollectionReader collReader = createCollectionReader(TextReader.class,
                 TextReader.PARAM_PATH, Configuration.getInputDir(),
                 TextReader.PARAM_LANGUAGE, Configuration.getLang(),
-                TextReader.PARAM_PATTERNS, files);
+                TextReader.PARAM_PATTERNS, files,
+                TextReader.PARAM_ENCODING, TextReader.ENCODING_AUTO);
         return collReader;
     }
 
