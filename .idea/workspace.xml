@@ -7,6 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d23da889-40de-41d3-8170-1eef29c4fdb4" name="Default" comment="new review">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Configuration.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Configuration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/components/UIMAComponents.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/components/UIMAComponents.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -35,19 +37,19 @@
     <file path="$USER_HOME$/korAP-project/.idea/modules.xml" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1373632908192" ignored="false" />
     <file path="$USER_HOME$/korAP-project/.idea/encodings.xml" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1373632908192" ignored="false" />
     <file path="/TRParser.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379871040873" ignored="false" />
-    <file path="/a.dummy" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383327767813" ignored="false" />
+    <file path="/a.dummy" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383899590671" ignored="false" />
     <file path="/TRAnnotator.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1381749742472" ignored="false" />
     <file path="/Statistics.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379867025893" ignored="false" />
     <file path="/ConfigUtils.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1382782149107" ignored="false" />
     <file path="/RuleInstance.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383326430758" ignored="false" />
     <file path="/RuleDefinition.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383725229117" ignored="false" />
-    <file path="/Configuration.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383724798537" ignored="false" />
+    <file path="/Configuration.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383899615182" ignored="false" />
     <file path="/TopicInterpreter.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379871665102" ignored="false" />
     <file path="/SAXParser.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383327660887" ignored="false" />
     <file path="/Constituent.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1382899511192" ignored="false" />
     <file path="/XMLConstituent.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1382899552145" ignored="false" />
     <file path="/ConstituentWriter.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1382902249998" ignored="false" />
-    <file path="/Dummy.txt" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383818718916" ignored="false" />
+    <file path="/Dummy.txt" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383896791948" ignored="false" />
     <file path="/XMLUtils.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1382901621560" ignored="false" />
     <file path="/Learner.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383725137758" ignored="false" />
     <file path="/Main.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383725166484" ignored="false" />
@@ -69,8 +71,8 @@
     <file path="/StatisticsContainer.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383724512062" ignored="false" />
     <file path="/SAXFilter.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383326954028" ignored="false" />
     <file path="/Interprefer.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380446938987" ignored="false" />
-    <file path="/UIMAComponents.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383818847131" ignored="false" />
-    <file path="/ParsingPipeline.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383725180573" ignored="false" />
+    <file path="/UIMAComponents.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383899636584" ignored="false" />
+    <file path="/ParsingPipeline.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383898601255" ignored="false" />
     <file path="/maven-build.xml" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380462209444" ignored="false" />
     <file path="$USER_HOME$/KorAP/KorAP-core/pom.xml" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380567300659" ignored="false" />
     <file path="$USER_HOME$/KorAP/KorAP-indexer/src/resources/test/00001/xip/morpho.xml" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380567552571" ignored="false" />
@@ -192,16 +194,27 @@
       <file leaf-file-name="UIMAComponents.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/components/UIMAComponents.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="40" selection-start="1533" selection-end="1533" vertical-scroll-proportion="0.3962264">
+            <state line="73" column="52" selection-start="3057" selection-end="3057" vertical-scroll-proportion="0.6025237">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParsingPipeline.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="71" column="34" selection-start="2721" selection-end="2721" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TextReader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/dkpro/core/de.tudarmstadt.ukp.dkpro.core.io.text-asl/1.4.0/de.tudarmstadt.ukp.dkpro.core.io.text-asl-1.4.0-sources.jar!/de/tudarmstadt/ukp/dkpro/core/io/text/TextReader.java">
+      <file leaf-file-name="SimplePipeline.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/uimafit/uimafit/1.4.0/uimafit-1.4.0-sources.jar!/org/uimafit/pipeline/SimplePipeline.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="35" selection-start="1904" selection-end="1918" vertical-scroll-proportion="0.0">
+            <state line="159" column="27" selection-start="5693" selection-end="5693" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -232,10 +245,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/annotator/TreeAnnotator.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/main/Learner.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/main/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleDefinition.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleBook.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/Result.java" />
@@ -247,6 +258,8 @@
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicXMLParserHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TREEntryPoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/writers/ConstituentWriter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Configuration.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/components/UIMAComponents.java" />
       </list>
     </option>
@@ -542,161 +555,6 @@
       <sortByType Scope="false" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dkpro.ukp.topic.structure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dkpro.ukp.topic.structure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dkpro.ukp.topic.structure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dkpro.ukp.topic.structure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dkpro.topic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src/main/java">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src/main/java">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="dkpro/topic/utils">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src/main/java">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="dkpro/topic/main">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src/main/java">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="dkpro/topic/interpreter">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="All">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src/main/java">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src/main/java">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="dkpro/topic/components">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1197,20 +1055,247 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src/main/java">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src/main/java">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="dkpro/topic/utils">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src/main/java">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="dkpro/topic/main">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src/main/java">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="dkpro/topic/interpreter">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="All">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src/main/java">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src/main/java">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="dkpro/topic/utils">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src/main/java">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="dkpro/topic/UIMATools">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src/main/java">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="dkpro/topic/main">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src/main/java">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="dkpro/topic/interpreter">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="tu-darmstadt-dkpro-ukp-topic">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src/main/java">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="dkpro/topic/components">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dkpro.ukp.topic.structure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dkpro.ukp.topic.structure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dkpro.ukp.topic.structure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dkpro.ukp.topic.structure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dkpro.topic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
     <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
-    <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="true" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/build.xml" />
+    <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="build" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="false" />
@@ -1223,13 +1308,13 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="options.lastSelected" value="fileTemplates" />
-    <property name="project.structure.side.proportion" value="0.38871473" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="project.structure.side.proportion" value="0.38871473" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1250,7 +1335,7 @@
       <recent name="dkpro.topic.utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.UIMAComponents.testTextReader">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="dkpro.topic.main.Main" />
       <option name="VM_PARAMETERS" value="" />
@@ -1263,6 +1348,28 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="dkpro.ukp.topic.structure" />
       <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="UIMAComponents.testTextReader" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="dkpro.ukp.topic.structure" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="dkpro.topic.components" />
+      <option name="MAIN_CLASS_NAME" value="dkpro.topic.components.UIMAComponents" />
+      <option name="METHOD_NAME" value="testTextReader" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -1303,6 +1410,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -1328,19 +1448,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1377,12 +1484,14 @@
       <patterns />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.UIMAComponents.testTextReader" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.UIMAComponents.testTextReader" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1449,22 +1558,22 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.556231" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25701624" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2398374" sideWeight="0.70757574" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3206687" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24861442" sideWeight="0.4002954" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2888889" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32791728" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25194132" sideWeight="0.67851853" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12401264" sideWeight="0.6780627" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24546172" sideWeight="0.7111111" order="0" side_tool="false" content_ui="combo" x="555" y="47" width="312" height="677" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32842416" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23520127" sideWeight="0.6725926" order="0" side_tool="false" content_ui="combo" x="555" y="47" width="312" height="677" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32740742" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="148" y="122" width="1112" height="546" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25777778" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2888889" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940805" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39968154" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1554,86 +1663,54 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="734" selection-end="804" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="14" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/RuleBook.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="70" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/annotator/TreeAnnotator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="13" selection-start="599" selection-end="599" vertical-scroll-proportion="0.22364217">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/rules/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="76" selection-end="174" vertical-scroll-proportion="0.08945687">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/data/XMLConstituent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="3" selection-start="271" selection-end="271" vertical-scroll-proportion="0.17891374">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="9" selection-start="508" selection-end="515" vertical-scroll-proportion="0.15654951">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicXMLParserHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="612" selection-end="612" vertical-scroll-proportion="0.24600638">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TREEntryPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="29" selection-start="843" selection-end="843" vertical-scroll-proportion="0.15100154">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TopicSentInterpreter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="13" selection-start="710" selection-end="710" vertical-scroll-proportion="0.2861635">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/writers/ConstituentWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="15" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.11006289">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/data/Constituent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="88" selection-end="88" vertical-scroll-proportion="0.064714946">
+        <state line="4" column="0" selection-start="88" selection-end="88" vertical-scroll-proportion="0.064714946" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/dkpro/core/de.tudarmstadt.ukp.dkpro.core.io.text-asl/1.4.0/de.tudarmstadt.ukp.dkpro.core.io.text-asl-1.4.0.jar!/de/tudarmstadt/ukp/dkpro/core/io/text/TextReader.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="41" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/uima/uimaj-core/2.4.0/uimaj-core-2.4.0-sources.jar!/org/apache/uima/analysis_engine/AnalysisEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="511" column="14" selection-start="27441" selection-end="27441" vertical-scroll-proportion="0.6068516">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="65" selection-start="2665" selection-end="2665" vertical-scroll-proportion="0.70799345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/dkpro/core/de.tudarmstadt.ukp.dkpro.core.stanfordnlp-gpl/1.4.0/de.tudarmstadt.ukp.dkpro.core.stanfordnlp-gpl-1.4.0.jar!/de/tudarmstadt/ukp/dkpro/core/stanfordnlp/StanfordParser.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="41" selection-start="2190" selection-end="2190" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/uimafit/uimafit/1.4.0/uimafit-1.4.0-sources.jar!/org/uimafit/descriptor/ConfigurationParameter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="18" selection-start="2101" selection-end="2101" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/UIMATools/Parsing.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="52" selection-start="910" selection-end="910" vertical-scroll-proportion="0.49614793">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/dkpro/core/de.tudarmstadt.ukp.dkpro.core.stanfordnlp-gpl/1.4.0/de.tudarmstadt.ukp.dkpro.core.stanfordnlp-gpl-1.4.0-sources.jar!/de/tudarmstadt/ukp/dkpro/core/stanfordnlp/StanfordParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="383" column="31" selection-start="14484" selection-end="14484" vertical-scroll-proportion="-0.10062893">
           <folding />
         </state>
       </provider>
@@ -1645,24 +1722,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/dkpro/core/de.tudarmstadt.ukp.dkpro.core.io.text-asl/1.4.0/de.tudarmstadt.ukp.dkpro.core.io.text-asl-1.4.0.jar!/de/tudarmstadt/ukp/dkpro/core/io/text/TextReader.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/uimafit/uimafit/1.4.0/uimafit-1.4.0-sources.jar!/org/uimafit/pipeline/SimplePipeline.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="41" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
+        <state line="159" column="27" selection-start="5693" selection-end="5693" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="34" selection-start="2721" selection-end="2721" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/uima/uimaj-core/2.4.0/uimaj-core-2.4.0-sources.jar!/org/apache/uima/collection/CollectionReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="17" selection-start="2129" selection-end="2129" vertical-scroll-proportion="-0.44976816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/ibm/icu/icu4j/4.0.1/icu4j-4.0.1.jar!/com/ibm/icu/text/CharsetDetector.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="26" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.74061435">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/dkpro/core/de.tudarmstadt.ukp.dkpro.core.io.text-asl/1.4.0/de.tudarmstadt.ukp.dkpro.core.io.text-asl-1.4.0-sources.jar!/de/tudarmstadt/ukp/dkpro/core/io/text/TextReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="35" selection-start="1904" selection-end="1918" vertical-scroll-proportion="0.0">
+        <state line="69" column="70" selection-start="2369" selection-end="2369" vertical-scroll-proportion="0.6321484">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="27" selection-start="2652" selection-end="2652" vertical-scroll-proportion="0.5888717">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/components/UIMAComponents.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="40" selection-start="1533" selection-end="1533" vertical-scroll-proportion="0.3962264">
-          <folding />
+        <state line="73" column="52" selection-start="3057" selection-end="3057" vertical-scroll-proportion="0.6025237">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

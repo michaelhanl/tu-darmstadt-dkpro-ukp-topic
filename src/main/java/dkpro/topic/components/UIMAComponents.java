@@ -10,6 +10,7 @@ import dkpro.topic.writers.ConstituentWriter;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.collection.CollectionReader;
 import org.apache.uima.resource.ResourceInitializationException;
+import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -46,7 +47,7 @@ public class UIMAComponents {
                 TextReader.PARAM_PATH, Configuration.getInputDir(),
                 TextReader.PARAM_LANGUAGE, Configuration.getLang(),
                 TextReader.PARAM_PATTERNS, files,
-                TextReader.PARAM_ENCODING, TextReader.ENCODING_AUTO);
+                TextReader.PARAM_ENCODING, Configuration.getEncoding());
         return collReader;
     }
 
@@ -69,7 +70,8 @@ public class UIMAComponents {
                 StanfordParser.PARAM_LANGUAGE, Configuration.getLang(),
                 StanfordParser.PARAM_VARIANT, Configuration.getModal(),
                 StanfordParser.PARAM_CREATE_CONSTITUENT_TAGS, true,
-                StanfordParser.PARAM_CREATE_DEPENDENCY_TAGS, false);
+                StanfordParser.PARAM_CREATE_DEPENDENCY_TAGS, false,
+                StanfordParser.PARAM_MAX_TOKENS, 200);
         return parser;
     }
 
@@ -104,5 +106,19 @@ public class UIMAComponents {
         AnalysisEngineDescription treeRuleEngine = createPrimitiveDescription(TREEntryPoint.class,
                 TREEntryPoint.PARAM_PATH, fileDir);
         return treeRuleEngine;
+    }
+
+
+    @Test
+    public void testTextReader() throws ResourceInitializationException {
+        String text = "[+]*.txt";
+        String file = "/home/hanl/Desktop/Master/artifacts/input/test";
+
+        CollectionReader collReader = createCollectionReader(TextReader.class,
+                TextReader.PARAM_PATH, file,
+                TextReader.PARAM_LANGUAGE, "de",
+                TextReader.PARAM_PATTERNS, new String[] {text},
+                TextReader.PARAM_ENCODING, TextReader.ENCODING_AUTO);
+
     }
 }

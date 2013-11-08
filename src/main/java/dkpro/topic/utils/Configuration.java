@@ -28,6 +28,9 @@ public class Configuration {
     public static final String PCFG = "pcfg";
     public static final String FACTORED = "factored";
 
+    private static final String GERMAN_ENCODING = "ISO_8859-1";
+    private static final String DEFAULT_ENCODING = "UTF-8";
+
     private static Logger _log = LoggerFactory.getLogger(Configuration.class);
     private static String lang = new String();
     private static String input = new String();
@@ -79,12 +82,22 @@ public class Configuration {
     }
 
     public static String getModal() {
-        if (modal == null) {
+        if (modal == null)
             modal = PCFG;
-        }
         _log.trace("ModMessage: Using modal: " + modal);
         return modal;
+    }
 
+    public static String getEncoding() {
+        String encod;
+        switch(lang) {
+            case GERMAN:
+                encod = GERMAN_ENCODING;
+                break;
+            default:
+                encod = DEFAULT_ENCODING;
+        }
+        return encod;
     }
 
     public static void setModal(final String modal) {
@@ -93,9 +106,8 @@ public class Configuration {
     }
 
     public static String getLang() {
-        if (lang == null) {
+        if (lang == null)
             lang = ENGLISH;
-        }
         _log.trace("LangMessage: Using language: " + lang);
         return lang;
     }

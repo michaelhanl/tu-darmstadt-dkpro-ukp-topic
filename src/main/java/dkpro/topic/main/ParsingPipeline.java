@@ -107,5 +107,7 @@ public class ParsingPipeline {
                 + "Workspace/tu.darmstadt.ukp.dkpro.theme-german/src/main/resources");
         // NamingParameters.loadConfigurationProperties();
     }
+
+
 }
 //

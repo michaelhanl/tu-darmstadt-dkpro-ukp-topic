@@ -28,6 +28,12 @@ The application assumes the presence of the following files and directory struct
 
 Input and Output files can be provided as command line paramters.
 
+Text Encoding:
+Be aware that the stanford parser expects different encodings for different languages. Whereas English works with default UTF-8 encoding, texts in German have to stay encoded with ISO_8859-1 (Western Europe). The implemented Configuration sets these encoding accordingly. Thus, make sure that the texts are actually encoded this way, or the Parser will not be able to parse individual tokens correctly.
+
+
+
+
 -- Application Parameters --
 The Advanced TreeruleEngine takes one of the following specifiers as first argument, according the requirements of the user:
 	- all
@@ -53,3 +59,4 @@ All:
 TopicEngine:
 The TreeRuleEngine expects the input files to in a compatible XML format as produced by the parser. 
 [JARBUNDLE] german/english  -inDir [input file directory] -outDir [ouput file directory] -rule [ruleFile] -modal [modal file] 
+
