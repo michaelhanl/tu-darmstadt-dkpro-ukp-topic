@@ -7,8 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d23da889-40de-41d3-8170-1eef29c4fdb4" name="Default" comment="new review">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Configuration.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Configuration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/components/UIMAComponents.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/components/UIMAComponents.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -182,22 +180,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SAXFilter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="23" selection-start="853" selection-end="853" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UIMAComponents.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/components/UIMAComponents.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="52" selection-start="3057" selection-end="3057" vertical-scroll-proportion="0.6025237">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="12" column="32" selection-start="617" selection-end="617" vertical-scroll-proportion="0.26498422">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -205,16 +192,7 @@
       <file leaf-file-name="ParsingPipeline.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="34" selection-start="2721" selection-end="2721" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimplePipeline.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/uimafit/uimafit/1.4.0/uimafit-1.4.0-sources.jar!/org/uimafit/pipeline/SimplePipeline.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="159" column="27" selection-start="5693" selection-end="5693" vertical-scroll-proportion="0.0">
+            <state line="97" column="43" selection-start="3604" selection-end="3604" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -1715,23 +1693,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="23" selection-start="853" selection-end="853" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/uimafit/uimafit/1.4.0/uimafit-1.4.0-sources.jar!/org/uimafit/pipeline/SimplePipeline.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="159" column="27" selection-start="5693" selection-end="5693" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="34" selection-start="2721" selection-end="2721" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1764,12 +1728,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="43" selection-start="3604" selection-end="3604" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/SAXFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="38" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.32457495">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/components/UIMAComponents.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="52" selection-start="3057" selection-end="3057" vertical-scroll-proportion="0.6025237">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="12" column="32" selection-start="617" selection-end="617" vertical-scroll-proportion="0.26498422">
+          <folding />
         </state>
       </provider>
     </entry>

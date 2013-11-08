@@ -10,7 +10,6 @@ import dkpro.topic.writers.ConstituentWriter;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.collection.CollectionReader;
 import org.apache.uima.resource.ResourceInitializationException;
-import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -108,17 +107,4 @@ public class UIMAComponents {
         return treeRuleEngine;
     }
 
-
-    @Test
-    public void testTextReader() throws ResourceInitializationException {
-        String text = "[+]*.txt";
-        String file = "/home/hanl/Desktop/Master/artifacts/input/test";
-
-        CollectionReader collReader = createCollectionReader(TextReader.class,
-                TextReader.PARAM_PATH, file,
-                TextReader.PARAM_LANGUAGE, "de",
-                TextReader.PARAM_PATTERNS, new String[] {text},
-                TextReader.PARAM_ENCODING, TextReader.ENCODING_AUTO);
-
-    }
 }
