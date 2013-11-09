@@ -92,7 +92,6 @@ public class Configuration {
         switch(lang) {
             case GERMAN:
                 return GERMAN_ENCODING;
-                break;
             default:
                 return DEFAULT_ENCODING;
         }
