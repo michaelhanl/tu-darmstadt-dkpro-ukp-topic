@@ -89,15 +89,13 @@ public class Configuration {
     }
 
     public static String getEncoding() {
-        String encod;
         switch(lang) {
             case GERMAN:
-                encod = GERMAN_ENCODING;
+                return GERMAN_ENCODING;
                 break;
             default:
-                encod = DEFAULT_ENCODING;
+                return DEFAULT_ENCODING;
         }
-        return encod;
     }
 
     public static void setModal(final String modal) {

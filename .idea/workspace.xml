@@ -7,8 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d23da889-40de-41d3-8170-1eef29c4fdb4" name="Default" comment="new review">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/components/UIMAComponents.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/components/UIMAComponents.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Configuration.java" afterPath="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Configuration.java" />
     </list>
     <ignored path="dkpro.ukp.topic.structure.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,13 +40,13 @@
     <file path="/ConfigUtils.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1382782149107" ignored="false" />
     <file path="/RuleInstance.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383326430758" ignored="false" />
     <file path="/RuleDefinition.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383725229117" ignored="false" />
-    <file path="/Configuration.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383899615182" ignored="false" />
+    <file path="/Configuration.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383982806419" ignored="false" />
     <file path="/TopicInterpreter.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1379871665102" ignored="false" />
     <file path="/SAXParser.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383327660887" ignored="false" />
     <file path="/Constituent.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1382899511192" ignored="false" />
     <file path="/XMLConstituent.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1382899552145" ignored="false" />
     <file path="/ConstituentWriter.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1382902249998" ignored="false" />
-    <file path="/Dummy.txt" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383896791948" ignored="false" />
+    <file path="/Dummy.txt" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383982757628" ignored="false" />
     <file path="/XMLUtils.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1382901621560" ignored="false" />
     <file path="/Learner.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383725137758" ignored="false" />
     <file path="/Main.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383725166484" ignored="false" />
@@ -112,12 +111,12 @@
     <file path="$PROJECT_DIR$/META-INF/MANIFEST.MF" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380582955772" ignored="false" />
     <file path="/Apache_Commons.xml" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1380885837487" ignored="false" />
     <file path="/build.properties" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1382871157020" ignored="false" />
-    <file path="$PROJECT_DIR$/../KorAP/KorAP-mate/src/main/java/de/mannheim/ids/korap/mate/TokenExtractor.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383307708792" ignored="false" />
+    <file path="$USER_HOME$/KorAP/KorAP-mate/src/main/java/de/mannheim/ids/korap/mate/TokenExtractor.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383307708792" ignored="false" />
     <file path="/TokenExtractor.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383307641744" ignored="false" />
-    <file path="$PROJECT_DIR$/../KorAP/KorAP-mate/src/main/java/de/mannheim/ids/korap/mate/TextReader.groovy" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383307779049" ignored="false" />
+    <file path="$USER_HOME$/KorAP/KorAP-mate/src/main/java/de/mannheim/ids/korap/mate/TextReader.groovy" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383307779049" ignored="false" />
     <file path="/TextReader.groovy" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383307761632" ignored="false" />
-    <file path="$PROJECT_DIR$/../KorAP/KorAP-mate/src/main/java/de/mannheim/ids/korap/mate/MatePipeline.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383307827825" ignored="false" />
-    <file path="$PROJECT_DIR$/../KorAP/KorAP-mate/src/main/java/de/mannheim/ids/korap/mate/Stack_skTok.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383307932686" ignored="false" />
+    <file path="$USER_HOME$/KorAP/KorAP-mate/src/main/java/de/mannheim/ids/korap/mate/MatePipeline.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383307827825" ignored="false" />
+    <file path="$USER_HOME$/KorAP/KorAP-mate/src/main/java/de/mannheim/ids/korap/mate/Stack_skTok.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383307932686" ignored="false" />
     <file path="/Stack_skTok.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383307911650" ignored="false" />
     <file path="/NamingParameters.java" changelist="d23da889-40de-41d3-8170-1eef29c4fdb4" time="1383326708967" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -180,10 +179,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UIMAComponents.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="UIMAComponents.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/components/UIMAComponents.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="32" selection-start="617" selection-end="617" vertical-scroll-proportion="0.26498422">
+            <state line="12" column="32" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Configuration.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Configuration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="87" column="55" selection-start="2421" selection-end="2421" vertical-scroll-proportion="0.44354838">
               <folding />
             </state>
           </provider>
@@ -192,7 +200,7 @@
       <file leaf-file-name="ParsingPipeline.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="43" selection-start="3604" selection-end="3604" vertical-scroll-proportion="0.0">
+            <state line="94" column="43" selection-start="3575" selection-end="3575" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -237,8 +245,8 @@
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/interpreter/TREEntryPoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/writers/ConstituentWriter.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Configuration.java" />
         <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/components/UIMAComponents.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Configuration.java" />
       </list>
     </option>
   </component>
@@ -285,9 +293,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="53" />
-    <option name="y" value="2" />
-    <option name="width" value="1313" />
+    <option name="x" value="4" />
+    <option name="y" value="22" />
+    <option name="width" value="1276" />
     <option name="height" value="766" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -1033,6 +1041,34 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dkpro.ukp.topic.structure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dkpro.ukp.topic.structure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dkpro.ukp.topic.structure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dkpro.ukp.topic.structure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dkpro.topic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Problems" />
         <subPane subId="Project Files">
@@ -1232,50 +1268,22 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dkpro.ukp.topic.structure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dkpro.ukp.topic.structure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dkpro.ukp.topic.structure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dkpro.ukp.topic.structure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dkpro.topic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
     <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="true" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/build.xml" />
+    <property name="recentsLimit" value="5" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="true" />
-    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="build" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/build.xml" />
     <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="build" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
@@ -1291,8 +1299,8 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1388,19 +1396,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -1426,6 +1421,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1530,28 +1538,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="53" y="2" width="1313" height="766" extended-state="6" />
+    <frame x="4" y="22" width="1276" height="766" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.556231" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25701624" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2398374" sideWeight="0.70757574" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3206687" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24861442" sideWeight="0.4002954" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2888889" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32791728" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25194132" sideWeight="0.67851853" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12401264" sideWeight="0.6780627" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23520127" sideWeight="0.6725926" order="0" side_tool="false" content_ui="combo" x="555" y="47" width="312" height="677" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23495935" sideWeight="0.6725926" order="0" side_tool="false" content_ui="combo" x="555" y="47" width="312" height="677" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32740742" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="148" y="122" width="1112" height="546" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25701624" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2888889" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940805" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39968154" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1653,9 +1661,7 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/uima/uimaj-core/2.4.0/uimaj-core-2.4.0-sources.jar!/org/apache/uima/analysis_engine/AnalysisEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="511" column="14" selection-start="27441" selection-end="27441" vertical-scroll-proportion="0.6068516">
-          <folding />
-        </state>
+        <state line="511" column="14" selection-start="27441" selection-end="27441" vertical-scroll-proportion="0.6068516" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -1667,16 +1673,12 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/dkpro/core/de.tudarmstadt.ukp.dkpro.core.stanfordnlp-gpl/1.4.0/de.tudarmstadt.ukp.dkpro.core.stanfordnlp-gpl-1.4.0.jar!/de/tudarmstadt/ukp/dkpro/core/stanfordnlp/StanfordParser.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="41" selection-start="2190" selection-end="2190" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="31" column="41" selection-start="2190" selection-end="2190" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/uimafit/uimafit/1.4.0/uimafit-1.4.0-sources.jar!/org/uimafit/descriptor/ConfigurationParameter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="18" selection-start="2101" selection-end="2101" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="53" column="18" selection-start="2101" selection-end="2101" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/UIMATools/Parsing.xml">
@@ -1688,49 +1690,32 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/dkpro/core/de.tudarmstadt.ukp.dkpro.core.stanfordnlp-gpl/1.4.0/de.tudarmstadt.ukp.dkpro.core.stanfordnlp-gpl-1.4.0-sources.jar!/de/tudarmstadt/ukp/dkpro/core/stanfordnlp/StanfordParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="383" column="31" selection-start="14484" selection-end="14484" vertical-scroll-proportion="-0.10062893">
-          <folding />
-        </state>
+        <state line="383" column="31" selection-start="14484" selection-end="14484" vertical-scroll-proportion="-0.10062893" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/uimafit/uimafit/1.4.0/uimafit-1.4.0-sources.jar!/org/uimafit/pipeline/SimplePipeline.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="27" selection-start="5693" selection-end="5693" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="159" column="27" selection-start="5693" selection-end="5693" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/uima/uimaj-core/2.4.0/uimaj-core-2.4.0-sources.jar!/org/apache/uima/collection/CollectionReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="17" selection-start="2129" selection-end="2129" vertical-scroll-proportion="-0.44976816">
-          <folding />
-        </state>
+        <state line="49" column="17" selection-start="2129" selection-end="2129" vertical-scroll-proportion="-0.44976816" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/ibm/icu/icu4j/4.0.1/icu4j-4.0.1.jar!/com/ibm/icu/text/CharsetDetector.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="26" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.74061435">
-          <folding />
-        </state>
+        <state line="32" column="26" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.74061435" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/dkpro/core/de.tudarmstadt.ukp.dkpro.core.io.text-asl/1.4.0/de.tudarmstadt.ukp.dkpro.core.io.text-asl-1.4.0-sources.jar!/de/tudarmstadt/ukp/dkpro/core/io/text/TextReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="70" selection-start="2369" selection-end="2369" vertical-scroll-proportion="0.6321484">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Configuration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="27" selection-start="2652" selection-end="2652" vertical-scroll-proportion="0.5888717">
-          <folding />
-        </state>
+        <state line="69" column="70" selection-start="2369" selection-end="2369" vertical-scroll-proportion="0.6321484" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/main/ParsingPipeline.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="43" selection-start="3604" selection-end="3604" vertical-scroll-proportion="0.0">
+        <state line="94" column="43" selection-start="3575" selection-end="3575" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1744,7 +1729,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/components/UIMAComponents.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="32" selection-start="617" selection-end="617" vertical-scroll-proportion="0.26498422">
+        <state line="12" column="32" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dkpro/topic/utils/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="55" selection-start="2421" selection-end="2421" vertical-scroll-proportion="0.44354838">
           <folding />
         </state>
       </provider>
