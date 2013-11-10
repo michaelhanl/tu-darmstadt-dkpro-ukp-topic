@@ -13,6 +13,7 @@ import java.util.Stack;
 
 /**
  * a wrapper class based on the SAXWalker class, provided by R. Eckart de Castilho
+ *
  * @author eckart@ukp.informatik.tu-darmstadt.de, hanl@ids-mannheim.de
  * @date 11/6/13
  */
@@ -89,10 +90,10 @@ public class SAXParser extends SAXFilter {
 
 
     public XMLConstituent getCurrent() {
-        if (!this._stack.isEmpty())
-            return this._stack.peek();
-        else
+        if (this._stack.isEmpty())
             return null;
+        return this._stack.peek();
+
     }
 
 }
