@@ -25,13 +25,10 @@ import java.io.File;
 public class Main {
 
     private static Logger _log = LoggerFactory.getLogger(Main.class);
-    private static boolean topicAnnotator = false;
+    public static boolean ANNOTATOR = false;
     private static ParsingPipeline pipeline;
 
-    public static boolean isAEn() {
-        return topicAnnotator;
-    }
-
+    // todo: specify modal files explicitly
     public static void main(String[] args) {
         pipeline = new ParsingPipeline();
         if (args.length == 0) {
@@ -130,7 +127,7 @@ public class Main {
                     getRules = false;
                     break;
                 case "-toFile":
-                    topicAnnotator = true;
+                    ANNOTATOR = true;
                     break;
                 case "inFile":
                     // ??
@@ -158,7 +155,7 @@ public class Main {
     }
 
     private static void runPipeline(String[] args, String path) {
-        topicAnnotator = true;
+        ANNOTATOR = true;
         boolean getRules = true;
         for (int i = 0; i < args.length; i++) {
             switch (args[i]) {

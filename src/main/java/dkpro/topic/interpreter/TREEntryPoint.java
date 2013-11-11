@@ -57,7 +57,7 @@ public class TREEntryPoint extends JCasConsumer_ImplBase {
         File annotated = new File(Configuration.getOutputDir() + "/" + TreeAnnotator.outDirEx + "/"
                 + targetFile.getName());
 
-        if (!NamingParameters.isAutoOverEn() && Main.isAEn()
+        if (!NamingParameters.isAutoOverEn() && Main.ANNOTATOR
                 && annotated.exists()) {
             System.out.println();
             System.out
@@ -71,7 +71,7 @@ public class TREEntryPoint extends JCasConsumer_ImplBase {
             _log.error("TreeRuleParser exits with error!", e);
         }
 
-        if (Main.isAEn()) {
+        if (Main.ANNOTATOR) {
             annotator = TreeAnnotator.instantiate
                     (targetFile, parser.getSentenceResults());
             annotator.process();
