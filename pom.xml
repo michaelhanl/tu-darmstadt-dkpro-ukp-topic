@@ -16,6 +16,7 @@
                     <target>1.7</target>
                 </configuration>
             </plugin>
+            <!-- Replaces deprecated ant scripts to build a jar file with all dependencies in target directory-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
@@ -30,7 +31,7 @@
                         <configuration>
                             <descriptorRefs>
                                 <descriptorRef>jar-with-dependencies</descriptorRef>
-                            </descriptorRefs>
+                            </descriptorRefs>                            
                             <archive>
                                 <manifest>
                                     <mainClass>dkpro.topic.main.Main</mainClass>
