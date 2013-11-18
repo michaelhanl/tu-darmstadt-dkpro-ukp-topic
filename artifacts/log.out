@@ -45134,3 +45134,55 @@ Nov 01, 2013 18:47:12 dkpro.topic.utils.XMLUtils
  INFO : writing XML file /home/hanl/Projects/tu-darmstadt-dkpro-ukp-topic/artifacts/output/file2.xml with discourse information to directory
 Nov 01, 2013 18:47:12 dkpro.topic.main.Main 
  INFO : Successfully run pipeline
+Nov 18, 2013 02:57:37 dkpro.topic.utils.NamingParameters 
+ INFO : loading properties
+Nov 18, 2013 02:57:37 dkpro.topic.main.Main 
+ INFO : running entire annotation engine
+Nov 18, 2013 02:57:37 dkpro.topic.utils.Configuration 
+ INFO : setting rule file Rules_EN.xml
+Nov 18, 2013 02:57:42 ukp.dkpro.core.api.resources.ResourceObjectProviderBase 
+ INFO : Producing resource from jar:file:/Volumes/Mac%20User/Users/michael/tu-darmstadt-dkpro-ukp-topic/artifacts/dkpro.ukp.topic.structure.jar!/de/tudarmstadt/ukp/dkpro/core/stanfordnlp/lib/parser-en-pcfg.ser.gz
+Nov 18, 2013 02:57:45 ukp.dkpro.core.api.resources.ResourceObjectProviderBase 
+ INFO : Producing resource from jar:file:/Volumes/Mac%20User/Users/michael/tu-darmstadt-dkpro-ukp-topic/artifacts/dkpro.ukp.topic.structure.jar!/de/tudarmstadt/ukp/dkpro/core/api/lexmorph/tagset/en-ptb-tagger.map
+Nov 18, 2013 02:57:46 dkpro.topic.interpreter.TREEntryPoint 
+ INFO : Running TreeRuleParser on output/file.xml!
+Nov 18, 2013 02:57:46 dkpro.topic.interpreter.TopicXMLParserHandler 
+ INFO : interpreting file output/file.xml
+Nov 18, 2013 02:57:47 dkpro.topic.annotator.TreeAnnotator 
+ INFO : running XML annotator
+Nov 18, 2013 02:57:47 dkpro.topic.annotator.TreeAnnotator 
+ INFO : running the annotator for file output/file.xml
+Nov 18, 2013 02:57:47 dkpro.topic.utils.XMLUtils 
+ INFO : writing XML file /Volumes/Mac User/Users/michael/tu-darmstadt-dkpro-ukp-topic/artifacts/output/topics/file.xml
+Nov 18, 2013 02:57:47 dkpro.topic.utils.XMLUtils 
+ INFO : writing XML file /Volumes/Mac User/Users/michael/tu-darmstadt-dkpro-ukp-topic/artifacts/output/topics/file.xml
+Nov 18, 2013 02:57:47 dkpro.topic.main.Main 
+ INFO : Successfully run pipeline
+Nov 18, 2013 03:02:33 dkpro.topic.utils.NamingParameters 
+ INFO : loading properties
+Nov 18, 2013 03:02:33 dkpro.topic.main.Main 
+ INFO : running entire annotation engine
+Nov 18, 2013 03:02:39 dkpro.topic.utils.NamingParameters 
+ INFO : loading properties
+Nov 18, 2013 03:02:39 dkpro.topic.main.Main 
+ INFO : running entire annotation engine
+Nov 18, 2013 03:02:39 dkpro.topic.utils.Configuration 
+ INFO : setting rule file Rules_EN.xml
+Nov 18, 2013 03:02:44 ukp.dkpro.core.api.resources.ResourceObjectProviderBase 
+ INFO : Producing resource from jar:file:/Volumes/Mac%20User/Users/michael/tu-darmstadt-dkpro-ukp-topic/artifacts/dkpro.ukp.topic.structure.jar!/de/tudarmstadt/ukp/dkpro/core/stanfordnlp/lib/parser-en-pcfg.ser.gz
+Nov 18, 2013 03:02:46 ukp.dkpro.core.api.resources.ResourceObjectProviderBase 
+ INFO : Producing resource from jar:file:/Volumes/Mac%20User/Users/michael/tu-darmstadt-dkpro-ukp-topic/artifacts/dkpro.ukp.topic.structure.jar!/de/tudarmstadt/ukp/dkpro/core/api/lexmorph/tagset/en-ptb-tagger.map
+Nov 18, 2013 03:02:47 dkpro.topic.interpreter.TREEntryPoint 
+ INFO : Running TreeRuleParser on output/file.xml!
+Nov 18, 2013 03:02:47 dkpro.topic.interpreter.TopicXMLParserHandler 
+ INFO : interpreting file output/file.xml
+Nov 18, 2013 03:02:48 dkpro.topic.annotator.TreeAnnotator 
+ INFO : running XML annotator
+Nov 18, 2013 03:02:48 dkpro.topic.annotator.TreeAnnotator 
+ INFO : running the annotator for file output/file.xml
+Nov 18, 2013 03:02:48 dkpro.topic.utils.XMLUtils 
+ INFO : writing XML file /Volumes/Mac User/Users/michael/tu-darmstadt-dkpro-ukp-topic/artifacts/output/topics/file.xml
+Nov 18, 2013 03:02:48 dkpro.topic.utils.XMLUtils 
+ INFO : writing XML file /Volumes/Mac User/Users/michael/tu-darmstadt-dkpro-ukp-topic/artifacts/output/topics/file.xml
+Nov 18, 2013 03:02:48 dkpro.topic.main.Main 
+ INFO : Successfully run pipeline

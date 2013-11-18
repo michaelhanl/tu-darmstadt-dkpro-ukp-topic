@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="DBNavigator.Module.ConnectionManager">
+    <connections />
+  </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
@@ -12,10 +15,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: de.tudarmstadt.ukp.dkpro.core:stanfordnlp-model-lexparser-de-pcfg:20120709.0" level="project" />
-    <orderEntry type="library" name="Maven: de.tudarmstadt.ukp.dkpro.core:stanfordnlp-model-lexparser-en-pcfg:20120709.0" level="project" />
-    <orderEntry type="library" name="Maven: de.tudarmstadt.ukp.dkpro.core:stanfordnlp-model-lexparser-de-factored:20120709.0" level="project" />
-    <orderEntry type="library" name="Maven: de.tudarmstadt.ukp.dkpro.core:stanfordnlp-model-lexparser-en-factored:20120709.0" level="project" />
+    <orderEntry type="library" name="Maven: de.tudarmstadt.ukp.dkpro.core:de.tudarmstadt.ukp.dkpro.core.stanfordnlp-upstream-parser-de-pcfg:20130620" level="project" />
+    <orderEntry type="library" name="Maven: de.tudarmstadt.ukp.dkpro.core:de.tudarmstadt.ukp.dkpro.core.stanfordnlp-upstream-parser-en-pcfg:20130620" level="project" />
+    <orderEntry type="library" name="Maven: de.tudarmstadt.ukp.dkpro.core:de.tudarmstadt.ukp.dkpro.core.stanfordnlp-upstream-parser-de-factored:20130620" level="project" />
+    <orderEntry type="library" name="Maven: de.tudarmstadt.ukp.dkpro.core:de.tudarmstadt.ukp.dkpro.core.stanfordnlp-upstream-parser-en-factored:20130620" level="project" />
     <orderEntry type="library" name="Maven: org.apache.uima:uimaj-core:2.4.0" level="project" />
     <orderEntry type="library" name="Maven: org.uimafit:uimafit:1.4.0" level="project" />
     <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.4" level="project" />

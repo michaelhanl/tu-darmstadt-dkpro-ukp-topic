@@ -9,10 +9,10 @@ cd ..
 v3="all_intellij.jar"
 input="input"
 output="output"
-modal="factored"
+model="factored"
 rule="config/Rules_EN.xml"
 
-parameters="-all english -modal $modal -inDir $input -outDir $output -toFile"
+parameters="-all english -model $model -inDir $input -outDir $output -toFile"
 
 java -jar $v3 $parameters
 

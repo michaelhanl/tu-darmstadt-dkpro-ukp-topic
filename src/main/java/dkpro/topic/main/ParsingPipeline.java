@@ -100,7 +100,7 @@ public class ParsingPipeline {
     @Deprecated
     private void init() {
         Configuration.setFilesDir("resources/current/");
-        Configuration.setModal(Configuration.PCFG);
+        Configuration.setModel(Configuration.PCFG);
         Configuration.setOutputDir("XMLOutput/" + "current");
         Configuration.setLang(Configuration.GERMAN);
         Configuration.retrieveRuleFiles("/Volumes/Mac User/Users/michael/Library/"

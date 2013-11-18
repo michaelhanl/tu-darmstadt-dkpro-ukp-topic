@@ -28,7 +28,7 @@ public class Main {
     public static boolean ANNOTATOR = false;
     private static ParsingPipeline pipeline;
 
-    // todo: specify modal files explicitly
+    // todo: specify model files explicitly
     public static void main(String[] args) {
         pipeline = new ParsingPipeline();
         if (args.length == 0) {
@@ -77,20 +77,20 @@ public class Main {
                 case "-outDir":
                     Configuration.setOutputDir(args[i + 1]);
                     break;
-                case "-modal":
+                case "-model":
                     if (args[i + 1].equalsIgnoreCase(Configuration.PCFG)
                             | args[i + 1].equalsIgnoreCase(Configuration.FACTORED)) {
-                        Configuration.setModal(args[i + 1]);
+                        Configuration.setModel(args[i + 1]);
                         break;
                     } else {
                         System.out
-                                .println("Please use 'pcfg' or 'factored' as modal description");
+                                .println("Please use 'pcfg' or 'factored' as model description");
                         System.exit(-1);
                         return;
                     }
                 case "-help":
                     System.out
-                            .println("Help: java -jar Annotator.jar -parser <Language> -rules <RuleFile> -in <InputDir> -out <OutputDir> -m <Modal> [-toFile]");
+                            .println("Help: java -jar Annotator.jar -parser <Language> -rules <RuleFile> -in <InputDir> -out <OutputDir> -m <Model> [-toFile]");
                     System.exit(-1);
                     return;
             }
@@ -171,13 +171,13 @@ public class Main {
                 case "-outDir":
                     Configuration.setOutputDir(args[i + 1]);
                     break;
-                case "-modal":
+                case "-model":
                     if (args[i + 1].equalsIgnoreCase(Configuration.PCFG)
                             | args[i + 1].equalsIgnoreCase(Configuration.FACTORED)) {
-                        Configuration.setModal(args[i + 1]);
+                        Configuration.setModel(args[i + 1]);
                     } else {
                         System.out
-                                .println("Please use 'pcfg' or 'factored' as modal description");
+                                .println("Please use 'pcfg' or 'factored' as model description");
                         System.exit(-1);
                         return;
                     }
@@ -191,7 +191,7 @@ public class Main {
                 // break;
                 case "-help":
                     System.out
-                            .println("Help: java -jar Annotator.jar -all <Language> -rules <RuleFile> -in <InputDir> -out <OutputDir> -m <Modal> [-toFile]");
+                            .println("Help: java -jar Annotator.jar -all <Language> -rules <RuleFile> -in <InputDir> -out <OutputDir> -m <Model> [-toFile]");
                     System.exit(-1);
                     return;
             }

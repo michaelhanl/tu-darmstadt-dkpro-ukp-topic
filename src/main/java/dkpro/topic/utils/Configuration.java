@@ -35,7 +35,7 @@ public class Configuration {
     private static String lang = new String();
     private static String input = new String();
     private static String output = new String();
-    private static String modal = new String();
+    private static String model = new String();
     private static int sentID = 1;
     private static int citeID = 1;
     private static int levelID = 1;
@@ -81,11 +81,11 @@ public class Configuration {
         sentID += 1;
     }
 
-    public static String getModal() {
-        if (modal == null)
-            modal = PCFG;
-        _log.trace("ModMessage: Using modal: " + modal);
-        return modal;
+    public static String getModel() {
+        if (model == null)
+            model = PCFG;
+        _log.trace("ModMessage: Using model: " + model);
+        return model;
     }
 
     public static String getEncoding() {
@@ -97,9 +97,9 @@ public class Configuration {
         }
     }
 
-    public static void setModal(final String modal) {
-        _log.debug("Setting modal: {}", modal);
-        Configuration.modal = modal;
+    public static void setModel(final String model) {
+        _log.debug("Setting model: {}", model);
+        Configuration.model = model;
     }
 
     public static String getLang() {
@@ -137,7 +137,7 @@ public class Configuration {
         if (output == null) {
             try {
                 output = new File(".").getCanonicalPath() + "/" + "output"
-                        + "/" + getModal();
+                        + "/" + getModel();
                 File out = new File(output);
                 out.mkdirs();
             } catch (IOException e) {

@@ -67,7 +67,7 @@ public class UIMAComponents {
         // StanfordParser.PARAM_MAX_ITEMS, 5000000
         AnalysisEngineDescription parser = createPrimitiveDescription(StanfordParser.class,
                 StanfordParser.PARAM_LANGUAGE, Configuration.getLang(),
-                StanfordParser.PARAM_VARIANT, Configuration.getModal(),
+                StanfordParser.PARAM_VARIANT, Configuration.getModel(),
                 StanfordParser.PARAM_CREATE_CONSTITUENT_TAGS, true,
                 StanfordParser.PARAM_CREATE_DEPENDENCY_TAGS, false,
                 StanfordParser.PARAM_MAX_TOKENS, 200);

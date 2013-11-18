@@ -6,7 +6,7 @@ v3="dkpro.ukp.topic.structure.jar"
 input="input/file.xml"
 output="output/file2.xml"
 language="german"
-modal="factored"
+model="factored"
 rule="Rules_DE.xml"
 
 parameters="-learn $rule $input $output"

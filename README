@@ -51,12 +51,12 @@ The following parameters are partially optional and support default value settin
 -- Application parameters and script files --
 Stanford Parser:
 
-[JARBUNDLE] german/english  -inDir [input file directory] -outDir [ouput file directory] -rule [ruleFile] -modal [modal file] 
+[JARBUNDLE] german/english  -inDir [input file directory] -outDir [ouput file directory] -rule [ruleFile] -model [model file]
 
 All:
-[JARBUNDLE] german/english  -inDir [input file directory] -outDir [ouput file directory] -rule [ruleFile] -modal [modal file] 
+[JARBUNDLE] german/english  -inDir [input file directory] -outDir [ouput file directory] -rule [ruleFile] -model [model file]
 
 TopicEngine:
 The TreeRuleEngine expects the input files to in a compatible XML format as produced by the parser. 
-[JARBUNDLE] german/english  -inDir [input file directory] -outDir [ouput file directory] -rule [ruleFile] -modal [modal file] 
+[JARBUNDLE] german/english  -inDir [input file directory] -outDir [ouput file directory] -rule [ruleFile] -model [model file]
 

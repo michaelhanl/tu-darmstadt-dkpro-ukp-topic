@@ -16,83 +16,86 @@
                     <target>1.7</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.4</version>
+                <executions>
+                    <execution>
+                        <id>package-jar-with-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <descriptorRefs>
+                                <descriptorRef>jar-with-dependencies</descriptorRef>
+                            </descriptorRefs>
+                            <archive>
+                                <manifest>
+                                    <mainClass>dkpro.topic.main.Main</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
             <!--
-<plugin>
-<groupId>org.apache.maven.plugins</groupId>
-<artifactId>maven-assembly-plugin</artifactId>
-<version>2.4</version>
-<executions>
-<execution>
-<id>package-jar-with-dependencies</id>
-<phase>package</phase>
-<goals>
-<goal>single</goal>
-</goals>
-<configuration>
-<appendAssemblyId>false</appendAssemblyId>
-<descriptorRefs>
- <descriptorRef>jar-with-dependencies</descriptorRef>
-</descriptorRefs>
-<archive>
- <manifest>
-     <mainClass>dkpro.topic.main.Main</mainClass>
- </manifest>
-</archive>
-</configuration>
-</execution>
-</executions>
-</plugin>
-
-
-
-
 <plugin>
 <groupId>org.apache.maven.plugins</groupId>
 <artifactId>maven-antrun-plugin</artifactId>
 <version>1.7</version>
 <executions>
-<execution>
-<phase>compile</phase>
-<goals>
-<goal>run</goal>
-</goals>
-<configuration>
-<tasks>
-<echo>Creating configuration files</echo>
-<copy toDir="${basedir}/config1">
-<fileset dir="${basedir}/src/main/resources" includes="**/*" />
-</copy>
-</tasks>
-</configuration>
-</execution>
+   <execution>
+       <phase>compile</phase>
+       <goals>
+           <goal>run</goal>
+       </goals>
+       <configuration>
+           <tasks>
+               <echo>Creating configuration files</echo>
+               <copy toDir="${basedir}/config1">
+                   <fileset dir="${basedir}/src/main/resources" includes="**/*"/>
+               </copy>
+           </tasks>
+       </configuration>
+   </execution>
 </executions>
 </plugin>
 <plugin>
 <artifactId>maven-resources-plugin</artifactId>
 <version>2.6</version>
 <executions>
-<execution>
-<id>copy-resources</id>
-<phase>validate</phase>
-<goals>
-<goal>copy-resources</goal>
-</goals>
-<configuration>
-<outputDirectory>${basedir}/config</outputDirectory>
-<resources>
-<resource>
-<directory>resources</directory>
-<filtering>true</filtering>
-</resource>
-</resources>
-</configuration>
-</execution>
+   <execution>
+       <id>copy-resources</id>
+       <phase>validate</phase>
+       <goals>
+           <goal>copy-resources</goal>
+       </goals>
+       <configuration>
+           <outputDirectory>${basedir}/config</outputDirectory>
+           <resources>
+               <resource>
+                   <directory>resources</directory>
+                   <filtering>true</filtering>
+               </resource>
+           </resources>
+       </configuration>
+   </execution>
 </executions>
 </plugin>
 -->
         </plugins>
     </build>
     <dependencies>
+        <!--
         <dependency>
             <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
             <artifactId>stanfordnlp-model-lexparser-de-pcfg</artifactId>
@@ -129,6 +132,30 @@
                 ${basedir}/models/de.tudarmstadt.ukp.dkpro.core.stanfordnlp-model-parser-en-factored-20120709.0.jar
             </systemPath>
         </dependency>
+        -->
+        <dependency>
+            <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
+            <artifactId>de.tudarmstadt.ukp.dkpro.core.stanfordnlp-upstream-parser-de-pcfg</artifactId>
+            <version>20130620</version>
+        </dependency>
+
+        <dependency>
+            <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
+            <artifactId>de.tudarmstadt.ukp.dkpro.core.stanfordnlp-upstream-parser-en-pcfg</artifactId>
+            <version>20130620</version>
+        </dependency>
+        <dependency>
+            <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
+            <artifactId>de.tudarmstadt.ukp.dkpro.core.stanfordnlp-upstream-parser-de-factored</artifactId>
+            <version>20130620</version>
+        </dependency>
+
+        <dependency>
+            <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
+            <artifactId>de.tudarmstadt.ukp.dkpro.core.stanfordnlp-upstream-parser-en-factored</artifactId>
+            <version>20130620</version>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.uima</groupId>
             <artifactId>uimaj-core</artifactId>

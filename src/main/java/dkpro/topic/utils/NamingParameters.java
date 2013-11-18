@@ -32,14 +32,15 @@ public class NamingParameters {
         File f = new File(System.getProperty("java.class.path"));
         String path = f.getAbsoluteFile().getParentFile().getAbsolutePath();
         Properties props = new Properties();
-        System.out.println("loading log4j properties file "+ path + Configuration.CONFIGDIR);
+        String s = path + "/" + Configuration.CONFIGDIR + "/";
+        System.out.println("loading log4j properties file " + s + Configuration.LOG4J);
         try {
-            props.load(new FileInputStream(path +"/"+ Configuration.CONFIGDIR
-                    + "/" + Configuration.LOG4J));
+            props.load(new FileInputStream(
+                    s + Configuration.LOG4J));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        schema = path +"/"+ Configuration.CONFIGDIR + "/"+ "schema.xsd";
+        schema = s + "schema.xsd";
         PropertyConfigurator.configure(props);
         NamingParameters.loadConfigurationProperties(path);
         return path;
@@ -77,7 +78,7 @@ public class NamingParameters {
         }
 
         try {
-            properties.load(new FileInputStream(path +"/"+ Configuration.CONFIGDIR + "/"
+            properties.load(new FileInputStream(path + "/" + Configuration.CONFIGDIR + "/"
                     + PARAS));
             setProperties(properties);
 
