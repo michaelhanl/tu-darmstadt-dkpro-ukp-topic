@@ -1,0 +1,36 @@
+## Configuration Parameter for XML elements and attributes
+
+theme.constituent.SROOT = s
+theme.constituent.CLAUSE = cl
+theme.constituent.PHRASE = phr
+theme.constituent.WORD = w
+theme.constituent.CONSTITUENTTYPE = type 
+theme.constituent.IDATT = xml:id
+theme.constituent.TEIROOT = TEI
+theme.constituent.TEIHEADER = teiHeader
+theme.constituent.TEXT = text
+theme.constituent.CITEID = citationID
+ 
+
+generic.document = ROOT
+generic.docname = docName
+generic.sentence = constituent
+generic.constituent = constituent
+generic.lemma = lemma
+generic.citeid = citationID
+generic.constituenttype = cat
+generic.id = id
+generic.topiclabel = topicLabel
+generic.topicrule = rule
+generic.relax = relax
+
+##generic.document = docRoot
+##generic.docname = docName
+##generic.sentence = sentence
+##generic.constituent = constituent
+##generic.lemma = lemma
+##generic.citeid = citationID
+##generic.constituenttype = type
+##generic.id = xml:id
+##generic.topiclabel = topicLabel
+##generic.topicrule = topicRule
