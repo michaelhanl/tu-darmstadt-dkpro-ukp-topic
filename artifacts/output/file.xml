@@ -1,41 +1,24 @@
 <?xml version="1.0" ?>
 <ROOT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/Volumes/Mac User/Users/michael/tu-darmstadt-dkpro-ukp-topic/artifacts/config/schema.xsd" docName="file">
 	<constituent id="001" cat="S">
-		<constituent cat="NP">
-			<constituent cat="NNP" lemma="Maria">Maria</constituent>
-		</constituent>
+		<constituent cat="PPER-SB">Ich</constituent>
+		<constituent cat="VAFIN">bin</constituent>
 		<constituent cat="VP">
-			<constituent cat="VBD" lemma="be">was</constituent>
-			<constituent cat="VP">
-				<constituent cat="VBG" lemma="go">going</constituent>
-				<constituent cat="NP">
-					<constituent cat="NN" lemma="home">home</constituent>
-				</constituent>
+			<constituent cat="PP">
+				<constituent cat="APPR">nach</constituent>
+				<constituent cat="NN">Haus</constituent>
 			</constituent>
+			<constituent cat="VVPP">gegangen</constituent>
 		</constituent>
-		<constituent cat="." lemma="!">!</constituent>
-	</constituent>
-	<constituent id="002" cat="S">
-		<constituent cat="NP">
-			<constituent cat="PRP" lemma="I">I</constituent>
-		</constituent>
-		<constituent cat="VP">
-			<constituent cat="VBD" lemma="be">was</constituent>
-			<constituent cat="ADJP">
-				<constituent cat="RB" lemma="pretty">pretty</constituent>
-				<constituent cat="JJ" lemma="beat">beat</constituent>
-				<constituent cat="PP">
-					<constituent cat="IN" lemma="from">from</constituent>
-					<constituent cat="NP">
-						<constituent cat="DT" lemma="the">the</constituent>
-						<constituent cat="NN" lemma="party">party</constituent>
-					</constituent>
-				</constituent>
+		<constituent cat="$,">,</constituent>
+		<constituent cat="S">
+			<constituent cat="KOUS">als</constituent>
+			<constituent cat="NP-SB">
+				<constituent cat="ART">der</constituent>
+				<constituent cat="NE">Ernst</constituent>
 			</constituent>
-			<constituent cat="NP">
-				<constituent cat="JJ" lemma="last">last</constituent>
-				<constituent cat="NN" lemma="night">night</constituent>
-			</constituent>
+			<constituent cat="ADV">gerade</constituent>
+			<constituent cat="VVFIN">ging</constituent>
 		</constituent>
-		<constituent cat="." lemma=".">.</constituent>
+		<constituent cat="$.">!</constituent>
 	</constituent></ROOT>

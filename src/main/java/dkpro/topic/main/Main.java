@@ -201,7 +201,7 @@ public class Main {
             Configuration.retrieveRuleFiles(path + "/" + Configuration.CONFIGDIR);
 
         try {
-            pipeline.runPipeline();
+            pipeline.runFullInterpreter();
             _log.info("Successfully run pipeline");
         } catch (AnnotatorConfigurationException
                 | ResourceInitializationException e) {

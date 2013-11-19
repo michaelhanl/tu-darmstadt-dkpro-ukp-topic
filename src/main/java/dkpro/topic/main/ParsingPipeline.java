@@ -45,15 +45,11 @@ public class ParsingPipeline {
             ResourceInitializationException {
         collReader = UIMAComponents.setupReader(UIMAComponents.XML);
         treeRuleEngine = UIMAComponents.setupTreeRuleEngine(Configuration.getInputDir());
+        /**
+         * run pipeline with instantiated AnalysisEngines
+         */
+        runPipeline(collReader, treeRuleEngine);
 
-        try {
-            _log.debug("run Analysis Pipeline");
-            SimplePipeline.runPipeline(collReader, treeRuleEngine);
-        } catch (UIMAException e) {
-            _log.error("UIMA Exception", e.getMessage());
-        } catch (IOException e) {
-            _log.error("IO Exception", e.getMessage());
-        }
     }
 
     public void runStanfordParser() throws AnnotatorConfigurationException,
@@ -66,35 +62,32 @@ public class ParsingPipeline {
         /**
          * run pipeline with instantiated AnalysisEngines
          */
+        runPipeline(collReader, segmenter, parser,
+                constituentXML);
 
-        try {
-            _log.debug("run Analysis Pipeline");
-            SimplePipeline.runPipeline(collReader, segmenter, parser,
-                    constituentXML);
-        } catch (UIMAException e) {
-            _log.error("UIMA Exception", e.getMessage());
-        } catch (IOException e) {
-            _log.error("IO Exception", e.getMessage());
-        }
     }
 
-    public void runPipeline() throws AnnotatorConfigurationException,
+    public void runFullInterpreter() throws AnnotatorConfigurationException,
             ResourceInitializationException {
         defaultSetup();
+
         /**
          * run pipeline with instantiated AnalysisEngines
          */
+        runPipeline(collReader, segmenter, parser,
+                constituentXML, treeRuleEngine);
+    }
 
+
+    private void runPipeline(CollectionReader reader, AnalysisEngineDescription... engines) {
         try {
             _log.debug("run Analysis Pipeline");
-            SimplePipeline.runPipeline(collReader, segmenter, parser,
-                    constituentXML, treeRuleEngine);
+            SimplePipeline.runPipeline(reader, engines);
         } catch (UIMAException e) {
-            _log.error("UIMA Exception", e.getMessage());
+            _log.error("UIMA Exception", e);
         } catch (IOException e) {
-            _log.error("IO Exception", e.getMessage());
+            _log.error("IO Exception", e);
         }
-
     }
 
     @Deprecated

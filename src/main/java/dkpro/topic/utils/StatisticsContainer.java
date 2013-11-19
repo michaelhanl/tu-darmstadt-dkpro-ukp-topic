@@ -63,12 +63,12 @@ public class StatisticsContainer {
 
     public double getPrecision(boolean includeUnexpected) {
         if (includeUnexpected)
-            return this._totalMet / (this._totalMet + this._totalMismatches + this._totalUnexpectedMatches);
-        return this._totalMet / Float.valueOf(this._totalMet + this._totalMismatches);
+            return this._totalMet / new Float(this._totalMet + this._totalMismatches + this._totalUnexpectedMatches);
+        return this._totalMet / new Float(this._totalMet + this._totalMismatches);
     }
 
     public double getRecall() {
-        return this._totalMet / Float.valueOf(this._totalExpected);
+        return this._totalMet / new Float(this._totalExpected);
     }
 
     public double getFScore(boolean includeUnexpected, float alpha) {

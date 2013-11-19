@@ -4,13 +4,14 @@
 ## in "all" mode the rule file is automatically detected, if there are rule files in the "config"
 ## directory with the respective language extension ("EN" or "DE").
 v3="dkpro.ukp.topic.structure.jar"
+v4="dkpro.ukp.topic.structure-core-1.0-jar-with-dependencies.jar"
 input="input"
 output="output"
-modal="pcfg"
+model="pcfg"
 
-parameters="-all $1 -modal $modal -inDir $input -outDir $output"
+parameters="-all $1 -model $model -inDir $input -outDir $output"
 
-java -jar $v3 $parameters
+java -jar $v4 $parameters
 
 
 ## java -cp annolab.jar org.annolab.tre.cli.Main Rules_EN.xml file.xml
