@@ -53,21 +53,21 @@ public class TreeAnnotator {
         SAXReader reader = new SAXReader();
         Document document = reader.read(file);
         Element root = document.getRootElement();
-        jlog.info("running the annotator for file {}", file);
+        jlog.debug("running the annotator for file {}", file);
 
         for (Iterator<Element> i = root.elementIterator(NamingParameters
                 .getElementSentence()); i.hasNext(); ) {
             Element sentence = i.next();
 
             Attribute sentID = sentence.attribute(NamingParameters.getAttrSentenceID());
-            String[] f = XMLUtils.ruleEnumeration(getResults(sentID.getValue()));
-            String ruleIds = f[0];
-            String ruleLabels = f[1];
-
             if (getResults(sentID.getValue()) == null) {
                 jlog.info("no topics available for sentence with ID {}!", sentID.getValue());
                 continue;
             } else {
+                String[] f = XMLUtils.ruleEnumeration(getResults(sentID.getValue()));
+                String ruleIds = f[0];
+                String ruleLabels = f[1];
+
                 sentence.addAttribute(NamingParameters.getAttrTopicRule(), ruleIds);
                 //sentence.addAttribute(NamingParameters.getAttrTopicLabel(), ruleLabels);
                 try {
@@ -83,8 +83,9 @@ public class TreeAnnotator {
 
     private List<Result> getResults(String id) {
         for (String key : results.keySet()) {
-            if (key.startsWith(id))
+            if (key.startsWith(id) && !results.get(key).isEmpty()) {
                 return results.get(key);
+            }
         }
         return null;
     }

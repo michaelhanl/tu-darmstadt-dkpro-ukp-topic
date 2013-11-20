@@ -28,7 +28,7 @@ public class StatisticsContainer {
         this._totalMet = 0;
         this._totalMismatches = 0;
         this._totalUnexpectedMatches = 0;
-        this._stats = new HashMap();
+        this._stats = new HashMap<>();
     }
 
     public void tallySentence() {
@@ -118,12 +118,12 @@ public class StatisticsContainer {
 
         private double getPrecision(boolean includeUnexpected) {
             if (includeUnexpected)
-                return this._met / Float.valueOf(this._met + this._mismatch + this._unexpectedMatch);
-            return this._met / Float.valueOf(this._met + this._mismatch);
+                return this._met / this._met + this._mismatch + this._unexpectedMatch;
+            return this._met / this._met + this._mismatch;
         }
 
         private double getRecall() {
-            return this._met / Float.valueOf(this._expected);
+            return this._met / this._expected;
         }
 
         private double getFScore(boolean includeUnexpected, float alpha) {

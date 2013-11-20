@@ -152,7 +152,7 @@ public class TopicSentInterpreter {
          * Due to an error/bug in the matching of the rule Identifier (getNodeExpectation expected format [rule 1]
          * as the value for the "expect" attribute, whereas getExpectedRule expected the name to be without brackets,
          * e.g. "rule 1"
-         * if expected == null, no expect attribute in XML found
+         * if expected == null, no expect attribute found in XML
          *
          */
         RuleDefinition expected = getExpectedRule(node);
