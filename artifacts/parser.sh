@@ -6,9 +6,9 @@
 v3="dkpro.ukp.topic.structure.jar"
 input="input"
 output="output"
-modal="pcfg"
+model="pcfg"
 
-parameters="-parser $1 -modal $modal -inDir $input -outDir $output"
+parameters="-parser $1 -model $model -inDir $input -outDir $output"
 
 java -jar $v3 $parameters
 
