@@ -26,11 +26,9 @@ public class Main {
 
     private static Logger _log = LoggerFactory.getLogger(Main.class);
     public static boolean ANNOTATOR = false;
-    private static ParsingPipeline pipeline;
 
     // todo: specify model files explicitly
     public static void main(String[] args) {
-        pipeline = new ParsingPipeline();
         if (args.length == 0) {
             System.out.println("please specify parameters!");
             System.out
@@ -97,7 +95,7 @@ public class Main {
         }
         Configuration.retrieveRuleFiles(path + "/" + Configuration.CONFIGDIR);
         try {
-            pipeline.runStanfordParser();
+            ParsingPipeline.runStanfordParser();
         } catch (AnnotatorConfigurationException
                 | ResourceInitializationException e) {
             _log.error("Parsing could not be completed, due to internal error",
@@ -143,7 +141,7 @@ public class Main {
         if(getRules)
             Configuration.retrieveRuleFiles(path + "/" + Configuration.CONFIGDIR);
         try {
-           pipeline.runTopicEngineOnly();
+            ParsingPipeline.runTopicEngineOnly();
             _log.info("Successfully run pipeline");
         } catch (AnnotatorConfigurationException
                 | ResourceInitializationException e) {
@@ -201,7 +199,7 @@ public class Main {
             Configuration.retrieveRuleFiles(path + "/" + Configuration.CONFIGDIR);
 
         try {
-            pipeline.runFullInterpreter();
+            ParsingPipeline.runFullInterpreter();
             _log.info("Successfully run pipeline");
         } catch (AnnotatorConfigurationException
                 | ResourceInitializationException e) {

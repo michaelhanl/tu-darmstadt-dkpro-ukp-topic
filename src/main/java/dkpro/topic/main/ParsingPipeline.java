@@ -23,7 +23,6 @@ import java.io.IOException;
 public class ParsingPipeline {
 
     private static Logger _log = LoggerFactory.getLogger(ParsingPipeline.class);
-
     private CollectionReader collReader;
     private AnalysisEngineDescription segmenter;
     private AnalysisEngineDescription parser;
@@ -31,6 +30,22 @@ public class ParsingPipeline {
     private AnalysisEngineDescription constituentXML;
     private AnalysisEngineDescription treeRuleEngine;
 
+
+    private ParsingPipeline() {
+
+    }
+
+    public static ParsingPipeline runTopicEngineOnly() throws AnnotatorConfigurationException,
+            ResourceInitializationException {
+        ParsingPipeline p = new ParsingPipeline();
+        p.collReader = UIMAComponents.setupReader(UIMAComponents.XML);
+        p.treeRuleEngine = UIMAComponents.setupTreeRuleEngine(Configuration.getInputDir());
+        /**
+         * run pipeline with instantiated AnalysisEngines
+         */
+        p.runPipeline(p.collReader, p.treeRuleEngine);
+        return p;
+    }
 
     private void defaultSetup() throws ResourceInitializationException {
         collReader = UIMAComponents.setupReader(UIMAComponents.TEXT);
@@ -41,43 +56,34 @@ public class ParsingPipeline {
         treeRuleEngine = UIMAComponents.setupTreeRuleEngine(Configuration.getOutputDir());
     }
 
-    public void runTopicEngineOnly() throws AnnotatorConfigurationException,
+    public static ParsingPipeline runStanfordParser() throws AnnotatorConfigurationException,
             ResourceInitializationException {
-        collReader = UIMAComponents.setupReader(UIMAComponents.XML);
-        treeRuleEngine = UIMAComponents.setupTreeRuleEngine(Configuration.getInputDir());
-        /**
-         * run pipeline with instantiated AnalysisEngines
-         */
-        runPipeline(collReader, treeRuleEngine);
-
-    }
-
-    public void runStanfordParser() throws AnnotatorConfigurationException,
-            ResourceInitializationException {
-        collReader = UIMAComponents.setupReader(UIMAComponents.TEXT);
-        segmenter = UIMAComponents.setupSegmenter();
-        parser = UIMAComponents.setupParser();
-        constituentXML = UIMAComponents.setupConstituentWriter();
+        ParsingPipeline p = new ParsingPipeline();
+        p.collReader = UIMAComponents.setupReader(UIMAComponents.TEXT);
+        p.segmenter = UIMAComponents.setupSegmenter();
+        p.parser = UIMAComponents.setupParser();
+        p.constituentXML = UIMAComponents.setupConstituentWriter();
 
         /**
          * run pipeline with instantiated AnalysisEngines
          */
-        runPipeline(collReader, segmenter, parser,
-                constituentXML);
-
+        p.runPipeline(p.collReader, p.segmenter, p.parser,
+                p.constituentXML);
+        return p;
     }
 
-    public void runFullInterpreter() throws AnnotatorConfigurationException,
+    public static ParsingPipeline runFullInterpreter() throws AnnotatorConfigurationException,
             ResourceInitializationException {
-        defaultSetup();
+        ParsingPipeline p = new ParsingPipeline();
+        p.defaultSetup();
 
         /**
          * run pipeline with instantiated AnalysisEngines
          */
-        runPipeline(collReader, segmenter, parser,
-                constituentXML, treeRuleEngine);
+        p.runPipeline(p.collReader, p.segmenter, p.parser,
+                p.constituentXML, p.treeRuleEngine);
+        return p;
     }
-
 
     private void runPipeline(CollectionReader reader, AnalysisEngineDescription... engines) {
         try {
@@ -89,18 +95,4 @@ public class ParsingPipeline {
             _log.error("IO Exception", e);
         }
     }
-
-    @Deprecated
-    private void init() {
-        Configuration.setFilesDir("resources/current/");
-        Configuration.setModel(Configuration.PCFG);
-        Configuration.setOutputDir("XMLOutput/" + "current");
-        Configuration.setLang(Configuration.GERMAN);
-        Configuration.retrieveRuleFiles("/Volumes/Mac User/Users/michael/Library/"
-                + "Workspace/tu.darmstadt.ukp.dkpro.theme-german/src/main/resources");
-        // NamingParameters.loadConfigurationProperties();
-    }
-
-
 }
-//

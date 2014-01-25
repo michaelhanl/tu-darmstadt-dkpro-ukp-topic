@@ -16,26 +16,22 @@ import java.util.Arrays;
  *
  * @author hanl@ids-mannheim.de
  * @date 11/6/13
- *
  */
 public class Configuration {
 
     public static final String CONFIGDIR = "config";
     public static final String LOG4J = "log4j.properties";
-
     public static final String GERMAN = "de";
     public static final String ENGLISH = "en";
     public static final String PCFG = "pcfg";
     public static final String FACTORED = "factored";
-
     private static final String GERMAN_ENCODING = "ISO_8859-1";
     private static final String DEFAULT_ENCODING = "UTF-8";
-
     private static Logger _log = LoggerFactory.getLogger(Configuration.class);
-    private static String lang = new String();
-    private static String input = new String();
-    private static String output = new String();
-    private static String model = new String();
+    private static String lang = "";
+    private static String input = "";
+    private static String output = "";
+    private static String model = "";
     private static int sentID = 1;
     private static int citeID = 1;
     private static int levelID = 1;
@@ -82,19 +78,10 @@ public class Configuration {
     }
 
     public static String getModel() {
-        if (model == null)
+        if (model.isEmpty())
             model = PCFG;
         _log.trace("ModMessage: Using model: " + model);
         return model;
-    }
-
-    public static String getEncoding() {
-        switch(lang) {
-            case GERMAN:
-                return GERMAN_ENCODING;
-            default:
-                return DEFAULT_ENCODING;
-        }
     }
 
     public static void setModel(final String model) {
@@ -102,8 +89,17 @@ public class Configuration {
         Configuration.model = model;
     }
 
+    public static String getEncoding() {
+        switch (lang) {
+            case GERMAN:
+                return GERMAN_ENCODING;
+            default:
+                return DEFAULT_ENCODING;
+        }
+    }
+
     public static String getLang() {
-        if (lang == null)
+        if (lang.isEmpty())
             lang = ENGLISH;
         _log.trace("LangMessage: Using language: " + lang);
         return lang;
@@ -115,7 +111,7 @@ public class Configuration {
     }
 
     public static String getInputDir() {
-        if (input == null) {
+        if (input.isEmpty()) {
             try {
                 input = new File(".").getCanonicalPath() + "/" + "input";
                 File in = new File(input);
@@ -134,7 +130,7 @@ public class Configuration {
     }
 
     public static String getOutputDir() {
-        if (output == null) {
+        if (output.isEmpty()) {
             try {
                 output = new File(".").getCanonicalPath() + "/" + "output"
                         + "/" + getModel();
@@ -179,7 +175,7 @@ public class Configuration {
      * @param fileDir
      * @return
      */
-    public static void retrieveRuleFiles(String fileDir) throws IllegalArgumentException{
+    public static void retrieveRuleFiles(String fileDir) throws IllegalArgumentException {
         File dir = new File(fileDir);
 
         FileFilter ruleFilter = new WildcardFileFilter("Rules_*.xml");
@@ -210,7 +206,7 @@ public class Configuration {
         }
 
         if (getRuleFile() == null)
-           throw new IllegalArgumentException("No rule file set! Please check you have " +
-                   "set the correct directory or language");
+            throw new IllegalArgumentException("No rule file set! Please check you have " +
+                    "set the correct directory or language");
     }
 }
