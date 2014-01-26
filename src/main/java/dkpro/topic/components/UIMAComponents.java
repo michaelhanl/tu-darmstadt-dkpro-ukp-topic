@@ -17,20 +17,19 @@ import static org.uimafit.factory.AnalysisEngineFactory.createPrimitiveDescripti
 import static org.uimafit.factory.CollectionReaderFactory.createCollectionReader;
 
 /**
- *
  * @author eckart@ukp.informatik.tu-darmstadt.de, hanl@ids-mannheim.de
  * @date 11/6/13
  */
 public class UIMAComponents {
 
-    private static Logger _log = LoggerFactory.getLogger(UIMAComponents.class);
     public static final int XML = 1;
     public static final int TEXT = 2;
+    private static Logger _log = LoggerFactory.getLogger(UIMAComponents.class);
 
-        /*
-         * reads input files from the configured input path!
-         * new String[]{"[+]*.txt"}
-		 */
+    /*
+     * reads input files from the configured input path!
+     * new String[]{"[+]*.txt"}
+     */
     public static CollectionReader setupReader(int fileType) throws ResourceInitializationException {
         String[] files = new String[1];
         switch (fileType) {
@@ -64,7 +63,10 @@ public class UIMAComponents {
 		 * parsing tree parameters
 		 */
         _log.debug("initialize Parser");
-        // StanfordParser.PARAM_MAX_ITEMS, 5000000
+        if (Configuration.getModel() == null || Configuration.getModel().isEmpty())
+            throw new ResourceInitializationException("Stanford Parser Initialization",
+                    "No Parser model given", null);
+
         AnalysisEngineDescription parser = createPrimitiveDescription(StanfordParser.class,
                 StanfordParser.PARAM_LANGUAGE, Configuration.getLang(),
                 StanfordParser.PARAM_VARIANT, Configuration.getModel(),
@@ -74,7 +76,6 @@ public class UIMAComponents {
         return parser;
     }
 
-
     public static AnalysisEngineDescription setupXMIWriter() throws ResourceInitializationException {
         _log.debug("initialize XMI Writer");
         AnalysisEngineDescription cxmi = createPrimitiveDescription(XmiWriter.class,
@@ -82,7 +83,6 @@ public class UIMAComponents {
                 XmiWriter.PARAM_TYPE_SYSTEM_FILE, "TypeSystem.xml");
         return cxmi;
     }
-
 
     public static AnalysisEngineDescription setupConstituentWriter() throws ResourceInitializationException {
         /*
@@ -95,10 +95,9 @@ public class UIMAComponents {
         return constituentXML;
     }
 
-
     public static AnalysisEngineDescription setupTreeRuleEngine(String fileDir) throws ResourceInitializationException {
         /*
-		 * takes XML files as input and produces statistics output in console
+         * takes XML files as input and produces statistics output in console
 		 * for topic identification
 		 */
         _log.debug("initialize Tree-Rule-Engine");
