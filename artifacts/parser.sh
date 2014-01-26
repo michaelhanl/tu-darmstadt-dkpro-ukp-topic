@@ -9,7 +9,7 @@ input="input"
 output="output"
 model="pcfg"
 
-parameters="-parser $1 -modal $model -inDir $input -outDir $output"
+parameters="-parser $1 -model $model -inDir $input -outDir $output"
 
 java -jar $v4 $parameters
 
