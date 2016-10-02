@@ -70,16 +70,16 @@ public class UIMAComponents {
         AnalysisEngineDescription parser = createPrimitiveDescription(StanfordParser.class,
                 StanfordParser.PARAM_LANGUAGE, Configuration.getLang(),
                 StanfordParser.PARAM_VARIANT, Configuration.getModel(),
-                StanfordParser.PARAM_CREATE_CONSTITUENT_TAGS, true,
-                StanfordParser.PARAM_CREATE_DEPENDENCY_TAGS, false,
-                StanfordParser.PARAM_MAX_TOKENS, 200);
+                StanfordParser.PARAM_WRITE_CONSTITUENT, true,
+                StanfordParser.PARAM_WRITE_DEPENDENCY, false,
+                StanfordParser.PARAM_MAX_SENTENCE_LENGTH, 200);
         return parser;
     }
 
     public static AnalysisEngineDescription setupXMIWriter() throws ResourceInitializationException {
         _log.debug("initialize XMI Writer");
         AnalysisEngineDescription cxmi = createPrimitiveDescription(XmiWriter.class,
-                XmiWriter.PARAM_PATH, "target/xmi",
+                XmiWriter.PARAM_TARGET_LOCATION, "target/xmi",
                 XmiWriter.PARAM_TYPE_SYSTEM_FILE, "TypeSystem.xml");
         return cxmi;
     }

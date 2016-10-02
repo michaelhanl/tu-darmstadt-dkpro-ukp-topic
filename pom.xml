@@ -58,6 +58,18 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
+        <repository>
+            <id>public-releases</id>
+            <url>http://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-releases/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>local jars</id>
+            <name>local jars</name>
+            <url>file://${basedir}/lib</url>
+        </repository>
     </repositories>
     <dependencies>
         <!--
@@ -99,9 +111,14 @@
         </dependency>
         -->
         <dependency>
+            <groupId>info.bliki.wiki</groupId>
+            <artifactId>bliki-core</artifactId>
+            <version>3.0.16</version>
+        </dependency>
+        <dependency>
             <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
             <artifactId>de.tudarmstadt.ukp.dkpro.core.stanfordnlp-model-parser-de-pcfg</artifactId>
-            <version>20130620.1</version>
+            <version>20150129.1</version>
         </dependency>
 
         <dependency>
@@ -112,7 +129,7 @@
         <dependency>
             <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
             <artifactId>de.tudarmstadt.ukp.dkpro.core.stanfordnlp-model-parser-de-factored</artifactId>
-            <version>20130620.1</version>
+            <version>20150129.1</version>
         </dependency>
 
         <dependency>
@@ -120,7 +137,6 @@
             <artifactId>de.tudarmstadt.ukp.dkpro.core.stanfordnlp-model-parser-en-factored</artifactId>
             <version>20130620.1</version>
         </dependency>
-
         <dependency>
             <groupId>org.apache.uima</groupId>
             <artifactId>uimaj-core</artifactId>
@@ -134,28 +150,28 @@
         <dependency>
             <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
             <artifactId>de.tudarmstadt.ukp.dkpro.core.stanfordnlp-gpl</artifactId>
-            <version>1.4.0</version>
+            <version>1.8.0</version>
         </dependency>
         <dependency>
             <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
             <artifactId>
                 de.tudarmstadt.ukp.dkpro.core.io.text-asl
             </artifactId>
-            <version>1.4.0</version>
+            <version>1.8.0</version>
         </dependency>
         <dependency>
             <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
             <artifactId>
                 de.tudarmstadt.ukp.dkpro.core.io.xmi-asl
             </artifactId>
-            <version>1.4.0</version>
+            <version>1.8.0</version>
         </dependency>
         <dependency>
             <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
             <artifactId>
                 de.tudarmstadt.ukp.dkpro.core.tokit-asl
             </artifactId>
-            <version>1.4.0</version>
+            <version>1.8.0</version>
         </dependency>
         <dependency>
             <groupId>dom4j</groupId>
