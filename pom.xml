@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>dkpro.ukp.topic.structure</groupId>
     <artifactId>dkpro.ukp.topic.structure-core</artifactId>
-    <version>0.7</version>
+    <version>0.75</version>
     <build>
         <plugins>
             <plugin>
@@ -150,28 +150,28 @@
         <dependency>
             <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
             <artifactId>de.tudarmstadt.ukp.dkpro.core.stanfordnlp-gpl</artifactId>
-            <version>1.8.0</version>
+            <version>1.6.2</version>
         </dependency>
         <dependency>
             <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
             <artifactId>
                 de.tudarmstadt.ukp.dkpro.core.io.text-asl
             </artifactId>
-            <version>1.8.0</version>
+            <version>1.6.2</version>
         </dependency>
         <dependency>
             <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
             <artifactId>
                 de.tudarmstadt.ukp.dkpro.core.io.xmi-asl
             </artifactId>
-            <version>1.8.0</version>
+            <version>1.6.2</version>
         </dependency>
         <dependency>
             <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
             <artifactId>
                 de.tudarmstadt.ukp.dkpro.core.tokit-asl
             </artifactId>
-            <version>1.8.0</version>
+            <version>1.6.2</version>
         </dependency>
         <dependency>
             <groupId>dom4j</groupId>

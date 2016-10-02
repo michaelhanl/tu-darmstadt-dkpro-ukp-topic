@@ -72,7 +72,7 @@ public class UIMAComponents {
                 StanfordParser.PARAM_VARIANT, Configuration.getModel(),
                 StanfordParser.PARAM_WRITE_CONSTITUENT, true,
                 StanfordParser.PARAM_WRITE_DEPENDENCY, false,
-                StanfordParser.PARAM_MAX_SENTENCE_LENGTH, 200);
+                StanfordParser.PARAM_MAX_TOKENS, 200);
         return parser;
     }
 
