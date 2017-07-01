@@ -1,3 +1,4 @@
-target/
+arget/
 .DS_Store
 .gitignore~
+.idea
