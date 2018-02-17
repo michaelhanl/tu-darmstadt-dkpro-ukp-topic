@@ -8,126 +8,140 @@
 
 package dkpro.topic.main;
 
-import dkpro.topic.utils.Configuration;
+import dkpro.topic.utils.ConfigParameters;
 import dkpro.topic.utils.NamingParameters;
+import org.apache.log4j.PropertyConfigurator;
 import org.apache.uima.analysis_engine.annotator.AnnotatorConfigurationException;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
 
 /**
  * Main class
- * @author hanl@ids-mannheim.de
+ * @author micha.hanl@gmail.com
  * @date 11/6/13
  */
 public class Main {
 
     private static Logger _log = LoggerFactory.getLogger(Main.class);
+    //fixme: what does this do?
     public static boolean ANNOTATOR = false;
+    public static boolean DEBUG = false;
 
-    // todo: specify model files explicitly
     public static void main(String[] args) {
         if (args.length == 0) {
             System.out.println("please specify parameters!");
             System.out
                     .println("help: 'java -jar <jarFile> -parser | -topic | -all ... [-toFile]'");
-            System.exit(-1);
+            return;
         }
-        String path = NamingParameters.bootstrapConfiguration();
+        try {
+            bootstrap();
+        } catch (IOException e) {
+            System.out.println("Properties could not be loaded due to: '" + e.getMessage()+"'");
+            return;
+        }
 
+        System.out.println("Running pipeline ... ");
         for (int i = 0; i < args.length; i++) {
-            switch (args[i]) {
+            switch (args[i].toLowerCase()) {
                 case "-all":
                     _log.info("running entire annotation engine");
-                    runPipeline(args, path);
+                    runPipeline(args);
                     break;
                 case "-parser":
                     _log.info("running stanford parser engine");
-                    runStanfordParser(args, path);
+                    runStanfordParser(args);
                     break;
                 case "-learn":
-                    // TODO: doesn't work. compilation/rule failure in source code
+                    // TODO: doesn't work. compilation/rule failure in source code -- fix before submission!
                     _log.info("running annotator learning engine");
                     runAnnoLabLearner(args);
                     break;
                 case "-topic":
                     _log.info("running topic engine only");
-                    runTopicEngine(args, path);
+                    runTopicEngine(args);
                     break;
             }
         }
     }
 
-    private static void runStanfordParser(String[] args, String path) {
+    private static void runStanfordParser(String[] args) {
+        ConfigParameters params = ConfigParameters.Instances.getConfiguration();
         for (int i = 0; i < args.length; i++) {
-            switch (args[i]) {
+            switch (args[i].toLowerCase()) {
                 case "german":
-                    Configuration.setLang(Configuration.GERMAN);
+                    params.setLang(ConfigParameters.GERMAN);
                     break;
                 case "english":
-                    Configuration.setLang(Configuration.ENGLISH);
+                    params.setLang(ConfigParameters.ENGLISH);
                     break;
-                case "-inDir":
-                    Configuration.setFilesDir(args[i + 1]);
+                case "-indir":
+                    params.setFilesDir(args[i + 1]);
                     break;
-                case "-outDir":
-                    Configuration.setOutputDir(args[i + 1]);
+                case "-outdir":
+                    params.setOutputDir(args[i + 1]);
                     break;
                 case "-model":
-                    if (args[i + 1].equalsIgnoreCase(Configuration.PCFG)
-                            | args[i + 1].equalsIgnoreCase(Configuration.FACTORED)) {
-                        Configuration.setModel(args[i + 1]);
+                    if (args[i + 1].equalsIgnoreCase(ConfigParameters.PCFG)
+                            | args[i + 1].equalsIgnoreCase(ConfigParameters.FACTORED)) {
+                        params.setModel(args[i + 1]);
                         break;
                     } else {
                         System.out
                                 .println("Please use 'pcfg' or 'factored' as model description");
-                        System.exit(-1);
                         return;
                     }
                 case "-help":
                     System.out
                             .println("Help: java -jar Annotator.jar -parser <Language> -rules <RuleFile> -in <InputDir> -out <OutputDir> -m <Model> [-toFile]");
-                    System.exit(-1);
                     return;
+
+                case "-debug":
+                    DEBUG = true;
+                return;
             }
         }
-        Configuration.retrieveRuleFiles(path + "/" + Configuration.CONFIGDIR);
+
         try {
-            ParsingPipeline.runStanfordParser();
+            ParsingPipeline.runStanfordParser(params);
+            _log.info("Successfully run pipeline");
         } catch (AnnotatorConfigurationException
                 | ResourceInitializationException e) {
             _log.error("Parsing could not be completed, due to internal error",
                     e.getMessage(), e);
         }
-        _log.info("Successfully run pipeline");
     }
 
-    private static void runTopicEngine(String[] args, String path) {
-        boolean getRules = true;
+    private static void runTopicEngine(String[] args) {
+        ConfigParameters params = ConfigParameters.Instances.getConfiguration();
         for (int i = 0; i < args.length; i++) {
-            switch (args[i]) {
+            switch (args[i].toLowerCase()) {
                 case "german":
-                    Configuration.setLang(Configuration.GERMAN);
+                    params.setLang(ConfigParameters.GERMAN);
                     break;
                 case "english":
-                    Configuration.setLang(Configuration.ENGLISH);
+                    params.setLang(ConfigParameters.ENGLISH);
                     break;
-                case "-inDir":
-                    Configuration.setFilesDir(args[i + 1]);
+                case "-indir":
+                    params.setFilesDir(args[i + 1]);
                     break;
-                case "-outDir":
-                    Configuration.setOutputDir(args[i + 1]);
+                case "-outdir":
+                    params.setOutputDir(args[i + 1]);
                     break;
                 case "-rule":
-                    Configuration.setRuleFile(new File(args[i + 1]));
-                    getRules = false;
+                    params.setRuleFile(new File(args[i + 1]));
                     break;
-                case "-toFile":
+                case "-tofile":
                     ANNOTATOR = true;
                     break;
-                case "inFile":
+                case "infile":
                     // ??
                 case "-help":
                     System.out
@@ -138,10 +152,8 @@ public class Main {
             }
         }
 
-        if(getRules)
-            Configuration.retrieveRuleFiles(path + "/" + Configuration.CONFIGDIR);
         try {
-            ParsingPipeline.runTopicEngineOnly();
+            ParsingPipeline.runTopicEngineOnly(params);
             _log.info("Successfully run pipeline");
         } catch (AnnotatorConfigurationException
                 | ResourceInitializationException e) {
@@ -152,37 +164,36 @@ public class Main {
 
     }
 
-    private static void runPipeline(String[] args, String path) {
+    private static void runPipeline(String[] args) {
         ANNOTATOR = true;
-        boolean getRules = true;
+        ConfigParameters params = ConfigParameters.Instances.getConfiguration();
+
         for (int i = 0; i < args.length; i++) {
-            switch (args[i]) {
+            switch (args[i].toLowerCase()) {
                 case "german":
-                    Configuration.setLang(Configuration.GERMAN);
+                    params.setLang(ConfigParameters.GERMAN);
                     break;
                 case "english":
-                    Configuration.setLang(Configuration.ENGLISH);
+                    params.setLang(ConfigParameters.ENGLISH);
                     break;
-                case "-inDir":
-                    Configuration.setFilesDir(args[i + 1]);
+                case "-indir":
+                    params.setFilesDir(args[i + 1]);
                     break;
-                case "-outDir":
-                    Configuration.setOutputDir(args[i + 1]);
+                case "-outdir":
+                    params.setOutputDir(args[i + 1]);
                     break;
                 case "-model":
-                    if (args[i + 1].equalsIgnoreCase(Configuration.PCFG)
-                            | args[i + 1].equalsIgnoreCase(Configuration.FACTORED)) {
-                        Configuration.setModel(args[i + 1]);
+                    if (args[i + 1].equalsIgnoreCase(ConfigParameters.PCFG)
+                            | args[i + 1].equalsIgnoreCase(ConfigParameters.FACTORED)) {
+                        params.setModel(args[i + 1]);
                     } else {
                         System.out
                                 .println("Please use 'pcfg' or 'factored' as model description");
-                        System.exit(-1);
                         return;
                     }
                     break;
                 case "-rule":
-                    Configuration.setRuleFile(new File(args[i + 1]));
-                    getRules = false;
+                    params.setRuleFile(new File(args[i + 1]));
                     break;
                 //case "-toFile":
                 //  topicAnnotator = true;
@@ -194,21 +205,18 @@ public class Main {
                     return;
             }
         }
-
-        if (getRules)
-            Configuration.retrieveRuleFiles(path + "/" + Configuration.CONFIGDIR);
-
         try {
-            ParsingPipeline.runFullInterpreter();
+            ParsingPipeline.runFullInterpreter(params);
             _log.info("Successfully run pipeline");
-        } catch (AnnotatorConfigurationException
-                | ResourceInitializationException e) {
+        } catch (ResourceInitializationException e) {
             _log.error("Parsing could not be completed, due to internal error",
                     e.getMessage(), e);
+
         }
 
 
     }
+
 
     private static void runAnnoLabLearner(String[] args) {
         String[] sortedArgs = new String[args.length];
@@ -217,10 +225,10 @@ public class Main {
                 case "-rule":
                     sortedArgs[0] = args[i + 1];
                     break;
-                case "-in":
+                case "-indir":
                     sortedArgs[1] = args[i + 1];
                     break;
-                case "-out":
+                case "-outdir":
                     sortedArgs[2] = args[i + 1];
                     break;
                 case "-help":
@@ -239,6 +247,36 @@ public class Main {
             System.exit(-1);
         }
 
+    }
+
+    public static String bootstrap() throws IOException {
+        _log.info("loading properties");
+        File f = new File(System.getProperty("java.class.path"));
+        String path = f.getAbsoluteFile().getParentFile().getAbsolutePath();
+        Properties props = ConfigParameters.Instances.loadProperties(ConfigParameters.LOG4J);
+
+        Properties names = ConfigParameters.Instances.loadProperties(NamingParameters.FILENAME);
+        ConfigParameters.Instances.setNamingParameters(names);
+
+
+        //InputStream in;
+//        try {
+//            if (new File(s + ConfigParameters.LOG4J).exists()) {
+//                in = new FileInputStream(s + ConfigParameters.LOG4J);
+//                System.out.println("Loading Logger from file path: "+s);
+//            } else {
+//                in = NamingParameters.class.getClassLoader()
+//                        .getResourceAsStream(ConfigParameters.LOG4J);
+//                System.out.println("Loading Logger from class path");
+//            }
+//            props.load(in);
+//        } catch(IOException e){
+//            e.printStackTrace();
+//        }
+        //schema = s + "schema.xsd";
+        PropertyConfigurator.configure(props);
+        //NamingParameters.loadConfigurationProperties(path);
+        return path;
     }
 
 }

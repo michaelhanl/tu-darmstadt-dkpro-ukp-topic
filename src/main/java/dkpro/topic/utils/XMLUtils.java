@@ -19,7 +19,7 @@ import java.util.List;
 
 /**
  *
- * @author hanl@ids-mannheim.de
+ * @author micha.hanl@gmail.com
  * @date 11/6/13
  */
 public final class XMLUtils {

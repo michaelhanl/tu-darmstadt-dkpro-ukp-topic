@@ -1,6 +1,7 @@
 package dkpro.topic.interpreter.rules;
 
 import dkpro.topic.interpreter.data.Constituent;
+import dkpro.topic.utils.ConfigParameters;
 import dkpro.topic.utils.NamingParameters;
 import org.dom4j.Element;
 import org.slf4j.Logger;
@@ -71,7 +72,8 @@ public class RuleInstance {
 
     public boolean isRelaxing() {
         if (this._cursor != null) {
-            return NamingParameters.getRelaxElement().equals(this._cursor.getName());
+            return ConfigParameters.Instances.getNamingParameters().
+                    getRelaxElement().equals(this._cursor.getName());
         }
         return false;
     }

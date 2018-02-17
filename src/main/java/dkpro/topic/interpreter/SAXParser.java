@@ -1,6 +1,7 @@
 package dkpro.topic.interpreter;
 
 import dkpro.topic.interpreter.data.XMLConstituent;
+import dkpro.topic.utils.ConfigParameters;
 import dkpro.topic.utils.NamingParameters;
 import dkpro.topic.utils.OutputWriter;
 import org.dom4j.DocumentHelper;
@@ -14,7 +15,7 @@ import java.util.Stack;
 /**
  * a wrapper class based on the SAXWalker class, provided by R. Eckart de Castilho
  *
- * @author eckart@ukp.informatik.tu-darmstadt.de, hanl@ids-mannheim.de
+ * @author eckart@ukp.informatik.tu-darmstadt.de, micha.hanl@gmail.com
  * @date 11/6/13
  */
 public class SAXParser extends SAXFilter {
@@ -23,12 +24,14 @@ public class SAXParser extends SAXFilter {
     private String docName;
     private String sentenceID;
     private final boolean render;
+    private NamingParameters namingParameters;
 
     public SAXParser(TopicSentInterpreter i, boolean render) {
         this._interpreter = i;
         this.docName = new String();
         this.sentenceID = new String();
         this.render = render;
+        this.namingParameters = ConfigParameters.Instances.getNamingParameters();
     }
 
     public SAXParser(TopicSentInterpreter i) {
@@ -39,11 +42,11 @@ public class SAXParser extends SAXFilter {
     public void startElement(String uri, String localName, String name,
                              Attributes attributes) throws SAXException {
 //        FIXME: docname probably not needed!
-        if (localName.equals(NamingParameters.getDocRoot()))
-            docName = attributes.getValue(NamingParameters.getAttrDocName());
+        if (localName.equals(this.namingParameters.getDocRoot()))
+            docName = attributes.getValue(this.namingParameters.getAttrDocName());
 
-        if (localName.equals(NamingParameters.getElementSentence()))
-            sentenceID = attributes.getValue(NamingParameters.getAttrSentenceID());
+        if (localName.equals(this.namingParameters.getElementSentence()))
+            sentenceID = attributes.getValue(this.namingParameters.getAttrSentenceID());
 
         Element e = DocumentHelper.createElement(QName
                 .get(localName, uri, name));

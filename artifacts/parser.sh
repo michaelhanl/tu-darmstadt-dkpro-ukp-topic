@@ -11,7 +11,7 @@ model="pcfg"
 
 parameters="-parser $1 -model $model -inDir $input -outDir $output"
 
-java -jar $v4 $parameters
+java -jar $v3 $parameters
 
 
 ## java -cp annolab.jar org.annolab.tre.cli.Main Rules_EN.xml file.xml

@@ -14,7 +14,7 @@ theme.constituent.CITEID = citationID
 
 generic.document = ROOT
 generic.docname = docName
-generic.sentence = constituent
+generic.sentence = sentence
 generic.constituent = constituent
 generic.lemma = lemma
 generic.citeid = citationID

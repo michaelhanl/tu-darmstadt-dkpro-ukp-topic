@@ -17,7 +17,7 @@ import java.io.InputStream;
 import java.util.*;
 
 /**
- * @author eckart@ukp.informatik.tu-darmstadt.de, hanl@ids-mannheim.de
+ * @author eckart@ukp.informatik.tu-darmstadt.de, micha.hanl@gmail.com
  * @date 11/6/13
  */
 public class RuleBook

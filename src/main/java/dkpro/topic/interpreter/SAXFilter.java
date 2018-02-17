@@ -1,27 +1,26 @@
 package dkpro.topic.interpreter;
 
+import dkpro.topic.main.Main;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.xml.sax.*;
 import org.xml.sax.ext.DeclHandler;
 import org.xml.sax.ext.LexicalHandler;
-import org.xml.sax.helpers.AttributesImpl;
 import org.xml.sax.helpers.DefaultHandler;
 
 import java.io.IOException;
 
 /**
  *
- * @author eckart@ukp.informatik.tu-darmstadt.de, hanl@ids-mannheim.de
- * @date 11/6/13
+ * @author eckart@ukp.informatik.tu-darmstadt.de, micha.hanl@gmail.com
+ * @date 11/6/15
  */
 public class SAXFilter extends DefaultHandler
         implements LexicalHandler, DeclHandler {
     private static Log _log = LogFactory.getLog(SAXFilter.class);
 
-    public static Attributes NO_ATTRIBUTES = new AttributesImpl();
     protected ContentHandler _target;
-    private boolean debug = false;
+    private boolean debug = Main.DEBUG;
 
     public ContentHandler filter(ContentHandler filtered) {
         this._target = filtered;

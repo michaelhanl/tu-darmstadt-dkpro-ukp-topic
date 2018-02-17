@@ -17,24 +17,19 @@ import java.util.*;
  * class was copied and modified from the tree-rule-processor-engine by R.
  * Eckart de Castilho
  *
- * @author eckart@ukp.informatik.tu-darmstadt.de, hanl@ids-mannheim.de
+ * @author eckart@ukp.informatik.tu-darmstadt.de, micha.hanl@gmail.com
  * @date 11/6/13
  */
 
 public class TopicXMLParserHandler {
-    private Logger jlog = LoggerFactory.getLogger(TopicXMLParserHandler.class);
+    private static Logger jlog = LoggerFactory.getLogger(TopicXMLParserHandler.class);
     private TopicSentInterpreter interpreter;
     private OutputWriter out;
 
-    private TopicXMLParserHandler() {
+    public TopicXMLParserHandler() {
         out = new OutputWriter(System.out);
     }
 
-    public static TopicXMLParserHandler instantiate()
-            throws ParserConfigurationException, SAXException, IOException {
-        TopicXMLParserHandler wrapper = new TopicXMLParserHandler();
-        return wrapper;
-    }
 
     public void process(File ruleFile, File xmlFile)
             throws ParserConfigurationException, SAXException, IOException {

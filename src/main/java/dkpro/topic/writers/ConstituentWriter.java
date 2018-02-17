@@ -4,7 +4,7 @@ import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent;
 import de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.ROOT;
-import dkpro.topic.utils.Configuration;
+import dkpro.topic.utils.ConfigParameters;
 import dkpro.topic.utils.NamingParameters;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.FeatureStructure;
@@ -13,9 +13,9 @@ import org.apache.uima.jcas.tcas.Annotation;
 import org.openfuxml.addon.wiki.FormattingXMLStreamWriter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.uimafit.component.JCasConsumer_ImplBase;
-import org.uimafit.descriptor.ConfigurationParameter;
-import org.uimafit.util.JCasUtil;
+import org.apache.uima.fit.component.JCasConsumer_ImplBase;
+import org.apache.uima.fit.descriptor.ConfigurationParameter;
+import org.apache.uima.fit.util.JCasUtil;
 
 import javax.xml.stream.XMLOutputFactory;
 import javax.xml.stream.XMLStreamException;
@@ -29,7 +29,7 @@ import java.util.Map;
 
 /**
  *
- * @author eckart@ukp.informatik.tu-darmstadt.de, hanl@ids-mannheim.de
+ * @author eckart@ukp.informatik.tu-darmstadt.de, micha.hanl@gmail.com
  * @date 11/6/13
  */
 public class ConstituentWriter extends JCasConsumer_ImplBase {
@@ -39,7 +39,17 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
 
     @ConfigurationParameter(name = PARAM_PATH, mandatory = true)
     private String outputPath;
-    Map<Integer, Integer> sentennces = new HashMap<>();
+    // fixme: either use or remove!
+    //private Map<Integer, Integer> sentennces = new HashMap<>();
+    private NamingParameters params;
+
+
+    // fixme: calling this method within the constructor is not supported here! blank constructor required!
+    public ConstituentWriter() {
+        this.params = ConfigParameters.Instances.getNamingParameters();
+    }
+
+
 
     /**
      * process document as uima analysis engine and write stand-off-annotation XML file, based on relax NG XML schema.
@@ -53,13 +63,14 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
         File output = new File(outputPath);
         output.mkdirs();
         DocumentMetaData meta = DocumentMetaData.get(aJCas);
-        String title = Configuration.getTitle(meta.getDocumentTitle());
+        String title = ConfigParameters.getTitle(meta.getDocumentTitle());
         File file = new File(outputPath, title + ".xml");
 
-        if (!NamingParameters.isAutoOverEn() && file.exists()) {
+        if (!ConfigParameters.Instances.getNamingParameters().isAutoOverEn() && file.exists()) {
             System.out.println();
             System.out
                     .println("WARNING: target file to write XML tree to already exists!");
+            System.out.println("PATH "+ file.getAbsolutePath());
             System.exit(0);
         }
 
@@ -67,13 +78,13 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
             _log.debug("Writing Document Root: {}", title);
             writer = getFormattedWriter(file);
             writer.writeStartDocument();
-            writer.writeStartElement(NamingParameters.getDocRoot());
+            writer.writeStartElement(this.params.getDocRoot());
             writer.writeNamespace("xsi", "http://www.w3.org/2001/XMLSchema-instance");
-            writer.writeAttribute("http://www.w3.org/2001/XMLSchema-instance", "noNamespaceSchemaLocation",
-                    NamingParameters.getSchemaPath());
-            writer.writeAttribute(NamingParameters.getAttrDocName(), title);
-            Configuration.resetCiteID();
-            Configuration.resetSentID();
+            //writer.writeAttribute("http://www.w3.org/2001/XMLSchema-instance", "noNamespaceSchemaLocation",
+            //        this.params.getSchemaPath());
+            writer.writeAttribute(ConfigParameters.Instances.getNamingParameters().getAttrDocName(), title);
+            ConfigParameters.Instances.getConfiguration().resetCiteID();
+            ConfigParameters.Instances.getConfiguration().resetSentID();
 
             /*
              * process segments of sentence
@@ -145,21 +156,21 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
              */
             try {
                 if (c.getParent().getType().getShortName().equals("ROOT")) {
-                    xmlstream.writeStartElement(NamingParameters
+                    xmlstream.writeStartElement(ConfigParameters.Instances.getNamingParameters()
                             .getElementSentence());
 
-                    _log.debug("Writing sentence ID " + Configuration.getSentID() +
+                    _log.debug("Writing sentence ID " + ConfigParameters.Instances.getConfiguration().getSentID() +
                             ": " + c.getCoveredText());
 
-                    xmlstream.writeAttribute(NamingParameters.getAttrSentenceID(),
-                            Configuration.getSentID());
-                    Configuration.incrementSentID();
+                    xmlstream.writeAttribute(ConfigParameters.Instances.getNamingParameters().getAttrSentenceID(),
+                            ConfigParameters.Instances.getConfiguration().getSentID());
+                    ConfigParameters.Instances.getConfiguration().incrementSentID();
 
                 } else
-                    xmlstream.writeStartElement(NamingParameters
+                    xmlstream.writeStartElement(ConfigParameters.Instances.getNamingParameters()
                             .getElementConstituent());
 
-                xmlstream.writeAttribute(NamingParameters.getAttrConstType(),
+                xmlstream.writeAttribute(ConfigParameters.Instances.getNamingParameters().getAttrConstType(),
                         c.getConstituentType());
 
             } catch (XMLStreamException e) {
@@ -192,11 +203,11 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
             lemma = t.getLemma().getValue();
 
         try {
-            xmlstream.writeStartElement(NamingParameters.getElementConstituent());
-            xmlstream.writeAttribute(NamingParameters.getAttrConstType(), pos);
+            xmlstream.writeStartElement(this.params.getElementConstituent());
+            xmlstream.writeAttribute(this.params.getAttrConstType(), pos);
 
             if (lemma != null)
-                xmlstream.writeAttribute(NamingParameters.getAttrLemma(), lemma);
+                xmlstream.writeAttribute(this.params.getAttrLemma(), lemma);
 
             /*
              * uses the notation for citation marks of the stanford parser to
@@ -204,10 +215,10 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
              */
             if (pos.equals("$*LRB*") &&
                     t.getCoveredText().trim().charAt(0) == '"') {
-                _log.debug("Writing ID for citation: '{}'", Configuration.getCiteID());
-                xmlstream.writeAttribute(NamingParameters.getAttrCitationID(),
-                        Configuration.getCiteID());
-                Configuration.incrementCiteID();
+                _log.debug("Writing ID for citation: '{}'", ConfigParameters.Instances.getConfiguration().getCiteID());
+                xmlstream.writeAttribute(this.params.getAttrCitationID(),
+                        ConfigParameters.Instances.getConfiguration().getCiteID());
+                ConfigParameters.Instances.getConfiguration().incrementCiteID();
             }
 
             xmlstream.writeCharacters(t.getCoveredText());

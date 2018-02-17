@@ -14,6 +14,9 @@ rule="config/Rules_EN.xml"
 
 parameters="-all english -model $model -inDir $input -outDir $output -toFile"
 
+params="-parser german -model $model -inDir $input -outDir $output -toFile"
+
+
 java -jar $v3 $parameters
 
 

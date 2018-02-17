@@ -26,7 +26,7 @@ import java.util.List;
  * Learner class to annotate XML output file with topic type, in a convenient way via a command line
  * interface
  *
- * @author hanl@ids-mannheim.de
+ * @author micha.hanl@gmail.com
  * @date 11/6/13
  */
 public class Learner extends DefaultHandler implements ElementHandler {

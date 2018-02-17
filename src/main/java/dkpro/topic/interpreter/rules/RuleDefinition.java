@@ -4,6 +4,7 @@ package dkpro.topic.interpreter.rules;
 import dkpro.topic.interpreter.SAXParser;
 import dkpro.topic.interpreter.TopicSentInterpreter;
 import dkpro.topic.interpreter.data.Constituent;
+import dkpro.topic.utils.ConfigParameters;
 import dkpro.topic.utils.NamingParameters;
 import dkpro.topic.utils.XMLUtils;
 import org.apache.commons.logging.Log;
@@ -17,7 +18,7 @@ import java.util.*;
 
 /**
  *
- * @author eckart@ukp.informatik.tu-darmstadt.de, hanl@ids-mannheim.de
+ * @author eckart@ukp.informatik.tu-darmstadt.de, micha.hanl@gmail.com
  * @date 11/6/13
  */
 public class RuleDefinition {
@@ -148,7 +149,8 @@ public class RuleDefinition {
     }
 
     public static String elementToString(Element e) {
-        return e != null ? e.getName() + "/" + e.attributeValue(NamingParameters.getAttrConstType()) : null;
+        return e != null ? e.getName() + "/" + e.attributeValue(ConfigParameters.Instances.getNamingParameters()
+                .getAttrConstType()) : null;
     }
 
     public static class RelaxStack {

@@ -1,8 +1,7 @@
 package dkpro.topic.annotator;
 
 import dkpro.topic.interpreter.rules.Result;
-import dkpro.topic.utils.Configuration;
-import dkpro.topic.utils.NamingParameters;
+import dkpro.topic.utils.ConfigParameters;
 import dkpro.topic.utils.XMLUtils;
 import org.dom4j.Attribute;
 import org.dom4j.Document;
@@ -21,20 +20,19 @@ import java.util.Map;
 /**
  *
  *
- * @author hanl@ids-mannheim.de
+ * @author micha.hanl@gmail.com
  * @date 11/6/13
  */
 public class TreeAnnotator {
-    public static final String outDirEx = "topics";
-    private Logger jlog = LoggerFactory.getLogger(TreeAnnotator.class);
+
+
+    public static final String OUTDIREX = "topics";
+    private static Logger jlog = LoggerFactory.getLogger(TreeAnnotator.class);
     private Map<String, List<Result>> results;
     private File file;
 
-    public static TreeAnnotator instantiate(File parse, Map<String, List<Result>> results) {
-        return new TreeAnnotator(parse, results);
-    }
 
-    private TreeAnnotator(File parse, Map<String, List<Result>> results) {
+    public TreeAnnotator(File parse, Map<String, List<Result>> results) {
         this.results = results;
         this.file = parse;
     }
@@ -55,27 +53,29 @@ public class TreeAnnotator {
         Element root = document.getRootElement();
         jlog.debug("running the annotator for file {}", file);
 
-        for (Iterator<Element> i = root.elementIterator(NamingParameters
-                .getElementSentence()); i.hasNext(); ) {
+        String sent = ConfigParameters.Instances.getNamingParameters()
+                .getElementSentence();
+        for (Iterator<Element> i = root.elementIterator(sent); i.hasNext(); ) {
             Element sentence = i.next();
 
-            Attribute sentID = sentence.attribute(NamingParameters.getAttrSentenceID());
+            Attribute sentID = sentence.attribute(ConfigParameters.Instances.getNamingParameters().getAttrSentenceID());
             if (getResults(sentID.getValue()) == null) {
-                jlog.info("no topics available for sentence with ID {}!", sentID.getValue());
-                continue;
+                jlog.warn("no topics available for sentence with ID '{}'", sentID.getValue());
+
             } else {
                 String[] f = XMLUtils.ruleEnumeration(getResults(sentID.getValue()));
                 String ruleIds = f[0];
+                // fixme: usage?
                 String ruleLabels = f[1];
 
-                sentence.addAttribute(NamingParameters.getAttrTopicRule(), ruleIds);
+                sentence.addAttribute(ConfigParameters.Instances.getNamingParameters().getAttrTopicRule(), ruleIds);
                 //sentence.addAttribute(NamingParameters.getAttrTopicLabel(), ruleLabels);
                 try {
-                    File dir = new File(Configuration.getOutputDir(), outDirEx);
+                    File dir = new File(ConfigParameters.Instances.getConfiguration().getOutputDir(), OUTDIREX);
                     dir.mkdir();
                     XMLUtils.dumpDocumentToFile(new File(dir, this.file.getName()), document);
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    throw new DocumentException(e);
                 }
             }
         }

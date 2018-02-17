@@ -19,7 +19,7 @@ import java.util.*;
  * wrapper around topic interpreter class in the annolab project, written by R.
  * Eckart de Castilho
  *
- * @author eckart@ukp.informatik.tu-darmstadt.de, hanl@ids-mannheim.de
+ * @author eckart@ukp.informatik.tu-darmstadt.de, micha.hanl@gmail.com
  * @date 11/6/13
  *
  */
