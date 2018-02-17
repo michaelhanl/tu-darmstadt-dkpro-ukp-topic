@@ -12,6 +12,8 @@ import org.slf4j.LoggerFactory;
 import org.apache.uima.fit.pipeline.SimplePipeline;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Uses UIMAFit pipeline mechanism to create workflow for XML annotation and
@@ -31,8 +33,10 @@ public class ParsingPipeline {
     private AnalysisEngineDescription treeRuleEngine;
 
 
-    private ParsingPipeline() {
+    private List<AnalysisEngineDescription> analysisEngines;
 
+    private ParsingPipeline() {
+        analysisEngines = new ArrayList<>();
     }
 
     public static ParsingPipeline runTopicEngineOnly(ConfigParameters c) throws AnnotatorConfigurationException,
@@ -91,10 +95,8 @@ public class ParsingPipeline {
             _log.debug("run Analysis Pipeline");
             SimplePipeline.runPipeline(reader, engines);
         } catch (UIMAException e) {
-            e.printStackTrace();
             _log.error("UIMA Exception", e);
         } catch (IOException e) {
-            e.printStackTrace();
             _log.error("IO Exception", e);
         }
     }
