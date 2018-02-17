@@ -32,72 +32,70 @@ public class ParsingPipeline {
     private AnalysisEngineDescription constituentXML;
     private AnalysisEngineDescription treeRuleEngine;
 
-
     private List<AnalysisEngineDescription> analysisEngines;
 
-    private ParsingPipeline() {
-        analysisEngines = new ArrayList<>();
+    private ParsingPipeline(CollectionReader reader) {
+        this.collReader = reader;
+        this.analysisEngines = new ArrayList<>();
     }
+
+    private void addEngineDescription(AnalysisEngineDescription ... engines) {
+        for (AnalysisEngineDescription ae : engines)
+            this.analysisEngines.add(ae);
+    }
+
+
 
     public static ParsingPipeline runTopicEngineOnly(ConfigParameters c) throws AnnotatorConfigurationException,
             ResourceInitializationException {
-        ParsingPipeline p = new ParsingPipeline();
-        p.collReader = UIMAComponents.setupReader(UIMAComponents.XML, c);
-        p.treeRuleEngine = UIMAComponents.setupTreeRuleEngine(c);
+        ParsingPipeline p = new ParsingPipeline(UIMAComponents.setupReader(UIMAComponents.XML, c));
+        p.addEngineDescription(UIMAComponents.setupTreeRuleEngine(c));
         /**
          * run pipeline with instantiated AnalysisEngines
          */
-        p.runPipeline(p.collReader, p.treeRuleEngine);
+        p.runPipeline();
         return p;
     }
 
     // todo: create static factory methods from this
-    private void fullPipeline(ConfigParameters c) throws ResourceInitializationException {
-        collReader = UIMAComponents.setupReader(UIMAComponents.TEXT, c);
-        segmenter = UIMAComponents.setupSegmenter();
-        parser = UIMAComponents.setupParser(c);
-        cxmi = UIMAComponents.setupXMIWriter();
-        constituentXML = UIMAComponents.setupConstituentWriter(c);
-        treeRuleEngine = UIMAComponents.setupTreeRuleEngine(c);
+    private static ParsingPipeline fullPipeline(ConfigParameters c) throws ResourceInitializationException {
+        ParsingPipeline p = new ParsingPipeline(UIMAComponents.setupReader(UIMAComponents.TEXT, c));
+        p.addEngineDescription(UIMAComponents.setupSegmenter(), UIMAComponents.setupParser(c), UIMAComponents.setupXMIWriter(),
+                UIMAComponents.setupConstituentWriter(c), UIMAComponents.setupTreeRuleEngine(c));
+        return p;
     }
 
-    public static ParsingPipeline runStanfordParser(ConfigParameters c) throws AnnotatorConfigurationException,
-            ResourceInitializationException {
-        ParsingPipeline p = new ParsingPipeline();
-        p.collReader = UIMAComponents.setupReader(UIMAComponents.TEXT, c);
-        p.segmenter = UIMAComponents.setupSegmenter();
-        p.parser = UIMAComponents.setupParser(c);
-        p.constituentXML = UIMAComponents.setupConstituentWriter(c);
-
+    public static ParsingPipeline runStanfordParser(ConfigParameters c) throws ResourceInitializationException {
+        ParsingPipeline p = new ParsingPipeline(UIMAComponents.setupReader(UIMAComponents.TEXT, c));
+        p.addEngineDescription(UIMAComponents.setupSegmenter(), UIMAComponents.setupParser(c), UIMAComponents.setupXMIWriter(),
+                UIMAComponents.setupConstituentWriter(c));
         /**
          * run pipeline with instantiated AnalysisEngines
          */
-        p.runPipeline(p.collReader, p.segmenter, p.parser,
-                p.constituentXML);
+        p.runPipeline();
         return p;
     }
 
     public static ParsingPipeline runFullInterpreter(ConfigParameters c)
             throws ResourceInitializationException {
-        ParsingPipeline p = new ParsingPipeline();
-        p.fullPipeline(c);
-
+        ParsingPipeline p = fullPipeline(c);
         /**
          * run pipeline with instantiated AnalysisEngines
          */
-        p.runPipeline(p.collReader, p.segmenter, p.parser,
-                p.constituentXML, p.treeRuleEngine);
+        p.runPipeline();
         return p;
     }
 
-    private void runPipeline(CollectionReader reader, AnalysisEngineDescription... engines) {
+    public void runPipeline() {
         try {
-            _log.debug("run Analysis Pipeline");
-            SimplePipeline.runPipeline(reader, engines);
+            _log.info("run Analysis Pipeline");
+            SimplePipeline.runPipeline(this.collReader, analysisEngines.toArray(new AnalysisEngineDescription[0]));
         } catch (UIMAException e) {
             _log.error("UIMA Exception", e);
         } catch (IOException e) {
             _log.error("IO Exception", e);
         }
     }
+
+
 }
