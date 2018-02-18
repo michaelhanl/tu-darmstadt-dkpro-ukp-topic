@@ -72,7 +72,7 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
             System.out
                     .println("WARNING: target file to write XML tree already exists!"+
                             " Renaming file to: '"+it.getName()+"'");
-            file.renameTo(it);
+            file = it;
         }
 
         try {

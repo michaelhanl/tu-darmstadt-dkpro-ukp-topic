@@ -29,7 +29,7 @@ public class UIMAComponents {
     public static final int TEXT = 2;
     private static Logger _log = LoggerFactory.getLogger(UIMAComponents.class);
 
-    /*
+    /**
      * reads input files from the configured input path!
      * new String[]{"[+]*.txt"}
      */

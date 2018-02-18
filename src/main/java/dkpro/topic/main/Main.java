@@ -17,9 +17,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Properties;
 
 /**
@@ -81,7 +79,7 @@ public class Main {
                     params.setLang(ConfigParameters.ENGLISH);
                     break;
                 case "-indir":
-                    params.setFilesDir(args[i + 1]);
+                    params.setInputDir(args[i + 1]);
                     break;
                 case "-outdir":
                     params.setOutputDir(args[i + 1]);
@@ -127,7 +125,7 @@ public class Main {
                     params.setLang(ConfigParameters.ENGLISH);
                     break;
                 case "-indir":
-                    params.setFilesDir(args[i + 1]);
+                    params.setInputDir(args[i + 1]);
                     break;
                 case "-outdir":
                     params.setOutputDir(args[i + 1]);
@@ -168,7 +166,7 @@ public class Main {
                     params.setLang(ConfigParameters.ENGLISH);
                     break;
                 case "-indir":
-                    params.setFilesDir(args[i + 1]);
+                    params.setInputDir(args[i + 1]);
                     break;
                 case "-outdir":
                     params.setOutputDir(args[i + 1]);
