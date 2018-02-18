@@ -49,9 +49,9 @@ public class TreeAnnotator {
 
     private void processNodes() throws DocumentException {
         SAXReader reader = new SAXReader();
-        Document document = reader.read(file);
+        Document document = reader.read(this.file);
         Element root = document.getRootElement();
-        jlog.debug("running the annotator for file {}", file);
+        jlog.debug("running the annotator for file {}", this.file);
 
         String sent = ConfigParameters.Instances.getNamingParameters()
                 .getElementSentence();
