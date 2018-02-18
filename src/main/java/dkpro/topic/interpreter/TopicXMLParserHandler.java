@@ -43,11 +43,11 @@ public class TopicXMLParserHandler {
     private void apply(File xmlFile, RuleBook rules) throws ParserConfigurationException,
             SAXException, IOException {
         jlog.debug("--- Now we will try to match the rules");
-        SAXParser parseXML = new SAXParser(interpreter);
+        SAXParser parseXML = new SAXParser(this.interpreter);
         XMLUtils.parse(xmlFile, parseXML);
 
-        out.writeOutResults(interpreter.getSentenceResults());
-        out.dumpStats(interpreter.getStats());
+        out.writeOutResults(this.interpreter.getSentenceResults());
+        out.dumpStats(this.interpreter.getStats());
         out.writeRuleBuild(rules);
     }
 

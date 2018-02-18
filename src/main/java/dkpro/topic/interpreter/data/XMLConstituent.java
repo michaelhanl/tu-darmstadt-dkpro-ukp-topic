@@ -64,6 +64,10 @@ public class XMLConstituent
         return _element;
     }
 
+    @Override
+    public String toString() {
+        return this._element.getName();
+    }
 
 
 }

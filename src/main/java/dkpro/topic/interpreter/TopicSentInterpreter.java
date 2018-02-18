@@ -61,7 +61,7 @@ public class TopicSentInterpreter {
 
 
         /**
-         * required to seperate sentence within the results
+         * required to separate sentence within the results
          */
         if (this._depth == SENTENCE_DEPTH) {
             this._sentence.setLength(0);
@@ -123,6 +123,7 @@ public class TopicSentInterpreter {
                 if (!r.expectsMore()) {
                     _log.debug("RuleInstance matches: {} -> {}",r.toString(),
                             r.getDefinition().getTopicType());
+                    _log.debug("Matching node: {}", node.toString());
                     Result.Expectation e = r.getExpectation(node);
 
                     if (e == Result.Expectation.MET) {

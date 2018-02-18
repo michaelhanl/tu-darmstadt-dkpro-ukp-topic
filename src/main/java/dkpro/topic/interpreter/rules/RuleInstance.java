@@ -11,7 +11,7 @@ public class RuleInstance {
     private final RuleDefinition _ruleDefinition;
     private final RuleDefinition.RelaxStack _relaxStack;
     private final int _instance_id;
-    private Logger jlog = LoggerFactory.getLogger(RuleInstance.class);
+    private static final  Logger jlog = LoggerFactory.getLogger(RuleInstance.class);
     private Element _cursor;
     private int _createdAtDepth;
     private StringBuffer textMatch;
@@ -33,6 +33,7 @@ public class RuleInstance {
 
 
     public Result.Expectation getExpectation(Constituent constituent) {
+
         if (constituent.getNodeExpectation() == null)
             return Result.Expectation.UNEXPECTED;
 

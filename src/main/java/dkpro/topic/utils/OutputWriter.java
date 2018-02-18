@@ -22,7 +22,7 @@ import java.util.*;
  */
 public class OutputWriter {
 
-    private static Logger stats = LoggerFactory.getLogger("statLogger");
+    private static Logger stats = LoggerFactory.getLogger(OutputWriter.class);
     private PrintStream out;
 
     public OutputWriter(PrintStream out) {

@@ -101,14 +101,17 @@ public class UIMAComponents {
         return constituentXML;
     }
 
-    public static AnalysisEngineDescription setupTreeRuleEngine(ConfigParameters c) throws ResourceInitializationException {
+    public static AnalysisEngineDescription setupTreeRuleEngine(ConfigParameters c, boolean standalone) throws ResourceInitializationException {
         /*
          * takes XML files as input and produces statistics output in console
 		 * for topic identification
 		 */
         _log.debug("initialize Tree-Rule-Engine");
+        // if part of pipeline it takes the output of the constituent writer as input.
+        // If standalone, the regular input dir is used
+        String in = !standalone ? c.getOutputDir() : c.getInputDir();
         AnalysisEngineDescription treeRuleEngine = createEngineDescription(TreeParser.class,
-                TreeParser.PARAM_PATH, c.getOutputDir());
+                TreeParser.PARAM_PATH, in);
         return treeRuleEngine;
     }
 

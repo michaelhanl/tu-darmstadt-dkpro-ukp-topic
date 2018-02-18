@@ -40,10 +40,9 @@ public class ParsingPipeline {
 
 
 
-    public static ParsingPipeline runTopicEngineOnly(ConfigParameters c) throws AnnotatorConfigurationException,
-            ResourceInitializationException {
+    public static ParsingPipeline runTopicEngineOnly(ConfigParameters c) throws ResourceInitializationException {
         ParsingPipeline p = new ParsingPipeline(UIMAComponents.setupReader(UIMAComponents.XML, c));
-        p.addEngineDescription(UIMAComponents.setupTreeRuleEngine(c));
+        p.addEngineDescription(UIMAComponents.setupTreeRuleEngine(c, true));
         /**
          * run pipeline with instantiated AnalysisEngines
          */
@@ -67,7 +66,7 @@ public class ParsingPipeline {
             throws ResourceInitializationException {
         ParsingPipeline p = new ParsingPipeline(UIMAComponents.setupReader(UIMAComponents.TEXT, c));
         p.addEngineDescription(UIMAComponents.setupSegmenter(), UIMAComponents.setupParser(c),
-                UIMAComponents.setupConstituentWriter(c), UIMAComponents.setupTreeRuleEngine(c));
+                UIMAComponents.setupConstituentWriter(c), UIMAComponents.setupTreeRuleEngine(c, false));
         /**
          * run pipeline with instantiated AnalysisEngines
          */

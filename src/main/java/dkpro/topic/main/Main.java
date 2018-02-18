@@ -145,8 +145,7 @@ public class Main {
         try {
             ParsingPipeline.runTopicEngineOnly(params);
             _log.info("Successfully run pipeline");
-        } catch (AnnotatorConfigurationException
-                | ResourceInitializationException e) {
+        } catch (ResourceInitializationException e) {
             _log.error("Parsing could not be completed, due to internal error",
                     e.getMessage(), e);
         }
