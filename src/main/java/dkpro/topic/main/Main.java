@@ -30,8 +30,6 @@ import java.util.Properties;
 public class Main {
 
     private static Logger _log = LoggerFactory.getLogger(Main.class);
-    //fixme: what does this do?
-    public static boolean ANNOTATOR = false;
     public static boolean DEBUG = false;
 
     public static void main(String[] args) {
@@ -137,11 +135,6 @@ public class Main {
                 case "-rule":
                     params.setRuleFile(new File(args[i + 1]));
                     break;
-                case "-tofile":
-                    ANNOTATOR = true;
-                    break;
-                case "infile":
-                    // ??
                 case "-help":
                     System.out
                             .println("Help: java -jar Annotator.jar -topic <Language> -rules <RuleFile> -inDir <InputDir> -outDir <OutputDir> [-toFile]");
@@ -164,7 +157,6 @@ public class Main {
     }
 
     private static void runPipeline(String[] args) {
-        ANNOTATOR = true;
         ConfigParameters params = ConfigParameters.Instances.getConfiguration();
 
         for (int i = 0; i < args.length; i++) {
@@ -194,9 +186,6 @@ public class Main {
                 case "-rule":
                     params.setRuleFile(new File(args[i + 1]));
                     break;
-                //case "-toFile":
-                //  topicAnnotator = true;
-                // break;
                 case "-help":
                     System.out
                             .println("Help: java -jar Annotator.jar -all <Language> -rules <RuleFile> -in <InputDir> -out <OutputDir> -m <Model> [-toFile]");

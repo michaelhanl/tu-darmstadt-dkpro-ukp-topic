@@ -26,12 +26,6 @@ public class ParsingPipeline {
 
     private static Logger _log = LoggerFactory.getLogger(ParsingPipeline.class);
     private CollectionReader collReader;
-    private AnalysisEngineDescription segmenter;
-    private AnalysisEngineDescription parser;
-    private AnalysisEngineDescription cxmi;
-    private AnalysisEngineDescription constituentXML;
-    private AnalysisEngineDescription treeRuleEngine;
-
     private List<AnalysisEngineDescription> analysisEngines;
 
     private ParsingPipeline(CollectionReader reader) {
@@ -57,17 +51,10 @@ public class ParsingPipeline {
         return p;
     }
 
-    // todo: create static factory methods from this
-    private static ParsingPipeline fullPipeline(ConfigParameters c) throws ResourceInitializationException {
-        ParsingPipeline p = new ParsingPipeline(UIMAComponents.setupReader(UIMAComponents.TEXT, c));
-        p.addEngineDescription(UIMAComponents.setupSegmenter(), UIMAComponents.setupParser(c), UIMAComponents.setupXMIWriter(),
-                UIMAComponents.setupConstituentWriter(c), UIMAComponents.setupTreeRuleEngine(c));
-        return p;
-    }
-
+    // todo: in case XMI writer is needed: UIMAComponents.setupXMIWriter(). It does not work yet though
     public static ParsingPipeline runStanfordParser(ConfigParameters c) throws ResourceInitializationException {
         ParsingPipeline p = new ParsingPipeline(UIMAComponents.setupReader(UIMAComponents.TEXT, c));
-        p.addEngineDescription(UIMAComponents.setupSegmenter(), UIMAComponents.setupParser(c), UIMAComponents.setupXMIWriter(),
+        p.addEngineDescription(UIMAComponents.setupSegmenter(), UIMAComponents.setupParser(c),
                 UIMAComponents.setupConstituentWriter(c));
         /**
          * run pipeline with instantiated AnalysisEngines
@@ -78,7 +65,9 @@ public class ParsingPipeline {
 
     public static ParsingPipeline runFullInterpreter(ConfigParameters c)
             throws ResourceInitializationException {
-        ParsingPipeline p = fullPipeline(c);
+        ParsingPipeline p = new ParsingPipeline(UIMAComponents.setupReader(UIMAComponents.TEXT, c));
+        p.addEngineDescription(UIMAComponents.setupSegmenter(), UIMAComponents.setupParser(c),
+                UIMAComponents.setupConstituentWriter(c), UIMAComponents.setupTreeRuleEngine(c));
         /**
          * run pipeline with instantiated AnalysisEngines
          */

@@ -66,12 +66,13 @@ public class ConstituentWriter extends JCasConsumer_ImplBase {
         String title = ConfigParameters.getTitle(meta.getDocumentTitle());
         File file = new File(outputPath, title + ".xml");
 
-        if (!ConfigParameters.Instances.getNamingParameters().isAutoOverEn() && file.exists()) {
+        if (file.exists()) {
+            File it = new File(ConfigParameters.buildCopyName(file));
             System.out.println();
             System.out
-                    .println("WARNING: target file to write XML tree to already exists!");
-            System.out.println("PATH "+ file.getAbsolutePath());
-            System.exit(0);
+                    .println("WARNING: target file to write XML tree already exists!"+
+                            " Renaming file to: '"+it.getName()+"'");
+            file.renameTo(it);
         }
 
         try {

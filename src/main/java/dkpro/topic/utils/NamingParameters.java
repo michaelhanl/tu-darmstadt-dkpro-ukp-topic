@@ -68,12 +68,6 @@ public class NamingParameters {
         return this.getParameter("generic.topicrule");
     }
 
-    //todo: either move or delete
-    @Deprecated
-    public boolean isAutoOverEn() {
-        return enabledOverride;
-    }
-
     public void setEnableOverride(boolean enabledOverride) {
         this.enabledOverride = enabledOverride;
     }
